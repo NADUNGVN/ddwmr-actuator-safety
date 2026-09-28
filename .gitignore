@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+
+# MATLAB / Simulink generated files
+*.asv
+*.slxc
+slprj/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
