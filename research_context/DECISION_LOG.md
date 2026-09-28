@@ -49,6 +49,17 @@ This decision adopts the reduced C_j-based formulation as the authoritative rese
 - Review evidence: docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md accepts R2 with three mandatory finalization edits; docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md records those edits. Actual adoption authorization is a separate event.
 - G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED; overall HOLD. Review actual authoritative v2.1 text for G1 separately. Adoption alone does not authorize G2/G3 construction or implementation.
 
+## G1 status recording - restricted reduced-model scope - HOLD
+
+Acceptance/application provenance — 2026-09-29 (Asia/Saigon): the user explicitly authorized “Đồng ý ghi nhận G1 PASS trong phạm vi mô hình rút gọn và áp dụng bản diff trạng thái”. Applied `docs/proposals/g1_status_8341014/G1_STATUS_PENDING.patch` from commit `81ff1cb43ea2ad19a04f45bc72b734048739bee6`, recording the independent disposition in `docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md` for authoritative formulation commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`. This dated record is the sole addition to the five proposed target texts. Physical-platform correspondence and G2/G3/G4 remain UNVERIFIED; overall HOLD. No next-phase construction or implementation authorization is recorded.
+
+Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6e1baee92e8f9b96` accepts internal consistency of the restricted nine-state reduced ideal planar model. Evidence: `docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`, G1-01 through G1-12 and disposition in section 14.
+
+- G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED.
+- G2/G3/G4 UNVERIFIED; overall HOLD. No G2/G3 construction or implementation authorization follows.
+- Plant equations, assumptions, scientific scope and declared formulation version v2.1 are unchanged. This is review-status synchronization, not a new formulation.
+- Prior entries retain their historical gate statuses. The actual dated user acceptance/application provenance is recorded when this status update is authorized and applied.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

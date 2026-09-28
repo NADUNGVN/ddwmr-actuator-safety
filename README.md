@@ -1,6 +1,6 @@
 ﻿# DDWMR actuator- and contact-aware safety research
 
-Independent research repository for Thầy Viễn. **HOLD — G1–G4 have not passed.**
+Independent research repository for Thầy Viễn. **HOLD - G1 PASS for restricted reduced-model scope; G2/G3/G4 UNVERIFIED.**
 
 ## Start every session here
 
@@ -23,7 +23,7 @@ Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current co
 
 The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
 
-G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED. No G2/G3 construction before explicit G1 resolution; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
+G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. G2/G3 construction requires explicit user authorization of the next research phase; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
 
 ## Supporting history
 
