@@ -6,12 +6,12 @@ Independent research repository for Thầy Viễn. **HOLD — G1–G4 have not p
 
 Read these before reasoning, derivation or code:
 
-1. [MASTER_RESEARCH_CONTEXT_v2.md](research_context/MASTER_RESEARCH_CONTEXT_v2.md) — authoritative current formulation, imported verbatim from the user-supplied file.
+1. [MASTER_RESEARCH_CONTEXT_v2.md](research_context/MASTER_RESEARCH_CONTEXT_v2.md) — authoritative declared v2.1; canonical filename retained for stable links. Original v2 import is preserved in history.
 2. [DECISION_LOG.md](research_context/DECISION_LOG.md) — decisions and superseded assumptions.
 3. [LITERATURE_MATRIX.md](research_context/LITERATURE_MATRIX.md) — source evidence and unresolved overlaps.
 4. [REVIEW_GATE.md](research_context/REVIEW_GATE.md) — G1–G4 status and evidence required.
 
-Current candidate: nine states (pose, body longitudinal velocity/yaw rate, wheel speeds, motor currents), motor-voltage inputs, uncertain longitudinal traction, fixed-period ZOH, and structured reachable tubes/predecessor. HOCBF is optional/baseline. The plant and method are not frozen.
+Adopted formulation v2.1: nine-state reduced ideal planar DDWMR, motor-voltage inputs, execution-fixed hidden model parameters and effective tangential capacities C_j, exact lateral constraint with algebraic reactions, exact sampled state and ideal four-quadrant voltage ZOH. Joint state/parameter tubes and predecessor reasoning remain under investigation. HOCBF is optional/baseline. Formulation adoption does not pass G1, validate a physical platform or authorize implementation.
 
 ## Session instruction
 
@@ -21,17 +21,15 @@ Current candidate: nine states (pose, body longitudinal velocity/yaw rate, wheel
 
 Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current context, then G1, then the remaining gates in separate exchanges. The GitHub repository is public as verified on 2026-09-28. If repository access fails, attach the four context files. Report the reviewed commit when available. Publishing this repository does not change the research HOLD.
 
-Latest review: [G1 physical model audit of MASTER v2](docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md), with twelve equation-level findings and proposed edits pending independent review. MASTER has not been changed or accepted as a frozen plant.
+The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
 
-Follow-up: [GPT handoff and pending v2.1 R2 review package](docs/proposals/v2_1/README.md), revised after GPT's review of commit `094f3c8`. R2 proposes effective tangential capacities C_j and optional auxiliary oddness, with an explicitly reduced-model claim. It includes Codex's equation-level response, a complete proposed MASTER preview and an unapplied diff. All four current context files remain unchanged; v2.1 is not adopted.
-
-Latest: [v2.1 adoption-finalization review package](docs/proposals/v2_1_finalization/README.md), following GPT's acceptance of the R2 formulation with minor mandatory edits. The finalization diff is ready for review and has not been applied. Formulation adoption, G1 acceptance and implementation authorization remain separate decisions.
+G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED. No G2/G3 construction before explicit G1 resolution; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
 
 ## Supporting history
 
 Earlier `docs/` and `research/` notes retain the initial seven-state audit and alternative model discussions. Their historical labels prevent them from overriding MASTER. Derive the nine-state results afresh.
 
-[Workspace audit](docs/WORKSPACE_AUDIT.md) records the isolation boundary. The [earlier Luna supertask](docs/LUNA_SUPER_TASK.md) is historical and must be aligned to v2 before execution. Luna previously stopped at a usage limit; no controller, simulator or experimental results were produced.
+[Workspace audit](docs/WORKSPACE_AUDIT.md) records the isolation boundary. The [earlier Luna supertask](docs/LUNA_SUPER_TASK.md) is historical and must be aligned to adopted v2.1 and the research gates before execution. Luna previously stopped at a usage limit; no controller, simulator or experimental results were produced.
 
 ## Collaboration and isolation
 
