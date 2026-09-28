@@ -1,51 +1,45 @@
-# Research review gates — v2
+# Research review gates - adopted formulation v2.1
 
-Read MASTER, DECISION_LOG and LITERATURE_MATRIX first. **Overall HOLD. No gate has passed.** This tracker is subordinate to MASTER.
+Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MATRIX before reasoning. **Overall HOLD; no gate has passed.** This tracker accompanies the adopted v2.1 formulation. Formulation adoption is not gate acceptance.
 
 | Gate | Status | Evidence required | Evidence present |
 |---|---|---|---|
-| G1 Plant consistency | NEEDS REVISION | Closed nine-state model; units, signs, reaction forces, equilibria, straight/turning symmetry, wheel lock, zero input | [Root G1 audit](../docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md): conditional sign/energy identities, counterexamples and 12 findings; physical blockers and proposed MASTER edits await independent review |
-| G2 Certified enclosure | UNVERIFIED | Constructed computable tube covering every admitted trajectory under the same held voltage for the full interval | Strategy in §§20–25 only; no enclosure proof |
-| G3 Recursive safe subset | UNVERIFIED | Useful nonempty K_T with safe hold and robust endpoint return; observations and action selection specified | Definitions/target in §§15,24 only |
-| G4 Novelty | UNVERIFIED | Source-backed model/uncertainty/safety-object/theorem/computation comparison | Preliminary register; closest full texts and contact/friction/tube coverage incomplete |
+| G1 Plant consistency | NEEDS REVISION | Independent review of actual reduced capacity model and scientific scope; units, signs, energy, geometry, reactions, uncertainty, information and driver conventions | F01–F12 audit, archived GPT handoffs and Codex responses; conditional algebraic/model identities, no accepted G1 |
+| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Corrected target only; no enclosure constructed |
+| G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
+| G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
 
-## G1 questions requiring explicit resolution
+## G1 — review the actual revised text
 
-The 2026-09-28 root audit is review evidence, not acceptance. Affected branches explicitly stopped include approximate lateral-grip certification, unspecified COM offset, physical turning/contact validity, generic braking authority, sustained wheel lock, estimated-state safety, and an unconditional robust straight-line reduction under independent side uncertainty. MASTER v2 is unchanged; none of the proposed repairs is adopted.
+- [ ] Accept or revise the reduced ideal planar scientific scope and title. Formal safety of this model is not validated physical robot safety.
+- [ ] Check exact axle-COM geometry, exact lateral constraint, signs, units and electromechanical energy identity.
+- [ ] Check F_j=C_j phi and the matching envelope F_j²+Y_j²<=C_j², reaction selection including zero lateral capacity, and the parameter-specific validity set.
+- [ ] Confirm C_j has force units and is an execution-fixed reduced-model parameter; no literal mu_j or N_j remains in the formal parameter vector or force equations.
+- [ ] Review the known fixed phi assumptions; neither oddness nor monotonicity is silently used in the core. Any auxiliary pure-spin assumption must be local to that analysis.
+- [ ] Review compact joint parameter bounds and correlations, exact sampled-state information and ideal drive/gear conventions.
+- [ ] Check rest/equilibrium, mirror covariance, matched-side straight motion and wheel-zero statements under their actual assumptions.
+- [ ] Identify the function/parameter data needed for later quantitative work without inventing physical provenance.
 
-- [ ] Equations impose zero lateral velocity, while A5 says approximately zero. Choose exact idealized constraint or quantified residual; do not treat approximation as exact certification.
-- [ ] A2 says COM is “sufficiently close” to axle midpoint. Specify exact geometry for the theorem or bound omitted coupling.
-- [ ] Justify lateral reaction during turning and the operating domain where lateral grip and longitudinal traction coexist; independent longitudinal force bounds do not validate combined friction capacity.
-- [ ] Specify direct-drive or wheel-equivalent K_t, K_e, J_w with consistent gearing, reflected inertia, units and energy balance.
-- [ ] Define positive parameter bounds, voltage-driver/braking assumptions and the time regularity of traction/normal loads. Do not infer monotonicity or differentiability from phi's Lipschitz/sign conditions.
-- [ ] Distinguish passing through omega=0 from sustained wheel lock. Holding a wheel at zero needs torque balance or an explicit brake constraint; the ODE alone does not supply one.
-- [ ] Specify exact state knowledge or bounded estimation errors. “Measurements or estimates” without bounds leaves the theorem's information pattern unresolved.
-- [ ] Check all required equilibria/symmetry/zero-input cases for the nine-state model. No physical numerical parameter set has been identified yet.
+Physical transfer remains UNVERIFIED. Before a claim about actual hardware, establish a platform/support/contact mapping or sound model-error enclosure on an explicit operating domain. A calibrated capacity envelope alone does not establish the exact force law or prove trajectory inclusion. This physical correspondence is not silently resolved by renaming mu_j N_j. G1 for the restricted theoretical scope still needs explicit independent acceptance; no pass is recorded here.
 
-These are reviewer questions from reading v2, not silently adopted changes to its equations. Stop dependent claims until resolved and logged.
+Braking, finite stopping distance and persistent-lock backup claims require separate compatible voltage-policy proofs. They cannot be silently used to support G3. Their absence is not by itself a failure to define a reduced ODE.
 
-## G2/G3 proof checks
+## G2/G3 after G1 resolution
 
-- [ ] Establish well-posedness and operating-domain bounds without assuming the safety conclusion.
-- [ ] Preserve wheel/body/contact coupling in subsystem enclosures, or prove that any decoupled bounds are sound and assess conservatism.
-- [ ] Certify every time in a hold, not only integration points.
-- [ ] Use one voltage for all hidden uncertainties and preserve fixed-parameter dependence across time.
-- [ ] Construct a useful K_T; assuming persistent feasible inputs does not solve the feasibility problem.
-- [ ] Prove sample-invariance of K_T and continuous safety in S separately. Do not claim exact viability or unavoidable collision from sufficient-certificate failure.
+- [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
+- [ ] Use one voltage for all hidden parameters, constant along each entire execution; do not reset or existentially select favorable parameters.
+- [ ] Prove full-hold collision and contact-domain preservation with actuator/contact coupling intact.
+- [ ] Do not assume differentiability or Lipschitz continuity of the square-root contact margin at saturation.
+- [ ] Construct a useful recursive subset with robust endpoint return and non-oracle input selection. Rest states alone do not establish usefulness.
+- [ ] Keep sampled K_T membership, continuous model safety, state-only conservative recursion and history-dependent fixed-parameter viability distinct.
 
-## G4 evidence checks
+## G4 under the narrowed scope
 
-- [ ] Compare closest full-text results: bounded-input feasibility, Lin, Xiong, ZOCBF, SACBF, nonuniform-relative-degree safety and relevant reachability/tube methods.
-- [ ] Add primary-source contact-aware/friction-limited ground-robot and tube-control works; these categories are currently open.
-- [ ] Record exact equation/theorem locators and inspected scope. Unknown is not No; a DOI/title is not a theorem audit.
-- [ ] Identify a mathematical/computational result beyond substituting the nine-state plant into an existing generic method.
+- [ ] Compare fixed unknown tangential capacity, time-varying friction, full tire/support/load dynamics and reduced nonholonomic constrained models separately.
+- [ ] Audit voltage-level models, robust joint state/parameter reachability, inter-sample safety and recursive filtering at equation/theorem level.
+- [ ] Record source-access limitations; unknown is not No. Preserve existing novelty threats until checked.
+- [ ] Identify an actual useful construction beyond plant substitution, parameter renaming or generic enclosure/predecessor logic.
 
-## Implementation wording
+## Review and implementation gate
 
-The user's current instruction is **no implementation before G1–G4 pass**. MASTER §32 also says implementation should remain “exploratory only.” Do not interpret that phrase as authorization to bypass the user's stricter gate. Context management and theoretical review may proceed; controller/simulator/experiment implementation remains HOLD. MASTER was imported verbatim rather than silently editing this ambiguity.
-
-## Review response and GO
-
-Use MASTER §33: **Finding → Evidence → Consequence → Status (VALID / NEEDS REVISION / BLOCKER / UNVERIFIED) → Required action.** Stop the affected branch on contradiction, blocker or overlap; unaffected documentation work may continue.
-
-Record `GO — implementation freeze v2` only after G1–G4 each have explicit evidence and reviewed acceptance, updated in MASTER and DECISION_LOG. A plan, numerical success or model agreement cannot replace proof or novelty verification.
+Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 scope/assumptions must be resolved before G2/G3 construction. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.

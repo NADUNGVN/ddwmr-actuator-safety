@@ -33,6 +33,22 @@ MASTER_RESEARCH_CONTEXT_v2.md is authoritative. This log records history; it doe
 - All proposed assumption changes await independent review. MASTER v2 remains byte-for-byte unchanged; G1 NEEDS REVISION and G2–G4 UNVERIFIED. No implementation authorized or performed.
 - GitHub CLI confirmed the repository is now PUBLIC. Corrected outdated private-repository wording in README and the GPT review request; no visibility setting was changed by this review.
 
+## v2.1 - adopted reduced-model formulation - HOLD
+
+Adoption provenance — 2026-09-29 (Asia/Saigon): the user explicitly authorized application with “Đồng ý áp dụng v2.1 theo bản diff đã được GPT ACCEPT”. Applied only `docs/proposals/v2_1_finalization/ADOPTION_FINALIZATION.patch`, reviewed at `fdefbebc4b59d848e2234da37eb9ad6395d61fdf` and accepted in `docs/reviews/GPT_TO_CODEX_FINALIZATION_REVIEW_fdefbebc_ACCEPT.md` (archived in commit `a15424e`). This dated provenance record is the sole addition to the six reviewed target texts. Formulation adoption only; HOLD, G1 NEEDS REVISION and G2/G3/G4 UNVERIFIED remain unchanged.
+
+This decision adopts the reduced C_j-based formulation as the authoritative research context. It does not pass G1, validate a physical platform or authorize implementation. The actual dated adoption/authorization event is recorded with the authoritative adoption commit.
+
+- Replace the literal friction/normal-load product in the formal core with execution-fixed effective tangential capacities C_j in newtons. Physical support/contact correspondence remains unverified.
+- Use exact axle-COM geometry, an exact lateral constraint and algebraic bounded reactions with correctly typed state/parameter contact domains.
+- Keep one known fixed bounded globally Lipschitz strictly sign-preserving phi. Oddness is auxiliary only; monotonicity and differentiability are not core assumptions.
+- Use an unknown fixed model-parameter vector for the complete execution, power-consistent wheel-side conversion, ideal four-quadrant terminal-voltage ZOH and exact sampled state/zero delay.
+- Preserve the reduced-model question/title and its distinction from physical tire/support dynamics and changing-terrain uncertainty. Capacity reparameterization is not novelty; a lower force bound alone is not a trajectory enclosure.
+- Retain qualified wheel-zero and symmetry statements. No stopping policy, certified enclosure or useful recursive subset is established.
+- Historical fixed-normal-load diagnostic remains in docs/reviews/CODEX_RESPONSE_TO_GPT_G1_v2_1.md, B3; it is not part of active MASTER equations.
+- Review evidence: docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md accepts R2 with three mandatory finalization edits; docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md records those edits. Actual adoption authorization is a separate event.
+- G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED; overall HOLD. Review actual authoritative v2.1 text for G1 separately. Adoption alone does not authorize G2/G3 construction or implementation.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

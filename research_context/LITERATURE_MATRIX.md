@@ -119,3 +119,13 @@ Full-text status describes actual access/inspection, not completion of the novel
 
 Already populated research areas include high-order/sampled-data certificates, flow-based inter-sample safety, bounded-input feasibility, nonuniform relative degree, mobile robot safety and actuator execution effects. What remains **unverified** is an original, useful construction for MASTER v2's voltage/body/contact model. Do not turn U cells into negative novelty evidence. Retain the problem-oriented working title provisionally; no method or first claim is accepted.
 
+## v2.1 scope-specific screening obligations
+
+This note records the adopted v2.1 scope. It changes screening obligations, not the evidence tiers or inspected content of the 24 existing entries. No new prior-art exclusion or novelty result is asserted.
+
+- Distinguish fixed unknown per-wheel tangential contact capacity, hold-wise changes, arbitrary time-varying friction and spatial terrain variation. The proposed first core covers only parameters fixed for the complete execution.
+- Distinguish a reduced nonholonomic model with algebraic force budgets from constitutive tire dynamics and physical normal-load/support balance. C_j is a force-scale/envelope parameter, not a proved instantaneous mu_j N_j product.
+- Compare motor-voltage electromechanical actuation, joint state/parameter reachability, inter-sample collision/contact validity and recursive safe filtering at equation/theorem/computation level.
+- Record whether dependence is preserved, switching or independent-box relaxations are used, and whether the policy learns fixed parameters. Do not equate state-only robust recursion with exact history-dependent viability.
+- Review whether real-plant/model correspondence is established or assumed; fitting or bounding a capacity alone does not certify the longitudinal force law.
+- Capacity reparameterization, removal of unused phi assumptions and generic inclusion/predecessor logic are not contributions. The narrowed problem may increase overlap with existing fixed-parameter constrained reachability; the novelty question remains open.

@@ -3,7 +3,8 @@
 ## Mandatory context read
 - Every session, before research reasoning, derivation or code, read all four files in `research_context/`: `MASTER_RESEARCH_CONTEXT_v2.md`, `DECISION_LOG.md`, `LITERATURE_MATRIX.md`, `REVIEW_GATE.md`.
 - MASTER is authoritative current research state; user instructions take precedence. Previous chat, handoff v1, and `docs/`/`research/` notes are historical where they conflict with MASTER.
-- Current candidate: nine states `[p_x,p_y,theta,u,r,omega_L,omega_R,i_L,i_R]`; u is body speed, V is voltage input. Uncertain longitudinal traction, fixed ZOH, structured reachable tubes/predecessor; HOCBF optional/baseline. Do not reuse the old seven-state derivative audit as a result for the current plant.
+- Adopted formulation v2.1: nine states `[p_x,p_y,theta,u,r,omega_L,omega_R,i_L,i_R]`; u is body speed and V is voltage. Reduced ideal constrained-contact model with execution-fixed hidden model parameters, effective capacities C_j, exact sampled state and ideal four-quadrant fixed-period voltage ZOH. HOCBF is optional/baseline. Physical tire/support correspondence is unverified. Do not transfer the historical seven-state derivative audit to this plant.
+- Adoption of v2.1 does not pass G1. No G2/G3 construction before explicit G1 resolution under the current review workflow.
 - No implementation before G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Preparing context/review documents does not open the gate.
 - On contradiction, blocker or literature overlap, stop the affected branch and report it explicitly; never repair assumptions silently.
 - Substantive formulation changes belong in MASTER with a version increment and dated DECISION_LOG entry; update matrix/gates as needed. Mark old claims as superseded.
@@ -15,7 +16,7 @@
 - Existing sibling changes belong to their owners. Do not clean, restore, commit, or copy their unpublished research.
 
 ## Research gates
-- The governing research gates are G1–G4 in MASTER v2. The old deliverables 1–5 are historical organization, not a competing acceptance rule.
+- The governing research gates are G1–G4 in MASTER v2.1 (canonical filename retained). The old deliverables 1–5 are historical organization, not a competing acceptance rule.
 - Preserve motor voltage as the physical input. Explicitly distinguish amplitude-bounded slip, differentiable slip, parameter uncertainty, and ground-contact mechanics.
 - Never equate instantaneous QP feasibility with recursive feasibility, viability, or physical impossibility of avoidance.
 - Report relative-degree singularities and hidden assumptions; do not silently exclude them.
