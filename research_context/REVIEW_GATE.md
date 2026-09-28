@@ -4,12 +4,14 @@ Read MASTER, DECISION_LOG and LITERATURE_MATRIX first. **Overall HOLD. No gate h
 
 | Gate | Status | Evidence required | Evidence present |
 |---|---|---|---|
-| G1 Plant consistency | NEEDS REVISION | Closed nine-state model; units, signs, reaction forces, equilibria, straight/turning symmetry, wheel lock, zero input | Candidate equations in MASTER §§5–13; no completed nine-state consistency audit |
+| G1 Plant consistency | NEEDS REVISION | Closed nine-state model; units, signs, reaction forces, equilibria, straight/turning symmetry, wheel lock, zero input | [Root G1 audit](../docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md): conditional sign/energy identities, counterexamples and 12 findings; physical blockers and proposed MASTER edits await independent review |
 | G2 Certified enclosure | UNVERIFIED | Constructed computable tube covering every admitted trajectory under the same held voltage for the full interval | Strategy in §§20–25 only; no enclosure proof |
 | G3 Recursive safe subset | UNVERIFIED | Useful nonempty K_T with safe hold and robust endpoint return; observations and action selection specified | Definitions/target in §§15,24 only |
 | G4 Novelty | UNVERIFIED | Source-backed model/uncertainty/safety-object/theorem/computation comparison | Preliminary register; closest full texts and contact/friction/tube coverage incomplete |
 
 ## G1 questions requiring explicit resolution
+
+The 2026-09-28 root audit is review evidence, not acceptance. Affected branches explicitly stopped include approximate lateral-grip certification, unspecified COM offset, physical turning/contact validity, generic braking authority, sustained wheel lock, estimated-state safety, and an unconditional robust straight-line reduction under independent side uncertainty. MASTER v2 is unchanged; none of the proposed repairs is adopted.
 
 - [ ] Equations impose zero lateral velocity, while A5 says approximately zero. Choose exact idealized constraint or quantified residual; do not treat approximation as exact certification.
 - [ ] A2 says COM is “sufficiently close” to axle midpoint. Specify exact geometry for the theorem or bound omitted coupling.

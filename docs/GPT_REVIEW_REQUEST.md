@@ -6,7 +6,7 @@ This is a review instruction, not a replacement for MASTER. The user relays the 
 
 Repository: https://github.com/NADUNGVN/ddwmr-actuator-safety
 
-The repository is private. Review only content actually accessible through authorized repository access or files attached by the user. A repository URL alone does not establish access. If access fails, request the four files below; do not infer their contents from earlier chats. State the branch and commit reviewed when available, or explicitly state that the review uses attached files without a verified commit.
+The repository is public as verified on 2026-09-28. Review only content actually accessible through repository access or files attached by the user. A repository URL alone does not establish access. If access fails, request the four files below; do not infer their contents from earlier chats. State the branch and commit reviewed when available, or explicitly state that the review uses attached files without a verified commit.
 
 ## First message — establish current context
 

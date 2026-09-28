@@ -25,6 +25,14 @@ MASTER_RESEARCH_CONTEXT_v2.md is authoritative. This log records history; it doe
 - Earlier research notes are superseded supporting history; their seven-state algebra does not establish a nine-state result.
 - Initialized a 24-entry evidence-tiered literature register; contact/friction/tube coverage and closest full-text comparisons remain open. No systematic novelty closure is claimed.
 
+## 2026-09-28 — HOLD — G1 review evidence, no formulation change
+
+- User relayed GPT's context confirmation at commit `8ad80a20b5a58dafb135a89210cb8f990f3ccadf`; this does not constitute a G1 pass.
+- Root produced `docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md`: twelve findings with conditional derivations, counterexamples, affected branches and proposed exact MASTER edits.
+- Contact signs are conditionally consistent. Physical lateral/contact validity, geometry, braking authority, sustained lock, state information, drive conventions and uncertainty/symmetry assumptions remain unresolved.
+- All proposed assumption changes await independent review. MASTER v2 remains byte-for-byte unchanged; G1 NEEDS REVISION and G2–G4 UNVERIFIED. No implementation authorized or performed.
+- GitHub CLI confirmed the repository is now PUBLIC. Corrected outdated private-repository wording in README and the GPT review request; no visibility setting was changed by this review.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

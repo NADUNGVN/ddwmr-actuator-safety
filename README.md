@@ -19,7 +19,9 @@ Current candidate: nine states (pose, body longitudinal velocity/yaw rate, wheel
 
 ## GPT review handoff
 
-Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current context, then G1, then the remaining gates in separate exchanges. The GitHub repository is private; GPT needs authorized access or the four context files attached by the user. Report the reviewed commit when available. Publishing this repository does not change the research HOLD.
+Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current context, then G1, then the remaining gates in separate exchanges. The GitHub repository is public as verified on 2026-09-28. If repository access fails, attach the four context files. Report the reviewed commit when available. Publishing this repository does not change the research HOLD.
+
+Latest review: [G1 physical model audit of MASTER v2](docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md), with twelve equation-level findings and proposed edits pending independent review. MASTER has not been changed or accepted as a frozen plant.
 
 ## Supporting history
 
