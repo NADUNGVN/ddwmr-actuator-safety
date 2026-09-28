@@ -1,0 +1,177 @@
+--- a/research_context/MASTER_RESEARCH_CONTEXT_v2.md
++++ b/research_context/MASTER_RESEARCH_CONTEXT_v2.md
+@@ -39,7 +39,7 @@
+ 
+ The theoretical scope is a nine-state ideal planar constrained-contact DDWMR, with fixed unknown model parameters and per-wheel effective tangential capacities C_j, a known longitudinal traction shape, and an ideal four-quadrant terminal-voltage source. The aim is continuous collision safety **and preservation of algebraic contact admissibility** under fixed-period voltage ZOH.
+ 
+-The ideal contact model is not a validated constitutive tire law. G1 must review and accept this reduced-model scope; any transfer to an actual platform additionally requires support/load/contact and actuation justification or a certified model-error extension. Replacing literal normal loads with capacities does not establish that physical correspondence. Formal safety of the ideal plant alone does not establish complete hardware feasibility.
++The ideal contact model is not a validated constitutive tire law. G1 has accepted internal consistency for this restricted reduced-model scope; any transfer to an actual platform additionally requires support/load/contact and actuation justification or a certified model-error extension. Replacing literal normal loads with capacities does not establish that physical correspondence. Formal safety of the ideal plant alone does not establish complete hardware feasibility.
+ 
+ ---
+ 
+@@ -55,9 +55,9 @@
+ 
+ # 3. CURRENT DECISION
+ 
+-**HOLD.** Version v2.1 is the adopted formulation for continuing research review. The plant has not passed G1 and implementation is not frozen. G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED.
+-
+-The formulation has nine physical dynamic states and two voltage inputs. Algebraic lateral reactions and fixed-parameter labels do not add physical dynamic states. The title, useful reachable enclosure, recursive safe subset and novelty remain unaccepted.
++**HOLD.** Version v2.1 is the adopted formulation for continuing research review. G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED; overall HOLD. Implementation remains unauthorized.
++
++The formulation has nine physical dynamic states and two voltage inputs. Algebraic lateral reactions and fixed-parameter labels do not add physical dynamic states. The title is accepted as scope-aligned for G1 and remains provisional; no useful reachable enclosure, recursive safe subset or novelty result is established.
+ 
+ The v2.1 change from time-varying traction to parameters fixed for the entire execution is a deliberate scope narrowing. Earlier time-varying uncertainty targets are superseded for this core, not solved by it.
+ 
+@@ -217,7 +217,7 @@
+ 
+ C_j is an effective per-wheel tangential contact-force capacity in newtons. Literal normal forces N_j and friction coefficients mu_j are not formal core parameters. Mapping the effective capacities to physical support/contact quantities requires independent justification on a declared operating envelope. Calibration agreement alone does not provide a certified model-error bound. C_j fixed for the execution is not a theorem about physical normal-load constancy or load-transfer dynamics.
+ 
+-The capacity is both a force-law scale and an envelope radius. A lower bound on actual available force cannot simply be substituted as an exact C_j trajectory model: different capacities change body acceleration and wheel reaction, and no monotone ordering of collision safety is assumed. To transfer a theorem, establish that each actual trajectory lies in the modeled fixed-parameter family or in a sound model-error enclosure, and that the modeled constraint reactions are physically admissible. Renaming the parameter is not a proof of either fact and is not itself novelty. Physical correspondence remains unverified; G1 acceptance for the reduced scope still requires independent review.
++The capacity is both a force-law scale and an envelope radius. A lower bound on actual available force cannot simply be substituted as an exact C_j trajectory model: different capacities change body acceleration and wheel reaction, and no monotone ordering of collision safety is assumed. To transfer a theorem, establish that each actual trajectory lies in the modeled fixed-parameter family or in a sound model-error enclosure, and that the modeled constraint reactions are physically admissible. Renaming the parameter is not a proof of either fact and is not itself novelty. Physical correspondence remains unverified; the separate G1 acceptance covers internal consistency of the restricted reduced model only.
+ 
+ ## A4 — Longitudinal slip and zero wheel speed
+ 
+@@ -492,7 +492,7 @@
+ 
+ The adopted core is a fixed-parameter uncertain ODE `dot x=f(x,V;vartheta)`. Seek a plant-structured joint reachable enclosure with constant parameter labels. An analytical augmentation `dot vartheta=0` preserves this dependence. A switching-parameter differential inclusion is only an explicitly labeled outer relaxation.
+ 
+-No G2/G3 construction begins until the adopted G1 assumptions and scope are explicitly reviewed and accepted for G1. The following are specification targets, not newly proved theorems.
++G1 has passed for the restricted reduced-model scope. G2/G3 construction still requires explicit user authorization of the next research phase. The following are specification targets, not newly proved theorems.
+ 
+ # 21. WHAT MUST CARRY THE CONTRIBUTION
+ 
+@@ -637,11 +637,11 @@
+ 
+ # 31. RESEARCH GATES
+ 
+-All gates remain open. Adoption of this formulation is not a gate pass.
++G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED; overall HOLD. Formulation adoption and the subsequent G1 review are distinct decisions.
+ 
+ ## G1 — Plant consistency and explicit physical scope
+ 
+-Review the actual capacity-based nine-state ideal plant, force signs, units, power balance, geometry, algebraic reaction existence, fixed-parameter semantics, exact-state assumptions and driver boundary condition. Explicitly accept or revise the reduced-model scientific scope before G1 acceptance. Physical platform correspondence in A3 remains unverified and is a separate obligation before transferring the result to actual hardware; changing to C_j does not resolve it. Provide capacity/function/parameter/drive provenance and valid model correspondence before quantitative physical claims. Diagnostic equilibria/symmetries and wheel-zero behavior must be checked under their actual assumptions. A coherent formulation or reviewer agreement is not a G1 pass.
++G1 PASS - restricted reduced-model scope. Independent review of authoritative commit `8341014eac52ea66fe38559d6e1baee92e8f9b96` is recorded in `docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`, checks G1-01 through G1-12. Acceptance covers internal consistency of geometry, force signs, units, energy, algebraic contact admissibility, ODE regularity, fixed uncertainty, information/driver conventions, and qualified equilibrium/symmetry/wheel-zero statements. Physical-platform correspondence in A3 remains UNVERIFIED; provide model-family inclusion or a certified model-error extension before hardware safety claims. No plant equations or assumptions are changed by this status update.
+ 
+ ## G2 — Certified enclosure
+ 
+@@ -657,7 +657,7 @@
+ 
+ # 32. IMPLEMENTATION GATE
+ 
+-Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. A future G1 pass alone does not authorize implementation.
++Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. The restricted G1 pass does not authorize implementation or G2/G3 construction; the next research phase requires explicit user authorization.
+ 
+ ---
+ 
+@@ -713,6 +713,6 @@
+ 
+ Target: continuous collision safety and preservation of the parameter-specific ideal contact domain, with a useful sampled recursive subset. Method under investigation: structured joint state/parameter reachability. HOCBF remains optional/baseline.
+ 
+-The adopted reduced-model scope and actual text still require independent G1 review. Physical tire/platform/support/load correspondence remains unverified. No gate has passed; no enclosure, useful K_T, braking policy or novelty result has been established. **HOLD.**
+-
+----
++G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED; no enclosure, useful K_T, braking policy or novelty result has been established. **HOLD.** G2/G3 construction requires explicit user authorization; implementation remains unauthorized.
++
++---
+--- a/research_context/REVIEW_GATE.md
++++ b/research_context/REVIEW_GATE.md
+@@ -1,30 +1,33 @@
+ # Research review gates - adopted formulation v2.1
+ 
+-Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MATRIX before reasoning. **Overall HOLD; no gate has passed.** This tracker accompanies the adopted v2.1 formulation. Formulation adoption is not gate acceptance.
++Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MATRIX before reasoning. **Overall HOLD; G1 PASS - restricted reduced-model scope; G2/G3/G4 UNVERIFIED.** This tracker accompanies the adopted v2.1 formulation. Formulation adoption is not gate acceptance.
+ 
+ | Gate | Status | Evidence required | Evidence present |
+ |---|---|---|---|
+-| G1 Plant consistency | NEEDS REVISION | Independent review of actual reduced capacity model and scientific scope; units, signs, energy, geometry, reactions, uncertainty, information and driver conventions | F01–F12 audit, archived GPT handoffs and Codex responses; conditional algebraic/model identities, no accepted G1 |
++| G1 Plant consistency | PASS - restricted reduced-model scope | Internal consistency of adopted reduced ideal model only | Independent G1 review of commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`: G1-01 through G1-12 VALID; see `../docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`. Physical-platform correspondence UNVERIFIED |
+ | G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Corrected target only; no enclosure constructed |
+ | G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
+ | G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
+ 
+-## G1 — review the actual revised text
++## G1 - accepted internal consistency of the restricted reduced model
+ 
+-- [ ] Accept or revise the reduced ideal planar scientific scope and title. Formal safety of this model is not validated physical robot safety.
+-- [ ] Check exact axle-COM geometry, exact lateral constraint, signs, units and electromechanical energy identity.
+-- [ ] Check F_j=C_j phi and the matching envelope F_j²+Y_j²<=C_j², reaction selection including zero lateral capacity, and the parameter-specific validity set.
+-- [ ] Confirm C_j has force units and is an execution-fixed reduced-model parameter; no literal mu_j or N_j remains in the formal parameter vector or force equations.
+-- [ ] Review the known fixed phi assumptions; neither oddness nor monotonicity is silently used in the core. Any auxiliary pure-spin assumption must be local to that analysis.
+-- [ ] Review compact joint parameter bounds and correlations, exact sampled-state information and ideal drive/gear conventions.
+-- [ ] Check rest/equilibrium, mirror covariance, matched-side straight motion and wheel-zero statements under their actual assumptions.
++- [x] Accept or revise the reduced ideal planar scientific scope and title. Formal safety of this model is not validated physical robot safety.
++- [x] Check exact axle-COM geometry, exact lateral constraint, signs, units and electromechanical energy identity.
++- [x] Check F_j=C_j phi and the matching envelope F_j²+Y_j²<=C_j², reaction selection including zero lateral capacity, and the parameter-specific validity set.
++- [x] Confirm C_j has force units and is an execution-fixed reduced-model parameter; no literal mu_j or N_j remains in the formal parameter vector or force equations.
++- [x] Review the known fixed phi assumptions; neither oddness nor monotonicity is silently used in the core. Any auxiliary pure-spin assumption must be local to that analysis.
++- [x] Review compact joint parameter bounds and correlations, exact sampled-state information and ideal drive/gear conventions.
++- [x] Check rest/equilibrium, mirror covariance, matched-side straight motion and wheel-zero statements under their actual assumptions.
++
++Remaining quantitative/physical-validation obligation (not a failed G1 consistency check):
++
+ - [ ] Identify the function/parameter data needed for later quantitative work without inventing physical provenance.
+ 
+-Physical transfer remains UNVERIFIED. Before a claim about actual hardware, establish a platform/support/contact mapping or sound model-error enclosure on an explicit operating domain. A calibrated capacity envelope alone does not establish the exact force law or prove trajectory inclusion. This physical correspondence is not silently resolved by renaming mu_j N_j. G1 for the restricted theoretical scope still needs explicit independent acceptance; no pass is recorded here.
++Physical transfer remains UNVERIFIED. Before a claim about actual hardware, establish a platform/support/contact mapping or sound model-error enclosure on an explicit operating domain. A calibrated capacity envelope alone does not establish the exact force law or prove trajectory inclusion. This physical correspondence is not silently resolved by renaming mu_j N_j. G1 PASS applies only to internal consistency of the restricted theoretical scope. Physical-platform correspondence: **UNVERIFIED**.
+ 
+ Braking, finite stopping distance and persistent-lock backup claims require separate compatible voltage-policy proofs. They cannot be silently used to support G3. Their absence is not by itself a failure to define a reduced ODE.
+ 
+-## G2/G3 after G1 resolution
++## G2/G3 - require explicit next-phase authorization
+ 
+ - [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
+ - [ ] Use one voltage for all hidden parameters, constant along each entire execution; do not reset or existentially select favorable parameters.
+@@ -42,4 +45,4 @@
+ 
+ ## Review and implementation gate
+ 
+-Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 scope/assumptions must be resolved before G2/G3 construction. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.
++Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model; G2/G3 construction still requires explicit user authorization of the next research phase. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.
+--- a/research_context/DECISION_LOG.md
++++ b/research_context/DECISION_LOG.md
+@@ -49,6 +49,15 @@
+ - Review evidence: docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md accepts R2 with three mandatory finalization edits; docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md records those edits. Actual adoption authorization is a separate event.
+ - G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED; overall HOLD. Review actual authoritative v2.1 text for G1 separately. Adoption alone does not authorize G2/G3 construction or implementation.
+ 
++## G1 status recording - restricted reduced-model scope - HOLD
++
++Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6e1baee92e8f9b96` accepts internal consistency of the restricted nine-state reduced ideal planar model. Evidence: `docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`, G1-01 through G1-12 and disposition in section 14.
++
++- G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED.
++- G2/G3/G4 UNVERIFIED; overall HOLD. No G2/G3 construction or implementation authorization follows.
++- Plant equations, assumptions, scientific scope and declared formulation version v2.1 are unchanged. This is review-status synchronization, not a new formulation.
++- Prior entries retain their historical gate statuses. The actual dated user acceptance/application provenance is recorded when this status update is authorized and applied.
++
+ ## Version maintenance
+ 
+ For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -4,7 +4,7 @@
+ - Every session, before research reasoning, derivation or code, read all four files in `research_context/`: `MASTER_RESEARCH_CONTEXT_v2.md`, `DECISION_LOG.md`, `LITERATURE_MATRIX.md`, `REVIEW_GATE.md`.
+ - MASTER is authoritative current research state; user instructions take precedence. Previous chat, handoff v1, and `docs/`/`research/` notes are historical where they conflict with MASTER.
+ - Adopted formulation v2.1: nine states `[p_x,p_y,theta,u,r,omega_L,omega_R,i_L,i_R]`; u is body speed and V is voltage. Reduced ideal constrained-contact model with execution-fixed hidden model parameters, effective capacities C_j, exact sampled state and ideal four-quadrant fixed-period voltage ZOH. HOCBF is optional/baseline. Physical tire/support correspondence is unverified. Do not transfer the historical seven-state derivative audit to this plant.
+-- Adoption of v2.1 does not pass G1. No G2/G3 construction before explicit G1 resolution under the current review workflow.
++- G1 PASS - restricted reduced-model scope, through the separate independent review of authoritative v2.1. Physical-platform correspondence remains UNVERIFIED. G2/G3 construction requires explicit user authorization of the next research phase.
+ - No implementation before G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Preparing context/review documents does not open the gate.
+ - On contradiction, blocker or literature overlap, stop the affected branch and report it explicitly; never repair assumptions silently.
+ - Substantive formulation changes belong in MASTER with a version increment and dated DECISION_LOG entry; update matrix/gates as needed. Mark old claims as superseded.
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ﻿# DDWMR actuator- and contact-aware safety research
+ 
+-Independent research repository for Thầy Viễn. **HOLD — G1–G4 have not passed.**
++Independent research repository for Thầy Viễn. **HOLD - G1 PASS for restricted reduced-model scope; G2/G3/G4 UNVERIFIED.**
+ 
+ ## Start every session here
+ 
+@@ -23,7 +23,7 @@
+ 
+ The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
+ 
+-G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED. No G2/G3 construction before explicit G1 resolution; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
++G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. G2/G3 construction requires explicit user authorization of the next research phase; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
+ 
+ ## Supporting history
+ 
