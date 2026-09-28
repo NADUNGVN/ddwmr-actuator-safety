@@ -129,3 +129,15 @@ This note records the adopted v2.1 scope. It changes screening obligations, not 
 - Record whether dependence is preserved, switching or independent-box relaxations are used, and whether the policy learns fixed parameters. Do not equate state-only robust recursion with exact history-dependent viability.
 - Review whether real-plant/model correspondence is established or assumed; fitting or bounding a capacity alone does not certify the longitudinal force law.
 - Capacity reparameterization, removal of unused phi assumptions and generic inclusion/predecessor logic are not contributions. The narrowed problem may increase overlap with existing fixed-parameter constrained reachability; the novelty question remains open.
+
+## G2 targeted additions - 2026-09-29
+
+The original 24-entry register and its evidence tiers are unchanged. These additions screen the actual G2 candidate, not the entire international literature. `P` means the specified source sections were inspected; it does not mean full theorem verification or G4 closure.
+
+| ID | Source | Evidence and locator | Overlap / scope of knowledge |
+|---|---|---|---|
+| 25 | Arcak and Maidens, *Simulation-based reachability analysis for nonlinear systems using componentwise contraction properties*, 2017 author manuscript | P: [arXiv PDF](https://arxiv.org/pdf/1709.06661), §2 Proposition 1/Corollary 1, §3 Algorithm 1 and Example 1 | Componentwise exponential bounds and constant-parameter augmentation directly overlap. The displayed result assumes C1 dynamics; this is not evidence that a Lipschitz variant is novel. DDWMR/contact/hardware coverage not determined by this screening. |
+| 26 | Meyer, Devonport and Arcak, *TIRA: Toolbox for Interval Reachability Analysis*, 2019 author manuscript | P: [arXiv PDF](https://arxiv.org/pdf/1902.05204), §3.1 Assumption 3, Eq. (4), Proposition 4 and remarks | Growth-matrix interval reachability and integrated uncertainty forcing overlap the candidate's comparison step. Numerical certification and application-specific comparison remain open. |
+| 27 | Chen, Abraham and Sankaranarayanan, Flow*: An Analyzer for Non-Linear Hybrid Systems, CAV 2013 | A/partial extraction: [author page](https://home.cs.colorado.edu/~srirams/papers/cav2013-flowstar.html), abstract and search-extracted PDF opening; direct PDF retrieval error | Validated flowpipes are established methodology. No full theorem/smoothness comparison completed in this pass. |
+
+See `docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md`. Novelty based solely on generic growth bounds, parameter augmentation or tube inclusion is BLOCKED. The candidate's usefulness and any additional original result remain UNVERIFIED; this is not G4 acceptance.

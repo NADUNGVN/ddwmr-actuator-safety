@@ -60,6 +60,16 @@ Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6
 - Plant equations, assumptions, scientific scope and declared formulation version v2.1 are unchanged. This is review-status synchronization, not a new formulation.
 - Prior entries retain their historical gate statuses. The actual dated user acceptance/application provenance is recorded when this status update is authorized and applied.
 
+## 2026-09-29 - HOLD - authorize G2 analytic research only
+
+- The user said "thực hiện" after Codex proposed opening G2 to construct and prove a one-hold reachable enclosure. Scope interpreted from that immediate proposal: G2 research only.
+- G1 PASS remains restricted to model consistency; physical-platform correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. G3 construction and controller/simulator/experiment implementation are not authorized.
+- Formulation version remains v2.1; plant assumptions and all displayed MASTER equations are unchanged. Only current-phase/evidence metadata is synchronized.
+- Root prepared `research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md`: finite voltage-dependent integral predictors, residual comparison, joint parameter enclosure, and continuous collision/contact checks. These are candidate proofs for independent review, not accepted canonical theorem claims.
+- Luna max was delegated a read-only adversarial proof audit under the existing requested division of research roles. Agreement is not evidence of theorem validity.
+- Targeted primary-source screening found direct overlap with componentwise/growth-bound reachability and fixed-parameter augmentation. Standalone novelty from that machinery is BLOCKED; no first or G4 claim is made.
+- Numerical computability requires a selected evaluable phi, an effective parameter-set description, validated arithmetic and full-time range bounds. No values or performance results were invented. No simulation, controller or implementation tests were added or run.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

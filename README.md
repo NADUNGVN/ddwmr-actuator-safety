@@ -23,7 +23,15 @@ Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current co
 
 The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
 
-G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. G2/G3 construction requires explicit user authorization of the next research phase; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
+G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. The user authorized G2 analytic research on 2026-09-29; G3 construction remains unauthorized; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
+
+## Current G2 research package
+
+- [Analytic enclosure candidate](research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md): proof draft, full-hold collision/contact checks and finite-evaluation obligations.
+- [Prior-art overlap and blockers](docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md).
+- [Independent GPT review request](docs/GPT_G2_REVIEW_REQUEST_v1.md).
+
+G2 is UNVERIFIED. These are research artifacts, not an accepted theorem, implementation freeze or new authoritative formulation.
 
 ## Supporting history
 

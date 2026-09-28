@@ -5,7 +5,7 @@ Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MA
 | Gate | Status | Evidence required | Evidence present |
 |---|---|---|---|
 | G1 Plant consistency | PASS - restricted reduced-model scope | Internal consistency of adopted reduced ideal model only | Independent G1 review of commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`: G1-01 through G1-12 VALID; see `../docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`. Physical-platform correspondence UNVERIFIED |
-| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Corrected target only; no enclosure constructed |
+| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic candidate `../research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md` with proof draft and finite-evaluation contract; independent review and usefulness validation pending |
 | G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
 | G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
 
@@ -27,7 +27,9 @@ Physical transfer remains UNVERIFIED. Before a claim about actual hardware, esta
 
 Braking, finite stopping distance and persistent-lock backup claims require separate compatible voltage-policy proofs. They cannot be silently used to support G3. Their absence is not by itself a failure to define a reduced ODE.
 
-## G2/G3 - require explicit next-phase authorization
+## G2 research authorized; G3 requires separate authorization
+
+2026-09-29: user authorized G2 analytic research only. This does not accept G2 or authorize G3/implementation. The candidate is under review. Computational soundness in finite arithmetic, usable conservatism and runtime remain UNVERIFIED.
 
 - [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
 - [ ] Use one voltage for all hidden parameters, constant along each entire execution; do not reset or existentially select favorable parameters.
@@ -45,4 +47,4 @@ Braking, finite stopping distance and persistent-lock backup claims require sepa
 
 ## Review and implementation gate
 
-Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model; G2/G3 construction still requires explicit user authorization of the next research phase. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.
+Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model. Separate user authorization now permits G2 analytic research only; G3 construction requires another explicit authorization. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.

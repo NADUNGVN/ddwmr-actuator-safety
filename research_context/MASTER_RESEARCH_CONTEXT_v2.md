@@ -57,6 +57,8 @@ The title remains provisional. It denotes safety of a reduced model, not validat
 
 **HOLD.** Version v2.1 is the adopted formulation for continuing research review. G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED; overall HOLD. Implementation remains unauthorized.
 
+Current authorized phase (2026-09-29): G2 research only, following the user's "thực hiện" in response to the proposal to open G2. This authorizes analytic enclosure construction and review artifacts, not G2 acceptance. G3 construction and controller/simulator/experiment implementation remain unauthorized. The working candidate is `research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md`; it is supporting research under review and does not change this formulation or prove a gate pass.
+
 The formulation has nine physical dynamic states and two voltage inputs. Algebraic lateral reactions and fixed-parameter labels do not add physical dynamic states. The title is accepted as scope-aligned for G1 and remains provisional; no useful reachable enclosure, recursive safe subset or novelty result is established.
 
 The v2.1 change from time-varying traction to parameters fixed for the entire execution is a deliberate scope narrowing. Earlier time-varying uncertainty targets are superseded for this core, not solved by it.
@@ -492,11 +494,11 @@ That landscape is already populated.
 
 The adopted core is a fixed-parameter uncertain ODE `dot x=f(x,V;vartheta)`. Seek a plant-structured joint reachable enclosure with constant parameter labels. An analytical augmentation `dot vartheta=0` preserves this dependence. A switching-parameter differential inclusion is only an explicitly labeled outer relaxation.
 
-G1 has passed for the restricted reduced-model scope. G2/G3 construction still requires explicit user authorization of the next research phase. The following are specification targets, not newly proved theorems.
+G1 has passed for the restricted reduced-model scope. G2 analytic research is authorized as recorded in section 3 and DECISION_LOG; G3 construction still requires separate explicit user authorization. The following are specification targets, not newly proved theorems.
 
 # 21. WHAT MUST CARRY THE CONTRIBUTION
 
-An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. None exists yet.
+An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. A G2 analytic candidate is now under review; no accepted, practically useful or novel construction is established.
 
 # 22. TARGET 1 — JOINT REACHABLE ENCLOSURE
 
@@ -657,7 +659,7 @@ Compare fixed unknown contact capacities, voltage-level actuator models, reduced
 
 # 32. IMPLEMENTATION GATE
 
-Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. The restricted G1 pass does not authorize implementation or G2/G3 construction; the next research phase requires explicit user authorization.
+Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. The restricted G1 pass itself authorizes no subsequent work. The separate user authorization in section 3 opens G2 analytic research only; G3 and implementation remain unauthorized.
 
 ---
 
@@ -713,6 +715,6 @@ Adopted formulation: reduced ideal planar nine-state voltage-driven DDWMR with e
 
 Target: continuous collision safety and preservation of the parameter-specific ideal contact domain, with a useful sampled recursive subset. Method under investigation: structured joint state/parameter reachability. HOCBF remains optional/baseline.
 
-G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED; no enclosure, useful K_T, braking policy or novelty result has been established. **HOLD.** G2/G3 construction requires explicit user authorization; implementation remains unauthorized.
+G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. An analytic G2 enclosure candidate with proofs is under independent review; no accepted enclosure, useful K_T, braking policy or novelty result is established. **HOLD.** G2 research only is authorized; G3 construction and implementation remain unauthorized.
 
 ---
