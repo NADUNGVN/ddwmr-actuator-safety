@@ -23,7 +23,7 @@ Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current co
 
 Latest review: [G1 physical model audit of MASTER v2](docs/reviews/G1_PHYSICAL_MODEL_AUDIT_v2.md), with twelve equation-level findings and proposed edits pending independent review. MASTER has not been changed or accepted as a frozen plant.
 
-Follow-up: [GPT handoff and pending v2.1 review package](docs/proposals/v2_1/README.md). It includes Codex's equation-level response, a complete proposed MASTER preview and an unapplied diff. All four current context files remain unchanged; v2.1 is not adopted.
+Follow-up: [GPT handoff and pending v2.1 R2 review package](docs/proposals/v2_1/README.md), revised after GPT's review of commit `094f3c8`. R2 proposes effective tangential capacities C_j and optional auxiliary oddness, with an explicitly reduced-model claim. It includes Codex's equation-level response, a complete proposed MASTER preview and an unapplied diff. All four current context files remain unchanged; v2.1 is not adopted.
 
 ## Supporting history
 

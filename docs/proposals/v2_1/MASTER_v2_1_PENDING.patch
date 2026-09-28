@@ -2,8 +2,9 @@
 +++ b/research_context/MASTER_RESEARCH_CONTEXT_v2.md
 @@ -1,7 +1,9 @@
 -# MASTER RESEARCH CONTEXT v2
+-## Actuator- and Contact-Aware Inter-Sample Safety for Differential-Drive Robots
 +# MASTER RESEARCH CONTEXT v2.1
- ## Actuator- and Contact-Aware Inter-Sample Safety for Differential-Drive Robots
++## Inter-Sample Safety of a Reduced Voltage-Driven DDWMR with Uncertain Tangential Contact Capacity
  
  **Status:** HOLD — theoretical formulation under review  
 +**Version scope:** Declared v2.1; the canonical filename remains `MASTER_RESEARCH_CONTEXT_v2.md` for stable links. Adoption records belong in DECISION_LOG. A draft preview outside research_context has no authority.
@@ -11,7 +12,7 @@
  **Authority:** This file is the current single source of truth. If any previous chat, handoff, note, or model output conflicts with this document, this document takes precedence unless explicitly superseded by a later version.
  
  ---
-@@ -33,25 +35,11 @@
+@@ -33,648 +35,323 @@
  
  # 1. CURRENT RESEARCH QUESTION
  
@@ -34,15 +35,30 @@
 -\[
 -\text{physically realizable collision safety}.
 -\]
-+The motivating physical question remains: when can digitally commanded collision safety be realized through voltage-limited motor, wheel, body and contact dynamics?
++The motivating question is the gap between kinematic safety commands and finite actuator/contact authority. The first formal research question is: when can continuous collision safety be certified within a reduced electromechanical/contact DDWMR model that explicitly represents finite voltage-driven actuator dynamics and bounded tangential contact authority?
 +
-+The first proposed theorem scope is narrower: a nine-state ideal planar constrained-contact DDWMR, with fixed unknown physical parameters, a known longitudinal traction shape, and an ideal four-quadrant terminal-voltage source. The aim is continuous collision safety **and preservation of algebraic contact admissibility** under fixed-period voltage ZOH.
++The first proposed theorem scope is a nine-state ideal planar constrained-contact DDWMR, with fixed unknown plant parameters and per-wheel effective tangential capacities C_j, a known longitudinal traction shape, and an ideal four-quadrant terminal-voltage source. The aim is continuous collision safety **and preservation of algebraic contact admissibility** under fixed-period voltage ZOH.
 +
-+The ideal contact model is not a validated constitutive tire law. Transfer to an actual platform requires explicit support/load/contact and actuation justification or a certified model-error extension. This physical correspondence remains an open G1 obligation. Formal safety of the ideal plant alone does not establish complete hardware feasibility.
++The ideal contact model is not a validated constitutive tire law. G1 must review and accept this reduced-model scope; any transfer to an actual platform additionally requires support/load/contact and actuation justification or a certified model-error extension. Replacing literal normal loads with capacities does not establish that physical correspondence. Formal safety of the ideal plant alone does not establish complete hardware feasibility.
  
  ---
  
-@@ -69,612 +57,294 @@
+ # 2. CURRENT WORKING TITLE
+ 
+-Current candidate:
+-
+-**Actuator- and Contact-Aware Inter-Sample Collision Safety for Differential-Drive Robots under Voltage Limits and Uncertain Longitudinal Traction**
+-
+-This title is not permanently frozen.
+-
+-Do not put HOCBF in the title unless HOCBF eventually becomes an essential original contribution.
++Proposed scope-aligned title:
++
++**Inter-Sample Collision Safety for a Reduced Differential-Drive Robot Model under Voltage Limits and Uncertain Tangential Contact Capacity**
++
++The title remains provisional. It denotes safety of a reduced model, not validated physical tire/support mechanics. Retaining or strengthening a physical robot claim requires separate evidence. HOCBF is optional/baseline and should not enter the title unless it becomes an essential original contribution.
+ 
+ ---
  
  # 3. CURRENT DECISION
  
@@ -297,10 +313,16 @@
 +## 8.1 Longitudinal law
 +
 +\[
-+F_j(x,\vartheta)=\mu_j N_j\phi(\sigma_j/v_s),\qquad j=L,R.
++F_j(x,\vartheta)=C_j\phi(\sigma_j/v_s),\qquad j=L,R.
 +\]
 +
-+`N_L,N_R>0` are known fixed coefficients of the ideal planar model. Their correspondence to actual normal loads is governed by A3 below. Unknown `mu_j` belong to positive bounded intervals and remain constant for the entire trajectory.
++Each C_j is an effective tangential contact-force capacity of the reduced planar model, measured in newtons:
++
++\[
++0<\underline C_j\le C_j\le\overline C_j<\infty.
++\]
++
++The capacities are unknown but fixed for the complete execution. They are not asserted to equal instantaneous physical friction-normal-load products. No mu_j or N_j is a parameter of the formal core. A physical mapping requires the separate evidence specified in A3.
 +
 +The core uses one known fixed function phi satisfying
 +
@@ -309,7 +331,7 @@
 +|\phi(z)|\le1,\quad |\phi(z_1)-\phi(z_2)|\le L_\phi|z_1-z_2|.
 +\]
 +
-+Additionally, `phi(-z)=-phi(z)` is adopted explicitly as a reversal-symmetry idealization. Oddness is not needed for the energy/enclosure definitions themselves. Global monotonicity and differentiability are not assumed. Any later theorem requiring them must say so. `tanh` is one eligible example, not a calibrated tire law or an implicitly mandatory realization.
++Global oddness, monotonicity and differentiability are not assumed. Any later theorem requiring them must state the additional assumption. Oddness is reserved for auxiliary reversal/pure-spin symmetry in §26. `tanh` is one eligible example, not a calibrated tire law or an implicitly mandatory realization. One selected phi is fixed and known; the controller does not face an arbitrarily switching unknown function family.
 +
 +Strict sign preservation excludes the v2 counterexample `phi=0` but does not guarantee finite stopping distance, a uniform braking force, or a voltage-admissible braking policy.
 +
@@ -318,15 +340,16 @@
 +The ideal constraint supplies algebraic reactions `Y_L,Y_R` satisfying
 +
 +\[
-+Y_L+Y_R=mur,\qquad F_j^2+Y_j^2\le(\mu_jN_j)^2.
++Y_L+Y_R=mur,\qquad F_j^2+Y_j^2\le C_j^2.
 +\]
 +
-+This combined-force envelope uses the same coefficient as the longitudinal law by explicit modeling choice. It is an ideal constrained-force admissibility model, not isotropic Coulomb sliding or complete tire physics. No additional planar lateral forces or contact yaw moments are included. At the adopted projected geometry, the reactions add no yaw moment and do zero power under the exact lateral constraint. They do not enter the nine-state ODE and are not controller decision inputs.
++The same capacity scales the longitudinal force law and limits the combined tangential force by explicit modeling choice. This is an ideal constrained-force admissibility model, not isotropic Coulomb sliding or complete tire physics. No additional planar lateral forces or contact yaw moments are included. At the adopted projected geometry, the reactions add no yaw moment and do zero power under the exact lateral constraint. They do not enter the nine-state ODE and are not controller decision inputs.
 +
 +For a fixed parameter realization let
 +
 +\[
-+a_j(x,\vartheta)=\mu_jN_j\sqrt{1-\phi(\sigma_j/v_s)^2},
++a_j(x,\vartheta)=\sqrt{C_j^2-F_j(x,\vartheta)^2}
++=C_j\sqrt{1-\phi(\sigma_j/v_s)^2},
 +\quad A=a_L+a_R,
 +\]
 +\[
@@ -712,11 +735,13 @@
 +
 +The planar COM projection equals the axle midpoint exactly; use the sign and inertia conventions in §§5–7,10.
 +
-+## A3 — Prescribed normal loads and open physical correspondence
++## A3 — Effective capacities and reduced-model scope
 +
-+`N_L,N_R>0` are known fixed coefficients of this ideal first core. This choice is not derived from a suspension/caster/roll/pitch model. It does not assert that any finite-height robot maintains these values during arbitrary motion. Actual vertical and moment balances, support reactions and the validity of neglecting load transfer require separate justification on a declared operating domain. No hidden ideal support moment, zero COM height or extra stabilizing contact is presumed.
++C_j is an effective per-wheel tangential contact-force capacity in newtons. Literal normal forces N_j and friction coefficients mu_j are not formal core parameters. A proposed relation C_j approximately equals mu_j N_j requires a separately justified support/load/contact mapping or calibration on a declared operating envelope. Calibration agreement alone does not provide a certified model-error bound. C_j fixed for the execution is not a theorem about physical normal-load constancy or load-transfer dynamics.
 +
-+In the diagnostic case of only two contacts `(0,±b,-H)`, finite COM height H, and no additional roll moment, zero roll acceleration requires `b(N_L-N_R)+Hmur=0`. Fixed equal loads would force `ur=0` in that diagnostic model. Actual supports can change this relation and must be identified. G1 physical correspondence remains open until this obligation is resolved or the scientific claim is explicitly limited and accepted. The ideal planar result alone cannot be advertised as validated tire/platform contact safety.
++Historical reason for rejecting the literal fixed-load proposal: in a diagnostic finite-height two-contact geometry with no extra roll moment, roll balance requires `b(N_L-N_R)+Hmur=0`. This equation explains the limitation; N_j and H are not added to the capacity model. Actual supports may change that balance. No hidden support moment, zero COM height, extra contact or physical load-transfer solution is presumed by the revised model.
++
++The capacity is both a force-law scale and an envelope radius. A lower bound on actual available force cannot simply be substituted as an exact C_j trajectory model: different capacities change body acceleration and wheel reaction, and no monotone ordering of collision safety is assumed. To transfer a theorem, establish that each actual trajectory lies in the modeled fixed-parameter family or in a sound model-error enclosure, and that the modeled constraint reactions are physically admissible. Renaming the parameter is not a proof of either fact and is not itself novelty. Physical correspondence remains unverified; G1 acceptance for the reduced scope still requires independent review.
 +
 +## A4 — Longitudinal slip and zero wheel speed
 +
@@ -732,7 +757,7 @@
 +
 +## A7 — Positive coefficients are not a braking guarantee
 +
-+Positive friction/load bounds and strict sign-preserving phi do not imply a realizable minimum braking force. A stopping result requires a voltage-admissible policy, a proven reachable braking-slip regime, and explicit remaining-travel/low-speed analysis. No such result is currently established.
++Positive capacity bounds and strict sign-preserving phi do not imply a realizable minimum braking force. A stopping result requires a voltage-admissible policy, a proven reachable braking-slip regime, preservation of the contact-validity domain, and explicit remaining-travel/low-speed analysis. No such result is currently established.
 +
 +## A8 — Digital actuation
 +
@@ -744,14 +769,14 @@
 +
 +\[
 +\vartheta=(m,I_z,R_w,b,v_s,c_u,c_r,J_L,J_R,B_L,B_R,
-+L_L,L_R,R_L,R_R,k_L,k_R,\mu_L,\mu_R)\in\Theta.
++L_L,L_R,R_L,R_R,k_L,k_R,C_L,C_R)\in\Theta.
 +\]
 +
-+`Theta` is a declared nonempty compact joint set. Every component is constant for the entire execution, including across successive holds. Known parameters are singleton components; uncertainty in every component is not required. Mass, inertias, inductances, resistances, radii, half-track, regularization speed, conversion constants and friction coefficients have positive lower bounds. Damping is nonnegative. Physical gear/conversion correlations must be preserved. Fixed known `N_L,N_R`, phi, `V_max` and T are not hidden decision variables.
++`Theta` is a declared nonempty compact joint set. Every component is constant for the entire execution, including across successive holds. Known parameters are singleton components; uncertainty in every component is not required. Mass, inertias, inductances, resistances, radii, half-track, regularization speed, conversion constants and capacities have positive lower bounds. Damping is nonnegative. Physical gear/conversion correlations must be preserved. Fixed known phi, `V_max` and T are not hidden decision variables. C_j, F_j, Y_j and a_j have force units; phi is dimensionless.
 +
-+Left/right friction may vary independently within their specified fixed intervals. Intervals need not be equal. Exchange symmetry is a separate optional condition on all known side data and the whole joint parameter set, not a default implication of independence.
++Left/right capacities may have independently selected fixed realizations within their specified intervals. Intervals need not be equal. Exchange symmetry is a separate optional condition on all known side data and the whole joint parameter set, not a default implication of independence.
 +
-+This core excludes spatially/time-varying friction, parameter changes between holds, and additive disturbances. A differential inclusion allowing parameter switching is an outer relaxation, not the exact fixed-parameter plant. Preserve state/parameter dependence in reachability where possible. Parameters may be analytically appended with `dot vartheta=0`; this is not additional measured state or physical dynamics.
++This core excludes time-varying capacities, spatially/time-varying traction, parameter changes between holds, and additive disturbances. A differential inclusion allowing parameter switching is an outer relaxation, not the exact fixed-parameter plant. Preserve state/parameter dependence in reachability where possible. Parameters may be analytically appended with `dot vartheta=0`; this is not additional measured state or physical dynamics.
 +
 +With these assumptions, fixed held voltage gives a locally Lipschitz vector field. The internal states have at most linear growth plus bounded contact forcing, and pose integrates body velocities. Solutions of the formal ODE exist uniquely on finite horizons. Such existence does not prove contact-domain preservation or physical correspondence; those obligations remain separate.
 +
@@ -936,7 +961,7 @@
  
  ---
  
-@@ -813,318 +483,81 @@
+@@ -813,343 +490,92 @@
  
  ---
  
@@ -1281,11 +1306,11 @@
 +
 +# 26. AUXILIARY SYMMETRIC BRAKING SUBPROBLEM
 +
-+A straight-line reduction is auxiliary only. It requires equal realized traction/load products (a sufficient restriction is `mu_L=mu_R`, `N_L=N_R`), matched motor/wheel parameters, symmetric wheel/current states and applied voltages, and initial `r=0`. Independent side uncertainty in the general model does not preserve that subspace.
++A straight-line reduction is auxiliary only. It requires equal realized capacities `C_L=C_R`, matched motor/wheel parameters, the same known phi and scale, symmetric wheel/current states and applied voltages, and initial `r=0`. Independent side uncertainty in the general model does not preserve that subspace. At equal nonzero slip, `dot r=(b/I_z)(C_R-C_L)phi(sigma/v_s)` generally does not vanish.
 +
 +Transient zero wheel rate does not supply a sustained locked-wheel policy. A braking result requires explicit actuator feasibility and a proof of the required slip history, including the near-zero-speed regime. A symmetric stopping bound cannot serve as the general independent-side-uncertainty recursive backup without an additional proof.
 +
-+Mirror reflection exchanges side data, states and inputs. Symmetry of the same reachable problem additionally requires invariant known side data, an exchange-closed joint parameter set, and compatible initial/input sets or policy. Odd phi enables pure-spin antisymmetry only under the matched-side conditions. None of these symmetries is presumed for all realizations.
++Mirror reflection exchanges side data, states and inputs. Symmetry of the same reachable problem additionally requires invariant known side data, an exchange-closed joint parameter set, and compatible initial/input sets or policy; comparison of obstacle-constrained problems also transforms the obstacle/domain. Odd phi is an additional assumption only for auxiliary pure-spin/reversal antisymmetry under the corresponding matched-side conditions. It is not a core assumption. None of these symmetries is presumed for all realizations.
 +
 +# 27. PROHIBITED CLAIMS
  
@@ -1314,7 +1339,8 @@
 +- K_T equals exact viability;
 +- a state-only existential projection of the parameter-dependent contact domain is robustly safe;
 +- fixed-parameter safety covers changing terrain or time-varying friction;
-+- positive friction or strict-sign phi guarantees stopping distance;
++- positive capacity or strict-sign phi guarantees stopping distance;
++- C_j is a proven instantaneous physical friction-normal-load product, or a conservative capacity substitution automatically encloses actual trajectories;
 +- zero wheel rate supplies a persistent lock mode;
 +- algebraic force allocation validates a real tire law, normal-load balance, or full lateral-skid safety;
 +- an auxiliary symmetric model proves the general independent-side-uncertainty result;
@@ -1327,7 +1353,37 @@
  
  ---
  
-@@ -1211,101 +644,29 @@
+ # 28. CURRENT NOVELTY BOUNDARY
+ 
+-Existing literature already contains combinations of:
+-
+-- CBF/HOCBF;
+-- sampled-data CBF;
+-- robust sampled-data HOCBF;
+-- variable sampling;
+-- arbitrary/variable relative degree;
+-- zero-order CBF;
+-- segment/inter-sample safety;
+-- WMR obstacle avoidance;
+-- wheel-slip control;
+-- actuator saturation;
+-- contact-aware mobile-robot control;
+-- tube MPC.
+-
+-Therefore novelty, if validated, must be narrower:
+-
+-> **A tractable actuator- and contact-aware inter-sample safety certificate for a voltage-driven differential-drive robot that explicitly accounts for electromechanical dynamics, longitudinal traction uncertainty, and sampled recursive safety.**
+-
+-This remains a hypothesis, not a verified claim.
++The literature register already identifies CBF/HOCBF, bounded-input feasibility, sampled-data and inter-sample safety, robot obstacle avoidance, robust reachability, constrained contact and tube-control threats. Their detailed coverage must be verified, not inferred from titles or unknown cells.
++
++The narrowed contribution hypothesis is a tractable, certified and useful construction for inter-sample collision/contact admissibility in the reduced voltage-driven electromechanical DDWMR with execution-fixed unknown effective tangential capacities and sampled recursive safety. Joint parameter dependence and actuator/contact coupling must yield more than substituting a plant into generic reachability or predecessor logic.
++
++Changing notation from mu_j N_j to C_j and removing unused phi assumptions are formulation corrections, not novelty. This model does not establish arbitrary changing-terrain safety, physical tire behavior or support/load transfer. The title and contribution remain provisional; no first claim is accepted.
+ 
+ ---
+ 
+@@ -1211,101 +637,29 @@
  
  ---
  
@@ -1432,7 +1488,7 @@
 +
 +## G1 — Plant consistency and explicit physical scope
 +
-+Review the complete nine-state ideal plant, force signs, power balance, geometry, algebraic reaction existence, fixed-parameter semantics, exact-state assumptions and driver boundary condition. Distinguish this mathematical consistency from physical platform correspondence. The support/load/contact justification in A3 remains unresolved; an accepted restricted scientific claim or justified physical extension is required before G1 acceptance. Provide parameter/function/drive provenance before quantitative physical claims. Diagnostic equilibria/symmetries and wheel-zero behavior must be checked under their actual assumptions.
++Review the actual capacity-based nine-state ideal plant, force signs, units, power balance, geometry, algebraic reaction existence, fixed-parameter semantics, exact-state assumptions and driver boundary condition. Explicitly accept or revise the reduced-model scientific scope before G1 acceptance. Physical platform correspondence in A3 remains unverified and is a separate obligation before transferring the result to actual hardware; changing to C_j does not resolve it. Provide capacity/function/parameter/drive provenance and valid model correspondence before quantitative physical claims. Diagnostic equilibria/symmetries and wheel-zero behavior must be checked under their actual assumptions. A coherent candidate text or reviewer agreement is not a G1 pass.
 +
 +## G2 — Certified enclosure
 +
@@ -1444,7 +1500,7 @@
 +
 +## G4 — Novelty
 +
-+Compare fixed-parameter constrained-contact models, force-admissible safety, robust reachability and recursive filtering at equation/theorem/computation level. Distinguish time-varying uncertainty, ideal normal loads and full tire physics. Existing matrix entries remain evidence-limited; unknown is not No. No first claim is accepted.
++Compare fixed unknown contact capacities, voltage-level actuator models, reduced nonholonomic constrained models, force-admissible inter-sample safety, joint state/parameter reachability and recursive filtering at equation/theorem/computation level. Distinguish time-varying friction and full tire/support/load dynamics. Renaming mu_j N_j as C_j is not a mathematical contribution. Existing matrix entries remain evidence-limited; unknown is not No. No first claim is accepted.
 +
 +# 32. IMPLEMENTATION GATE
 +
@@ -1452,7 +1508,7 @@
  
  ---
  
-@@ -1364,67 +725,12 @@
+@@ -1364,67 +718,12 @@
  
  ---
  
@@ -1523,11 +1579,11 @@
 \ No newline at end of file
 +# 35. CURRENT SUMMARY
 +
-+Candidate: nine-state voltage-driven DDWMR with exact axle-COM geometry, exact ideal lateral constraint and algebraic force-budget admissibility. Known fixed traction shape; fixed unknown physical parameters for the whole execution; known fixed prescribed normal loads; ideal four-quadrant voltage ZOH; exact sampled state.
++Candidate: reduced ideal planar nine-state voltage-driven DDWMR with exact axle-COM geometry, exact lateral constraint and algebraic tangential force-budget admissibility. Unknown fixed per-wheel capacities C_L,C_R and plant parameters for the whole execution; one known fixed strictly sign-preserving bounded Lipschitz phi, without default oddness or monotonicity; ideal four-quadrant voltage ZOH; exact sampled state. No literal normal-load parameter is in the formal core.
 +
 +Target: continuous collision safety and preservation of the parameter-specific ideal contact domain, with a useful sampled recursive subset. Method candidate: structured joint state/parameter reachability. HOCBF remains optional/baseline.
 +
-+Physical support/load/contact correspondence and all gate acceptances remain open. No enclosure, useful K_T, braking policy or novelty result has been established. **HOLD.**
++The revised reduced-model scope and actual text require independent G1 review. Physical tire/platform/support/load correspondence remains unverified. No gate has passed; no enclosure, useful K_T, braking policy or novelty result has been established. **HOLD.**
 +
 +---
 --- a/research_context/DECISION_LOG.md
@@ -1536,19 +1592,19 @@
  - All proposed assumption changes await independent review. MASTER v2 remains byte-for-byte unchanged; G1 NEEDS REVISION and G2–G4 UNVERIFIED. No implementation authorized or performed.
  - GitHub CLI confirmed the repository is now PUBLIC. Corrected outdated private-repository wording in README and the GPT review request; no visibility setting was changed by this review.
  
-+## Pending adoption entry - declared v2.1 - HOLD
++## Pending adoption entry — v2.1 proposal R2 — HOLD
 +
-+This entry takes effect only when the associated reviewed patch is explicitly adopted; record the actual acceptance date and reviewer/user decision here at that time. Applying a draft for inspection is not acceptance.
++This record takes effect only on explicit adoption of the reviewed patch. Enter the actual adoption date and decision then. Proposal R2 was prepared on 2026-09-29 in response to GPT's review of commit 094f3c8. Publishing a proposal is not acceptance.
 +
-+- Proposed replacement of approximate lateral wording and COM geometry by exact ideal constraints; algebraic lateral force allocations define parameter-specific contact slices and a joint state/parameter safety target.
-+- Proposed wheel-side power-consistent conversion, ideal four-quadrant voltage source and exact sampled-state/zero-delay information pattern.
-+- Proposed known fixed strictly sign-preserving odd Lipschitz traction shape; global monotonicity is not required by the present consistency arguments.
-+- Proposed fixed unknown parameters for the complete execution. This narrows v2's time-varying-traction scope; it does not solve it. Independent side uncertainty remains allowed; straight-line braking is auxiliary only.
-+- No independent sustained-lock mode is assumed. Special zero-wheel-speed ODE trajectories are not categorically excluded.
-+- Normal-load/support and real-contact correspondence remain open physical G1 obligations. Algebraic force-budget feasibility is not physical tire validation.
-+- Typed joint reachable sets and the parameter-specific predecessor replace mixed state/parameter notation. No enclosure or useful recursive subset is constructed by these definitions.
-+- Traceability: GPT_TO_CODEX_G1_REVIEW_HANDOFF_v2_1.md and CODEX_RESPONSE_TO_GPT_G1_v2_1.md in docs/reviews. Proposals are not proof or a gate pass.
-+- G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED; overall HOLD. No implementation authorization.
++- Proposed exact axle-COM/lateral constraint, algebraic lateral reactions and correctly typed joint state/parameter collision/contact domains; no tenth physical dynamic state.
++- Rejected the previous proposal's literal fixed normal-load core. Replace its mu_j N_j product by effective tangential capacity C_j in newtons in both the exact reduced force law and the combined-force envelope. C_j is not asserted to be instantaneous real tire friction times normal load.
++- Proposed independently uncertain side capacities and plant parameters fixed over the complete execution. Time-varying/spatially varying traction and hold-wise parameter changes are outside this narrowed core.
++- One known fixed bounded globally Lipschitz phi is strictly sign-preserving off zero. Neither monotonicity nor oddness is required in the core; oddness belongs only to explicitly stated auxiliary symmetry analyses.
++- Retained power-consistent wheel-side conversion, ideal four-quadrant terminal-voltage ZOH and exact sampled state/zero delay as theorem idealizations.
++- Restricted question, title and novelty hypothesis to the reduced model. Capacity reparameterization does not solve physical support/load/tire validation, is not itself novelty, and does not justify substituting a lower capacity as a guaranteed trajectory overapproximation.
++- No automatic persistent wheel-lock mode, general robust straight-line reduction, stopping guarantee, enclosure or useful recursive subset is established.
++- Traceability: docs/reviews/GPT_TO_CODEX_REVIEW_094f3c8_FULL_HANDOFF.md and docs/reviews/CODEX_RESPONSE_TO_REVIEW_094f3c8_R2.md. Earlier proposed choices remain historical at commit 094f3c8; they were never authoritative.
++- Review the actual revised model and accept the restricted scope before any G1 pass. G1 NEEDS REVISION; G2/G3/G4 UNVERIFIED; overall HOLD. No implementation authorization.
 +
  ## Version maintenance
  
@@ -1557,10 +1613,10 @@
 +++ b/research_context/REVIEW_GATE.md
 @@ -1,51 +1,45 @@
 -# Research review gates — v2
-+# Research review gates - declared v2.1 candidate
++# Research review gates — declared v2.1 candidate, proposal R2
  
 -Read MASTER, DECISION_LOG and LITERATURE_MATRIX first. **Overall HOLD. No gate has passed.** This tracker is subordinate to MASTER.
-+The canonical MASTER filename remains MASTER_RESEARCH_CONTEXT_v2.md. Read it, DECISION_LOG and LITERATURE_MATRIX before reasoning. **Overall HOLD; no gate has passed.** This proposed tracker takes effect only with explicit adoption of the associated MASTER revision.
++Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MATRIX before reasoning. **Overall HOLD; no gate has passed.** This candidate tracker takes effect only with explicit adoption of the reviewed revision. The current authoritative tracker remains unchanged while this block is pending.
  
  | Gate | Status | Evidence required | Evidence present |
  |---|---|---|---|
@@ -1568,24 +1624,23 @@
 -| G2 Certified enclosure | UNVERIFIED | Constructed computable tube covering every admitted trajectory under the same held voltage for the full interval | Strategy in §§20–25 only; no enclosure proof |
 -| G3 Recursive safe subset | UNVERIFIED | Useful nonempty K_T with safe hold and robust endpoint return; observations and action selection specified | Definitions/target in §§15,24 only |
 -| G4 Novelty | UNVERIFIED | Source-backed model/uncertainty/safety-object/theorem/computation comparison | Preliminary register; closest full texts and contact/friction/tube coverage incomplete |
-+| G1 Plant consistency | NEEDS REVISION | Accepted ideal plant and scientific scope; signs, units, energy, geometry, reactions, support/load correspondence, uncertainty, information and driver conventions | Root F01-F12 audit, GPT handoff and root response; candidate definitions and conditional identities; physical support/contact obligation remains open |
-+| G2 Certified enclosure | UNVERIFIED | Computable outer joint tube covering all trajectories for each fixed parameter under the same voltage and the whole hold | Corrected joint target only; no tube constructed |
-+| G3 Recursive subset | UNVERIFIED | Useful K_T and information-compatible input selection satisfying contact-aware predecessor recursion | Candidate definitions only; no useful set/policy proof |
-+| G4 Novelty | UNVERIFIED | Primary equation/theorem/computation comparison under the narrowed fixed-parameter ideal-contact scope | Preliminary matrix; no novelty closure |
++| G1 Plant consistency | NEEDS REVISION | Independent review of actual reduced capacity model and scientific scope; units, signs, energy, geometry, reactions, uncertainty, information and driver conventions | F01–F12 audit, two GPT handoffs and Codex responses; proposed algebraic/model identities, no accepted G1 |
++| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Corrected target only; no enclosure constructed |
++| G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
++| G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
  
 -## G1 questions requiring explicit resolution
-+## G1 - no acceptance inferred from the patch
++## G1 — review the actual revised text
  
 -The 2026-09-28 root audit is review evidence, not acceptance. Affected branches explicitly stopped include approximate lateral-grip certification, unspecified COM offset, physical turning/contact validity, generic braking authority, sustained wheel lock, estimated-state safety, and an unconditional robust straight-line reduction under independent side uncertainty. MASTER v2 is unchanged; none of the proposed repairs is adopted.
-+- [ ] Independently accept or revise the exact axle-COM geometry and lateral idealization.
-+- [ ] Verify the algebraic reaction model and the stated selection, including zero available lateral capacity. Distinguish force-budget feasibility from a physical sliding law.
-+- [ ] Resolve the support/load correspondence obligation in MASTER A3. Prescribed positive normals are not a derivation of finite-height roll/pitch/load balance. Agree on the legitimate physical scope or derive a justified extension.
-+- [ ] Accept the known fixed phi, strict-sign and oddness choices; global monotonicity is not implied. Identify the actual function and scale for physical quantitative work.
-+- [ ] Accept the fixed-for-entire-execution uncertainty class and its narrower coverage. Specify the compact joint parameter set and its physical correlations; known parameters may be singleton components.
-+- [ ] Check wheel-side inertia/conversion and actual drive convention; an ideal four-quadrant source does not prove hardware limits.
-+- [ ] Accept exact sampled state and zero delay as theorem idealizations; no observer claim.
-+- [ ] Review equilibrium, mirror symmetry, auxiliary straight-line/pure-spin and zero-input reasoning under their actual side-data assumptions.
-+- [ ] Provide physical parameter/platform provenance before quantitative physical feasibility claims.
++- [ ] Accept or revise the reduced ideal planar scientific scope and title. Formal safety of this model is not validated physical robot safety.
++- [ ] Check exact axle-COM geometry, exact lateral constraint, signs, units and electromechanical energy identity.
++- [ ] Check F_j=C_j phi and the matching envelope F_j²+Y_j²<=C_j², reaction selection including zero lateral capacity, and the parameter-specific validity set.
++- [ ] Confirm C_j has force units and is an execution-fixed reduced-model parameter; no literal mu_j or N_j remains in the formal parameter vector or force equations.
++- [ ] Review the known fixed phi assumptions; neither oddness nor monotonicity is silently used in the core. Any auxiliary pure-spin assumption must be local to that analysis.
++- [ ] Review compact joint parameter bounds and correlations, exact sampled-state information and ideal drive/gear conventions.
++- [ ] Check rest/equilibrium, mirror covariance, matched-side straight motion and wheel-zero statements under their actual assumptions.
++- [ ] Identify the function/parameter data needed for later quantitative work without inventing physical provenance.
  
 -- [ ] Equations impose zero lateral velocity, while A5 says approximately zero. Choose exact idealized constraint or quantified residual; do not treat approximation as exact certification.
 -- [ ] A2 says COM is “sufficiently close” to axle midpoint. Specify exact geometry for the theorem or bound omitted coupling.
@@ -1595,19 +1650,13 @@
 -- [ ] Distinguish passing through omega=0 from sustained wheel lock. Holding a wheel at zero needs torque balance or an explicit brake constraint; the ODE alone does not supply one.
 -- [ ] Specify exact state knowledge or bounded estimation errors. “Measurements or estimates” without bounds leaves the theorem's information pattern unresolved.
 -- [ ] Check all required equilibria/symmetry/zero-input cases for the nine-state model. No physical numerical parameter set has been identified yet.
-+Braking-policy, finite stopping-distance and persistent-lock backup claims remain blocked unless separately proved; they are not needed merely to define an ODE. None may be silently used to establish G3.
++Physical transfer remains UNVERIFIED. Before a claim about actual hardware, establish a platform/support/contact mapping or sound model-error enclosure on an explicit operating domain. A calibrated capacity envelope alone does not establish the exact force law or prove trajectory inclusion. This physical correspondence is not silently resolved by renaming mu_j N_j. G1 for the restricted theoretical scope still needs explicit independent acceptance; no pass is recorded here.
  
 -These are reviewer questions from reading v2, not silently adopted changes to its equations. Stop dependent claims until resolved and logged.
-+## G2/G3 obligations after G1 resolution
++Braking, finite stopping distance and persistent-lock backup claims require separate compatible voltage-policy proofs. They cannot be silently used to support G3. Their absence is not by itself a failure to define a reduced ODE.
  
 -## G2/G3 proof checks
-+- [ ] Preserve the pair (state, fixed parameter) in the full-hold enclosure, or state conservative relaxation explicitly.
-+- [ ] Enforce joint collision/contact admissibility with the correct universal hidden-parameter quantifier.
-+- [ ] Do not assume the square-root contact margin is Lipschitz at saturation.
-+- [ ] Do not introduce parameter switching or favorable existential parameter projection silently.
-+- [ ] Prove contact-domain preservation rather than assuming lateral grip continues.
-+- [ ] Construct useful K_T with robust endpoint return and action selection based on allowed observations; a rest-only set is not evidence of usefulness.
-+- [ ] Distinguish sampled K_T membership, continuous collision/contact validity and exact history-dependent viability.
++## G2/G3 after G1 resolution
  
 -- [ ] Establish well-posedness and operating-domain bounds without assuming the safety conclusion.
 -- [ ] Preserve wheel/body/contact coupling in subsystem enclosures, or prove that any decoupled bounds are sound and assess conservatism.
@@ -1615,22 +1664,28 @@
 -- [ ] Use one voltage for all hidden uncertainties and preserve fixed-parameter dependence across time.
 -- [ ] Construct a useful K_T; assuming persistent feasible inputs does not solve the feasibility problem.
 -- [ ] Prove sample-invariance of K_T and continuous safety in S separately. Do not claim exact viability or unavoidable collision from sufficient-certificate failure.
-+## G4 screening obligations
++- [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
++- [ ] Use one voltage for all hidden parameters, constant along each entire execution; do not reset or existentially select favorable parameters.
++- [ ] Prove full-hold collision and contact-domain preservation with actuator/contact coupling intact.
++- [ ] Do not assume differentiability or Lipschitz continuity of the square-root contact margin at saturation.
++- [ ] Construct a useful recursive subset with robust endpoint return and non-oracle input selection. Rest states alone do not establish usefulness.
++- [ ] Keep sampled K_T membership, continuous model safety, state-only conservative recursion and history-dependent fixed-parameter viability distinct.
  
 -## G4 evidence checks
-+- [ ] Audit fixed-parameter reachability, state/parameter dependence, constrained-force safety and recursive filtering.
-+- [ ] Distinguish ideal algebraic reactions and prescribed loads from physical tire/load-transfer models.
-+- [ ] Compare the existing closest CBF/sampled-data/feasibility papers at equation/theorem level; unknown is not No.
-+- [ ] Identify a useful construction beyond generic inclusion/predecessor implications or plant substitution.
++## G4 under the narrowed scope
  
 -- [ ] Compare closest full-text results: bounded-input feasibility, Lin, Xiong, ZOCBF, SACBF, nonuniform-relative-degree safety and relevant reachability/tube methods.
 -- [ ] Add primary-source contact-aware/friction-limited ground-robot and tube-control works; these categories are currently open.
 -- [ ] Record exact equation/theorem locators and inspected scope. Unknown is not No; a DOI/title is not a theorem audit.
 -- [ ] Identify a mathematical/computational result beyond substituting the nine-state plant into an existing generic method.
-+## Review and implementation
++- [ ] Compare fixed unknown tangential capacity, time-varying friction, full tire/support/load dynamics and reduced nonholonomic constrained models separately.
++- [ ] Audit voltage-level models, robust joint state/parameter reachability, inter-sample safety and recursive filtering at equation/theorem level.
++- [ ] Record source-access limitations; unknown is not No. Preserve existing novelty threats until checked.
++- [ ] Identify an actual useful construction beyond plant substitution, parameter renaming or generic enclosure/predecessor logic.
  
 -## Implementation wording
--
++## Review and implementation gate
+ 
 -The user's current instruction is **no implementation before G1–G4 pass**. MASTER §32 also says implementation should remain “exploratory only.” Do not interpret that phrase as authorization to bypass the user's stricter gate. Context management and theoretical review may proceed; controller/simulator/experiment implementation remains HOLD. MASTER was imported verbatim rather than silently editing this ambiguity.
 -
 -## Review response and GO
@@ -1638,19 +1693,20 @@
 -Use MASTER §33: **Finding → Evidence → Consequence → Status (VALID / NEEDS REVISION / BLOCKER / UNVERIFIED) → Required action.** Stop the affected branch on contradiction, blocker or overlap; unaffected documentation work may continue.
 -
 -Record `GO — implementation freeze v2` only after G1–G4 each have explicit evidence and reviewed acceptance, updated in MASTER and DECISION_LOG. A plan, numerical success or model agreement cannot replace proof or novelty verification.
-+Use Finding / Evidence / Consequence / Status / Required action. On a contradiction, stop the affected branch and report it. G1 must be explicitly resolved and accepted before G2/G3 construction under this proposed formulation. No controller/simulator/experiment implementation before all G1-G4 pass and a reviewed GO is recorded in MASTER and DECISION_LOG. A proposed or adopted formulation is not itself a gate pass.
++Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 scope/assumptions must be resolved before G2/G3 construction. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a candidate revision is not a gate pass.
 --- a/research_context/LITERATURE_MATRIX.md
 +++ b/research_context/LITERATURE_MATRIX.md
-@@ -119,3 +119,12 @@
+@@ -119,3 +119,13 @@
  
  Already populated research areas include high-order/sampled-data certificates, flow-based inter-sample safety, bounded-input feasibility, nonuniform relative degree, mobile robot safety and actuator execution effects. What remains **unverified** is an original, useful construction for MASTER v2's voltage/body/contact model. Do not turn U cells into negative novelty evidence. Retain the problem-oriented working title provisionally; no method or first claim is accepted.
  
-+## Proposed v2.1 scope-specific screening additions
++## Proposed v2.1 R2 scope-specific screening additions
 +
-+This section takes effect only with explicit adoption of the associated v2.1 revision. It changes screening obligations, not the inspected facts or evidence tiers of the 24 existing papers. No additional paper or novelty exclusion is asserted.
++This note takes effect only with explicit adoption of the associated revision. It changes screening obligations, not the evidence tiers or inspected content of the 24 existing entries. No new prior-art exclusion or novelty result is asserted.
 +
-+- Record whether each relevant model uses fixed unknown parameters, per-hold changes, arbitrary time-varying uncertainty or spatial terrain dependence; the proposed first core covers only parameters fixed for the entire execution.
-+- Distinguish ideal nonholonomic algebraic reaction budgets from a constitutive sliding/tire model and from justified normal-load/support dynamics.
-+- Record whether enclosures retain state/parameter correlation and enforce parameter-dependent contact validity continuously, or use independent outer boxes/switching relaxations.
-+- Compare state-only robust recursion against parameter-aware or history-dependent policies without equating their viability objects.
-+- Preserve prior contact/friction and tube/reachability gaps. The narrower scope may increase overlap with existing fixed-parameter constrained reachability; no originality follows from these amendments.
++- Distinguish fixed unknown per-wheel tangential contact capacity, hold-wise changes, arbitrary time-varying friction and spatial terrain variation. The proposed first core covers only parameters fixed for the complete execution.
++- Distinguish a reduced nonholonomic model with algebraic force budgets from constitutive tire dynamics and physical normal-load/support balance. C_j is a force-scale/envelope parameter, not a proved instantaneous mu_j N_j product.
++- Compare motor-voltage electromechanical actuation, joint state/parameter reachability, inter-sample collision/contact validity and recursive safe filtering at equation/theorem/computation level.
++- Record whether dependence is preserved, switching or independent-box relaxations are used, and whether the policy learns fixed parameters. Do not equate state-only robust recursion with exact history-dependent viability.
++- Review whether real-plant/model correspondence is established or assumed; fitting or bounding a capacity alone does not certify the longitudinal force law.
++- Capacity reparameterization, removal of unused phi assumptions and generic inclusion/predecessor logic are not contributions. The narrowed problem may increase overlap with existing fixed-parameter constrained reachability; the novelty question remains open.
