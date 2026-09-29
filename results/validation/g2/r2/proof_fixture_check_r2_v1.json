@@ -1,0 +1,321 @@
+{
+  "all_pass": false,
+  "checks": {
+    "completed_inconclusive_fixture": true,
+    "completed_inconclusive_replayed": true,
+    "exact_tamper_case_count": true,
+    "positive_certificate_replayed": false,
+    "positive_certificate_tampers_exercised": false,
+    "resource_telemetry_integrity_replayed": true,
+    "resource_unknown_has_operation_limit": true,
+    "safe_fixture_certified": false,
+    "safe_fixture_has_nonzero_radius": false,
+    "tamper_cases_all_rejected": true
+  },
+  "completed_certificate_replays": 0,
+  "completed_inconclusive_records": 1,
+  "completed_inconclusive_replays": 1,
+  "fixture_path": "validation/configs/g2_proof_pipeline_fixture_r2_v1.json",
+  "inconclusive_replay": {
+    "checker_operations": 29380,
+    "collision_margin": {
+      "den": "398540915135159854593014448514657863199313792574242907503407478168864177050145878203217655981772856657372321933507919311523437500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "num": "-199274685108416787509670893794380698744469720192337377724633165353305405334836171400549711380156106906036269654793353349685396287269124118658972061379189931354458990296232993076445602316226723742935293630718749121423802855387206901558033747010099874802583145736506752037902748355029118438228097409394745937090775572153071439515438894962767408686026918407239053069517949541111708876300992681162168068959028719047157256757161535127"
+    },
+    "contact_margin": {
+      "den": "18392320978183517067894943633567760765066793641267416340508015904082798045536295806069102230865986783972366764566669429186731576919555664062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "num": "36780300793752181262367627800277156569215224480423729768189296899378780746908068451559197951308565201608667527138061882388850578745696066821805979466520579511971069252786477139492772505048057745459043592682114539449842788898299625054526899768253998321685655184259754426528747033787376978327225823605833441883876276005845669302974873059499301744727689099249739371612603386612339137261651310284709021727216293205712205513405867337632935349623205429382443329472427009907916977416747658659712001069222757357520664707054875262814435020718602391"
+    },
+    "proof_replay_pass": true,
+    "record_integrity_valid": true,
+    "replayed": true,
+    "shared_trusted_components": [
+      "exact Fraction interval primitives",
+      "parameter-map and model matrix constructor",
+      "validated exp/trig/root primitives"
+    ],
+    "status": "UNKNOWN"
+  },
+  "metadata_path": "results/validation/g2/r2/proof_fixture_metadata_r2_v1.json",
+  "nonzero_comparison_radius": false,
+  "positive_certificates_checked": 0,
+  "positive_replay": {
+    "reason": "record integrity checked; arithmetic replay not applicable without a proof object",
+    "record_integrity_valid": true,
+    "replayed": false,
+    "resource_limited": true,
+    "status": "UNKNOWN"
+  },
+  "records_path": "results/validation/g2/r2/proof_fixture_records_r2_v1.jsonl",
+  "resource_failure": {
+    "completed_results": 0,
+    "configured_cap_name": "max_rational_operations",
+    "configured_cap_value": 1,
+    "estimate_kind": "operation_count",
+    "estimated_or_observed_bits": null,
+    "kind": "RATIONAL_OPERATION_LIMIT",
+    "max_completed_result_bits": 0,
+    "max_observed_result_bits": 10,
+    "max_preoperation_estimate_bits": 1,
+    "operand_bit_lengths": [
+      {
+        "denominator_bits": 1,
+        "numerator_bits": 0
+      },
+      {
+        "denominator_bits": 1,
+        "numerator_bits": 1
+      }
+    ],
+    "operation_attempts": 2,
+    "operations_started": 1,
+    "primitive_id": "fraction.add.identity",
+    "schema": "ddwmr-g2-resource-diagnostic-v1",
+    "stage_id": "query.parameter_model"
+  },
+  "resource_limited_unknown_integrity_records": 1,
+  "resource_limited_unknown_records": 1,
+  "resource_replay": {
+    "reason": "record integrity checked; arithmetic replay not applicable without a proof object",
+    "record_integrity_valid": true,
+    "replayed": false,
+    "resource_limited": true,
+    "status": "UNKNOWN"
+  },
+  "schema": "ddwmr-g2-proof-pipeline-check-r2-v1",
+  "scope": "declared plumbing fixture; does not alter the benchmark or constitute general soundness acceptance",
+  "status_details": {
+    "inconclusive_fixture": {
+      "reason_codes": [
+        "COLLISION_SUFFICIENT_MARGIN_NEGATIVE"
+      ],
+      "status": "UNKNOWN",
+      "work": {
+        "comparison_order": 16,
+        "completed_results": 29383,
+        "configured_caps": {
+          "max_rational_bits": 32768,
+          "max_rational_operations": 1000000
+        },
+        "exp_degree": 16,
+        "initial_state_leaves": 1,
+        "max_completed_result_bits": 10608,
+        "max_preoperation_estimate_bits": 10609,
+        "max_rational_bits": 10608,
+        "operation_attempts": 29438,
+        "parameter_leaves": 1,
+        "rational_operations": 29438,
+        "sqrt_bisections": 24,
+        "time_slabs": 1,
+        "trig_degree": 18,
+        "whole_hold_hull_reused_on_slabs": false
+      }
+    },
+    "positive_fixture": {
+      "reason": "estimated rational intermediate 42448 bits exceeds 32768",
+      "reason_codes": [
+        "RATIONAL_BIT_LIMIT"
+      ],
+      "resource_diagnostic": {
+        "completed_results": 29323,
+        "configured_caps": {
+          "max_rational_bits": 32768,
+          "max_rational_operations": 1000000,
+          "wall_time": {
+            "configured_seconds": {
+              "den": "1",
+              "num": "15"
+            },
+            "enforced": true,
+            "remaining_seconds_display_only": 14.905999999988126
+          }
+        },
+        "failure": {
+          "completed_results": 29323,
+          "configured_cap_name": "max_rational_bits",
+          "configured_cap_value": 32768,
+          "estimate_kind": "preoperation_intermediate_upper_estimate",
+          "estimated_or_observed_bits": 42448,
+          "kind": "RATIONAL_BIT_LIMIT",
+          "max_completed_result_bits": 21224,
+          "max_observed_result_bits": 21224,
+          "max_preoperation_estimate_bits": 42448,
+          "operand_bit_lengths": [
+            {
+              "denominator_bits": 21210,
+              "numerator_bits": 21224
+            },
+            {
+              "denominator_bits": 21210,
+              "numerator_bits": 21224
+            }
+          ],
+          "operation_attempts": 29379,
+          "operations_started": 29378,
+          "primitive_id": "fraction.mul",
+          "schema": "ddwmr-g2-resource-diagnostic-v1",
+          "stage_id": "collision.full_hold_margin"
+        },
+        "max_completed_result_bits": 21224,
+        "max_observed_result_bits": 21224,
+        "max_preoperation_estimate_bits": 42448,
+        "operation_attempts": 29379,
+        "operations_started": 29378,
+        "schema": "ddwmr-g2-resource-diagnostic-v1",
+        "stage_id": "collision.full_hold_margin"
+      },
+      "status": "UNKNOWN",
+      "work": {
+        "completed_results": 29323,
+        "configured_caps": {
+          "max_rational_bits": 32768,
+          "max_rational_operations": 1000000
+        },
+        "max_completed_result_bits": 21224,
+        "max_preoperation_estimate_bits": 42448,
+        "max_rational_bits": 21224,
+        "operation_attempts": 29379,
+        "rational_operations": 29378
+      }
+    },
+    "resource_fixture": {
+      "reason": "operation cap 1 exceeded",
+      "reason_codes": [
+        "RATIONAL_OPERATION_LIMIT"
+      ],
+      "resource_diagnostic": {
+        "completed_results": 0,
+        "configured_caps": {
+          "max_rational_bits": 32768,
+          "max_rational_operations": 1,
+          "wall_time": {
+            "configured_seconds": {
+              "den": "1",
+              "num": "15"
+            },
+            "enforced": true,
+            "remaining_seconds_display_only": 15.0
+          }
+        },
+        "failure": {
+          "completed_results": 0,
+          "configured_cap_name": "max_rational_operations",
+          "configured_cap_value": 1,
+          "estimate_kind": "operation_count",
+          "estimated_or_observed_bits": null,
+          "kind": "RATIONAL_OPERATION_LIMIT",
+          "max_completed_result_bits": 0,
+          "max_observed_result_bits": 10,
+          "max_preoperation_estimate_bits": 1,
+          "operand_bit_lengths": [
+            {
+              "denominator_bits": 1,
+              "numerator_bits": 0
+            },
+            {
+              "denominator_bits": 1,
+              "numerator_bits": 1
+            }
+          ],
+          "operation_attempts": 2,
+          "operations_started": 1,
+          "primitive_id": "fraction.add.identity",
+          "schema": "ddwmr-g2-resource-diagnostic-v1",
+          "stage_id": "query.parameter_model"
+        },
+        "max_completed_result_bits": 0,
+        "max_observed_result_bits": 10,
+        "max_preoperation_estimate_bits": 1,
+        "operation_attempts": 2,
+        "operations_started": 1,
+        "schema": "ddwmr-g2-resource-diagnostic-v1",
+        "stage_id": "query.parameter_model"
+      },
+      "status": "UNKNOWN",
+      "work": {
+        "completed_results": 0,
+        "configured_caps": {
+          "max_rational_bits": 32768,
+          "max_rational_operations": 1
+        },
+        "max_completed_result_bits": 0,
+        "max_preoperation_estimate_bits": 1,
+        "max_rational_bits": 10,
+        "operation_attempts": 2,
+        "rational_operations": 1
+      }
+    }
+  },
+  "statuses": {
+    "r2_fixture__r2_fixture_far_obstacle__r2_fixture_T_020__r2_fixture_V_0_0": "UNKNOWN",
+    "r2_fixture__r2_fixture_far_obstacle__r2_fixture_T_020__r2_fixture_V_0_0__resource_ops1": "UNKNOWN",
+    "r2_fixture__r2_fixture_near_obstacle__r2_fixture_T_020__r2_fixture_V_0_0": "UNKNOWN"
+  },
+  "tamper_rejections": [
+    {
+      "applicable": false,
+      "name": "reduce serialized comparison radius",
+      "rejected": null
+    },
+    {
+      "applicable": false,
+      "name": "increase serialized collision margin",
+      "rejected": null
+    },
+    {
+      "applicable": true,
+      "name": "change held voltage alias",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change horizon alias",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change query identity",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change benchmark hash",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change development manifest hash",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change profile hash",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change specification hash",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change coverage state cell",
+      "rejected": true
+    },
+    {
+      "applicable": false,
+      "name": "change positive status",
+      "rejected": null
+    },
+    {
+      "applicable": true,
+      "name": "change hashed query voltage",
+      "rejected": true
+    },
+    {
+      "applicable": true,
+      "name": "change hashed query horizon",
+      "rejected": true
+    }
+  ]
+}

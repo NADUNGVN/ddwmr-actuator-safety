@@ -1,0 +1,24 @@
+{
+  "actual_argv": [
+    "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "-m",
+    "validation.verification.verify_proof_pipeline_r2"
+  ],
+  "benchmark_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b",
+  "development_manifest_sha256": "e56342ab6a3bfceb5a9596836c0a905a1a75f521b0b9debc52e730b59766277d",
+  "fixture_check_disposition": "PARTIAL_RESOURCE_LIMITED",
+  "fixture_id": "R2_NONZERO_RADIUS_CERTIFICATE_PIPELINE_V1",
+  "fixture_is_not_a_pilot_query": true,
+  "fixture_semantic_sha256": "ee22d63de39ff06166059c640db1f3e0c2dbe3bd6814eac45f09b27f3df4d8f7",
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "profile_id": "R2_PROOF_PIPELINE_FIXTURE_BITS32768_V1",
+  "profile_sha256": "d9345d5778a3cdb2f78f481964498efb656045b3b6c4ddaaebcd4ea7342a2122",
+  "python_executable": "C:\\msys64\\ucrt64\\bin\\python.exe",
+  "python_version": "3.12.12 (main, Oct 10 2025, 12:42:57)  [GCC UCRT 15.2.0 64 bit (AMD64)]",
+  "records_semantic_sha256": "e953b2c6d4a70e872957eef68562fae37495b2419bb2b2c1b37e7d883c029a1d",
+  "resource_profile_id": "R2_RESOURCE_TELEMETRY_FIXTURE_OPS1_V1",
+  "resource_profile_sha256": "c79599a6e54cc544e49d921c4587befcc45b5a611c4c1be61a20a6a156aed70c",
+  "schema": "ddwmr-g2-proof-fixture-run-metadata-r2-v1",
+  "source_revision": "3a1271cdde1a7e4d67b29847f6e5a7c209eb9cf6",
+  "working_directory": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety"
+}
