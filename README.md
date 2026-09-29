@@ -29,6 +29,8 @@ G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/revie
 
 ## Current G2 research package
 
+**Current user handoff:** [Consolidated GPT review request](docs/GPT_CONSOLIDATED_RESEARCH_REVIEW_REQUEST.md) bundles Case C, remaining G2 obligations, G3 readiness and G4 novelty into one review. It requires one downloadable Markdown response and an actionable closure plan. It does not authorize G3 construction or implementation. The R4 request below remains the detailed Case C checklist.
+
 - [Analytic enclosure candidate](research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md): proof draft, full-hold collision/contact checks and finite-evaluation obligations.
 - [Prior-art overlap and blockers](docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md).
 - [GPT review of v1](docs/reviews/GPT_TO_CODEX_G2_REVIEW_7390942f_FULL_HANDOFF.md): analytic equations accepted with a wording correction; G2 remains UNVERIFIED.
