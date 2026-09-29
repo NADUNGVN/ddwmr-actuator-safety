@@ -79,7 +79,7 @@ def main() -> None:
         "pilot_config": PILOT_R2.as_posix(),
         "proof_pipeline_fixture": FIXTURE_R2.as_posix(),
         "benchmark_config_semantic_sha256": benchmark_hash,
-        "pilot_config_semantic_sha256": pilot_hash,
+        "pilot_config_semantic_sha256": None,
         "proof_fixture_semantic_sha256": fixture_hash,
         "profile": pilot_r2["profile"],
         "original_query_count_per_method_profile": old_manifest["original_query_count_per_method_profile"],
