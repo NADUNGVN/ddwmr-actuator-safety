@@ -1,0 +1,29 @@
+{
+  "all_pass": true,
+  "checks": {
+    "legacy_files_and_git_blobs_demonstrate_prior_mismatch": true,
+    "protocol_id": "ddwmr-semantic-json-sha256-v2",
+    "raw_json_hashes_differ_on_line_endings": true,
+    "synthetic_json_lf_crlf_match": true,
+    "synthetic_jsonl_lf_crlf_match": true
+  },
+  "legacy_checkout_evidence": [
+    {
+      "legacy_git_blob_raw_sha256_differs": true,
+      "legacy_manifest_raw_sha256_matches_working_copy": true,
+      "lf_crlf_semantic_hashes_match": true,
+      "path": "validation/configs/benchmark_v1.json",
+      "semantic_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b"
+    },
+    {
+      "legacy_git_blob_raw_sha256_differs": true,
+      "legacy_manifest_raw_sha256_matches_working_copy": true,
+      "lf_crlf_semantic_hashes_match": true,
+      "path": "validation/configs/dev_pilot_v1.json",
+      "semantic_sha256": "7d6c0a03fcc5736df6a9bc81316dc9cc8826564d36fb99a7b201d4cd99c1a877"
+    }
+  ],
+  "schema": "ddwmr-g2-hash-protocol-verification-r2-v1",
+  "scope": "semantic hash protocol check; v1 files and ledgers remain untouched",
+  "source_revision": "dec84d7c0b75003adbc7eb341684b2979bfaaeae"
+}
