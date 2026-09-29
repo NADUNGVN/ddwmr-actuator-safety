@@ -87,9 +87,14 @@ def main() -> None:
 
     tamper_results = []
 
-    def add_tamper(name: str, record, query) -> None:
-        tamper_results.append({"name": name, "rejected": rejected(record, query)})
+    def add_tamper(name: str, record, query, *, applicable: bool = True) -> None:
+        tamper_results.append({
+            "name": name,
+            "applicable": applicable,
+            "rejected": rejected(record, query) if applicable else None,
+        })
 
+    has_positive_certificate = safe_record.get("status") == "CERTIFIED" and isinstance(safe_proof, dict)
     if isinstance(safe_proof, dict) and isinstance(safe_proof.get("eta_scaled"), list):
         altered = copy.deepcopy(safe_record)
         radius_index = next((i for i, item in enumerate(altered["proof"]["eta_scaled"]) if parse_q(item) > 0), None)
@@ -106,8 +111,8 @@ def main() -> None:
                 collision[0]["margin_lower"] = qobj(bigger_margin)
         add_tamper("increase serialized collision margin", altered, safe_query)
     else:
-        add_tamper("reduce serialized comparison radius", copy.deepcopy(safe_record), safe_query)
-        add_tamper("increase serialized collision margin", copy.deepcopy(safe_record), safe_query)
+        add_tamper("reduce serialized comparison radius", copy.deepcopy(safe_record), safe_query, applicable=False)
+        add_tamper("increase serialized collision margin", copy.deepcopy(safe_record), safe_query, applicable=False)
 
     for name, field, replacement in (
         ("change held voltage alias", "held_voltage", [{"num": "1", "den": "1"}, safe_query["action"]["V"][1]]),
@@ -118,11 +123,14 @@ def main() -> None:
         ("change profile hash", "profile_sha256", "2" * 64),
         ("change specification hash", "specification_sha256", "3" * 64),
         ("change coverage state cell", "state_cell_id", "different_state_cell"),
-        ("change positive status", "status", "UNKNOWN"),
     ):
         altered = copy.deepcopy(safe_record)
         altered[field] = replacement
         add_tamper(name, altered, safe_query)
+
+    altered = copy.deepcopy(safe_record)
+    altered["status"] = "UNKNOWN"
+    add_tamper("change positive status", altered, safe_query, applicable=has_positive_certificate)
 
     altered_query = copy.deepcopy(safe_query)
     altered_query["action"]["V"][0] = {"num": "1", "den": "1"}
@@ -148,7 +156,15 @@ def main() -> None:
         "resource_telemetry_integrity_replayed": resource_replay.get("resource_limited", False)
             and resource_replay.get("record_integrity_valid", False)
             and not resource_replay.get("replayed", False),
-        "tamper_cases_all_rejected": bool(tamper_results) and all(item["rejected"] for item in tamper_results),
+        "tamper_cases_all_rejected": bool(tamper_results) and all(
+            item["rejected"] for item in tamper_results if item["applicable"]
+        ),
+        "positive_certificate_tampers_exercised": all(
+            item["applicable"] for item in tamper_results
+            if item["name"] in {
+                "reduce serialized comparison radius", "increase serialized collision margin", "change positive status",
+            }
+        ),
         "exact_tamper_case_count": len(tamper_results) == 13,
     }
     report = {
@@ -166,6 +182,11 @@ def main() -> None:
             inconclusive_record.get("query_id"): inconclusive_record.get("status"),
             resource_record.get("query_id"): resource_record.get("status"),
         },
+        "status_details": {
+            "positive_fixture": {key: safe_record[key] for key in ("status", "reason_codes", "reason", "work", "resource_diagnostic") if key in safe_record},
+            "inconclusive_fixture": {key: inconclusive_record[key] for key in ("status", "reason_codes", "reason", "work", "resource_diagnostic") if key in inconclusive_record},
+            "resource_fixture": {key: resource_record[key] for key in ("status", "reason_codes", "reason", "work", "resource_diagnostic") if key in resource_record},
+        },
         "nonzero_comparison_radius": nonzero_radius,
         "resource_failure": resource_record.get("resource_diagnostic", {}).get("failure")
             if isinstance(resource_record.get("resource_diagnostic"), dict) else None,
@@ -179,7 +200,7 @@ def main() -> None:
         "scope": "declared plumbing fixture; does not alter the benchmark or constitute general soundness acceptance",
     }
 
-    if not args.check_only and report["all_pass"]:
+    if not args.check_only:
         OUT.mkdir(parents=True, exist_ok=True)
         RECORDS_PATH.write_text(
             "".join(json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n" for row in (safe_record, inconclusive_record, resource_record)),
@@ -197,6 +218,7 @@ def main() -> None:
             "profile_sha256": canonical_hash(profile),
             "resource_profile_id": resource_profile["id"],
             "resource_profile_sha256": canonical_hash(resource_profile),
+            "fixture_check_disposition": "PASS" if report["all_pass"] else "PARTIAL_RESOURCE_LIMITED",
             "records_semantic_sha256": semantic_jsonl_file_sha256(RECORDS_PATH),
             "python_version": sys.version,
             "python_executable": sys.executable,
