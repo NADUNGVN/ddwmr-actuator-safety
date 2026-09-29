@@ -1,0 +1,14 @@
+{
+  "frozen_before_any_r2_evaluator_output": true,
+  "generator_git_blob": "f6e3640957cb80623ca6f2c4af7fdcc66a192fb3",
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "hash_semantics": "SHA-256 over canonical UTF-8 JSON (sorted keys, compact separators, no insignificant whitespace); independent of LF/CRLF checkout conversion.",
+  "hashes": {
+    "benchmark_config_semantic_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b",
+    "development_manifest_semantic_sha256": "e56342ab6a3bfceb5a9596836c0a905a1a75f521b0b9debc52e730b59766277d",
+    "pilot_config_semantic_sha256": "3b04dd91ed5f3330cc9e6f032edb970a6f1e4b8054cd92c85f969f72ba8060a6",
+    "proof_fixture_semantic_sha256": "ee22d63de39ff06166059c640db1f3e0c2dbe3bd6814eac45f09b27f3df4d8f7"
+  },
+  "schema": "ddwmr-g2-preevaluation-semantic-hashes-r2-v1",
+  "source_base_commit": "b2422d2626cf559329345d4ddbc86ba4b88bc7bc"
+}

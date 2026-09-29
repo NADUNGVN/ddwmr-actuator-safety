@@ -1,0 +1,59 @@
+{
+  "benchmark_config": "validation/configs/benchmark_v1.json",
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "original_grid_count": 1944,
+  "pilot_query_count": 216,
+  "profile": {
+    "comparison_series_order": 16,
+    "exp_taylor_degree": 16,
+    "id": "DEV_FALLBACK_N1_PILOT_R2_BITS16384_V1",
+    "initial_state_leaf_limit": 1,
+    "initial_state_split_depth": 0,
+    "integration_panels": 1,
+    "max_rational_bits": 16384,
+    "max_rational_operations": 1000000,
+    "parameter_leaf_limit": 1,
+    "parameter_split_depth": 0,
+    "predictor_depth": 1,
+    "reason_for_cap": "One predeclared bounded diagnostic profile after the radius correctness fix: same 216 original IDs, physics, scenes, actions, Taylor settings, operation cap and 15-second wall cap as v1; only the intermediate rational-bit cap is set to 16384 to identify whether completed safety margins can be reached and to capture the first resource stage. This is one finite attempt, not iterative cap tuning, not a locked comparison, and not a safety justification for the cap.",
+    "resource_diagnostic_schema": "ddwmr-g2-resource-diagnostic-v1",
+    "selection_rule": "Fixed before any evaluator output: all nine benchmark actions for the four speed-yaw corner cells (low/high speed crossed with negative/positive yaw), two predeclared scenes (d=1/20,l=0 and d=1/5,l=1/5), and all three horizons. No outcome-based replacement, obstacle movement, or action omission.",
+    "sqrt_bisections": 24,
+    "time_slab_count": 1,
+    "trig_taylor_degree": 18,
+    "wall_seconds_per_query": {
+      "den": "1",
+      "num": "15"
+    }
+  },
+  "reason_for_cap": "A bounded, affordable 216-query development pilot using one full-hold interval hull per initial/parameter cell. It deliberately avoids subdivision/refinement so all UNKNOWN outcomes remain visible; time-panel repetition would be a no-op for this global hull. This is not a formal matched-comparison configuration.",
+  "schema": "ddwmr-g2-development-pilot-r2-v1",
+  "selected_actions": [
+    "V_m1_m1",
+    "V_m1_0",
+    "V_m1_p1",
+    "V_0_m1",
+    "V_0_0",
+    "V_0_p1",
+    "V_p1_m1",
+    "V_p1_0",
+    "V_p1_p1"
+  ],
+  "selected_horizons": [
+    "T_020",
+    "T_050",
+    "T_100"
+  ],
+  "selected_scenes": [
+    "scene_d050_l+000",
+    "scene_d200_l+200"
+  ],
+  "selected_state_cells": [
+    "state_low_neg",
+    "state_low_pos",
+    "state_high_neg",
+    "state_high_pos"
+  ],
+  "selection_rule": "Fixed before any evaluator output: all nine benchmark actions for the four speed-yaw corner cells (low/high speed crossed with negative/positive yaw), two predeclared scenes (d=1/20,l=0 and d=1/5,l=1/5), and all three horizons. No outcome-based replacement, obstacle movement, or action omission.",
+  "status": "FROZEN_R2_DEVELOPMENT_ONLY_NOT_LOCKED"
+}
