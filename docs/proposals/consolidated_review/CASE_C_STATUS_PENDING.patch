@@ -1,0 +1,95 @@
+--- a/research_context/MASTER_RESEARCH_CONTEXT_v2.md
++++ b/research_context/MASTER_RESEARCH_CONTEXT_v2.md
+@@ -65,7 +65,7 @@
+ 
+ Further review evidence (2026-09-29): GPT accepted Case B B.1--B.25 at commit `1da2166949ad12a0741c876c3a0daf8a5d957ddf`, including parameter-dependent actuator matrices, preserved correlations, formal-model saturation exit and the strictly limited refined-CERTIFIED/coarse-UNKNOWN comparison of three locked evaluations. Record: `docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. Multiple synthetic finite hand cases now exist; general evaluation, practical usefulness, voltage-selection value, tractability and novelty remain unverified. G2 is not promoted.
+ 
+-Current challenge artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, submitted for independent review, compares two forward voltage levels plus zero under the same state, synthetic matched-side parameter family, shared error envelope and locked full-hold evaluation. Its claim concerns certificate outputs only. It does not establish unsafe alternatives, voltage necessity, n=1 necessity or practical usefulness. Exact matched sides are restrictions of this auxiliary case, not amended MASTER assumptions.
++Review evidence update (2026-09-29): GPT accepted Case C C.1--C.16 at reviewed commit `c9ff32d45ad7f500cc2492c3bc7a69480c29c636`; see `docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md`. Under one locked full-hold evaluation, V=(0,0) and V=(1/4,1/4) are CERTIFIED while V=(1,1) returns UNKNOWN. This is a finite synthetic certificate-output distinction only. Exact rest, an already-safe zero action, matched sides, nonstiff synthetic data and engineered micrometer clearance prevent claims of practical voltage selection, voltage necessity, n=1 necessity, tracking benefit or method superiority. G2 remains UNVERIFIED. No plant assumption changes.
+ 
+ The v2.1 change from time-varying traction to parameters fixed for the entire execution is a deliberate scope narrowing. Earlier time-varying uncertainty targets are superseded for this core, not solved by it.
+ 
+@@ -504,7 +504,7 @@
+ 
+ # 21. WHAT MUST CARRY THE CONTRIBUTION
+ 
+-An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. The G2 analytic framework and finite synthetic Cases A/B have passed independent equation review. A general useful computational construction and originality remain unverified; accepting these cases does not establish either.
++An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. The G2 analytic framework and finite synthetic Cases A/B/C have passed independent equation review in their stated scopes. A general useful computational construction and originality remain unverified; accepting these cases does not establish either.
+ 
+ # 22. TARGET 1 — JOINT REACHABLE ENCLOSURE
+ 
+@@ -721,6 +721,6 @@
+ 
+ Target: continuous collision safety and preservation of the parameter-specific ideal contact domain, with a useful sampled recursive subset. Method under investigation: structured joint state/parameter reachability. HOCBF remains optional/baseline.
+ 
+-G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. An analytic G2 enclosure candidate with proofs is under independent review; no accepted enclosure, useful K_T, braking policy or novelty result is established. **HOLD.** G2 research only is authorized; G3 construction and implementation remain unauthorized.
+-
+----
++G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. The analytic G2 framework and synthetic finite hand Cases A/B/C have passed independent equation review in their stated scopes. A general useful certified evaluator, useful K_T, braking policy and novelty result remain unestablished. **HOLD.** G2 research only is authorized; G3 construction and implementation remain unauthorized.
++
++---
+--- a/research_context/REVIEW_GATE.md
++++ b/research_context/REVIEW_GATE.md
+@@ -5,7 +5,7 @@
+ | Gate | Status | Evidence required | Evidence present |
+ |---|---|---|---|
+ | G1 Plant consistency | PASS - restricted reduced-model scope | Internal consistency of adopted reduced ideal model only | Independent G1 review of commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`: G1-01 through G1-12 VALID; see `../docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`. Physical-platform correspondence UNVERIFIED |
+-| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; synthetic hand Cases A and B accepted at `d2cd854` / `1da2166`. See `../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. General evaluator, practical usefulness, voltage-selection value and tractability remain unverified; Case C pending review |
++| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; synthetic hand Cases A/B/C accepted at `d2cd854` / `1da2166` / `c9ff32d`. See `../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. General evaluator, practical usefulness, voltage-selection value and tractability remain unverified; Case C accepted only as a narrow synthetic certificate-output example |
+ | G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
+ | G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
+ 
+@@ -33,7 +33,7 @@
+ 
+ - [x] One explicit finite hand case with evaluable phi, effective Theta, full-time primitive bounds and positive collision/contact margins: Case A only.
+ - [x] One synthetic challenge with parameter-dependent actuator matrices, correlated fixed labels, saturation exit and strictly scoped certificate outputs: Case B only.
+-- [ ] Establish decision-relevant voltage-selection value: same state/parameters/locked evaluation, trace the action distinction through actuator/contact dynamics. Case C is a submitted minimal example, not accepted practical evidence.
++- [ ] Establish decision-relevant voltage-selection value: same state/parameters/locked evaluation, trace the action distinction through actuator/contact dynamics. Case C C.1--C.16 passed independent equation review and demonstrates a same-rule voltage-dependent certificate-output distinction. This usefulness item remains unchecked: exact rest, an already-safe zero action, engineered clearance and no task/tracking tradeoff do not establish a useful operating domain.
+ - [ ] Establish practical parameter relevance, useful conservatism and eventually tractability; Cases A/B do not establish these.
+ 
+ - [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
+--- a/research_context/DECISION_LOG.md
++++ b/research_context/DECISION_LOG.md
+@@ -88,6 +88,14 @@
+ - Next G2-only artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, a pending analytic comparison of two forward voltage candidates and zero with the same state/family/error budget/evaluation. Auxiliary matched sides and exact rest are disclosed restrictions of this case. No new general symmetry or physical-authority assumption is adopted.
+ - G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED; HOLD. No controller, simulator, interval solver, experiments, G3 or GO. Evidence synchronization only: authoritative formulation remains v2.1.
+ 
++## 2026-09-29 - HOLD - record independent Case C acceptance
++
++- User authorization to apply this pending patch must be recorded at application; this proposal alone is not authorization.
++- GPT reviewed `c9ff32d45ad7f500cc2492c3bc7a69480c29c636`; archived verbatim review: `docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md`.
++- C.1--C.16 ACCEPT in the exact synthetic scope. One locked rule gives zero/smaller voltage CERTIFIED and larger voltage UNKNOWN, not unsafe.
++- No practical action-selection, necessity, n=1 advantage, physical correspondence, novelty or recursive-safety result follows.
++- G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. No G3 or implementation authorization. Plant remains v2.1.
++
+ ## Version maintenance
+ 
+ For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.
+--- a/research_context/LITERATURE_MATRIX.md
++++ b/research_context/LITERATURE_MATRIX.md
+@@ -146,4 +146,4 @@
+ 
+ The supporting [R2 prior-art supplement](../docs/reviews/G2_PRIOR_ART_SUPPLEMENT_R2.md) records additional targeted primary-source inspections, notably parametric validated integration, Ariadne and Houska/Villanueva/Chachuat predictor-validation. Its explicit access limits remain in force; this index does not upgrade the evidence tiers of the register above or count a partial retrieval as a completed theorem audit.
+ 
+-GPT's [Case A acceptance record](../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md) and [Case B acceptance record](../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md) retain the generic-method novelty blocker. Both are accepted finite synthetic arithmetic evidence only. Neither establishes superiority over matched generic reachability methods. The pending Case C voltage-selection example makes no new prior-art exclusion claim. Matched-assumption comparison remains required before G4.
++GPT's [Case A acceptance record](../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md) and [Case B acceptance record](../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md) retain the generic-method novelty blocker. Both are accepted finite synthetic arithmetic evidence only. Neither establishes superiority over matched generic reachability methods. The Case C certificate-output example was accepted in narrow synthetic scope in the consolidated GPT review of `c9ff32d`; it makes no new prior-art exclusion claim. Matched-assumption comparison remains required before G4.
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ Independent research repository for Thầy Viễn. **HOLD - G1 PASS for restricted reduced-model scope; G2/G3/G4 UNVERIFIED.**
+ 
+-[Cập nhật tiến độ ngày 2026-09-29](docs/PROGRESS_SUMMARY_2026-09-29.md): Cases A/B accepted; Case C drafted and internally audited, pending independent GPT review. This summary does not change MASTER or the research gates.
++[Cập nhật tiến độ ngày 2026-09-29](docs/PROGRESS_SUMMARY_2026-09-29.md): Cases A/B accepted; Case C accepted by GPT in narrow synthetic scope, with practical usefulness still unverified. This summary does not change MASTER or the research gates.
+ 
+ ## Start every session here
+ 
+@@ -37,7 +37,7 @@
+ - [Finite rational Case A](research/theorem_notes/G2_FINITE_CERTIFICATE_CASE_A_v1.md): accepted by GPT at `d2cd854` for the exact synthetic hand case; [acceptance record](docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). No general solver or practical validation.
+ - [R2 response](docs/reviews/CODEX_RESPONSE_TO_G2_REVIEW_7390942f_R2.md) and [additional prior art](docs/reviews/G2_PRIOR_ART_SUPPLEMENT_R2.md).
+ - [Case B](research/theorem_notes/G2_CHALLENGE_CASE_B_v1.md): uncertain actuator blocks, saturation exit and strictly limited comparison of three sufficient evaluations, accepted at `1da2166`; [review record](docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md).
+-- [Case C voltage-selection challenge](research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md): same state/family and shared error envelope for two forward voltage levels plus zero; independent GPT review pending.
++- [Case C voltage-selection challenge](research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md): same state/family and shared error envelope for two forward voltage levels plus zero; accepted by GPT at `c9ff32d` as a synthetic certificate-output example only; practical usefulness remains UNVERIFIED.
+ - [Current GPT review request (R4)](docs/GPT_G2_REVIEW_REQUEST_R4.md). [R3](docs/GPT_G2_REVIEW_REQUEST_R3.md), [R2](docs/GPT_G2_REVIEW_REQUEST_R2.md) and [v1](docs/GPT_G2_REVIEW_REQUEST_v1.md) requests remain historical.
+ 
+ G2 is UNVERIFIED. These are research artifacts, not an accepted theorem, implementation freeze or new authoritative formulation.

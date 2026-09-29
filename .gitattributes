@@ -1,0 +1,2 @@
+# Preserve the imported review byte-for-byte for its recorded SHA-256 provenance.
+docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md -text

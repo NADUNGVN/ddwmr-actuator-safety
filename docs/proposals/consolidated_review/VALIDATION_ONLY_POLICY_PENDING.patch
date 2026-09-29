@@ -1,0 +1,79 @@
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -5,7 +5,7 @@
+ - MASTER is authoritative current research state; user instructions take precedence. Previous chat, handoff v1, and `docs/`/`research/` notes are historical where they conflict with MASTER.
+ - Adopted formulation v2.1: nine states `[p_x,p_y,theta,u,r,omega_L,omega_R,i_L,i_R]`; u is body speed and V is voltage. Reduced ideal constrained-contact model with execution-fixed hidden model parameters, effective capacities C_j, exact sampled state and ideal four-quadrant fixed-period voltage ZOH. HOCBF is optional/baseline. Physical tire/support correspondence is unverified. Do not transfer the historical seven-state derivative audit to this plant.
+ - G1 PASS - restricted reduced-model scope, through the separate independent review of authoritative v2.1. Physical-platform correspondence remains UNVERIFIED. The user authorized G2 analytic research on 2026-09-29 (see MASTER section 3 and DECISION_LOG). G2 remains UNVERIFIED; G3 construction still requires separate authorization. Implementation remains gated.
+-- No implementation before G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Preparing context/review documents does not open the gate.
++- Operational/controller implementation requires all G1-G4 passes and reviewed GO recorded in MASTER and DECISION_LOG. A separate validation-only research category may be authorized by an explicit user decision recorded in MASTER and DECISION_LOG. It is limited to certified enclosure evaluators, outward-arithmetic verification, matched baseline adapters and offline benchmark/reproducibility runners solely for G2/G4 evidence. It excludes G3 construction, controller/safety-filter integration, closed-loop simulation/performance claims, hardware experiments and GO. Without that recorded authorization, it remains prohibited. Preparing documents does not authorize code.
+ - On contradiction, blocker or literature overlap, stop the affected branch and report it explicitly; never repair assumptions silently.
+ - Substantive formulation changes belong in MASTER with a version increment and dated DECISION_LOG entry; update matrix/gates as needed. Mark old claims as superseded.
+ - The user relays messages between Codex and GPT. Do not use browser/computer automation to read or send GPT research exchanges.
+@@ -26,7 +26,7 @@
+ 
+ ## Roles
+ - Root agent and the user's GPT research conversation act as critical research reviewers.
+-- User explicitly requests **gpt-6-luna, reasoning max** as execution agent. Luna may draft phase-1 research artifacts now. All later implementation code is delegated to Luna after the research gate.
++- User explicitly requests **gpt-6-luna, reasoning max** as execution agent. Luna may draft phase-1 research artifacts now. All code is delegated to Luna after the applicable recorded authorization: scoped validation-only approval or operational gates plus GO.
+ - No autonomous additional agent delegation beyond this requested division.
+ - Independent verification of outputs remains necessary. Model agreement is not evidence.
+ 
+--- a/research_context/MASTER_RESEARCH_CONTEXT_v2.md
++++ b/research_context/MASTER_RESEARCH_CONTEXT_v2.md
+@@ -29,7 +29,7 @@
+ 
+ Do not conflate them.
+ 
+-The next execution model/Luna may implement artifacts and code only after the research formulation passes the stated gate.
++Luna may implement code only under the applicable authorization in section 32. Validation-only authorization is not operational GO.
+ 
+ ---
+ 
+@@ -665,7 +665,11 @@
+ 
+ # 32. IMPLEMENTATION GATE
+ 
+-Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. The restricted G1 pass itself authorizes no subsequent work. The separate user authorization in section 3 opens G2 analytic research only; G3 and implementation remain unauthorized.
++Overall **HOLD**. Operational/controller implementation, safety-filter integration, closed-loop simulation and hardware experiments still require all G1-G4 passes and a reviewed GO in MASTER and DECISION_LOG. Context documents and already authorized analytic research remain permitted.
++
++A separate validation-only research category may be authorized by an explicit user decision recorded in MASTER and DECISION_LOG. It is limited to certified enclosure evaluators, outward-arithmetic verification, matched baseline adapters and offline benchmark/reproducibility runners solely for G2/G4 evidence. It excludes G3 construction, controller/safety-filter integration, closed-loop simulation/performance claims, hardware experiments and GO. Without that recorded authorization, it remains prohibited.
++
++Approval of this policy creates a category; it does not itself launch WP2. Before coding, a scope-specific user decision must identify the reviewed evaluator specification, benchmark protocol and permitted validation activities. G3 construction still requires separate explicit authorization. The previously authorized work remains G2 analytic research only until such a decision is recorded.
+ 
+ ---
+ 
+--- a/research_context/REVIEW_GATE.md
++++ b/research_context/REVIEW_GATE.md
+@@ -52,4 +52,4 @@
+ 
+ ## Review and implementation gate
+ 
+-Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model. Separate user authorization now permits G2 analytic research only; G3 construction requires another explicit authorization. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.
++Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model; G2 analytic research is authorized; G3 construction requires separate explicit authorization. Operational/controller implementation still requires all gates and reviewed GO. A separate validation-only research category may be authorized by an explicit user decision recorded in MASTER and DECISION_LOG. It is limited to certified enclosure evaluators, outward-arithmetic verification, matched baseline adapters and offline benchmark/reproducibility runners solely for G2/G4 evidence. It excludes G3 construction, controller/safety-filter integration, closed-loop simulation/performance claims, hardware experiments and GO. Without that recorded authorization, it remains prohibited. Approval of the category alone does not launch WP2; the scope-specific authorization must identify its reviewed specification and benchmark.
+--- a/research_context/DECISION_LOG.md
++++ b/research_context/DECISION_LOG.md
+@@ -88,6 +88,13 @@
+ - Next G2-only artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, a pending analytic comparison of two forward voltage candidates and zero with the same state/family/error budget/evaluation. Auxiliary matched sides and exact rest are disclosed restrictions of this case. No new general symmetry or physical-authority assumption is adopted.
+ - G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED; HOLD. No controller, simulator, interval solver, experiments, G3 or GO. Evidence synchronization only: authoritative formulation remains v2.1.
+ 
++## Pending user decision - validation-only workflow policy
++
++- Proposal only: replace this heading and line at application with the actual dated user decision and its exact scope.
++- A separately authorized validation category may produce G2/G4 evaluator/arithmetic/baseline/offline benchmark evidence. No operational code, closed-loop simulation, G3, hardware or GO follows.
++- Approval of the category alone does not launch WP2; its reviewed specification and benchmark must be named in a scope-specific user authorization.
++- This is a workflow-policy proposal, with plant formulation v2.1 and all physical assumptions unchanged. Overall HOLD and gate statuses remain unchanged.
++
+ ## Version maintenance
+ 
+ For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@
+ 
+ The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
+ 
+-G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. The user authorized G2 analytic research on 2026-09-29; G3 construction remains unauthorized; no controller/simulator/experiment implementation before all gates pass and reviewed GO is recorded.
++G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. The user authorized G2 analytic research on 2026-09-29; G3 construction remains unauthorized; operational/controller implementation still requires all gates and reviewed GO. Validation-only research code, if separately authorized and recorded, has the restricted scope in MASTER section 32.
+ 
+ ## Current G2 research package
+ 
