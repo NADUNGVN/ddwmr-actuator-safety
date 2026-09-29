@@ -5,7 +5,7 @@ Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MA
 | Gate | Status | Evidence required | Evidence present |
 |---|---|---|---|
 | G1 Plant consistency | PASS - restricted reduced-model scope | Internal consistency of adopted reduced ideal model only | Independent G1 review of commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`: G1-01 through G1-12 VALID; see `../docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`. Physical-platform correspondence UNVERIFIED |
-| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; finite rational synthetic Case A accepted at `d2cd854`. See `../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md`. General evaluator, useful conservatism, actuator-parameter challenge and tractability remain unverified |
+| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; synthetic hand Cases A and B accepted at `d2cd854` / `1da2166`. See `../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. General evaluator, practical usefulness, voltage-selection value and tractability remain unverified; Case C pending review |
 | G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
 | G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
 
@@ -29,11 +29,12 @@ Braking, finite stopping distance and persistent-lock backup claims require sepa
 
 ## G2 research authorized; G3 requires separate authorization
 
-2026-09-29: user authorized G2 analytic research only. This does not accept G2 or authorize G3/implementation. GPT accepted finite rational Case A A.1--A.23 at `d2cd854`; one synthetic finite hand certificate is now accepted. General certified evaluation, usable conservatism and runtime remain UNVERIFIED.
+2026-09-29: user authorized G2 analytic research only. This does not accept G2 or authorize G3/implementation. GPT accepted finite rational Case A A.1--A.23 at `d2cd854` and Case B B.1--B.25 at `1da2166`; multiple synthetic finite hand certificates now exist. General certified evaluation, practical usefulness and runtime remain UNVERIFIED.
 
 - [x] One explicit finite hand case with evaluable phi, effective Theta, full-time primitive bounds and positive collision/contact margins: Case A only.
-- [ ] Challenge parameter-dependent actuator matrices on a correlated fixed-parameter set and record exactly which certificate evaluation succeeds or returns UNKNOWN.
-- [ ] Establish practical parameter relevance, useful conservatism and eventually tractability; Case A does not establish these.
+- [x] One synthetic challenge with parameter-dependent actuator matrices, correlated fixed labels, saturation exit and strictly scoped certificate outputs: Case B only.
+- [ ] Establish decision-relevant voltage-selection value: same state/parameters/locked evaluation, trace the action distinction through actuator/contact dynamics. Case C is a submitted minimal example, not accepted practical evidence.
+- [ ] Establish practical parameter relevance, useful conservatism and eventually tractability; Cases A/B do not establish these.
 
 - [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
 - [ ] Use one voltage for all hidden parameters, constant along each entire execution; do not reset or existentially select favorable parameters.

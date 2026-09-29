@@ -80,6 +80,14 @@ Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6
 - G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. No G3, controller, simulator, interval solver, experiments or GO authorized. Generic-method novelty remains BLOCKED.
 - This synchronizes review evidence within v2.1. Plant equations and assumptions remain unchanged; no formulation revision is adopted.
 
+## 2026-09-29 - HOLD - record Case B acceptance; prioritize voltage selection
+
+- User relayed GPT's 30-section review of `1da2166949ad12a0741c876c3a0daf8a5d957ddf`. Structured record: `docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`, explicitly not a verbatim transcript.
+- Case B B.1--B.25 ACCEPT as a finite synthetic hand certificate, including correlated actuator labels, explicit N domination, noncircular saturation exit and the narrowly locked three-evaluation separation. All displayed equations remain unchanged.
+- Multiple accepted synthetic instances now exist. General evaluator, practical usefulness, defensible data, voltage-selection value and runtime remain unverified. Generic-method novelty remains BLOCKED.
+- Next G2-only artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, a pending analytic comparison of two forward voltage candidates and zero with the same state/family/error budget/evaluation. Auxiliary matched sides and exact rest are disclosed restrictions of this case. No new general symmetry or physical-authority assumption is adopted.
+- G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED; HOLD. No controller, simulator, interval solver, experiments, G3 or GO. Evidence synchronization only: authoritative formulation remains v2.1.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

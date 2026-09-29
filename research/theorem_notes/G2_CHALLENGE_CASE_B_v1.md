@@ -1,6 +1,6 @@
 # G2 Case B: uncertain actuator blocks and a declared certificate separation
 
-2026-09-29. **DERIVED CANDIDATE; INDEPENDENT GPT REVIEW PENDING. G2 UNVERIFIED; HOLD.**
+2026-09-29. **ACCEPTED FINITE SYNTHETIC HAND CASE ONLY. G2 UNVERIFIED; HOLD.** GPT accepted B.1--B.25 at `1da2166949ad12a0741c876c3a0daf8a5d957ddf`; see [the user-relayed disposition record](../../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md). All displayed equations are unchanged. The comparison is confined to the three locked evaluations, not general method superiority.
 
 This synthetic mathematical challenge follows [accepted Case A](G2_FINITE_CERTIFICATE_CASE_A_v1.md) and [GPT's R2 disposition](../../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). It uses the unchanged MASTER v2.1 and the reviewed G2.1--G2.29 framework. It supplies a hand proof, no numerical solver or experiment.
 
@@ -275,7 +275,7 @@ Equation B.22 also gives sigma_L(T)>=9/8-24101/80000>4/5. Thus every fixed reali
 
 ## 8. Candidate proposition and finite primitives
 
-**Proposition B (submitted for review).** Under B.1--B.2 and B.18, the n=1, ell=1 enclosure with the declared full-slab evaluation satisfies, for every execution-fixed xi in [1,11/10]^4,
+**Proposition B (independently accepted).** Under B.1--B.2 and B.18, the n=1, ell=1 enclosure with the declared full-slab evaluation satisfies, for every execution-fixed xi in [1,11/10]^4,
 
 \[
 \forall t\in[0,1/20]:\quad g_p(t,\xi)\ge8/10^6>0,
@@ -283,7 +283,7 @@ Equation B.22 also gives sigma_L(T)>=9/8-24101/80000>4/5. Thus every fixed reali
 \tag{B.25}
 \]
 
-**Proof.** Use the parameter-indexed G2 inclusion separately for every fixed xi, B.12--B.16 for its error, B.17--B.19 for collision, and B.20--B.21 for contact. The common V is independent of xi. Therefore G2-A/B imply continuous one-hold safety of the stipulated model. B.22--B.24 establish the additional saturation-exit assertion. The two negative outputs in the table are only failures of the locked sufficient evaluations. QED, pending independent GPT review.
+**Proof.** Use the parameter-indexed G2 inclusion separately for every fixed xi, B.12--B.16 for its error, B.17--B.19 for collision, and B.20--B.21 for contact. The common V is independent of xi. Therefore G2-A/B imply continuous one-hold safety of the stipulated model. B.22--B.24 establish the additional saturation-exit assertion. The two negative outputs in the table mean UNKNOWN for the locked sufficient evaluations. QED, independently accepted as recorded above.
 
 | Finite primitive | Explicit enclosure used |
 |---|---|

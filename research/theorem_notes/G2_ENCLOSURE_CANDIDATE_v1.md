@@ -6,7 +6,7 @@
 
 This note supplies an explicit six-state electromechanical/contact decomposition, finite exponential-Picard predictors, comparison error bounds, pose lifting, and sufficient collision/contact checks on the complete hold. Proofs are given for exact mathematical objects. A finite evaluation contract is specified separately below; the original v1 package supplied no concrete certified arithmetic case or useful numerical operating range.
 
-Review update (2026-09-29): [Case A](G2_FINITE_CERTIFICATE_CASE_A_v1.md) is independently accepted as one synthetic finite rational certificate; see [the acceptance record](../../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). It does not establish a general implemented solver or practical usefulness. [GPT's review of v1](../../docs/reviews/GPT_TO_CODEX_G2_REVIEW_7390942f_FULL_HANDOFF.md) accepted analytic soundness subject to the Section 2 wording correction applied here. [Case B](G2_CHALLENGE_CASE_B_v1.md) is a new parameter-dependent actuator challenge awaiting independent GPT review. G2 remains UNVERIFIED; all tagged equations below are unchanged.
+Review update (2026-09-29): [Case A](G2_FINITE_CERTIFICATE_CASE_A_v1.md) is independently accepted as one synthetic finite rational certificate; see [the acceptance record](../../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). It does not establish a general implemented solver or practical usefulness. [GPT's review of v1](../../docs/reviews/GPT_TO_CODEX_G2_REVIEW_7390942f_FULL_HANDOFF.md) accepted analytic soundness subject to the Section 2 wording correction applied here. [Case B](G2_CHALLENGE_CASE_B_v1.md) is independently accepted in its restricted synthetic scope at `1da2166`. [Case C](G2_VOLTAGE_SELECTION_CASE_C_v1.md) is a new same-state voltage-selection example awaiting independent review. G2 remains UNVERIFIED; all tagged equations below are unchanged.
 
 The comparison and integral-iteration machinery is established methodology, not a novelty claim. See [the primary-source overlap audit](../../docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md). The branch claiming novelty from a generic growth bound, fixed-parameter augmentation, or tube inclusion alone is **BLOCKED**. Applicability and usefulness of this particular construction remain review questions.
 
@@ -326,7 +326,7 @@ This explains why an immediate kinematic steering command cannot be assumed real
 | Dini comparison and finite kernel refinement | Analytic proofs accepted in GPT review; generic machinery |
 | Fixed parameter joint enclosure | Explicit candidate; no parameter switching or voltage oracle |
 | Collision/contact over full hold | Sufficient analytic checks supplied; no recursive claim |
-| Finite arithmetic/representation | Case A finite hand certificate accepted at `d2cd854`; Case B under review; general evaluator not implemented or validated |
+| Finite arithmetic/representation | Cases A/B accepted at `d2cd854` / `1da2166`; Case C under review; general evaluator not implemented or validated |
 | Useful T, parameter cells, runtime, conservatism | UNVERIFIED; no physical parameter set supplied |
 | Novelty of generic comparison/Picard/parameter augmentation | Not claimed; branch BLOCKED as a standalone contribution |
 | G2 gate | UNVERIFIED; this note does not pass it |
