@@ -23,6 +23,7 @@ JSON_PATHS = [
     "results/validation/g2/r2/dev_pilot_run_metadata_r2_v1.json",
     "results/validation/g2/r2/dev_pilot_record_check_r2_v1.json",
     "results/validation/g2/r2/dev_pilot_summary_r2_v1.json",
+    "results/validation/g2/r2/pilot_positive_tamper_check_r2_v1.json",
 ]
 JSONL_PATHS = [
     "results/validation/g2/r2/proof_fixture_records_r2_v1.jsonl",
