@@ -1,6 +1,6 @@
 ﻿# G2 finite evaluator specification v1
 
-**Status (2026-09-29): DRAFT for root/GPT audit. G2 UNVERIFIED; G3/G4 UNVERIFIED; overall HOLD.** G2 analytic research only is authorized. This document specifies a computational subclass and a one-hold sufficient evaluator; it does not amend MASTER v2.1, pass G2, authorize code, or claim physical-platform validity.
+**Status (2026-09-29): DRAFT for root/GPT audit. G2 UNVERIFIED; G3/G4 UNVERIFIED; overall HOLD.** Workflow W1 authorizes scoped validation implementation through `../../docs/LUNA_VALIDATION_HANDOFF_v1.md`. This document specifies a computational subclass and a one-hold sufficient evaluator; its equations remain a draft requiring audit, not an accepted theorem or physical-platform claim. The code permission comes from the user decision in MASTER, not this specification.
 
 ## 1. Claim boundary
 

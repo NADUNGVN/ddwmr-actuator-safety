@@ -1,5 +1,7 @@
 # DDWMR — review WP1 và matched comparison trong một lượt
 
+**Cập nhật W1:** người dùng đã cho phép phạm vi code kiểm chứng và trực tiếp giao Luna qua `LUNA_VALIDATION_HANDOFF_v1.md`. Review khoa học này vẫn hữu ích nhưng không còn là điều kiện xin quyền bắt đầu development. Đọc MASTER và DECISION_LOG hiện hành; các câu về policy pending ở phiên bản ban đầu bên dưới là lịch sử. Quyền code không phải ACCEPT đặc tả hay đóng gate.
+
 ## Sản phẩm bắt buộc
 
 Hãy trả về **một file Markdown có thể tải xuống**:

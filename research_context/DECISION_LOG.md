@@ -88,6 +88,23 @@ Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6
 - Next G2-only artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, a pending analytic comparison of two forward voltage candidates and zero with the same state/family/error budget/evaluation. Auxiliary matched sides and exact rest are disclosed restrictions of this case. No new general symmetry or physical-authority assumption is adopted.
 - G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED; HOLD. No controller, simulator, interval solver, experiments, G3 or GO. Evidence synchronization only: authoritative formulation remains v2.1.
 
-## Version maintenance
+## 2026-09-29 - HOLD - record independent Case C acceptance
+
+- Application provenance: on 2026-09-29 the user requested setup after clarifying that validation code is allowed, followed by "thực hiện". Synchronize the already received independent Case C evidence as part of this setup; no gate is promoted.
+- GPT reviewed `c9ff32d45ad7f500cc2492c3bc7a69480c29c636`; archived verbatim review: `docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md`.
+- C.1--C.16 ACCEPT in the exact synthetic scope. One locked rule gives zero/smaller voltage CERTIFIED and larger voltage UNKNOWN, not unsafe.
+- No practical action-selection, necessity, n=1 advantage, physical correspondence, novelty or recursive-safety result follows.
+- G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. Case acceptance itself grants no G3 or implementation authorization; the separate W1 user authorization is recorded below. Plant remains v2.1.
+
+## 2026-09-29 - HOLD - workflow W1; validation code and user-mediated Luna handoff
+
+- User clarification: "tôi không cấm, hãy setup và tôi sẽ giao cho luna, giờ tôi là chung gian giữa bạn và luna", followed by "thực hiện". This supersedes the former blanket prohibition of pre-gate validation code and the pending policy proposal's additional launch-approval requirement.
+- Authorized scope: G2/G4 arithmetic validation, one-hold fallback evaluator, certificate/checker artifacts, applicable baseline adapters and reproducible offline benchmark tooling. Entry point: `docs/LUNA_VALIDATION_HANDOFF_v1.md`; starting draft snapshot `44e4f90a71e8e9192a92b88b17ec527eb8e322b6`.
+- Codex sets up the assignment and critically reviews returned work. User starts Luna and relays its files. No autonomous Luna/subagent delegation or implementation by Codex in this setup turn.
+- Draft soundness, general refinement evaluation, external baseline applicability and benchmark-lock details remain review obligations. Permission to code does not certify them. Stop affected branches on unresolved contradictions; report exact evidence without silently changing assumptions.
+- G3, operational controller/safety-filter integration, closed-loop and hardware work are not part of this assignment. G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. Scientific plant version remains v2.1; workflow revision W1 records the authorization change.
+- The pending validation-only policy patch is superseded, not applied verbatim. Earlier records of prohibitions describe historical authority and must not override this entry or current MASTER sections 3/32.
+
+## Version maintenance (current)
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

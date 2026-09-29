@@ -1,5 +1,7 @@
 # Codex response — consolidated GPT review
 
+**Historical snapshot notice:** this response predates workflow W1. Case C evidence is now synchronized and the user has authorized scoped validation code with user-mediated Luna execution. See MASTER §§3/32, DECISION_LOG and `../LUNA_VALIDATION_HANDOFF_v1.md`. The pending-policy wording below is retained as historical review provenance; it does not override current authority.
+
 2026-09-29. **HOLD; MASTER v2.1; G1 restricted PASS; G2/G3/G4 UNVERIFIED.** This response records the received review and work performed under existing analytic/documentation authority. It is not an adopted policy or a gate pass.
 
 ## 1. Imported evidence

@@ -1,4 +1,6 @@
-# Hai quyết định sau review tổng hợp — CHƯA ÁP DỤNG
+# Hai đề xuất sau review tổng hợp — lưu trữ lịch sử
+
+**Cập nhật workflow W1, 2026-09-29:** người dùng đã yêu cầu setup và cho phép code kiểm chứng, tự làm trung gian với Luna. Đề xuất A đã được áp dụng để đồng bộ Case C ACCEPT hẹp. Đề xuất B đã được thay bằng quyết định hiện hành trong MASTER §§3/32 và DECISION_LOG: Luna được làm phạm vi validation theo [assignment](../../LUNA_VALIDATION_HANDOFF_v1.md), không cần xin lại một quyết định “khởi chạy” cho cùng phạm vi. Không áp lại hai patch bên dưới. Nội dung từ đoạn tiếp theo là mô tả đề xuất trước quyết định W1, được giữ làm lịch sử.
 
 Nguồn: [GPT full handoff](../../reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md), sections 12 và 14. Các đề xuất dựa trên context tại `c9ff32d45ad7f500cc2492c3bc7a69480c29c636`; không sửa phương trình plant hoặc A/B/C.
 

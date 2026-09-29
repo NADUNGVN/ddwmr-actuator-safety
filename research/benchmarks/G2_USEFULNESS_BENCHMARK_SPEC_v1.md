@@ -2,6 +2,8 @@
 
 2026-09-29. **DRAFT FOR REVIEW; NOT LOCKED; NO RESULTS.** MASTER v2.1 remains authoritative. G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. This is a synthetic mathematical benchmark proposal under analytic G2 authority, not implementation authorization or a physical parameter identification.
 
+**Workflow W1 update:** the user separately authorized validation tooling and a bounded, predeclared development pilot via `../../docs/LUNA_VALIDATION_HANDOFF_v1.md`. This does not lock the formal matched-comparison benchmark or close its scientific gaps. Statements below requiring authorization are satisfied only within that assignment's scope; no additional policy approval is needed for it.
+
 ## 1. Question and scope
 
 Does a voltage-dependent certified enclosure give usable one-hold collision/contact certificates on nonzero-width moving-state regions, with independent uncertain actuators, at a defensible finite work cost? Can its structured kernel improve certification relative to matched alternatives?

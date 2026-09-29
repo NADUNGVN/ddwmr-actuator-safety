@@ -2,6 +2,7 @@
 ## Inter-Sample Safety of a Reduced Voltage-Driven DDWMR with Uncertain Tangential Contact Capacity
 
 **Status:** HOLD — theoretical formulation under review  
+**Workflow revision:** W1, 2026-09-29 — user-authorized G2/G4 validation coding; user mediates Luna execution. Plant formulation remains v2.1.
 **Version scope:** Adopted research formulation v2.1; the canonical filename remains `MASTER_RESEARCH_CONTEXT_v2.md` for stable links. Adoption provenance is recorded in DECISION_LOG. Formulation adoption is not G1 acceptance or implementation authorization.
 
 **Authority:** This file is the current single source of truth. If any previous chat, handoff, note, or model output conflicts with this document, this document takes precedence unless explicitly superseded by a later version.
@@ -12,7 +13,7 @@
 
 Do not treat agreement between language models as mathematical evidence.
 
-Do not freeze a controller or implementation before the theoretical gates listed in this document are satisfied.
+Do not freeze an operational controller before the theoretical gates listed in this document are satisfied. Scoped research-validation code is permitted under section 32.
 
 Do not silently repair assumptions.
 
@@ -29,7 +30,7 @@ Separate:
 
 Do not conflate them.
 
-The next execution model/Luna may implement artifacts and code only after the research formulation passes the stated gate.
+The user assigns Luna the scoped validation work in section 32 and relays its results to Codex. Code authorization and acceptance of mathematical results are separate.
 
 ---
 
@@ -55,9 +56,11 @@ The title remains provisional. It denotes safety of a reduced model, not validat
 
 # 3. CURRENT DECISION
 
-**HOLD.** Version v2.1 is the adopted formulation for continuing research review. G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED; overall HOLD. Implementation remains unauthorized.
+**HOLD.** Version v2.1 is the adopted formulation for continuing research review. G1 PASS - restricted reduced-model scope; physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED; overall HOLD. Scoped validation coding is authorized; operational implementation is outside the current assignment.
 
-Current authorized phase (2026-09-29): G2 research only, following the user's "thực hiện" in response to the proposal to open G2. This authorizes analytic enclosure construction and review artifacts, not G2 acceptance. G3 construction and controller/simulator/experiment implementation remain unauthorized. The working candidate is `research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md`; it is supporting research under review and does not change this formulation or prove a gate pass.
+Current authorized phase (2026-09-29, workflow W1): G2 analytic research plus scoped G2/G4 validation implementation. After clarification of the earlier blanket code rule, the user stated "tôi không cấm, hãy setup và tôi sẽ giao cho luna, giờ tôi là chung gian giữa bạn và luna" and then "thực hiện". This supersedes the blanket pre-gate code prohibition for the validation assignment. Codex prepares the package; the user starts Luna and relays its output; Codex reviews the result. Do not autonomously delegate or require another approval merely to start the assigned validation scope.
+
+Assignment: `docs/LUNA_VALIDATION_HANDOFF_v1.md`. Starting specifications at `44e4f90a71e8e9192a92b88b17ec527eb8e322b6`: `research/theorem_notes/G2_FINITE_EVALUATOR_SPEC_v1.md`, `research/benchmarks/G2_USEFULNESS_BENCHMARK_SPEC_v1.md`, and `docs/reviews/G4_MATCHED_PRIOR_ART_COMPARISON_v1.md`. They are drafts, not externally accepted implementation specifications. Luna must audit their applicable bounds before enabling certificate outputs, report unresolved branches and keep benchmark development separate from a locked comparison. This is authorization to validate the drafts, not a claim that they are complete. The analytic dependency remains `research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md`. G3 and operational controller/closed-loop/hardware work are outside this assignment.
 
 Review evidence update (2026-09-29): the user relayed GPT's independent acceptance of Case A equations A.1--A.23 at commit `d2cd85407bb5ba4b4360836c49aa8a9c7ec83f28`. One finite rational synthetic one-hold certificate now exists; the earlier absence of any instantiated finite certificate is superseded. Evidence: `docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md`. This accepts that exact hand case only, not a general certified evaluator, practical usefulness, physical correspondence, novelty or G2 PASS. The subsequent Case B addressed the synthetic actuator-parameter challenge; its accepted scope and the current next target are recorded below. Hidden parameters remain fixed; no model amendment or implementation authorization follows.
 
@@ -65,7 +68,7 @@ The formulation has nine physical dynamic states and two voltage inputs. Algebra
 
 Further review evidence (2026-09-29): GPT accepted Case B B.1--B.25 at commit `1da2166949ad12a0741c876c3a0daf8a5d957ddf`, including parameter-dependent actuator matrices, preserved correlations, formal-model saturation exit and the strictly limited refined-CERTIFIED/coarse-UNKNOWN comparison of three locked evaluations. Record: `docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. Multiple synthetic finite hand cases now exist; general evaluation, practical usefulness, voltage-selection value, tractability and novelty remain unverified. G2 is not promoted.
 
-Current challenge artifact: `research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md`, submitted for independent review, compares two forward voltage levels plus zero under the same state, synthetic matched-side parameter family, shared error envelope and locked full-hold evaluation. Its claim concerns certificate outputs only. It does not establish unsafe alternatives, voltage necessity, n=1 necessity or practical usefulness. Exact matched sides are restrictions of this auxiliary case, not amended MASTER assumptions.
+Review evidence update (2026-09-29): GPT accepted Case C C.1--C.16 at reviewed commit `c9ff32d45ad7f500cc2492c3bc7a69480c29c636`; see `docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md`. Under one locked full-hold evaluation, V=(0,0) and V=(1/4,1/4) are CERTIFIED while V=(1,1) returns UNKNOWN. This is a finite synthetic certificate-output distinction only. Exact rest, an already-safe zero action, matched sides, nonstiff synthetic data and engineered micrometer clearance prevent claims of practical voltage selection, voltage necessity, n=1 necessity, tracking benefit or method superiority. G2 remains UNVERIFIED. No plant assumption changes.
 
 The v2.1 change from time-varying traction to parameters fixed for the entire execution is a deliberate scope narrowing. Earlier time-varying uncertainty targets are superseded for this core, not solved by it.
 
@@ -500,11 +503,11 @@ That landscape is already populated.
 
 The adopted core is a fixed-parameter uncertain ODE `dot x=f(x,V;vartheta)`. Seek a plant-structured joint reachable enclosure with constant parameter labels. An analytical augmentation `dot vartheta=0` preserves this dependence. A switching-parameter differential inclusion is only an explicitly labeled outer relaxation.
 
-G1 has passed for the restricted reduced-model scope. G2 analytic research is authorized as recorded in section 3 and DECISION_LOG; G3 construction still requires separate explicit user authorization. The following are specification targets, not newly proved theorems.
+G1 has passed for the restricted reduced-model scope. G2 analytic research and scoped G2/G4 validation code are authorized as recorded in sections 3/32 and DECISION_LOG; G3 construction still requires separate explicit user authorization. The following are specification targets, not newly proved theorems.
 
 # 21. WHAT MUST CARRY THE CONTRIBUTION
 
-An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. The G2 analytic framework and finite synthetic Cases A/B have passed independent equation review. A general useful computational construction and originality remain unverified; accepting these cases does not establish either.
+An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. The G2 analytic framework and finite synthetic Cases A/B/C have passed independent equation review in their stated scopes. A general useful computational construction and originality remain unverified; accepting these cases does not establish either.
 
 # 22. TARGET 1 — JOINT REACHABLE ENCLOSURE
 
@@ -665,7 +668,11 @@ Compare fixed unknown contact capacities, voltage-level actuator models, reduced
 
 # 32. IMPLEMENTATION GATE
 
-Overall **HOLD**. No controller, simulator, experiment or implementation code before explicit G1–G4 acceptance and a recorded `GO — implementation freeze of reviewed formulation` in MASTER and DECISION_LOG. Context documents and review proposals are permitted. No “exploratory implementation” exception is implied. The restricted G1 pass itself authorizes no subsequent work. The separate user authorization in section 3 opens G2 analytic research only; G3 and implementation remain unauthorized.
+Overall **HOLD** describes scientific readiness. Workflow W1 replaces the former blanket prohibition: G2/G4 validation code is authorized by the user as recorded in section 3 and DECISION_LOG. Luna may implement exact/outward arithmetic, the one-hold fallback evaluator, independently checkable certificate records, applicable baseline adapters, and reproducible offline benchmark tooling. The user mediates all Luna execution; Codex prepares and reviews the assignment.
+
+No additional policy approval or G1-G4 pass is needed to begin this validation assignment. The current draft status remains visible: formulas must be audited and mapped to code, missing proofs must be reported, and unreviewed refinements cannot silently produce trusted certificates. Routine implementation choices and documented conservative fixes within the same assumptions are allowed. Plant/formulation changes require an explicit proposal. An unresolved mathematical blocker stops only the affected branch while independent authorized tasks proceed.
+
+Use `docs/LUNA_VALIDATION_HANDOFF_v1.md` for deliverables, preflight checks, benchmark locking and the required returned Markdown file. Validation results may inform G2/G4; they do not themselves pass gates. G3 construction, operational controller/safety-filter integration, closed-loop performance studies and hardware deployment remain outside the assignment. An operational implementation freeze still requires the research gates and recorded GO.
 
 ---
 
@@ -721,6 +728,6 @@ Adopted formulation: reduced ideal planar nine-state voltage-driven DDWMR with e
 
 Target: continuous collision safety and preservation of the parameter-specific ideal contact domain, with a useful sampled recursive subset. Method under investigation: structured joint state/parameter reachability. HOCBF remains optional/baseline.
 
-G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. An analytic G2 enclosure candidate with proofs is under independent review; no accepted enclosure, useful K_T, braking policy or novelty result is established. **HOLD.** G2 research only is authorized; G3 construction and implementation remain unauthorized.
+G1 PASS - restricted reduced-model scope, on the independent review of authoritative v2.1. Physical tire/platform/support/load correspondence remains UNVERIFIED. G2/G3/G4 remain UNVERIFIED. The analytic G2 framework and synthetic finite hand Cases A/B/C have passed independent equation review in their stated scopes. A general useful certified evaluator, useful K_T, braking policy and novelty result remain unestablished. **HOLD.** G2 analytic research and scoped G2/G4 validation coding are authorized under workflow W1; the user mediates Luna execution. G3 and operational implementation are outside this assignment.
 
 ---

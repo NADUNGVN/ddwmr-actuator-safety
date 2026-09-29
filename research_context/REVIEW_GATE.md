@@ -5,7 +5,7 @@ Read the canonical MASTER_RESEARCH_CONTEXT_v2.md, DECISION_LOG and LITERATURE_MA
 | Gate | Status | Evidence required | Evidence present |
 |---|---|---|---|
 | G1 Plant consistency | PASS - restricted reduced-model scope | Internal consistency of adopted reduced ideal model only | Independent G1 review of commit `8341014eac52ea66fe38559d6e1baee92e8f9b96`: G1-01 through G1-12 VALID; see `../docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md`. Physical-platform correspondence UNVERIFIED |
-| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; synthetic hand Cases A and B accepted at `d2cd854` / `1da2166`. See `../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. General evaluator, practical usefulness, voltage-selection value and tractability remain unverified; Case C pending review |
+| G2 Certified enclosure | UNVERIFIED | Joint outer enclosure for every execution-fixed parameter, one held voltage, all times and coupled motor/wheel/body/contact dynamics | Analytic framework reviewed; synthetic hand Cases A/B/C accepted at `d2cd854` / `1da2166` / `c9ff32d`. See `../docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md`. General evaluator, practical usefulness, voltage-selection value and tractability remain unverified; Case C accepted only as a narrow synthetic certificate-output example |
 | G3 Recursive subset | UNVERIFIED | Useful K_T, admissible observation-based voltage selection, full-hold contact/collision safety and robust endpoint return | Sufficient predecessor specification only; no useful set or policy proof |
 | G4 Novelty | UNVERIFIED | Primary-source equation/theorem/computation comparison under reduced capacity and fixed-parameter scope | Preliminary matrix; no novelty closure |
 
@@ -29,11 +29,11 @@ Braking, finite stopping distance and persistent-lock backup claims require sepa
 
 ## G2 research authorized; G3 requires separate authorization
 
-2026-09-29: user authorized G2 analytic research only. This does not accept G2 or authorize G3/implementation. GPT accepted finite rational Case A A.1--A.23 at `d2cd854` and Case B B.1--B.25 at `1da2166`; multiple synthetic finite hand certificates now exist. General certified evaluation, practical usefulness and runtime remain UNVERIFIED.
+2026-09-29, workflow W1: user authorized G2 analytic research and scoped G2/G4 validation code, with the user mediating Luna execution. This does not accept G2 or authorize G3/operational implementation. GPT accepted finite rational Cases A/B/C in their recorded synthetic scopes; multiple hand certificates now exist. General certified evaluation, practical usefulness and runtime remain UNVERIFIED. Assignment: `../docs/LUNA_VALIDATION_HANDOFF_v1.md`.
 
 - [x] One explicit finite hand case with evaluable phi, effective Theta, full-time primitive bounds and positive collision/contact margins: Case A only.
 - [x] One synthetic challenge with parameter-dependent actuator matrices, correlated fixed labels, saturation exit and strictly scoped certificate outputs: Case B only.
-- [ ] Establish decision-relevant voltage-selection value: same state/parameters/locked evaluation, trace the action distinction through actuator/contact dynamics. Case C is a submitted minimal example, not accepted practical evidence.
+- [ ] Establish decision-relevant voltage-selection value: same state/parameters/locked evaluation, trace the action distinction through actuator/contact dynamics. Case C C.1--C.16 passed independent equation review and demonstrates a same-rule voltage-dependent certificate-output distinction. This usefulness item remains unchecked: exact rest, an already-safe zero action, engineered clearance and no task/tracking tradeoff do not establish a useful operating domain.
 - [ ] Establish practical parameter relevance, useful conservatism and eventually tractability; Cases A/B do not establish these.
 
 - [ ] Preserve joint state/parameter dependence or quantify the conservatism of a sound relaxation.
@@ -52,4 +52,4 @@ Braking, finite stopping distance and persistent-lock backup claims require sepa
 
 ## Review and implementation gate
 
-Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model. Separate user authorization now permits G2 analytic research only; G3 construction requires another explicit authorization. No controller/simulator/experiment implementation before all G1–G4 pass and reviewed GO is recorded in MASTER and DECISION_LOG. Adoption of a formulation revision is not a gate pass.
+Use Finding / Evidence / Consequence / Status / Required action. Stop affected branches on contradiction. G1 is resolved for the restricted model. User authorization W1 permits scoped G2/G4 validation coding now, following `../docs/LUNA_VALIDATION_HANDOFF_v1.md`; no further policy approval or gate pass is required to begin that assignment. Draft mathematical specifications must be audited; benchmark pre-lock gaps and unsupported refinements remain explicit. The user relays Luna assignments/results; Codex does not autonomously delegate. G3 and operational controller/closed-loop/hardware work remain outside the assignment. All gate statuses remain unchanged; code permission is not theorem or gate acceptance.
