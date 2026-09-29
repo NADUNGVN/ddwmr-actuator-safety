@@ -1,0 +1,389 @@
+{
+  "action_vectors": {
+    "state_high_neg|scene_d050_l+000|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_neg|scene_d050_l+000|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_neg|scene_d050_l+000|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_neg|scene_d200_l+200|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_neg|scene_d200_l+200|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_neg|scene_d200_l+200|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d050_l+000|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d050_l+000|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d050_l+000|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d200_l+200|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d200_l+200|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_high_pos|scene_d200_l+200|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d050_l+000|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d050_l+000|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d050_l+000|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d200_l+200|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d200_l+200|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_neg|scene_d200_l+200|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d050_l+000|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d050_l+000|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d050_l+000|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d200_l+200|T_020": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d200_l+200|T_050": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "state_low_pos|scene_d200_l+200|T_100": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ]
+  },
+  "all_nine_actions_resource_limited_groups": 24,
+  "all_nine_actions_unknown_groups": 24,
+  "disposition": "DEVELOPMENT_PILOT_ONLY; NOT_LOCKED; NO_G2_G4_PROMOTION",
+  "failure_ledger_path": "results\\validation\\g2\\dev_pilot_failure_ledger_v1.jsonl",
+  "groups_with_at_least_one_certified_action": 0,
+  "limitations": [
+    "Only 216 preselected queries were evaluated; 1728 original IDs remain NOT_RUN.",
+    "Synthetic order-one parameter family only; no physical provenance.",
+    "One whole-hold predictor hull; no-op time-panel refinement, no parameter/state splitting or refined-kernel comparator.",
+    "No external validated-reachability baseline and no predeclared coverage threshold.",
+    "CERTIFIED is implementation evidence pending independent scientific review; UNKNOWN does not imply unsafe."
+  ],
+  "lower_margin_bounds": {
+    "collision_m": null,
+    "contact_N": null
+  },
+  "method": "one-hold finite-cell whole-hold interval-hull fallback, predictor depth n=1",
+  "not_run_original_query_count": 1728,
+  "original_grid_certified_fraction_not_estimable": "No full-grid run; report pilot only and retain 1944 denominator.",
+  "original_grid_denominator_per_method_profile": 1944,
+  "pilot_certified_fraction": "0/216",
+  "profile_id": "DEV_FALLBACK_N1_PILOT_V1",
+  "queries_with_completed_safety_margins": 0,
+  "reason_code_counts": {
+    "RATIONAL_BIT_LIMIT": 216
+  },
+  "records_path": "results\\validation\\g2\\dev_pilot_records_v1.jsonl",
+  "resource_limited_unknown_count": 216,
+  "schema": "ddwmr-g2-development-pilot-summary-v1",
+  "selected_pilot_denominator": 216,
+  "state_scene_horizon_groups": 24,
+  "status_counts_on_pilot": {
+    "UNKNOWN": 216
+  },
+  "strata": {
+    "clearance": {
+      "1/20": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      },
+      "1/5": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      }
+    },
+    "horizon": {
+      "T_020": {
+        "counts": {
+          "UNKNOWN": 72
+        },
+        "queries": 72
+      },
+      "T_050": {
+        "counts": {
+          "UNKNOWN": 72
+        },
+        "queries": 72
+      },
+      "T_100": {
+        "counts": {
+          "UNKNOWN": 72
+        },
+        "queries": 72
+      }
+    },
+    "speed": {
+      "high": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      },
+      "low": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      }
+    },
+    "yaw": {
+      "neg": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      },
+      "pos": {
+        "counts": {
+          "UNKNOWN": 108
+        },
+        "queries": 108
+      }
+    }
+  },
+  "unknown_ledger_path": "results\\validation\\g2\\dev_pilot_unknown_ledger_v1.jsonl",
+  "widths_and_radii": {
+    "internal_error_radius_physical": null,
+    "predictor_center_internal_component_widths_physical": null,
+    "total_internal_enclosure_component_widths_physical": null
+  },
+  "work": {
+    "elapsed_seconds_display_only": {
+      "count": 216,
+      "max": 0.125,
+      "median": 0.078,
+      "min": 0.062,
+      "sum": 17.483
+    },
+    "elapsed_time_is_not_a_safety_predicate": true,
+    "max_rational_bits_seen": 5704,
+    "rational_operations_per_query_before_termination": {
+      "count": 216,
+      "max": "28991/1",
+      "median_lower": "28991/1",
+      "min": "28982/1"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark_sha256": "b2bc12cd578229cfb6df4b426f93e0f472d69f6be36929df93e797ff79396a9e",
+  "command": "python validation/scripts/run_pilot.py",
+  "development_manifest_sha256": "04190d23c9597348245cd93793f60e87476b35e8c43e0accaebdee525f3f172c",
+  "original_denominator": 1944,
+  "pilot_config_sha256": "068e85fc3a9ecb2e85a4d4dd49773b76beada2e1afb85f012f48280c6be09a7c",
+  "platform": {
+    "machine": "AMD64",
+    "release": "11",
+    "system": "Windows"
+  },
+  "profile_id": "DEV_FALLBACK_N1_PILOT_V1",
+  "runtime_environment": "Python 3.12.12",
+  "schema": "ddwmr-g2-pilot-run-metadata-v1",
+  "selected_queries": 216,
+  "source_revision": "d50b8db0f999d3def6849078a395c7bcf6938707",
+  "timing_note": "Elapsed seconds are measured per original query on this machine; display-only and not a safety predicate."
+}
