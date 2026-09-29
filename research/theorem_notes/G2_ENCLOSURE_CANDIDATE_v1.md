@@ -4,7 +4,9 @@
 
 ## 0. Deliverable and limits
 
-This note supplies an explicit six-state electromechanical/contact decomposition, finite exponential-Picard predictors, comparison error bounds, pose lifting, and sufficient collision/contact checks on the complete hold. Proofs are given for exact mathematical objects. A finite evaluation contract is specified separately below; no certified arithmetic or useful numerical operating range has been demonstrated.
+This note supplies an explicit six-state electromechanical/contact decomposition, finite exponential-Picard predictors, comparison error bounds, pose lifting, and sufficient collision/contact checks on the complete hold. Proofs are given for exact mathematical objects. A finite evaluation contract is specified separately below; the original v1 package supplied no concrete certified arithmetic case or useful numerical operating range.
+
+R2 review supplement (2026-09-29): [Case A](G2_FINITE_CERTIFICATE_CASE_A_v1.md) now submits one synthetic finite rational certificate for independent review. It does not establish a general implemented solver or practical usefulness. [GPT's review of v1](../../docs/reviews/GPT_TO_CODEX_G2_REVIEW_7390942f_FULL_HANDOFF.md) accepted analytic soundness subject to the Section 2 wording correction applied here. G2 remains UNVERIFIED; all tagged equations below are unchanged.
 
 The comparison and integral-iteration machinery is established methodology, not a novelty claim. See [the primary-source overlap audit](../../docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md). The branch claiming novelty from a generic growth bound, fixed-parameter augmentation, or tube inclusion alone is **BLOCKED**. Applicability and usefulness of this particular construction remain review questions.
 
@@ -73,7 +75,7 @@ These are explicit finite nested integrals, not calls to the unknown nonlinear s
 
 For n=0 the force is frozen at its initial value. Its u and r center components are independent of V, since the first two rows of A are decoupled and the first two rows of B vanish. A safety filter using only that center can miss directional benefit from changing voltage and reflect voltage mainly through uncertainty inflation. **Do not present the n=0 center as an adequate voltage-aware avoidance construction.**
 
-Use n>=1 as the research candidate: the wheel/current response in z^0 changes F(z^0), which changes the body components of z^1. More iterations may be needed for a useful certificate. This is mathematical quadrature/iteration, not a change in ZOH input. V is constant through every integral.
+Use n>=1 as the research candidate: the voltage-dependent current/wheel components can make the slip entering F(z^0) voltage-dependent, so n=1 is the first predictor depth at which the body-center predictor can depend on voltage through the contact law. The adopted phi class does not guarantee a nonzero or monotone force change. More iterations may be needed for a useful certificate. This is mathematical quadrature/iteration, not a change in ZOH input. V is constant through every integral.
 
 Define the computable-in-principle residual bound
 
