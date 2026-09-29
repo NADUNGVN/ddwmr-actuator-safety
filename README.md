@@ -2,6 +2,8 @@
 
 Independent research repository for Thầy Viễn. **HOLD - G1 PASS for restricted reduced-model scope; G2/G3/G4 UNVERIFIED.**
 
+[Cập nhật tiến độ ngày 2026-09-29](docs/PROGRESS_SUMMARY_2026-09-29.md): Cases A/B accepted; Case C drafted and internally audited, pending independent GPT review. This summary does not change MASTER or the research gates.
+
 ## Start every session here
 
 Read these before reasoning, derivation or code:
