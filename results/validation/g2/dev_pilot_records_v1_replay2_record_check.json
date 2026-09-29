@@ -1,0 +1,3042 @@
+{
+  "all_pass": true,
+  "completed_certificate_replays": 0,
+  "execution_failures": 0,
+  "frozen_hashes_match": true,
+  "invalid_inputs": 0,
+  "manifest_coverage_exact": true,
+  "not_run_original_queries": 1728,
+  "records": 216,
+  "records_detail": [
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d050_l+000__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_neg__scene_d200_l+200__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d050_l+000__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_low_pos__scene_d200_l+200__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d050_l+000__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_neg__scene_d200_l+200__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d050_l+000__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_020__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_050__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_m1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_m1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_m1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_0_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_0_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_0_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_p1_m1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_p1_0",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    },
+    {
+      "input_hash_valid": true,
+      "quantifiers_valid": true,
+      "query_id": "state_high_pos__scene_d200_l+200__T_100__V_p1_p1",
+      "record_valid": true,
+      "replay": {
+        "reason": "bounded resource UNKNOWN without completed proof object",
+        "replayed": false,
+        "resource_limited": true,
+        "status": "UNKNOWN"
+      },
+      "resource_unknown_valid": true,
+      "status": "UNKNOWN"
+    }
+  ],
+  "resource_limited_unknowns": 216,
+  "schema": "ddwmr-g2-record-check-v1",
+  "source_revision_matches": true,
+  "status_counts": {
+    "UNKNOWN": 216
+  }
+}
