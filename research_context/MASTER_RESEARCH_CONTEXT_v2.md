@@ -59,7 +59,11 @@ The title remains provisional. It denotes safety of a reduced model, not validat
 
 Current authorized phase (2026-09-29): G2 research only, following the user's "thực hiện" in response to the proposal to open G2. This authorizes analytic enclosure construction and review artifacts, not G2 acceptance. G3 construction and controller/simulator/experiment implementation remain unauthorized. The working candidate is `research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md`; it is supporting research under review and does not change this formulation or prove a gate pass.
 
+Review evidence update (2026-09-29): the user relayed GPT's independent acceptance of Case A equations A.1--A.23 at commit `d2cd85407bb5ba4b4360836c49aa8a9c7ec83f28`. One finite rational synthetic one-hold certificate now exists; the earlier absence of any instantiated finite certificate is superseded. Evidence: `docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md`. This accepts that exact hand case only, not a general certified evaluator, practical usefulness, physical correspondence, novelty or G2 PASS. The next G2-only target is a synthetic challenge with parameter-dependent actuator dynamics and an explicitly scoped certificate comparison. Hidden parameters remain fixed; no model amendment or implementation authorization follows.
+
 The formulation has nine physical dynamic states and two voltage inputs. Algebraic lateral reactions and fixed-parameter labels do not add physical dynamic states. The title is accepted as scope-aligned for G1 and remains provisional; no useful reachable enclosure, recursive safe subset or novelty result is established.
+
+Current challenge artifact: `research/theorem_notes/G2_CHALLENGE_CASE_B_v1.md`, submitted for independent review, instantiates a synthetic correlated parameter family and compares three explicitly locked sufficient evaluations. Its proposed certificate separation is not a voltage-necessity result or practical usefulness claim. Case B is supporting research, not authoritative new assumptions.
 
 The v2.1 change from time-varying traction to parameters fixed for the entire execution is a deliberate scope narrowing. Earlier time-varying uncertainty targets are superseded for this core, not solved by it.
 
@@ -498,7 +502,7 @@ G1 has passed for the restricted reduced-model scope. G2 analytic research is au
 
 # 21. WHAT MUST CARRY THE CONTRIBUTION
 
-An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. A G2 analytic candidate is now under review; no accepted, practically useful or novel construction is established.
+An outer enclosure contained in the safe/contact domain implies safety; a suitable predecessor recursion implies repeated safe holds. Those logical implications are generic and not novelty. Any novelty claim requires a certified, tractable and useful plant-specific enclosure or recursive-set construction that depends meaningfully on voltage and contact parameters. The G2 analytic framework and one finite synthetic Case A have passed independent equation review. A general useful computational construction and originality remain unverified; Case A acceptance does not establish either.
 
 # 22. TARGET 1 — JOINT REACHABLE ENCLOSURE
 

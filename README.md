@@ -30,9 +30,10 @@ G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/revie
 - [Analytic enclosure candidate](research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md): proof draft, full-hold collision/contact checks and finite-evaluation obligations.
 - [Prior-art overlap and blockers](docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md).
 - [GPT review of v1](docs/reviews/GPT_TO_CODEX_G2_REVIEW_7390942f_FULL_HANDOFF.md): analytic equations accepted with a wording correction; G2 remains UNVERIFIED.
-- [R2 finite rational Case A](research/theorem_notes/G2_FINITE_CERTIFICATE_CASE_A_v1.md): synthetic full-hold proof example, submitted for review; no implemented solver or practical validation.
+- [Finite rational Case A](research/theorem_notes/G2_FINITE_CERTIFICATE_CASE_A_v1.md): accepted by GPT at `d2cd854` for the exact synthetic hand case; [acceptance record](docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). No general solver or practical validation.
 - [R2 response](docs/reviews/CODEX_RESPONSE_TO_G2_REVIEW_7390942f_R2.md) and [additional prior art](docs/reviews/G2_PRIOR_ART_SUPPLEMENT_R2.md).
-- [Current independent GPT review request (R2)](docs/GPT_G2_REVIEW_REQUEST_R2.md). The [v1 request](docs/GPT_G2_REVIEW_REQUEST_v1.md) is retained as history.
+- [R3 challenge Case B](research/theorem_notes/G2_CHALLENGE_CASE_B_v1.md): uncertain actuator blocks, contact saturation exit and a scoped comparison of three sufficient evaluations; independent GPT review pending.
+- [Current GPT review request (R3)](docs/GPT_G2_REVIEW_REQUEST_R3.md) and [R3 response](docs/reviews/CODEX_G2_R3_RESPONSE_AND_CASE_B.md). [R2](docs/GPT_G2_REVIEW_REQUEST_R2.md) and [v1](docs/GPT_G2_REVIEW_REQUEST_v1.md) requests remain historical.
 
 G2 is UNVERIFIED. These are research artifacts, not an accepted theorem, implementation freeze or new authoritative formulation.
 

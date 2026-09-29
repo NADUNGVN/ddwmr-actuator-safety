@@ -70,6 +70,16 @@ Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6
 - Targeted primary-source screening found direct overlap with componentwise/growth-bound reachability and fixed-parameter augmentation. Standalone novelty from that machinery is BLOCKED; no first or G4 claim is made.
 - Numerical computability requires a selected evaluable phi, an effective parameter-set description, validated arithmetic and full-time range bounds. No values or performance results were invented. No simulation, controller or implementation tests were added or run.
 
+## 2026-09-29 - HOLD - record independent Case A acceptance; continue G2 only
+
+- User relayed GPT's full G2 R2 review of `d2cd85407bb5ba4b4360836c49aa8a9c7ec83f28` and requested its recording. Structured record: `docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md` (not a verbatim transcript).
+- GPT accepted A.1--A.23 as one finite rational synthetic one-hold certificate, including full parameter/time coverage and all arithmetic primitives. Corrected voltage-dependence wording is VALID.
+- The claim that no finite instantiated certificate exists is superseded. General evaluator, practical usefulness, runtime, physical correspondence and novelty remain unverified.
+- Continue G2 analytic research with a Case B challenge involving parameter-dependent actuator matrices and explicitly scoped certificate-success versus UNKNOWN comparisons. No voltage-necessity, unavoidable-collision or generic-method originality claim follows.
+- Submitted `research/theorem_notes/G2_CHALLENGE_CASE_B_v1.md` for independent review: synthetic correlated actuator/capacity family, contact saturation exit, and three locked sufficient evaluations. Its obstacle placement is intentionally tuned and disclosed; it does not establish practical usefulness or voltage necessity.
+- G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. No G3, controller, simulator, interval solver, experiments or GO authorized. Generic-method novelty remains BLOCKED.
+- This synchronizes review evidence within v2.1. Plant equations and assumptions remain unchanged; no formulation revision is adopted.
+
 ## Version maintenance
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

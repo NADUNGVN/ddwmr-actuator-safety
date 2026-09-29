@@ -1,6 +1,6 @@
 # G2 Case A: a finite rational one-hold certificate
 
-2026-09-29. **DERIVED FOR INDEPENDENT REVIEW. G2 UNVERIFIED; overall HOLD.**
+2026-09-29. **ACCEPTED FINITE HAND CASE ONLY. G2 UNVERIFIED; overall HOLD.** GPT accepted A.1--A.23 at commit `d2cd85407bb5ba4b4360836c49aa8a9c7ec83f28`; see [the user-relayed review record](../../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md). Equations are unchanged. Acceptance does not establish practical usefulness or pass G2.
 
 Governing formulation: MASTER v2.1. This is a deliberately synthetic mathematical instance of the accepted reduced model, not identified robot data. It instantiates [G2.1--G2.29](G2_ENCLOSURE_CANDIDATE_v1.md) without changing their assumptions. It supplies a hand proof with finitely many rational bounds, not an implemented interval solver. No trajectory samples, numerical integration or floating-point `expm` are used as evidence.
 
@@ -240,7 +240,7 @@ This common coarse lower bound is in N; it does not assert equal actual margins 
 | Square root | Nonnegative rational lower bound verified by squaring (A.20). |
 | Obstacle distance | Reverse triangle inequality from a reference-position ball (A.18). |
 
-**Proposition (Case A, submitted for review).** For the exact data in Section 1, the single admissible voltage V=(1/2,-1/2), applied continuously over [0,1/10], has for all execution-fixed capacity pairs in Theta a tube satisfying
+**Proposition (Case A, independently accepted).** For the exact data in Section 1, the single admissible voltage V=(1/2,-1/2), applied continuously over [0,1/10], has for all execution-fixed capacity pairs in Theta a tube satisfying
 
 \[
 \forall\vartheta\in\Theta\ \forall t\in[0,1/10]:\qquad
@@ -248,7 +248,7 @@ g_p(t,\vartheta)\ge\frac{74867}{1000000}>0,\qquad
 g_c(t,\vartheta)\ge\frac{491949}{250000}>0. \tag{A.23}
 \]
 
-**Proof.** Equations (A.6--16) instantiate the already reviewed global/refined/fallback inclusions. Equations (A.17--22) bound all required quantities on the full parameter/time cell. Apply G2-A/B, using the same parameter label in each fiber. The worst listed collision bound and common contact bound give (A.23). Thus the formal reduced-model trajectory remains collision-free and contact-admissible for this hold. QED, pending independent review of this new arithmetic chain.
+**Proof.** Equations (A.6--16) instantiate the already reviewed global/refined/fallback inclusions. Equations (A.17--22) bound all required quantities on the full parameter/time cell. Apply G2-A/B, using the same parameter label in each fiber. The worst listed collision bound and common contact bound give (A.23). Thus the formal reduced-model trajectory remains collision-free and contact-admissible for this hold. QED. The arithmetic chain was independently accepted in the review cited above.
 
 ## 9. What the comparison measures and leaves open
 
@@ -256,6 +256,6 @@ The declared internal **upper budgets** have H/G=11/16 and F/G=4. This compares 
 
 This is a nonzero-speed, nonzero-yaw, nonzero-voltage, uncertain-capacity example; it is intentionally easy. Large contact reserve, broad obstacle clearance, simple motor coefficients and locally unsaturated phi make it unsuitable as evidence of practical superiority. The proof does not establish that a zero-voltage or n=0 alternative fails; safe action necessity is unproved. It also does not compare against a generic validated solver.
 
-Time T=1/10 s is a certified mathematical example horizon if this proof is accepted. It is **not** a useful physical sampling limit. All uncertainty is in two capacities; stiff motor parameter uncertainty is absent. There is no runtime measurement, implemented arithmetic library, general finite solver, operational UNKNOWN map, stopping/turning guarantee, state-estimation error model, hardware correspondence, recursive subset or novelty closure.
+Time T=1/10 s is an accepted certified mathematical example horizon. It is **not** a useful physical sampling limit. All uncertainty is in two capacities; stiff motor parameter uncertainty is absent. In particular, A.9 and A.19 imply every certified normalized slip is below one in magnitude, so this entire example remains on the linear branch of clip. There is no runtime measurement, implemented arithmetic library, general finite solver, operational UNKNOWN map, stopping/turning guarantee, state-estimation error model, hardware correspondence, recursive subset or novelty closure.
 
 G1 retains its restricted PASS. G2/G3/G4 remain UNVERIFIED, physical correspondence UNVERIFIED, overall HOLD. Case A does not change canonical metadata or authorize implementation.

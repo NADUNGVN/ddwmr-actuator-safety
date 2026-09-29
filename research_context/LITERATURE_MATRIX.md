@@ -113,7 +113,7 @@ Full-text status describes actual access/inspection, not completion of the novel
 1. Add primary-source contact-aware/friction-limited ground-robot safety papers, distinguishing longitudinal slip velocity, braking skid, lateral grip and force constraints.
 2. Add closest robust reachability/tube and recursive safety-filter constructions with bounded inputs. Existing generic results may cover the nine-state plant even if DDWMR is absent from the title.
 3. Audit how uncertain friction and normal loads enter the contact/body/wheel system, and whether parameter dependence is fixed, measurable or observed.
-4. Compare the proposed enclosure and K_T construction at equation/theorem/computation level after they exist. Currently neither is constructed.
+4. Compare the enclosure and any later K_T construction at equation/theorem/computation level. The G2 analytic framework and finite synthetic Case A now have independent equation review; practical usefulness and originality remain unverified. No K_T has been constructed.
 
 ## Screening outcome
 
@@ -141,3 +141,9 @@ The original 24-entry register and its evidence tiers are unchanged. These addit
 | 27 | Chen, Abraham and Sankaranarayanan, Flow*: An Analyzer for Non-Linear Hybrid Systems, CAV 2013 | A/partial extraction: [author page](https://home.cs.colorado.edu/~srirams/papers/cav2013-flowstar.html), abstract and search-extracted PDF opening; direct PDF retrieval error | Validated flowpipes are established methodology. No full theorem/smoothness comparison completed in this pass. |
 
 See `docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md`. Novelty based solely on generic growth bounds, parameter augmentation or tube inclusion is BLOCKED. The candidate's usefulness and any additional original result remain UNVERIFIED; this is not G4 acceptance.
+
+## G2 R2/R3 evidence index - 2026-09-29
+
+The supporting [R2 prior-art supplement](../docs/reviews/G2_PRIOR_ART_SUPPLEMENT_R2.md) records additional targeted primary-source inspections, notably parametric validated integration, Ariadne and Houska/Villanueva/Chachuat predictor-validation. Its explicit access limits remain in force; this index does not upgrade the evidence tiers of the register above or count a partial retrieval as a completed theorem audit.
+
+GPT's [Case A acceptance record](../docs/reviews/GPT_G2_R2_d2cd854_ACCEPT_RECORD.md) retains the generic-method novelty blocker. Case A is accepted finite arithmetic evidence only. The new Case B challenge is also a synthetic hand proof and does not establish superiority over matched generic reachability methods. Such a comparison remains required before G4.
