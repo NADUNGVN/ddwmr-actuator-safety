@@ -1,0 +1,92 @@
+{
+  "artifacts": [
+    {
+      "format": "semantic-json",
+      "path": "validation/configs/benchmark_v1.json",
+      "sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b"
+    },
+    {
+      "format": "semantic-json",
+      "path": "validation/configs/dev_pilot_r2_v1.json",
+      "sha256": "3b04dd91ed5f3330cc9e6f032edb970a6f1e4b8054cd92c85f969f72ba8060a6"
+    },
+    {
+      "format": "semantic-json",
+      "path": "validation/configs/g2_proof_pipeline_fixture_r2_v1.json",
+      "sha256": "ee22d63de39ff06166059c640db1f3e0c2dbe3bd6814eac45f09b27f3df4d8f7"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/development_manifest_r2_v1.json",
+      "sha256": "e56342ab6a3bfceb5a9596836c0a905a1a75f521b0b9debc52e730b59766277d"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/SHA256SUMS_PRE_EVAL_R2.json",
+      "sha256": "f27f548bf3a750e1519ade0611e3e50bdef70b8f477582c3b93166a820abab89"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/radius_series_regression_r2_v1.json",
+      "sha256": "59e2212198010ef1bf50c9df19432ffe2f6243fd3bbcedaf9bd572207bda557f"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/hash_protocol_check_r2_v1.json",
+      "sha256": "0aa1518fb311eff87e9974b19d1e0451de5c25efa773dc322bb2fe86067fbd00"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/proof_fixture_metadata_r2_v1.json",
+      "sha256": "fb963ea6b7417d75a039858a8dc02db375524f93a29a0aafcd505c946e011c4c"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/proof_fixture_check_r2_v1.json",
+      "sha256": "343d56df3ba9af0f4102b1ef7a1b36c90e519a01d0822299bc2086a6d37dd113"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/dev_pilot_run_metadata_r2_v1.json",
+      "sha256": "b2c1b246365aba39944944bbbb2cb580c02fbf91f540922f2b684a20c9219c9d"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/dev_pilot_record_check_r2_v1.json",
+      "sha256": "f515c53d3a343a68c5f5200493518e981142a1e28856414398428ffb88c95280"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/dev_pilot_summary_r2_v1.json",
+      "sha256": "80062c1215bd61cf5e9d68ed99c89db4cf07294a322959446e5c1147be338b2f"
+    },
+    {
+      "format": "semantic-json",
+      "path": "results/validation/g2/r2/pilot_positive_tamper_check_r2_v1.json",
+      "sha256": "c13c3b8dded48facfae04274c591b34563dc6bb82203d2d06ff351c8f6fbd585"
+    },
+    {
+      "format": "semantic-jsonl",
+      "path": "results/validation/g2/r2/proof_fixture_records_r2_v1.jsonl",
+      "sha256": "e953b2c6d4a70e872957eef68562fae37495b2419bb2b2c1b37e7d883c029a1d"
+    },
+    {
+      "format": "semantic-jsonl",
+      "path": "results/validation/g2/r2/dev_pilot_records_r2_v1.jsonl",
+      "sha256": "f3fff950792aedb785784612b02bed16e4d1ae632d6d830e72514d5a81027e59"
+    },
+    {
+      "format": "semantic-jsonl",
+      "path": "results/validation/g2/r2/dev_pilot_unknown_ledger_r2_v1.jsonl",
+      "sha256": "8ae3c8bbe278ec8240e3ee34bac6d3be30fb3bdb8b0c0c19a62618d9bc4e46da"
+    },
+    {
+      "format": "semantic-jsonl",
+      "path": "results/validation/g2/r2/dev_pilot_failure_ledger_r2_v1.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "schema": "ddwmr-g2-results-semantic-hashes-r2-v1",
+  "semantics": "JSON is parsed then canonicalized as sorted-key compact UTF-8 JSON; JSONL records are canonicalized in order with LF delimiters."
+}
