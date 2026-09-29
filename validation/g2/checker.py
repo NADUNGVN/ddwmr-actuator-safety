@@ -7,10 +7,11 @@ import math
 from fractions import Fraction
 from typing import Any
 
-from .evaluator import canonical_hash
+from .evaluator import _parse_input_query, _validate_profile, canonical_hash, query_hash_payload
+from .hashing import HASH_PROTOCOL_ID
 from .interval import interval_cosine, interval_matrix_exponential, interval_sine, matvec, sqrt_lower, vector_add
 from .model import ModelIntervals, build_model, physical_internal_box, physical_radius
-from .rational import Budget, Interval, InvalidInput, parse_q, qobj
+from .rational import Budget, Interval, InvalidInput, ResourceLimit, parse_q, qobj
 
 
 def _load_interval(value: Any, budget: Budget) -> Interval:
@@ -138,22 +139,225 @@ def sum_checked(values, budget: Budget) -> Fraction:
     return total
 
 
-def replay_record(record: dict[str, Any], query: dict[str, Any]) -> dict[str, Any]:
+def _query_binding_errors(record: dict[str, Any], query: dict[str, Any]) -> list[str]:
+    protocol = query.get("hash_protocol_id")
+    protocol_v2 = protocol == HASH_PROTOCOL_ID
+    expected = {
+        "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1",
+        "query_id": query.get("query_id"),
+        "method_id": "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1",
+        "profile_id": query.get("profile", {}).get("id"),
+        "held_voltage": query.get("action", {}).get("V"),
+        "horizon": query.get("horizon", {}).get("T"),
+        "state_cell_id": query.get("state_cell", {}).get("id"),
+        "scene_id": query.get("scene", {}).get("id"),
+        "horizon_id": query.get("horizon", {}).get("id"),
+        "action_id": query.get("action", {}).get("id"),
+        "parameter_cell_id": query.get("parameter_cell", {}).get("id"),
+        "benchmark_sha256": query.get("benchmark_sha256"),
+        "development_manifest_sha256": query.get("development_manifest_sha256"),
+        "quantifiers": {
+            "one_common_voltage_for_all_initial_states_and_labels": True,
+            "initial_state_cell_universal": True,
+            "parameter_labels_fixed_for_entire_hold": True,
+            "time_coverage": "closed [0,T] by whole-hold ranges",
+            "coefficient_representation": "named outer interval hull; interval arithmetic may forget rational-map correlations but does not resample a physical label",
+            "endpoint_target_requested": False,
+        },
+    }
+    errors = [key for key, value in expected.items() if record.get(key) != value]
+    if record.get("input_sha256") != canonical_hash(query_hash_payload(query)):
+        errors.append("input_sha256")
+    if record.get("status") not in {"CERTIFIED", "UNKNOWN"}:
+        errors.append("status_not_replayable")
+    if protocol_v2:
+        if canonical_hash(query.get("benchmark")) != query.get("benchmark_sha256"):
+            errors.append("benchmark_content_sha256")
+        expected_specification = canonical_hash({
+            "hash_protocol_id": protocol,
+            "benchmark_sha256": query.get("benchmark_sha256"),
+            "development_manifest_sha256": query.get("development_manifest_sha256"),
+        })
+        if record.get("hash_protocol_id") != protocol:
+            errors.append("hash_protocol_id")
+        if record.get("profile_sha256") != canonical_hash(query.get("profile")):
+            errors.append("profile_sha256")
+        if record.get("specification_sha256") != expected_specification:
+            errors.append("specification_sha256")
+    return errors
+
+
+def _validate_effective_query(query: dict[str, Any]) -> tuple[bool, str | None]:
+    try:
+        for key in ("state_cell", "scene", "horizon", "action", "parameter_cell"):
+            value = query.get(key)
+            if not isinstance(value, dict) or not isinstance(value.get("id"), str) or not value["id"]:
+                raise InvalidInput(f"{key} must have a nonempty string ID")
+        benchmark = query["benchmark"]
+        if not isinstance(benchmark, dict) or query["parameter_cell"] != benchmark.get("parameter_cell"):
+            raise InvalidInput("query parameter cell must match the hashed benchmark parameter cell")
+        profile = query["profile"]
+        wall = _validate_profile(profile)
+        budget = Budget(profile["max_rational_bits"], profile["max_rational_operations"], wall)
+        budget.set_stage("checker.query_contract")
+        _parse_input_query(
+            benchmark, query["state_cell"], query["scene"], query["horizon"],
+            query["action"], profile, budget,
+        )
+    except (InvalidInput, ResourceLimit, KeyError, TypeError, ValueError) as exc:
+        return False, f"{type(exc).__name__}: {exc}"
+    return True, None
+
+
+def _replay_record_impl(record: dict[str, Any], query: dict[str, Any]) -> dict[str, Any]:
     """Recompute the claim from the serialized proof, never calling run_query/evaluate."""
     status = record.get("status")
-    if status in {"INVALID_INPUT", "EXECUTION_FAILURE"}:
-        return {"replayed": False, "status": status, "reason": "non-certificate record"}
+    binding_errors = _query_binding_errors(record, query)
+    if binding_errors:
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "binding_errors": binding_errors}
+    query_valid, query_error = _validate_effective_query(query)
+    if not query_valid:
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "query_contract_error": query_error}
     proof = record.get("proof")
     if proof is None:
+        resource_reasons = {"RATIONAL_BIT_LIMIT", "RATIONAL_OPERATION_LIMIT", "WALL_TIME_LIMIT"}
+        reasons = record.get("reason_codes")
+        if (
+            status != "UNKNOWN" or not isinstance(reasons, list) or not reasons
+            or len(reasons) != 1
+            or any(not isinstance(reason, str) for reason in reasons)
+            or not set(reasons) <= resource_reasons
+        ):
+            return {"replayed": False, "record_integrity_valid": False, "status": status, "reason": "proof-less record is not a declared resource UNKNOWN"}
+        if query.get("hash_protocol_id") == HASH_PROTOCOL_ID:
+            diagnostic = record.get("resource_diagnostic")
+            work_value = record.get("work")
+            work = work_value if isinstance(work_value, dict) else {}
+            failure = diagnostic.get("failure") if isinstance(diagnostic, dict) else None
+            caps = diagnostic.get("configured_caps") if isinstance(diagnostic, dict) else None
+            if reasons[0] == "RATIONAL_BIT_LIMIT":
+                expected_cap = ("max_rational_bits", query["profile"]["max_rational_bits"])
+            elif reasons[0] == "RATIONAL_OPERATION_LIMIT":
+                expected_cap = ("max_rational_operations", query["profile"]["max_rational_operations"])
+            elif reasons[0] == "WALL_TIME_LIMIT":
+                wall_limit = parse_q(query["profile"]["wall_seconds_per_query"])
+                expected_cap = ("wall_seconds_per_query", {"num": str(wall_limit.numerator), "den": str(wall_limit.denominator)})
+            else:
+                expected_cap = None
+            counter_names = (
+                "operation_attempts", "operations_started", "completed_results",
+                "max_preoperation_estimate_bits", "max_completed_result_bits", "max_observed_result_bits",
+            )
+            counter_types_valid = isinstance(diagnostic, dict) and all(
+                isinstance(diagnostic.get(name), int) and not isinstance(diagnostic.get(name), bool)
+                and diagnostic.get(name) >= 0 for name in counter_names
+            )
+            work_counter_types_valid = all(
+                isinstance(work.get(name), int) and not isinstance(work.get(name), bool) and work.get(name) >= 0
+                for name in (
+                    "rational_operations", "operation_attempts", "completed_results", "max_rational_bits",
+                    "max_preoperation_estimate_bits", "max_completed_result_bits",
+                )
+            )
+            operand_widths_valid = isinstance(failure, dict) and isinstance(failure.get("operand_bit_lengths"), list) and all(
+                isinstance(width, dict)
+                and set(width) == {"numerator_bits", "denominator_bits"}
+                and all(isinstance(width.get(name), int) and not isinstance(width.get(name), bool) and width[name] >= 0
+                        for name in ("numerator_bits", "denominator_bits"))
+                for width in failure.get("operand_bit_lengths", [])
+            )
+            failure_counters_match = isinstance(failure, dict) and all(
+                failure.get(failure_name) == diagnostic.get(diagnostic_name)
+                for failure_name, diagnostic_name in (
+                    ("operation_attempts", "operation_attempts"), ("operations_started", "operations_started"),
+                    ("completed_results", "completed_results"),
+                    ("max_preoperation_estimate_bits", "max_preoperation_estimate_bits"),
+                    ("max_completed_result_bits", "max_completed_result_bits"),
+                    ("max_observed_result_bits", "max_observed_result_bits"),
+                )
+            )
+            failure_limit_valid = False
+            if isinstance(failure, dict) and expected_cap is not None:
+                if reasons[0] == "RATIONAL_BIT_LIMIT":
+                    observed = failure.get("estimated_or_observed_bits")
+                    estimate_kind = failure.get("estimate_kind")
+                    failure_limit_valid = (
+                        estimate_kind in {
+                            "preoperation_intermediate_upper_estimate", "reduced_result",
+                            "input_digit_width_upper_estimate", "input_observed",
+                        }
+                        and isinstance(observed, int) and not isinstance(observed, bool)
+                        and observed > expected_cap[1]
+                        and diagnostic.get("operations_started") <= query["profile"]["max_rational_operations"]
+                        and (
+                            diagnostic.get("operation_attempts") == diagnostic.get("operations_started") + 1
+                            if estimate_kind == "preoperation_intermediate_upper_estimate"
+                            else diagnostic.get("operation_attempts") == diagnostic.get("operations_started")
+                            if estimate_kind in {"reduced_result", "input_digit_width_upper_estimate", "input_observed"}
+                            else False
+                        )
+                    )
+                elif reasons[0] == "RATIONAL_OPERATION_LIMIT":
+                    failure_limit_valid = (
+                        failure.get("estimate_kind") == "operation_count"
+                        and failure.get("estimated_or_observed_bits") is None
+                        and diagnostic.get("operation_attempts") == expected_cap[1] + 1
+                        and diagnostic.get("operations_started") == expected_cap[1]
+                    )
+                elif reasons[0] == "WALL_TIME_LIMIT":
+                    wall_caps = caps.get("wall_time") if isinstance(caps, dict) else None
+                    failure_limit_valid = (
+                        failure.get("estimate_kind") == "wall_time"
+                        and isinstance(wall_caps, dict)
+                        and wall_caps.get("enforced") is True
+                        and wall_caps.get("configured_seconds") == expected_cap[1]
+                    )
+            telemetry_valid = (
+                isinstance(diagnostic, dict)
+                and diagnostic.get("schema") == "ddwmr-g2-resource-diagnostic-v1"
+                and isinstance(failure, dict)
+                and failure.get("schema") == "ddwmr-g2-resource-diagnostic-v1"
+                and isinstance(diagnostic.get("stage_id"), str) and bool(diagnostic.get("stage_id"))
+                and failure.get("stage_id") == diagnostic.get("stage_id")
+                and isinstance(failure.get("primitive_id"), str) and bool(failure.get("primitive_id"))
+                and isinstance(failure.get("estimate_kind"), str) and bool(failure.get("estimate_kind"))
+                and failure.get("kind") == reasons[0]
+                and isinstance(caps, dict)
+                and caps.get("max_rational_bits") == query["profile"]["max_rational_bits"]
+                and caps.get("max_rational_operations") == query["profile"]["max_rational_operations"]
+                and expected_cap is not None
+                and failure.get("configured_cap_name") == expected_cap[0]
+                and failure.get("configured_cap_value") == expected_cap[1]
+                and operand_widths_valid
+                and counter_types_valid
+                and work_counter_types_valid
+                and failure_counters_match
+                and failure_limit_valid
+                and work.get("rational_operations") == diagnostic.get("operations_started")
+                and work.get("operation_attempts") == diagnostic.get("operation_attempts")
+                and work.get("completed_results") == diagnostic.get("completed_results")
+                and work.get("max_rational_bits") == diagnostic.get("max_observed_result_bits")
+                and work.get("max_preoperation_estimate_bits") == diagnostic.get("max_preoperation_estimate_bits")
+                and work.get("max_completed_result_bits") == diagnostic.get("max_completed_result_bits")
+                and diagnostic.get("operation_attempts", -1) >= diagnostic.get("operations_started", 0)
+                and diagnostic.get("completed_results", -1) <= diagnostic.get("operation_attempts", 0)
+                and diagnostic.get("max_observed_result_bits", 0) >= diagnostic.get("max_completed_result_bits", 0)
+            )
+            if not telemetry_valid:
+                return {"replayed": False, "record_integrity_valid": False, "status": status, "reason": "resource diagnostic does not match the bounded failure record"}
         return {
             "replayed": False,
-            "resource_limited": status == "UNKNOWN" and bool(record.get("reason_codes")),
+            "record_integrity_valid": True,
+            "resource_limited": True,
             "status": status,
-            "reason": "bounded resource UNKNOWN without completed proof object",
+            "reason": "record integrity checked; arithmetic replay not applicable without a proof object",
         }
 
+    if not isinstance(proof, dict):
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "reason": "proof object must be a JSON object"}
     profile = query["profile"]
     budget = Budget(profile["max_rational_bits"], profile["max_rational_operations"] * 2)
+    budget.set_stage("checker.query_replay")
     T = parse_q(query["horizon"]["T"], budget)
     voltage = [parse_q(x, budget) for x in query["action"]["V"]]
     model = build_model(query["benchmark"], budget)
@@ -206,6 +410,13 @@ def replay_record(record: dict[str, Any], query: dict[str, Any]) -> dict[str, An
     distance, distance_hi = sqrt_lower(budget.add(budget.mul(dx, dx), budget.mul(dy, dy)), profile["sqrt_bisections"], budget)
     collision_margin = budget.add(budget.add(distance, -parse_q(obstacle["R_s"], budget)), -E_p)
 
+    internal_center_width = [budget.add(x.hi, -x.lo) for x in P1_physical]
+    internal_total_width = [budget.add(width, budget.mul(Fraction(2), radius)) for width, radius in zip(internal_center_width, eta_physical)]
+    pose_center_ranges = [px, py, heading]
+    pose_errors = [E_p, E_p, E_theta]
+    pose_center_width = [budget.add(x.hi, -x.lo) for x in pose_center_ranges]
+    pose_total_width = [budget.add(width, budget.mul(Fraction(2), radius)) for width, radius in zip(pose_center_width, pose_errors)]
+
     # Exact equality checks make the record a replayable arithmetic proof, not a status assertion.
     expected = {
         "parameter_label_order": model.parameter_label_order,
@@ -243,15 +454,92 @@ def replay_record(record: dict[str, Any], query: dict[str, Any]) -> dict[str, An
         }],
     }
     differences = [key for key, value in expected.items() if proof.get(key) != value]
+    if set(proof) != set(expected):
+        differences.append("proof_field_set")
     if differences:
-        return {"replayed": False, "status": status, "mismatched_proof_fields": differences}
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "mismatched_proof_fields": differences}
     if record.get("collision_margin_lower") != [qobj(collision_margin)] or record.get("contact_margin_lower") != qobj(contact_margin):
-        return {"replayed": False, "status": status, "mismatched_record_margins": True}
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "mismatched_record_margins": True}
+    annotations = {
+        "obstacle_count": 1,
+        "center_width_internal_physical": [qobj(x) for x in internal_center_width],
+        "error_radius_internal_physical": [qobj(x) for x in eta_physical],
+        "total_width_internal_physical": [qobj(x) for x in internal_total_width],
+        "center_width_pose": [qobj(x) for x in pose_center_width],
+        "error_radius_pose": [qobj(x) for x in pose_errors],
+        "total_width_pose": [qobj(x) for x in pose_total_width],
+    }
+    annotation_mismatches = [key for key, value in annotations.items() if record.get(key) != value]
+    if annotation_mismatches:
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "mismatched_record_annotations": annotation_mismatches}
     should_certify = collision_margin >= 0 and contact_margin >= 0
     if (status == "CERTIFIED") != should_certify:
-        return {"replayed": False, "status": status, "computed_should_certify": should_certify}
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "computed_should_certify": should_certify}
+    expected_reasons = []
+    if contact_margin < 0:
+        expected_reasons.append("CONTACT_SUFFICIENT_MARGIN_NEGATIVE")
+    if collision_margin < 0:
+        expected_reasons.append("COLLISION_SUFFICIENT_MARGIN_NEGATIVE")
+    reason_codes = record.get("reason_codes")
+    if not isinstance(reason_codes, list) or any(not isinstance(reason, str) for reason in reason_codes) or reason_codes != expected_reasons:
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "mismatched_reason_codes": True}
+    work_value = record.get("work")
+    if not isinstance(work_value, dict):
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "reason": "work counters must be a JSON object"}
+    work = work_value
+    expected_work = {
+        "parameter_leaves": 1, "initial_state_leaves": 1,
+        "time_slabs": profile["time_slab_count"],
+        "whole_hold_hull_reused_on_slabs": profile["time_slab_count"] > 1,
+        "exp_degree": profile["exp_taylor_degree"], "trig_degree": profile["trig_taylor_degree"],
+        "comparison_order": profile["comparison_series_order"], "sqrt_bisections": profile["sqrt_bisections"],
+        "configured_caps": {
+            "max_rational_bits": profile["max_rational_bits"],
+            "max_rational_operations": profile["max_rational_operations"],
+        },
+    }
+    work_mismatches = [key for key, value in expected_work.items() if work.get(key) != value]
+    if work.get("rational_operations", profile["max_rational_operations"] + 1) > profile["max_rational_operations"]:
+        work_mismatches.append("rational_operations")
+    if work.get("rational_operations", -1) < 0:
+        work_mismatches.append("rational_operations")
+    if work.get("max_rational_bits", profile["max_rational_bits"] + 1) > profile["max_rational_bits"]:
+        work_mismatches.append("max_rational_bits")
+    for key in ("operation_attempts", "completed_results", "max_preoperation_estimate_bits", "max_completed_result_bits"):
+        if not isinstance(work.get(key), int) or isinstance(work.get(key), bool) or work.get(key, profile["max_rational_operations"] + 1) < 0:
+            work_mismatches.append(key)
+    if work.get("operation_attempts") != work.get("rational_operations"):
+        work_mismatches.append("operation_attempts")
+    if work.get("completed_results", profile["max_rational_operations"] + 1) > work.get("operation_attempts", 0):
+        work_mismatches.append("completed_results")
+    if work.get("max_preoperation_estimate_bits", profile["max_rational_bits"] + 1) > profile["max_rational_bits"]:
+        work_mismatches.append("max_preoperation_estimate_bits")
+    if work.get("max_completed_result_bits", profile["max_rational_bits"] + 1) > profile["max_rational_bits"]:
+        work_mismatches.append("max_completed_result_bits")
+    if work.get("max_rational_bits", -1) < work.get("max_completed_result_bits", 0):
+        work_mismatches.append("max_rational_bits")
+    if work_mismatches:
+        return {"replayed": False, "record_integrity_valid": False, "status": status, "mismatched_work_fields": sorted(set(work_mismatches))}
     return {
-        "replayed": True, "status": status, "collision_margin": qobj(collision_margin),
+        "replayed": True, "proof_replay_pass": True, "record_integrity_valid": True,
+        "status": status, "collision_margin": qobj(collision_margin),
         "contact_margin": qobj(contact_margin), "checker_operations": budget.operations,
         "shared_trusted_components": ["exact Fraction interval primitives", "parameter-map and model matrix constructor", "validated exp/trig/root primitives"],
     }
+
+
+def replay_record(record: dict[str, Any], query: dict[str, Any]) -> dict[str, Any]:
+    """Return an explicit rejection result for malformed or unbounded replay inputs."""
+    status = record.get("status") if isinstance(record, dict) else None
+    try:
+        return _replay_record_impl(record, query)
+    except ResourceLimit as exc:
+        return {
+            "replayed": False, "record_integrity_valid": False, "status": status,
+            "checker_resource_limited": True, "reason": f"{exc.kind}: {exc.detail}",
+        }
+    except Exception as exc:
+        return {
+            "replayed": False, "record_integrity_valid": False, "status": status,
+            "reason": f"checker rejected malformed or unsupported record/query: {type(exc).__name__}: {exc}",
+        }

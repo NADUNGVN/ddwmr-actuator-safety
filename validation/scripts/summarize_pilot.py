@@ -11,6 +11,7 @@ from fractions import Fraction
 from pathlib import Path
 
 from validation.g2.evaluator import ROOT
+from validation.g2.hashing import parse_jsonl_records
 from validation.g2.rational import parse_q, qtext
 
 
@@ -36,12 +37,16 @@ def main() -> None:
     parser.add_argument("--summary", default=None)
     parser.add_argument("--unknown-ledger", default=None)
     parser.add_argument("--failure-ledger", default=None)
+    parser.add_argument("--benchmark", default="validation/configs/benchmark_v1.json")
+    parser.add_argument("--pilot", default="validation/configs/dev_pilot_v1.json")
+    parser.add_argument("--manifest", default="results/validation/g2/development_manifest_v1.json")
     args = parser.parse_args()
-    base = ROOT / "results/validation/g2"
     records_path = ROOT / args.records
-    records = [json.loads(line) for line in records_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    manifest = load(base / "development_manifest_v1.json")
-    benchmark = load(ROOT / "validation/configs/benchmark_v1.json")
+    records = parse_jsonl_records(records_path.read_bytes())
+    manifest = load(ROOT / args.manifest)
+    pilot = load(ROOT / args.pilot)
+    profile = pilot["profile"]
+    benchmark = load(ROOT / args.benchmark)
     states = {x["id"]: x for x in benchmark["state_cells"]}
     scenes = {x["id"]: x for x in benchmark["scenes"]}
     counts = Counter(record["status"] for record in records)
@@ -50,6 +55,9 @@ def main() -> None:
     action_groups: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
     collision_margins, contact_margins, widths, radii, total_widths = [], [], [], [], []
     runtimes, operations, max_bits = [], [], []
+    attempts, max_estimates, max_completed_bits = [], [], []
+    resource_failures = Counter()
+    resource_estimates: dict[str, list[int]] = defaultdict(list)
     unknown_ledger, failure_ledger = [], []
     for record in records:
         state = states[record["state_cell_id"]]
@@ -70,10 +78,22 @@ def main() -> None:
         if "rational_operations" in record.get("work", {}):
             operations.append(record["work"]["rational_operations"])
             max_bits.append(record["work"].get("max_rational_bits", 0))
+            if "operation_attempts" in record["work"]:
+                attempts.append(record["work"]["operation_attempts"])
+                max_estimates.append(record["work"].get("max_preoperation_estimate_bits", 0))
+                max_completed_bits.append(record["work"].get("max_completed_result_bits", 0))
+        diagnostic = record.get("resource_diagnostic", {})
+        failure = diagnostic.get("failure") if isinstance(diagnostic, dict) else None
+        if isinstance(failure, dict):
+            key = "|".join(str(failure.get(name, "")) for name in ("kind", "stage_id", "primitive_id", "estimate_kind"))
+            resource_failures[key] += 1
+            value = failure.get("estimated_or_observed_bits")
+            if isinstance(value, int):
+                resource_estimates[key].append(value)
         if record["status"] == "UNKNOWN":
             unknown_ledger.append({key: record[key] for key in (
                 "query_id", "status", "reason_codes", "reason", "collision_margin_lower",
-                "contact_margin_lower", "work", "elapsed_seconds_display_only",
+                "contact_margin_lower", "work", "resource_diagnostic", "elapsed_seconds_display_only",
             ) if key in record})
         if record["status"] in {"INVALID_INPUT", "EXECUTION_FAILURE"}:
             failure_ledger.append({key: record[key] for key in (
@@ -96,10 +116,11 @@ def main() -> None:
             for key, count in sorted(values.items())
         }
     report = {
-        "schema": "ddwmr-g2-development-pilot-summary-v1",
+        "schema": "ddwmr-g2-development-pilot-summary-r2-v1" if pilot.get("hash_protocol_id") else "ddwmr-g2-development-pilot-summary-v1",
         "disposition": "DEVELOPMENT_PILOT_ONLY; NOT_LOCKED; NO_G2_G4_PROMOTION",
         "method": "one-hold finite-cell whole-hold interval-hull fallback, predictor depth n=1",
-        "profile_id": "DEV_FALLBACK_N1_PILOT_V1",
+        "hash_protocol_id": pilot.get("hash_protocol_id", "legacy-raw-v1"),
+        "profile_id": profile["id"],
         "original_grid_denominator_per_method_profile": manifest["original_query_count_per_method_profile"],
         "selected_pilot_denominator": manifest["selected_query_count"],
         "not_run_original_query_count": manifest["not_run_query_count"],
@@ -129,7 +150,17 @@ def main() -> None:
         },
         "work": {
             "rational_operations_per_query_before_termination": summarize_values([Fraction(x) for x in operations]),
+            "operation_attempts_per_query": summarize_values([Fraction(x) for x in attempts]),
             "max_rational_bits_seen": max(max_bits, default=0),
+            "max_preoperation_estimate_bits": max(max_estimates, default=0),
+            "max_completed_result_bits": max(max_completed_bits, default=0),
+            "resource_failure_locations": {
+                key: {
+                    "count": count,
+                    "estimated_or_observed_bits": summarize_values([Fraction(x) for x in resource_estimates[key]]),
+                }
+                for key, count in sorted(resource_failures.items())
+            },
             "elapsed_seconds_display_only": {
                 "count": len(runtimes), "min": min(runtimes) if runtimes else None,
                 "median": sorted(runtimes)[(len(runtimes) - 1) // 2] if runtimes else None,
@@ -138,8 +169,8 @@ def main() -> None:
             },
             "elapsed_time_is_not_a_safety_predicate": True,
         },
-        "unknown_ledger_path": "results/validation/g2/dev_pilot_unknown_ledger_v1.jsonl",
-        "failure_ledger_path": "results/validation/g2/dev_pilot_failure_ledger_v1.jsonl",
+        "unknown_ledger_path": str(records_path.with_name(records_path.stem + "_unknown_ledger.jsonl").relative_to(ROOT)),
+        "failure_ledger_path": str(records_path.with_name(records_path.stem + "_failure_ledger.jsonl").relative_to(ROOT)),
         "limitations": [
             "Only 216 preselected queries were evaluated; 1728 original IDs remain NOT_RUN.",
             "Synthetic order-one parameter family only; no physical provenance.",
@@ -148,9 +179,12 @@ def main() -> None:
             "CERTIFIED is implementation evidence pending independent scientific review; UNKNOWN does not imply unsafe.",
         ],
     }
-    summary_path = ROOT / args.summary if args.summary else (base / "dev_pilot_summary_v1.json" if args.records.endswith("dev_pilot_records_v1.jsonl") else records_path.with_name(records_path.stem + "_summary.json"))
-    unknown_path = ROOT / args.unknown_ledger if args.unknown_ledger else (base / "dev_pilot_unknown_ledger_v1.jsonl" if args.records.endswith("dev_pilot_records_v1.jsonl") else records_path.with_name(records_path.stem + "_unknown_ledger.jsonl"))
-    failure_path = ROOT / args.failure_ledger if args.failure_ledger else (base / "dev_pilot_failure_ledger_v1.jsonl" if args.records.endswith("dev_pilot_records_v1.jsonl") else records_path.with_name(records_path.stem + "_failure_ledger.jsonl"))
+    summary_path = ROOT / args.summary if args.summary else records_path.with_name(records_path.stem + "_summary.json")
+    unknown_path = ROOT / args.unknown_ledger if args.unknown_ledger else records_path.with_name(records_path.stem + "_unknown_ledger.jsonl")
+    failure_path = ROOT / args.failure_ledger if args.failure_ledger else records_path.with_name(records_path.stem + "_failure_ledger.jsonl")
+    existing_outputs = [path for path in (summary_path, unknown_path, failure_path) if path.exists()]
+    if existing_outputs:
+        raise SystemExit("refusing to overwrite summary evidence: " + ", ".join(str(path) for path in existing_outputs))
     report["records_path"] = str(records_path.relative_to(ROOT))
     report["unknown_ledger_path"] = str(unknown_path.relative_to(ROOT))
     report["failure_ledger_path"] = str(failure_path.relative_to(ROOT))

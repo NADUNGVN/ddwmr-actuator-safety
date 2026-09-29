@@ -15,6 +15,7 @@ from .interval import (
     interval_cosine, interval_matrix_exponential, interval_sine, matvec,
     sqrt_lower, vector_add,
 )
+from .hashing import HASH_PROTOCOL_ID, semantic_json_sha256
 from .model import ModelIntervals, build_model, physical_internal_box, physical_radius
 from .rational import Budget, Interval, InvalidInput, ResourceLimit, parse_q, qobj, qtext
 
@@ -24,8 +25,7 @@ STATE_COORDINATES = ["p_x", "p_y", "theta", "u", "r", "omega_L", "omega_R", "i_L
 
 
 def canonical_hash(value: Any) -> str:
-    payload = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
-    return hashlib.sha256(payload).hexdigest()
+    return semantic_json_sha256(value)
 
 
 def file_hash(path: Path) -> str:
@@ -98,6 +98,7 @@ def _radius_series(
     N: list[list[Fraction]], D_bar: list[list[Fraction]], d_bar: list[Fraction], T: Fraction,
     order: int, budget: Budget,
 ) -> tuple[list[Fraction], list[Fraction], Fraction, Fraction]:
+    budget.set_stage("comparison.radius.forcing_vector")
     q_vec = []
     for row in D_bar:
         total = Fraction(0)
@@ -105,6 +106,7 @@ def _radius_series(
             total = budget.add(total, budget.mul(d, force_bound))
         q_vec.append(total)
     q_norm = max(q_vec, default=Fraction(0))
+    budget.set_stage("comparison.radius.matrix_norm")
     row_norms = []
     for row in N:
         total = Fraction(0)
@@ -114,21 +116,20 @@ def _radius_series(
     n_norm = max(row_norms, default=Fraction(0))
     Q = budget.mul(n_norm, T)
     partial = [Fraction(0)] * len(N)
-    power = [row[:] for row in N]
     vector = q_vec[:]
-    t_power = T
+    t_over_factorial = T
+    budget.set_stage("comparison.radius.partial_series")
     for k in range(order + 1):
-        denominator = Fraction(math.factorial(k + 1))
-        coeff = budget.div(t_power, denominator)
         for i in range(len(partial)):
-            partial[i] = budget.add(partial[i], budget.mul(coeff, vector[i]))
+            # Recurrence already maintains T^(k+1)/(k+1)!; divide by factorial once.
+            partial[i] = budget.add(partial[i], budget.mul(t_over_factorial, vector[i]))
         if k < order:
             vector = _matvec_positive(N, vector, budget)
-            t_power = budget.mul(t_power, T)
-            t_power = budget.div(t_power, Fraction(k + 2))
+            t_over_factorial = budget.div(budget.mul(t_over_factorial, T), Fraction(k + 2))
     if Q == 0 or q_norm == 0:
         tail = Fraction(0)
     else:
+        budget.set_stage("comparison.radius.tail_bound")
         exp_majorant = budget.pow(Fraction(3), (Q.numerator + Q.denominator - 1) // Q.denominator)
         tail_numerator = budget.mul(T, q_norm)
         tail_numerator = budget.mul(tail_numerator, exp_majorant)
@@ -237,15 +238,20 @@ def _evaluate_bounds(
     benchmark: dict[str, Any], state_cell: dict[str, Any], scene: dict[str, Any], horizon: dict[str, Any],
     action: dict[str, Any], profile: dict[str, Any], budget: Budget,
 ) -> dict[str, Any]:
+    budget.set_stage("query.input_contract")
     X_physical, T, V, obstacles, V_max = _parse_input_query(benchmark, state_cell, scene, horizon, action, profile, budget)
+    budget.set_stage("query.parameter_model")
     model = build_model(benchmark, budget)
     scales = model.scales
     internal_indices = [3, 4, 5, 6, 7, 8]
     X_scaled = [X_physical[index] / _point(scales[j], budget) for j, index in enumerate(internal_indices)]
+    budget.set_stage("predictor.matrix_exponential")
     E, exp_q, exp_remainder = interval_matrix_exponential(model.A, T, profile["exp_taylor_degree"])
+    budget.set_stage("predictor.picard_levels")
     P0, force_minus1, integrand0 = _predictor_level(model, E, X_scaled, X_scaled, V, T)
     P1, force0, integrand1 = _predictor_level(model, E, X_scaled, P0, V, T)
 
+    budget.set_stage("predictor.residual")
     delta = [(P1[i] - P0[i]).abs_upper() for i in range(6)]
     d_bar = []
     for side_idx, side in enumerate(("L", "R")):
@@ -255,10 +261,13 @@ def _evaluate_bounds(
         cap = budget.mul(Fraction(2), model.parameters[f"C_{side}"].hi)
         d_bar.append(min(bound, cap))
 
+    budget.set_stage("comparison.majorant")
     M_bar, D_bar, N = _bound_model_matrices(model)
+    budget.set_stage("comparison.radius_series")
     eta_scaled, q_vec, comparison_Q, comparison_tail = _radius_series(
         N, D_bar, d_bar, T, profile["comparison_series_order"], budget
     )
+    budget.set_stage("pose.full_hold_lift")
     eta_physical = physical_radius(eta_scaled, scales, budget)
     P1_physical = physical_internal_box(P1, scales)
     P0_physical = physical_internal_box(P0, scales)
@@ -276,6 +285,7 @@ def _evaluate_bounds(
     py_center = X_physical[1] + duration * (P1_physical[0] * sin_theta)
 
     # Contact bounds use the full predictor range and the same parameter-cell label hull.
+    budget.set_stage("contact.full_hold_margin")
     slip_tilde = [value / model.parameters["v_s"] for value in matvec(model.S, P1)]
     betas: list[Fraction] = []
     for side_idx, side in enumerate(("L", "R")):
@@ -300,6 +310,7 @@ def _evaluate_bounds(
     contact_margin = budget.add(contact_available, -contact_demand)
 
     collision = []
+    budget.set_stage("collision.full_hold_margin")
     for obstacle in obstacles:
         ox, oy = obstacle["p_o"]
         dx = max(Fraction(0), budget.add(px_center.lo, -ox), budget.add(ox, -px_center.hi))
@@ -394,6 +405,7 @@ def _proof_json(result: dict[str, Any]) -> dict[str, Any]:
 def make_query(
     benchmark: dict[str, Any], query_id: str, profile: dict[str, Any],
     development_manifest_sha256: str, benchmark_sha256: str,
+    hash_protocol_id: str | None = None,
 ) -> dict[str, Any]:
     parts = query_id.split("__")
     if len(parts) != 4:
@@ -411,35 +423,47 @@ def make_query(
         "benchmark": benchmark,
         "benchmark_sha256": benchmark_sha256,
         "development_manifest_sha256": development_manifest_sha256,
+        "hash_protocol_id": hash_protocol_id,
     }
+
+
+def query_hash_payload(query: dict[str, Any]) -> dict[str, Any]:
+    payload = {
+        "query_id": query["query_id"], "state_cell": query["state_cell"], "scene": query["scene"],
+        "horizon": query["horizon"], "action": query["action"],
+        "parameter_cell": query["parameter_cell"], "profile": query["profile"],
+    }
+    if query.get("hash_protocol_id"):
+        payload["hash_protocol_id"] = query["hash_protocol_id"]
+    return payload
 
 
 def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
     started = time.monotonic()
     profile = query.get("profile", {})
+    hash_protocol_id = query.get("hash_protocol_id")
+    protocol_v2 = hash_protocol_id == HASH_PROTOCOL_ID
+    method_id = "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1"
     try:
         wall = _validate_profile(profile)
         budget = Budget(profile["max_rational_bits"], profile["max_rational_operations"], wall)
     except InvalidInput as exc:
         return {
-            "schema": "ddwmr-g2-record-v1", "query_id": query.get("query_id"),
+            "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1", "query_id": query.get("query_id"),
             "source_revision": source_commit, "status": "INVALID_INPUT",
             "reason_codes": ["INVALID_RESOURCE_PROFILE"], "reason": str(exc),
             "review_status": "PENDING_INDEPENDENT_AUDIT",
             "elapsed_seconds_display_only": round(time.monotonic() - started, 6),
         }
+    input_hash = canonical_hash(query_hash_payload(query))
     base = {
-        "schema": "ddwmr-g2-record-v1", "query_id": query["query_id"],
-        "method_id": "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1",
+        "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1", "query_id": query["query_id"],
+        "method_id": method_id,
         "source_revision": source_commit,
         "benchmark_sha256": query["benchmark_sha256"],
         "development_manifest_sha256": query["development_manifest_sha256"],
         "profile_id": profile["id"],
-        "input_sha256": canonical_hash({
-            "query_id": query["query_id"], "state_cell": query["state_cell"],
-            "scene": query["scene"], "horizon": query["horizon"], "action": query["action"],
-            "parameter_cell": query["parameter_cell"], "profile": profile,
-        }),
+        "input_sha256": input_hash,
         "state_cell_id": query["state_cell"]["id"], "scene_id": query["scene"]["id"],
         "horizon_id": query["horizon"]["id"], "action_id": query["action"]["id"],
         "held_voltage": query["action"]["V"], "horizon": query["horizon"]["T"],
@@ -454,6 +478,16 @@ def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
         },
         "review_status": "PENDING_INDEPENDENT_AUDIT",
     }
+    if protocol_v2:
+        base.update({
+            "hash_protocol_id": hash_protocol_id,
+            "profile_sha256": canonical_hash(profile),
+            "specification_sha256": canonical_hash({
+                "hash_protocol_id": hash_protocol_id,
+                "benchmark_sha256": query["benchmark_sha256"],
+                "development_manifest_sha256": query["development_manifest_sha256"],
+            }),
+        })
     try:
         result = _evaluate_bounds(query["benchmark"], query["state_cell"], query["scene"], query["horizon"], query["action"], profile, budget)
         certified = result["contact_margin"] >= 0 and all(x["margin_lower"] >= 0 for x in result["collision"])
@@ -477,7 +511,12 @@ def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
             "total_width_pose": [qobj(x) for x in result["pose_width"]],
             "work": {
                 "rational_operations": budget.operations,
+                "operation_attempts": budget.operation_attempts,
+                "completed_results": budget.completed_results,
                 "max_rational_bits": budget.max_seen_bits,
+                "max_preoperation_estimate_bits": budget.max_preoperation_estimate_bits,
+                "max_completed_result_bits": budget.max_completed_result_bits,
+                "configured_caps": {"max_rational_bits": budget.max_bits, "max_rational_operations": budget.max_operations},
                 "parameter_leaves": 1, "initial_state_leaves": 1,
                 "time_slabs": profile["time_slab_count"], "whole_hold_hull_reused_on_slabs": profile["time_slab_count"] > 1,
                 "exp_degree": profile["exp_taylor_degree"], "trig_degree": profile["trig_taylor_degree"],
@@ -491,7 +530,14 @@ def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
     except ResourceLimit as exc:
         return {
             **base, "status": "UNKNOWN", "reason_codes": [exc.kind], "reason": exc.detail,
-            "work": {"rational_operations": budget.operations, "max_rational_bits": budget.max_seen_bits},
+            "work": {
+                "rational_operations": budget.operations, "operation_attempts": budget.operation_attempts,
+                "completed_results": budget.completed_results, "max_rational_bits": budget.max_seen_bits,
+                "max_preoperation_estimate_bits": budget.max_preoperation_estimate_bits,
+                "max_completed_result_bits": budget.max_completed_result_bits,
+                "configured_caps": {"max_rational_bits": budget.max_bits, "max_rational_operations": budget.max_operations},
+            },
+            "resource_diagnostic": budget.diagnostic(),
             "elapsed_seconds_display_only": round(time.monotonic() - started, 6),
         }
     except InvalidInput as exc:

@@ -1,0 +1,45 @@
+{
+  "schema": "ddwmr-g2-proof-pipeline-fixture-r2-v1",
+  "status": "DECLARED_BEFORE_R2_EVALUATION; PLUMBING_FIXTURE_NOT_BENCHMARK",
+  "fixture_id": "R2_NONZERO_RADIUS_CERTIFICATE_PIPELINE_V1",
+  "benchmark_config": "validation/configs/benchmark_v1.json",
+  "state_cell": {
+    "id": "r2_fixture_state_nonzero_width",
+    "coordinates": ["p_x", "p_y", "theta", "u", "r", "omega_L", "omega_R", "i_L", "i_R"],
+    "box": [
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}],
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}],
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}],
+      [{"num":"99","den":"1000"},{"num":"101","den":"1000"}],
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}],
+      [{"num":"99","den":"1000"},{"num":"101","den":"1000"}],
+      [{"num":"99","den":"1000"},{"num":"101","den":"1000"}],
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}],
+      [{"num":"-1","den":"1000"},{"num":"1","den":"1000"}]
+    ]
+  },
+  "safe_scene": {
+    "id": "r2_fixture_far_obstacle",
+    "p_o": [{"num":"100","den":"1"},{"num":"100","den":"1"}],
+    "R_s": {"num":"1","den":"2"}
+  },
+  "inconclusive_scene": {
+    "id": "r2_fixture_near_obstacle",
+    "p_o": [{"num":"0","den":"1"},{"num":"0","den":"1"}],
+    "R_s": {"num":"1","den":"2"}
+  },
+  "horizon": {"id":"r2_fixture_T_020","T":{"num":"1","den":"50"}},
+  "action": {"id":"r2_fixture_V_0_0","V":[{"num":"0","den":"1"},{"num":"0","den":"1"}]},
+  "fixture_resource_caps": {
+    "max_rational_bits": 32768,
+    "max_rational_operations": 1000000,
+    "wall_seconds_per_query": {"num":"15","den":"1"}
+  },
+  "resource_telemetry_profile": {
+    "id": "R2_RESOURCE_TELEMETRY_FIXTURE_OPS1_V1",
+    "max_rational_bits": 32768,
+    "max_rational_operations": 1,
+    "wall_seconds_per_query": {"num":"15","den":"1"}
+  },
+  "purpose": "Exercise a completed proof with nonzero comparison radius, a completed inconclusive proof, an operation-cap UNKNOWN with replayed telemetry, independent checker replay, and tamper rejection. This fixture is separate from the unchanged 1944-query benchmark and its 216 selected IDs."
+}

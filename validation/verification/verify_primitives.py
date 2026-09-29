@@ -129,9 +129,70 @@ def main() -> None:
 
     bit_budget = Budget(8, 100)
     checks.append(expect_exception("pre-operation bit exhaustion", ResourceLimit, lambda: bit_budget.mul(F(255), F(255))))
+    bit_failure = bit_budget.failure_context or {}
+    checks.append(require(
+        "pre-operation failure telemetry",
+        bit_failure.get("kind") == "RATIONAL_BIT_LIMIT"
+        and bit_failure.get("stage_id") == "unclassified"
+        and bit_failure.get("primitive_id") == "fraction.mul"
+        and bit_failure.get("estimate_kind") == "preoperation_intermediate_upper_estimate"
+        and bit_failure.get("configured_cap_name") == "max_rational_bits"
+        and bit_failure.get("configured_cap_value") == 8
+        and bit_failure.get("operand_bit_lengths") == [
+            {"numerator_bits": 8, "denominator_bits": 1},
+            {"numerator_bits": 8, "denominator_bits": 1},
+        ],
+        "failure captures stage, primitive, upper estimate, exact cap, and operand widths before multiplication",
+    ))
     operation_budget = Budget(1024, 1)
     a = Interval(F(1), F(2), operation_budget)
     checks.append(expect_exception("operation exhaustion", ResourceLimit, lambda: a * a))
+    operation_failure = operation_budget.failure_context or {}
+    checks.append(require(
+        "operation-limit telemetry",
+        operation_failure.get("kind") == "RATIONAL_OPERATION_LIMIT"
+        and operation_failure.get("configured_cap_name") == "max_rational_operations"
+        and operation_failure.get("configured_cap_value") == 1
+        and operation_failure.get("operation_attempts") == 2
+        and operation_failure.get("operations_started") == 1,
+        "the rejected second primitive attempt is distinguished from the one operation started",
+    ))
+    identity_budget = Budget(8, 16)
+    identity_results = [
+        identity_budget.add(F(0), F(255)),
+        identity_budget.add(F(255), F(-255)),
+        identity_budget.mul(F(255), F(1)),
+        identity_budget.div(F(255), F(1)),
+        identity_budget.div(F(255), F(255)),
+        identity_budget.pow(F(255), 1),
+        identity_budget.pow(F(255), 0),
+        identity_budget.pow(F(-1), 99999),
+    ]
+    checks.append(require(
+        "exact arithmetic identities under tight bit cap",
+        identity_results == [F(255), F(0), F(255), F(255), F(1), F(255), F(1), F(-1)]
+        and identity_budget.operation_attempts == 8
+        and identity_budget.operations == 8
+        and identity_budget.completed_results == 8
+        and identity_budget.max_completed_result_bits == 8,
+        "zero/one identities return exact values and account for each attempted primitive without a false intermediate-bit limit",
+    ))
+    oversized_input_budget = Budget(8, 16)
+    oversized_input_budget.set_stage("fixture.input_contract")
+    checks.append(expect_exception("oversized rational input digit exhaustion", ResourceLimit, lambda: parse_q(
+        {"num": "9" * 100, "den": "1"}, oversized_input_budget,
+    )))
+    input_failure = oversized_input_budget.failure_context or {}
+    checks.append(require(
+        "input-width failure telemetry",
+        input_failure.get("kind") == "RATIONAL_BIT_LIMIT"
+        and input_failure.get("stage_id") == "fixture.input_contract"
+        and input_failure.get("primitive_id") == "fraction.parse"
+        and input_failure.get("estimate_kind") == "input_digit_width_upper_estimate"
+        and input_failure.get("configured_cap_value") == 8
+        and input_failure.get("input_digit_lengths") == {"num": 100, "den": 1},
+        "oversized decimal input is rejected before integer construction with its stage, digits, estimate, and cap",
+    ))
     shared_budget = Budget(32, 10)
     shared_den = F(1, 2**20)
     shared_sum = shared_budget.add(shared_den, shared_den)
