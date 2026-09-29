@@ -48,18 +48,31 @@ class Budget:
         return value
 
     def add(self, a: Fraction, b: Fraction) -> Fraction:
-        estimate = max(
-            abs(a.numerator).bit_length() + b.denominator.bit_length(),
-            abs(b.numerator).bit_length() + a.denominator.bit_length(),
+        common = math.gcd(a.denominator, b.denominator)
+        a_scale = b.denominator // common
+        b_scale = a.denominator // common
+        num_estimate = max(
+            abs(a.numerator).bit_length() + a_scale.bit_length(),
+            abs(b.numerator).bit_length() + b_scale.bit_length(),
         ) + 1
-        estimate = max(estimate, a.denominator.bit_length() + b.denominator.bit_length())
+        den_estimate = b_scale.bit_length() + b.denominator.bit_length()
+        estimate = max(num_estimate, den_estimate)
         self._tick(estimate)
         return self._check_result(a + b)
 
     def mul(self, a: Fraction, b: Fraction) -> Fraction:
+        if a == 0 or b == 0:
+            self._tick(1)
+            return Fraction(0)
+        cancel_left = math.gcd(abs(a.numerator), b.denominator)
+        cancel_right = math.gcd(abs(b.numerator), a.denominator)
+        left_num = abs(a.numerator) // cancel_left
+        right_num = abs(b.numerator) // cancel_right
+        left_den = a.denominator // cancel_right
+        right_den = b.denominator // cancel_left
         estimate = max(
-            abs(a.numerator).bit_length() + abs(b.numerator).bit_length(),
-            a.denominator.bit_length() + b.denominator.bit_length(),
+            left_num.bit_length() + right_num.bit_length(),
+            left_den.bit_length() + right_den.bit_length(),
         )
         self._tick(estimate)
         return self._check_result(a * b)
@@ -67,9 +80,18 @@ class Budget:
     def div(self, a: Fraction, b: Fraction) -> Fraction:
         if b == 0:
             raise InvalidInput("division by zero")
+        if a == 0:
+            self._tick(1)
+            return Fraction(0)
+        cancel_numerators = math.gcd(abs(a.numerator), abs(b.numerator))
+        cancel_denominators = math.gcd(a.denominator, b.denominator)
+        left_num = abs(a.numerator) // cancel_numerators
+        right_num = b.denominator // cancel_denominators
+        left_den = a.denominator // cancel_denominators
+        right_den = abs(b.numerator) // cancel_numerators
         estimate = max(
-            abs(a.numerator).bit_length() + b.denominator.bit_length(),
-            a.denominator.bit_length() + abs(b.numerator).bit_length(),
+            left_num.bit_length() + right_num.bit_length(),
+            left_den.bit_length() + right_den.bit_length(),
         )
         self._tick(estimate)
         return self._check_result(a / b)

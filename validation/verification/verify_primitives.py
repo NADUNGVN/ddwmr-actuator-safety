@@ -132,6 +132,13 @@ def main() -> None:
     operation_budget = Budget(1024, 1)
     a = Interval(F(1), F(2), operation_budget)
     checks.append(expect_exception("operation exhaustion", ResourceLimit, lambda: a * a))
+    shared_budget = Budget(32, 10)
+    shared_den = F(1, 2**20)
+    shared_sum = shared_budget.add(shared_den, shared_den)
+    checks.append(require("shared-denominator bit accounting", shared_sum == F(1, 2**19), "preflight uses the common denominator before estimating intermediate bits"))
+    cancel_budget = Budget(32, 10)
+    cancel_product = cancel_budget.mul(F(2**30, 3), F(3, 2**30))
+    checks.append(require("cross-cancelled product bit accounting", cancel_product == 1, "preflight accounts for exact cross-cancellation before multiplication"))
 
     output = {"scope": "exact primitive/input arithmetic checks; separate from benchmark results", "checks": checks,
               "count": len(checks), "all_pass": all(x["pass"] for x in checks)}

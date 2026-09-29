@@ -146,7 +146,8 @@ def replay_record(record: dict[str, Any], query: dict[str, Any]) -> dict[str, An
     proof = record.get("proof")
     if proof is None:
         return {
-            "replayed": status == "UNKNOWN" and bool(record.get("reason_codes")),
+            "replayed": False,
+            "resource_limited": status == "UNKNOWN" and bool(record.get("reason_codes")),
             "status": status,
             "reason": "bounded resource UNKNOWN without completed proof object",
         }

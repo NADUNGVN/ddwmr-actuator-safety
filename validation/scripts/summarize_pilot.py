@@ -45,6 +45,7 @@ def main() -> None:
     states = {x["id"]: x for x in benchmark["state_cells"]}
     scenes = {x["id"]: x for x in benchmark["scenes"]}
     counts = Counter(record["status"] for record in records)
+    reason_counts = Counter(code for record in records for code in record.get("reason_codes", []))
     strata = {key: defaultdict(Counter) for key in ("speed", "yaw", "clearance", "horizon")}
     action_groups: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
     collision_margins, contact_margins, widths, radii, total_widths = [], [], [], [], []
@@ -81,6 +82,13 @@ def main() -> None:
 
     group_certified = sum(any(r["status"] == "CERTIFIED" for r in group) for group in action_groups.values())
     all_unknown_groups = sum(all(r["status"] == "UNKNOWN" for r in group) for group in action_groups.values())
+    resource_reasons = {"RATIONAL_BIT_LIMIT", "RATIONAL_OPERATION_LIMIT", "WALL_TIME_LIMIT"}
+    resource_limited_unknowns = sum(r["status"] == "UNKNOWN" and bool(set(r.get("reason_codes", [])) & resource_reasons) for r in records)
+    computed_margin_records = sum("collision_margin_lower" in r and "contact_margin_lower" in r for r in records)
+    all_resource_unknown_groups = sum(
+        all(r["status"] == "UNKNOWN" and bool(set(r.get("reason_codes", [])) & resource_reasons) for r in group)
+        for group in action_groups.values()
+    )
     strata_summary = {}
     for name, values in strata.items():
         strata_summary[name] = {
@@ -96,11 +104,15 @@ def main() -> None:
         "selected_pilot_denominator": manifest["selected_query_count"],
         "not_run_original_query_count": manifest["not_run_query_count"],
         "status_counts_on_pilot": dict(sorted(counts.items())),
+        "reason_code_counts": dict(sorted(reason_counts.items())),
+        "resource_limited_unknown_count": resource_limited_unknowns,
+        "queries_with_completed_safety_margins": computed_margin_records,
         "pilot_certified_fraction": f"{counts['CERTIFIED']}/{len(records)}",
         "original_grid_certified_fraction_not_estimable": "No full-grid run; report pilot only and retain 1944 denominator.",
         "state_scene_horizon_groups": len(action_groups),
         "groups_with_at_least_one_certified_action": group_certified,
         "all_nine_actions_unknown_groups": all_unknown_groups,
+        "all_nine_actions_resource_limited_groups": all_resource_unknown_groups,
         "action_vectors": {
             "|".join(key): [r["status"] for r in sorted(group, key=lambda r: next(i for i, a in enumerate(benchmark["actions"]) if a["id"] == r["action_id"]))]
             for key, group in sorted(action_groups.items())
@@ -116,7 +128,7 @@ def main() -> None:
             "total_internal_enclosure_component_widths_physical": summarize_values(total_widths),
         },
         "work": {
-            "rational_operations_per_completed_query": summarize_values([Fraction(x) for x in operations]),
+            "rational_operations_per_query_before_termination": summarize_values([Fraction(x) for x in operations]),
             "max_rational_bits_seen": max(max_bits, default=0),
             "elapsed_seconds_display_only": {
                 "count": len(runtimes), "min": min(runtimes) if runtimes else None,

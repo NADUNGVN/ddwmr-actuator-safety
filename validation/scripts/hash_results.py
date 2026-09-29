@@ -21,6 +21,12 @@ PATHS = [
     "results/validation/g2/dev_pilot_summary_v1.json",
     "results/validation/g2/dev_pilot_unknown_ledger_v1.jsonl",
     "results/validation/g2/dev_pilot_failure_ledger_v1.jsonl",
+    "results/validation/g2/dev_pilot_records_v1_replay2_run_metadata.json",
+    "results/validation/g2/dev_pilot_records_v1_replay2.jsonl",
+    "results/validation/g2/dev_pilot_records_v1_replay2_record_check.json",
+    "results/validation/g2/dev_pilot_records_v1_replay2_summary.json",
+    "results/validation/g2/dev_pilot_records_v1_replay2_unknown_ledger.jsonl",
+    "results/validation/g2/dev_pilot_records_v1_replay2_failure_ledger.jsonl",
 ]
 
 
