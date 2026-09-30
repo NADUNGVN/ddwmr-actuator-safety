@@ -1,0 +1,74 @@
+{
+  "files": {
+    "results/validation/g2/r3/SHA256SUMS_PRE_EVAL_R3.json": {
+      "bytes": 7667,
+      "raw_bytes_sha256": "ac97c4d96348ba554a54fa72507fb554ca86220c30936782214ca20d02d97687",
+      "semantic_sha256": "a2fad0d863ace7b279e420a2d5c4e163478e729ef0222149ae266f291b0cb972"
+    },
+    "results/validation/g2/r3/action_group_summary_r3_v1.json": {
+      "bytes": 111175,
+      "raw_bytes_sha256": "597d9f77d63fe558664b5a0628a10882afd3a2144ab7ca1a352e78e88f972a8e",
+      "semantic_sha256": "4ac3149a826141ef624ae5cc09db8c62a89b8bf878c0880e90921f7011cd5348"
+    },
+    "results/validation/g2/r3/dev_pilot_record_check_r3_v1.json": {
+      "bytes": 539603,
+      "raw_bytes_sha256": "8f2ce164b2395840988fa064e8b175f2253f1cbdfd233cc4f98ff728d6292a57",
+      "semantic_sha256": "4c1929b3795af71ab5ae58c6a9bfa5d0d90e06723028d9daa30bee329b18dfa6"
+    },
+    "results/validation/g2/r3/dev_pilot_records_r3_v1.jsonl": {
+      "bytes": 18197673,
+      "raw_bytes_sha256": "fdbce2ac5587247ababc0849c5fce8f9a596c3eb2175ed277545072c06acdc43",
+      "semantic_sha256": "fdbce2ac5587247ababc0849c5fce8f9a596c3eb2175ed277545072c06acdc43"
+    },
+    "results/validation/g2/r3/dev_pilot_run_metadata_r3_v1.json": {
+      "bytes": 4504,
+      "raw_bytes_sha256": "52db7370fae4e5a8598d76445aade0e9a2ab8e35e0d42ed2145af5360e92fd3b",
+      "semantic_sha256": "8944e98d91936bf1bef154dbddedb90cc7b79751624ca767a10f3c22fb6fc439"
+    },
+    "results/validation/g2/r3/dev_pilot_summary_r3_v1.json": {
+      "bytes": 1096,
+      "raw_bytes_sha256": "149b17becf9032e2265a5f7212c6d99bf09d582833e8252c386f5b21c6e20554",
+      "semantic_sha256": "05ea68886c9260ea959ee2be883a15a1827f9f64d5dbeb9a2733d0f2a8c864e5"
+    },
+    "results/validation/g2/r3/development_manifest_r3_v1.json": {
+      "bytes": 228946,
+      "raw_bytes_sha256": "794b314341e0c1ce7ff4fdbc7ddcde3f7d591e12b501e5ac7dd43175377be4e9",
+      "semantic_sha256": "e5c796fcfe8275b1b7106f112813d24b36d18626400ba149f29f4bee7b9c155d"
+    },
+    "results/validation/g2/r3/full_grid_continuation_manifest_r3_v1.json": {
+      "bytes": 95952,
+      "raw_bytes_sha256": "ecddff5f5679534bc1204922029e93dc06b84508357b323d2cd218ca876d9dbb",
+      "semantic_sha256": "17cd7eefad56d74a2d487eae90298c6db62775945596a1946980198e52c9fe7a"
+    },
+    "results/validation/g2/r3/r2_compatibility_record_check_r3_v1.json": {
+      "bytes": 335204,
+      "raw_bytes_sha256": "6463e55acdd41a46fa43fe6cc805708f737e5e48e30a57ca38a1c29da5c627c3",
+      "semantic_sha256": "f515c53d3a343a68c5f5200493518e981142a1e28856414398428ffb88c95280"
+    },
+    "results/validation/g2/r3/r2_to_r3_query_transitions_r3_v1.jsonl": {
+      "bytes": 839208,
+      "raw_bytes_sha256": "2531a5c6b789937b6da9b9b2dbbc945f2badaf8e4175afdfb4df204ae1ab61b3",
+      "semantic_sha256": "2531a5c6b789937b6da9b9b2dbbc945f2badaf8e4175afdfb4df204ae1ab61b3"
+    },
+    "results/validation/g2/r3/specification_content_ledger_r3_v1.json": {
+      "bytes": 3562,
+      "raw_bytes_sha256": "84928fe65dd788b7248d52e264832e4bcd3ca277633644ba3157cf16fb3efa45",
+      "semantic_sha256": "c20ae48d1c221330f6434345a78c669d78c1b16c5392b9de1ea5ed49d904d4f7"
+    },
+    "validation/configs/benchmark_v1.json": {
+      "bytes": 28938,
+      "raw_bytes_sha256": "b2bc12cd578229cfb6df4b426f93e0f472d69f6be36929df93e797ff79396a9e",
+      "semantic_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b"
+    },
+    "validation/configs/dev_pilot_r3_v1.json": {
+      "bytes": 3057,
+      "raw_bytes_sha256": "e65507d0f42368fa4366b03e59a8e7b311c258d9766b166fbdf83ac61fdfe52a",
+      "semantic_sha256": "7a93c4824b859d8dbc5816c2d7edac005a7a87282399678fc8beebb49192b7b0"
+    }
+  },
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "hash_semantics": "JSON/JSONL semantic SHA-256 uses sorted-key compact UTF-8 JSON with LF record delimiters; raw_bytes_sha256 records exact stored bytes.",
+  "phase": "pilot",
+  "schema": "ddwmr-g2-r3-pilot-result-hashes-v1",
+  "source_revision_when_ledger_created": "78aba4ddc100eb2fdb5c966e6d124ddac90ac8bc"
+}
