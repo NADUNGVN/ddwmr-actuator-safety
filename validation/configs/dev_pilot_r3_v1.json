@@ -1,0 +1,63 @@
+{
+  "benchmark_config": "validation/configs/benchmark_v1.json",
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "original_grid_count": 1944,
+  "pilot_query_count": 216,
+  "profile": {
+    "comparison_series_order": 16,
+    "distance_method_id": "DIRECTED_DYADIC_EUCLIDEAN_MIN_DISTANCE_V1",
+    "distance_rounding_contract": "exact_floor_ceil_integer_shift_division; all primitives charged to Budget",
+    "distance_rounding_precision_bits": 24,
+    "exp_taylor_degree": 16,
+    "id": "DEV_FALLBACK_N1_PILOT_R3_DYADIC_P24_BITS16384_V1",
+    "initial_state_leaf_limit": 1,
+    "initial_state_split_depth": 0,
+    "integration_panels": 1,
+    "max_rational_bits": 16384,
+    "max_rational_operations": 1000000,
+    "parameter_leaf_limit": 1,
+    "parameter_split_depth": 0,
+    "predictor_depth": 1,
+    "reason_for_cap": "One predeclared R3 development profile using the unchanged R2 16384-bit, 1000000-operation, 15-second/query caps and unchanged Taylor, predictor, state, parameter, time, voltage and physics settings. The only numerical-method change is fixed p=24 exact directed dyadic coordinate-gap enclosure before squaring. This is one bounded diagnostic, not cap/precision tuning or a locked comparison.",
+    "resource_diagnostic_schema": "ddwmr-g2-resource-diagnostic-v1",
+    "selection_rule": "Fixed before any evaluator output: all nine benchmark actions for the four speed-yaw corner cells (low/high speed crossed with negative/positive yaw), two predeclared scenes (d=1/20,l=0 and d=1/5,l=1/5), and all three horizons. No outcome-based replacement, obstacle movement, or action omission.",
+    "specification_bundle_sha256": "84b444d0be6e18c946697c3b95662ffd0f30dd228ae7ca5e742cee47d446c850",
+    "sqrt_bisections": 24,
+    "time_slab_count": 1,
+    "trig_taylor_degree": 18,
+    "wall_seconds_per_query": {
+      "den": "1",
+      "num": "15"
+    }
+  },
+  "reason_for_cap": "A bounded, affordable 216-query development pilot using one full-hold interval hull per initial/parameter cell. It deliberately avoids subdivision/refinement so all UNKNOWN outcomes remain visible; time-panel repetition would be a no-op for this global hull. This is not a formal matched-comparison configuration.",
+  "schema": "ddwmr-g2-development-pilot-r3-v1",
+  "selected_actions": [
+    "V_m1_m1",
+    "V_m1_0",
+    "V_m1_p1",
+    "V_0_m1",
+    "V_0_0",
+    "V_0_p1",
+    "V_p1_m1",
+    "V_p1_0",
+    "V_p1_p1"
+  ],
+  "selected_horizons": [
+    "T_020",
+    "T_050",
+    "T_100"
+  ],
+  "selected_scenes": [
+    "scene_d050_l+000",
+    "scene_d200_l+200"
+  ],
+  "selected_state_cells": [
+    "state_low_neg",
+    "state_low_pos",
+    "state_high_neg",
+    "state_high_pos"
+  ],
+  "selection_rule": "Fixed before any evaluator output: all nine benchmark actions for the four speed-yaw corner cells (low/high speed crossed with negative/positive yaw), two predeclared scenes (d=1/20,l=0 and d=1/5,l=1/5), and all three horizons. No outcome-based replacement, obstacle movement, or action omission.",
+  "status": "FROZEN_R3_DEVELOPMENT_PILOT_NOT_LOCKED"
+}

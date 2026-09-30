@@ -1,0 +1,67 @@
+{
+  "hash_protocol": "sha256 of immutable Git blob bytes; source revision and repository path are explicit",
+  "schema": "ddwmr-g2-r3-specification-content-ledger-v1",
+  "sources": [
+    {
+      "git_blob_object_id": "edb04bf4474dc89022a9b912dc2523e0b884c418",
+      "repository_relative_path": "AGENTS.md",
+      "sha256_git_blob_bytes": "d40542cc226351ec13b0adb85e16bc7702d5d1931520cd4ff49ac98b63a23f58",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "5a5022cf7870ad42e84773abec873ce29dc4ab32",
+      "repository_relative_path": "research_context/MASTER_RESEARCH_CONTEXT_v2.md",
+      "sha256_git_blob_bytes": "d8158e5e74d9e29d40003d3157b10b1ba22df37ae43e5356eefca1ccec55a58e",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "039f4f1d4979c4a4a91d6389cd30772fb11a49e9",
+      "repository_relative_path": "research_context/DECISION_LOG.md",
+      "sha256_git_blob_bytes": "5b50b834a340bfa216497844493a0c69446d6713856a99b9e879eae34b7b2879",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "82e6295bef78c45bf57d9b7e8303d2fa2ed153f1",
+      "repository_relative_path": "research_context/LITERATURE_MATRIX.md",
+      "sha256_git_blob_bytes": "56131915ab0c94cff5bc82783f14cacc1de41b6210becd6dc5feb06a18a0c1e3",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "00fce47037796e94161ebf2ae13804a966573679",
+      "repository_relative_path": "research_context/REVIEW_GATE.md",
+      "sha256_git_blob_bytes": "2064b826af63abbcabb241810391bc0850c41da6014daefb488307910122640f",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "c94050f0b84ecae29d434a9ba23f6db8745a8a92",
+      "repository_relative_path": "docs/LUNA_VALIDATION_HANDOFF_v1.md",
+      "sha256_git_blob_bytes": "d45f5192626904925fef4fc5912ebd99da51b3dce0c9db14a674742eb4a959a9",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "2c38a032c00ffbd9b4206c79f8cd5e0229c6b463",
+      "repository_relative_path": "docs/CODEX_TO_LUNA_G2_VALIDATION_R3.md",
+      "sha256_git_blob_bytes": "7cdc90aae09d9f148d3d35851c77e5abb8f6c7ff89721a75ed014196ed2da09e",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "1c66126399af1f893f42acd2ee4f75a7bf2b0f96",
+      "repository_relative_path": "research/theorem_notes/G2_FINITE_EVALUATOR_SPEC_v1.md",
+      "sha256_git_blob_bytes": "5b11fe7d9e8f21ff259b86e44e3648f34f56d78410492ca4a7c9b73a43ea7908",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "2fb15ccdef3b4710b94900c0b32a840f2c380231",
+      "repository_relative_path": "research/benchmarks/G2_USEFULNESS_BENCHMARK_SPEC_v1.md",
+      "sha256_git_blob_bytes": "a16a55230754a915b21616392ce508a6d7f1abb8694ce4e25933ea1435523912",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    },
+    {
+      "git_blob_object_id": "ec8ba763e2835ffd7dffbeca7f9ac910300afff2",
+      "repository_relative_path": "docs/LUNA_G2_DISTANCE_ADDENDUM_R3_v1.md",
+      "sha256_git_blob_bytes": "fe730d2bf7e172c781d4f05f5ad7fe4ab6d6e6f5f1f80d657232f5e1a891cc7e",
+      "source_revision": "c7f06727b33775c41b7c841d5c43269467ab217b"
+    }
+  ],
+  "specification_bundle_sha256": "84b444d0be6e18c946697c3b95662ffd0f30dd228ae7ca5e742cee47d446c850"
+}
