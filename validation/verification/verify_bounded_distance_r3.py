@@ -93,8 +93,8 @@ def main() -> None:
     query_id = prior_positive["query_id"]
     query = make_query(
         benchmark, query_id, pilot["profile"],
-        manifest["development_manifest_semantic_sha256"],
-        manifest["benchmark_config_semantic_sha256"], HASH_PROTOCOL_ID,
+        semantic_json_file_sha256(MANIFEST_PATH),
+        manifest["input_hashes"]["benchmark_config_semantic_sha256"], HASH_PROTOCOL_ID,
         manifest["specification_bundle_sha256"],
     )
     revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, text=True, capture_output=True).stdout.strip()
