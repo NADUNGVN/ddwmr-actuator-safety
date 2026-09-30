@@ -7,7 +7,10 @@ import math
 from fractions import Fraction
 from typing import Any
 
-from .evaluator import _parse_input_query, _validate_profile, canonical_hash, query_hash_payload
+from .evaluator import (
+    DISTANCE_METHOD_R3, R3_METHOD_ID, _parse_input_query, _validate_profile,
+    canonical_hash, query_hash_payload,
+)
 from .hashing import HASH_PROTOCOL_ID
 from .interval import interval_cosine, interval_matrix_exponential, interval_sine, matvec, sqrt_lower, vector_add
 from .model import ModelIntervals, build_model, physical_internal_box, physical_radius
@@ -139,13 +142,87 @@ def sum_checked(values, budget: Budget) -> Fraction:
     return total
 
 
+def _checker_dyadic_gap_bound(
+    gap: Fraction, precision: int, denominator: int, *, upward: bool, budget: Budget,
+) -> Fraction:
+    """Checker-side reconstruction; deliberately separate from evaluator rounding code."""
+    if gap < 0:
+        raise InvalidInput("checker received a negative coordinate gap")
+    scaled = budget.shift_left_nonnegative(
+        gap.numerator, precision, primitive_id="checker.distance.dyadic.shift"
+    )
+    quotient, remainder = budget.divmod_nonnegative(
+        scaled, gap.denominator, primitive_id="checker.distance.dyadic.divide"
+    )
+    if upward and remainder != 0:
+        quotient = budget.increment_nonnegative(
+            quotient, primitive_id="checker.distance.dyadic.ceil"
+        )
+    return budget.dyadic_fraction(
+        quotient, denominator, primitive_id="checker.distance.dyadic.construct"
+    )
+
+
+def _checker_r3_distance_witness(
+    dx: Fraction, dy: Fraction, precision: int, bisections: int, budget: Budget,
+) -> dict[str, Any]:
+    """Rebuild directed coordinate and square-root bounds from exact input geometry."""
+    denominator = budget.shift_left_nonnegative(
+        1, precision, primitive_id="checker.distance.dyadic.denominator"
+    )
+    coordinate_width = budget.dyadic_fraction(
+        1, denominator, primitive_id="checker.distance.dyadic.width"
+    )
+    gap_bounds = []
+    for gap in (dx, dy):
+        lower = _checker_dyadic_gap_bound(gap, precision, denominator, upward=False, budget=budget)
+        upper = _checker_dyadic_gap_bound(gap, precision, denominator, upward=True, budget=budget)
+        coordinate_width_actual = budget.add(upper, -lower)
+        if not (lower <= gap <= upper and coordinate_width_actual <= coordinate_width):
+            raise InvalidInput("checker rejected directed dyadic coordinate rounding")
+        gap_bounds.append((lower, upper))
+    lower_rad = budget.add(
+        budget.mul(gap_bounds[0][0], gap_bounds[0][0]),
+        budget.mul(gap_bounds[1][0], gap_bounds[1][0]),
+    )
+    upper_rad = budget.add(
+        budget.mul(gap_bounds[0][1], gap_bounds[0][1]),
+        budget.mul(gap_bounds[1][1], gap_bounds[1][1]),
+    )
+    if lower_rad > upper_rad:
+        raise InvalidInput("checker rejected radicand ordering")
+    lower_bracket = sqrt_lower(lower_rad, bisections, budget)
+    upper_bracket = sqrt_lower(upper_rad, bisections, budget)
+    lower_lo_sq = budget.mul(lower_bracket[0], lower_bracket[0])
+    lower_hi_sq = budget.mul(lower_bracket[1], lower_bracket[1])
+    upper_lo_sq = budget.mul(upper_bracket[0], upper_bracket[0])
+    upper_hi_sq = budget.mul(upper_bracket[1], upper_bracket[1])
+    if not (
+        lower_lo_sq <= lower_rad <= lower_hi_sq
+        and upper_lo_sq <= upper_rad <= upper_hi_sq
+    ):
+        raise InvalidInput("checker rejected exact square-root bracket inequalities")
+    return {
+        "coordinate_gaps_exact": [dx, dy],
+        "coordinate_gap_bounds_dyadic": gap_bounds,
+        "squared_distance_lower": lower_rad,
+        "squared_distance_upper": upper_rad,
+        "sqrt_lower_radicand_bracket": lower_bracket,
+        "sqrt_upper_radicand_bracket": upper_bracket,
+        "minimum_distance_lower": lower_bracket[0],
+        "minimum_distance_upper": upper_bracket[1],
+        "coordinate_rounding_loss_upper": budget.div(Fraction(2), Fraction(denominator)),
+    }
+
+
 def _query_binding_errors(record: dict[str, Any], query: dict[str, Any]) -> list[str]:
     protocol = query.get("hash_protocol_id")
     protocol_v2 = protocol == HASH_PROTOCOL_ID
+    protocol_r3 = protocol_v2 and query.get("profile", {}).get("distance_method_id") == DISTANCE_METHOD_R3
     expected = {
-        "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1",
+        "schema": "ddwmr-g2-record-r3-v1" if protocol_r3 else ("ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1"),
         "query_id": query.get("query_id"),
-        "method_id": "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1",
+        "method_id": R3_METHOD_ID if protocol_r3 else ("G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1"),
         "profile_id": query.get("profile", {}).get("id"),
         "held_voltage": query.get("action", {}).get("V"),
         "horizon": query.get("horizon", {}).get("T"),
@@ -173,17 +250,36 @@ def _query_binding_errors(record: dict[str, Any], query: dict[str, Any]) -> list
     if protocol_v2:
         if canonical_hash(query.get("benchmark")) != query.get("benchmark_sha256"):
             errors.append("benchmark_content_sha256")
-        expected_specification = canonical_hash({
-            "hash_protocol_id": protocol,
-            "benchmark_sha256": query.get("benchmark_sha256"),
-            "development_manifest_sha256": query.get("development_manifest_sha256"),
-        })
         if record.get("hash_protocol_id") != protocol:
             errors.append("hash_protocol_id")
         if record.get("profile_sha256") != canonical_hash(query.get("profile")):
             errors.append("profile_sha256")
-        if record.get("specification_sha256") != expected_specification:
-            errors.append("specification_sha256")
+        if protocol_r3:
+            profile_hash = canonical_hash(query.get("profile"))
+            expected_config_bundle = canonical_hash({
+                "hash_protocol_id": protocol,
+                "benchmark_sha256": query.get("benchmark_sha256"),
+                "profile_sha256": profile_hash,
+                "development_manifest_sha256": query.get("development_manifest_sha256"),
+            })
+            if record.get("distance_method_id") != DISTANCE_METHOD_R3:
+                errors.append("distance_method_id")
+            if record.get("distance_rounding_precision_bits") != query["profile"].get("distance_rounding_precision_bits"):
+                errors.append("distance_rounding_precision_bits")
+            if record.get("specification_bundle_sha256") != query.get("specification_bundle_sha256"):
+                errors.append("specification_bundle_sha256")
+            if record.get("input_configuration_bundle_sha256") != expected_config_bundle:
+                errors.append("input_configuration_bundle_sha256")
+            if "specification_sha256" in record or record.get("producer_revision") is None:
+                errors.append("r3_schema_field_semantics")
+        else:
+            expected_specification = canonical_hash({
+                "hash_protocol_id": protocol,
+                "benchmark_sha256": query.get("benchmark_sha256"),
+                "development_manifest_sha256": query.get("development_manifest_sha256"),
+            })
+            if record.get("specification_sha256") != expected_specification:
+                errors.append("specification_sha256")
     return errors
 
 
@@ -197,6 +293,12 @@ def _validate_effective_query(query: dict[str, Any]) -> tuple[bool, str | None]:
         if not isinstance(benchmark, dict) or query["parameter_cell"] != benchmark.get("parameter_cell"):
             raise InvalidInput("query parameter cell must match the hashed benchmark parameter cell")
         profile = query["profile"]
+        if profile.get("distance_method_id") == DISTANCE_METHOD_R3:
+            bundle_hash = query.get("specification_bundle_sha256")
+            if (not isinstance(bundle_hash, str) or len(bundle_hash) != 64
+                    or any(ch not in "0123456789abcdef" for ch in bundle_hash)
+                    or bundle_hash != profile.get("specification_bundle_sha256")):
+                raise InvalidInput("R3 query specification bundle must match the frozen profile")
         wall = _validate_profile(profile)
         budget = Budget(profile["max_rational_bits"], profile["max_rational_operations"], wall)
         budget.set_stage("checker.query_contract")
@@ -407,8 +509,39 @@ def _replay_record_impl(record: dict[str, Any], query: dict[str, Any]) -> dict[s
     ox, oy = [parse_q(x, budget) for x in obstacle["p_o"]]
     dx = max(Fraction(0), budget.add(px.lo, -ox), budget.add(ox, -px.hi))
     dy = max(Fraction(0), budget.add(py.lo, -oy), budget.add(oy, -py.hi))
-    distance, distance_hi = sqrt_lower(budget.add(budget.mul(dx, dx), budget.mul(dy, dy)), profile["sqrt_bisections"], budget)
-    collision_margin = budget.add(budget.add(distance, -parse_q(obstacle["R_s"], budget)), -E_p)
+    if profile.get("distance_method_id") == DISTANCE_METHOD_R3:
+        collision_distance = _checker_r3_distance_witness(
+            dx, dy, profile["distance_rounding_precision_bits"], profile["sqrt_bisections"], budget,
+        )
+        distance = collision_distance["minimum_distance_lower"]
+        collision_upper = collision_distance["minimum_distance_upper"]
+        collision_margin = budget.add(budget.add(distance, -parse_q(obstacle["R_s"], budget)), -E_p)
+        collision_proof = {
+            "obstacle_id": obstacle["id"],
+            "distance_method_id": DISTANCE_METHOD_R3,
+            "distance_rounding_precision_bits": profile["distance_rounding_precision_bits"],
+            "coordinate_gaps_exact": [qobj(x) for x in collision_distance["coordinate_gaps_exact"]],
+            "coordinate_gap_bounds_dyadic": [
+                {"lower": qobj(pair[0]), "upper": qobj(pair[1])}
+                for pair in collision_distance["coordinate_gap_bounds_dyadic"]
+            ],
+            "squared_distance_lower": qobj(collision_distance["squared_distance_lower"]),
+            "squared_distance_upper": qobj(collision_distance["squared_distance_upper"]),
+            "sqrt_lower_radicand_bracket": [qobj(x) for x in collision_distance["sqrt_lower_radicand_bracket"]],
+            "sqrt_upper_radicand_bracket": [qobj(x) for x in collision_distance["sqrt_upper_radicand_bracket"]],
+            "minimum_distance_lower": qobj(distance),
+            "minimum_distance_upper": qobj(collision_upper),
+            "coordinate_rounding_loss_upper": qobj(collision_distance["coordinate_rounding_loss_upper"]),
+            "margin_lower": qobj(collision_margin),
+        }
+    else:
+        squared_distance = budget.add(budget.mul(dx, dx), budget.mul(dy, dy))
+        distance, distance_hi = sqrt_lower(squared_distance, profile["sqrt_bisections"], budget)
+        collision_margin = budget.add(budget.add(distance, -parse_q(obstacle["R_s"], budget)), -E_p)
+        collision_proof = {
+            "obstacle_id": obstacle["id"], "distance_lower": qobj(distance),
+            "distance_upper_bracket": qobj(distance_hi), "margin_lower": qobj(collision_margin),
+        }
 
     internal_center_width = [budget.add(x.hi, -x.lo) for x in P1_physical]
     internal_total_width = [budget.add(width, budget.mul(Fraction(2), radius)) for width, radius in zip(internal_center_width, eta_physical)]
@@ -448,10 +581,7 @@ def _replay_record_impl(record: dict[str, Any], query: dict[str, Any]) -> dict[s
         "sqrt_lower_upper_brackets": [[qobj(lo), qobj(hi)] for lo, hi in roots],
         "contact_available_lower": qobj(reserve), "contact_demand_upper": qobj(demand),
         "contact_margin_lower": qobj(contact_margin),
-        "collision": [{
-            "obstacle_id": obstacle["id"], "distance_lower": qobj(distance),
-            "distance_upper_bracket": qobj(distance_hi), "margin_lower": qobj(collision_margin),
-        }],
+        "collision": [collision_proof],
     }
     differences = [key for key, value in expected.items() if proof.get(key) != value]
     if set(proof) != set(expected):

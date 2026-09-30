@@ -22,6 +22,8 @@ from .rational import Budget, Interval, InvalidInput, ResourceLimit, parse_q, qo
 
 ROOT = Path(__file__).resolve().parents[2]
 STATE_COORDINATES = ["p_x", "p_y", "theta", "u", "r", "omega_L", "omega_R", "i_L", "i_R"]
+DISTANCE_METHOD_R3 = "DIRECTED_DYADIC_EUCLIDEAN_MIN_DISTANCE_V1"
+R3_METHOD_ID = "G2_COMP_CLIP_WHOLE_HOLD_DYADIC_DISTANCE_N1_R3"
 
 
 def canonical_hash(value: Any) -> str:
@@ -231,7 +233,71 @@ def _validate_profile(profile: Any) -> Fraction:
     wall = parse_q(profile.get("wall_seconds_per_query"))
     if wall <= 0:
         raise InvalidInput("wall-time cap must be positive")
+    distance_method = profile.get("distance_method_id")
+    if distance_method is not None and distance_method != DISTANCE_METHOD_R3:
+        raise InvalidInput(f"unsupported distance method variant: {distance_method!r}")
+    if distance_method == DISTANCE_METHOD_R3:
+        precision = profile.get("distance_rounding_precision_bits")
+        if not isinstance(precision, int) or isinstance(precision, bool) or precision < 0:
+            raise InvalidInput("R3 dyadic distance precision must be a nonnegative integer")
+        if precision + 2 > profile["max_rational_bits"]:
+            raise InvalidInput("R3 dyadic distance precision exceeds the rational bit cap")
     return wall
+
+
+def _dyadic_gap_bound(
+    value: Fraction, precision: int, scale_denominator: int, *, upper: bool, budget: Budget,
+) -> Fraction:
+    """Exact directed dyadic rounding of a nonnegative rational gap."""
+    if value < 0:
+        raise InvalidInput("distance coordinate gap must be nonnegative")
+    scaled_numerator = budget.shift_left_nonnegative(
+        value.numerator, precision, primitive_id="distance.dyadic.numerator_shift"
+    )
+    quotient, remainder = budget.divmod_nonnegative(
+        scaled_numerator, value.denominator, primitive_id="distance.dyadic.integer_division"
+    )
+    if upper and remainder:
+        quotient = budget.increment_nonnegative(quotient, primitive_id="distance.dyadic.ceil_increment")
+    return budget.dyadic_fraction(
+        quotient, scale_denominator, primitive_id="distance.dyadic.rationalize"
+    )
+
+
+def _bounded_collision_distance(
+    dx: Fraction, dy: Fraction, precision: int, bisections: int, budget: Budget,
+) -> dict[str, Any]:
+    """Build a certified enclosure for the exact distance to a rectangle."""
+    scale_denominator = budget.shift_left_nonnegative(
+        1, precision, primitive_id="distance.dyadic.scale_denominator_shift"
+    )
+    gap_pairs = []
+    for gap in (dx, dy):
+        lower = _dyadic_gap_bound(gap, precision, scale_denominator, upper=False, budget=budget)
+        upper = _dyadic_gap_bound(gap, precision, scale_denominator, upper=True, budget=budget)
+        gap_pairs.append((lower, upper))
+    lower_radicand = budget.add(
+        budget.mul(gap_pairs[0][0], gap_pairs[0][0]),
+        budget.mul(gap_pairs[1][0], gap_pairs[1][0]),
+    )
+    upper_radicand = budget.add(
+        budget.mul(gap_pairs[0][1], gap_pairs[0][1]),
+        budget.mul(gap_pairs[1][1], gap_pairs[1][1]),
+    )
+    lower_root_bracket = sqrt_lower(lower_radicand, bisections, budget)
+    upper_root_bracket = sqrt_lower(upper_radicand, bisections, budget)
+    rounding_loss_upper = budget.div(Fraction(2), Fraction(scale_denominator))
+    return {
+        "coordinate_gaps_exact": [dx, dy],
+        "coordinate_gap_bounds_dyadic": gap_pairs,
+        "squared_distance_lower": lower_radicand,
+        "squared_distance_upper": upper_radicand,
+        "sqrt_lower_radicand_bracket": lower_root_bracket,
+        "sqrt_upper_radicand_bracket": upper_root_bracket,
+        "minimum_distance_lower": lower_root_bracket[0],
+        "minimum_distance_upper": upper_root_bracket[1],
+        "coordinate_rounding_loss_upper": rounding_loss_upper,
+    }
 
 
 def _evaluate_bounds(
@@ -315,13 +381,24 @@ def _evaluate_bounds(
         ox, oy = obstacle["p_o"]
         dx = max(Fraction(0), budget.add(px_center.lo, -ox), budget.add(ox, -px_center.hi))
         dy = max(Fraction(0), budget.add(py_center.lo, -oy), budget.add(oy, -py_center.hi))
-        squared_distance = budget.add(budget.mul(dx, dx), budget.mul(dy, dy))
-        distance_lo, distance_hi = sqrt_lower(squared_distance, profile["sqrt_bisections"], budget)
-        margin = budget.add(budget.add(distance_lo, -obstacle["R_s"]), -E_p)
-        collision.append({
-            "obstacle_id": obstacle["id"], "distance_lower": distance_lo,
-            "distance_upper_bracket": distance_hi, "margin_lower": margin,
-        })
+        if profile.get("distance_method_id") == DISTANCE_METHOD_R3:
+            distance_witness = _bounded_collision_distance(
+                dx, dy, profile["distance_rounding_precision_bits"], profile["sqrt_bisections"], budget,
+            )
+            margin = budget.add(
+                budget.add(distance_witness["minimum_distance_lower"], -obstacle["R_s"]), -E_p
+            )
+            collision.append({
+                "obstacle_id": obstacle["id"], **distance_witness, "margin_lower": margin,
+            })
+        else:
+            squared_distance = budget.add(budget.mul(dx, dx), budget.mul(dy, dy))
+            distance_lo, distance_hi = sqrt_lower(squared_distance, profile["sqrt_bisections"], budget)
+            margin = budget.add(budget.add(distance_lo, -obstacle["R_s"]), -E_p)
+            collision.append({
+                "obstacle_id": obstacle["id"], "distance_lower": distance_lo,
+                "distance_upper_bracket": distance_hi, "margin_lower": margin,
+            })
 
     full_internal_width = [budget.add(budget.add(P1_physical[i].hi, -P1_physical[i].lo), budget.mul(Fraction(2), eta_physical[i])) for i in range(6)]
     pose_width = [
@@ -331,6 +408,8 @@ def _evaluate_bounds(
     ]
     return {
         "model": model,
+        "distance_method_id": profile.get("distance_method_id", "EXACT_RATIONAL_SQUARED_DISTANCE_R2"),
+        "distance_rounding_precision_bits": profile.get("distance_rounding_precision_bits"),
         "T": T, "V": V, "X_physical": X_physical, "X_scaled": X_scaled,
         "E": E, "exp_q": exp_q, "exp_remainder": exp_remainder,
         "P0": P0, "P1": P1, "force_minus1": force_minus1, "force0": force0,
@@ -393,12 +472,29 @@ def _proof_json(result: dict[str, Any]) -> dict[str, Any]:
         "contact_available_lower": qobj(result["contact_available"]),
         "contact_demand_upper": qobj(result["contact_demand"]),
         "contact_margin_lower": qobj(result["contact_margin"]),
-        "collision": [{
+        "collision": ([{
+            "obstacle_id": x["obstacle_id"],
+            "distance_method_id": result["distance_method_id"],
+            "distance_rounding_precision_bits": result["distance_rounding_precision_bits"],
+            "coordinate_gaps_exact": [qobj(value) for value in x["coordinate_gaps_exact"]],
+            "coordinate_gap_bounds_dyadic": [
+                {"lower": qobj(pair[0]), "upper": qobj(pair[1])}
+                for pair in x["coordinate_gap_bounds_dyadic"]
+            ],
+            "squared_distance_lower": qobj(x["squared_distance_lower"]),
+            "squared_distance_upper": qobj(x["squared_distance_upper"]),
+            "sqrt_lower_radicand_bracket": [qobj(value) for value in x["sqrt_lower_radicand_bracket"]],
+            "sqrt_upper_radicand_bracket": [qobj(value) for value in x["sqrt_upper_radicand_bracket"]],
+            "minimum_distance_lower": qobj(x["minimum_distance_lower"]),
+            "minimum_distance_upper": qobj(x["minimum_distance_upper"]),
+            "coordinate_rounding_loss_upper": qobj(x["coordinate_rounding_loss_upper"]),
+            "margin_lower": qobj(x["margin_lower"]),
+        } for x in result["collision"]] if result["distance_method_id"] == DISTANCE_METHOD_R3 else [{
             "obstacle_id": x["obstacle_id"],
             "distance_lower": qobj(x["distance_lower"]),
             "distance_upper_bracket": qobj(x["distance_upper_bracket"]),
             "margin_lower": qobj(x["margin_lower"]),
-        } for x in result["collision"]],
+        } for x in result["collision"]]),
     }
 
 
@@ -406,6 +502,7 @@ def make_query(
     benchmark: dict[str, Any], query_id: str, profile: dict[str, Any],
     development_manifest_sha256: str, benchmark_sha256: str,
     hash_protocol_id: str | None = None,
+    specification_bundle_sha256: str | None = None,
 ) -> dict[str, Any]:
     parts = query_id.split("__")
     if len(parts) != 4:
@@ -424,6 +521,7 @@ def make_query(
         "benchmark_sha256": benchmark_sha256,
         "development_manifest_sha256": development_manifest_sha256,
         "hash_protocol_id": hash_protocol_id,
+        "specification_bundle_sha256": specification_bundle_sha256,
     }
 
 
@@ -435,6 +533,8 @@ def query_hash_payload(query: dict[str, Any]) -> dict[str, Any]:
     }
     if query.get("hash_protocol_id"):
         payload["hash_protocol_id"] = query["hash_protocol_id"]
+    if query.get("specification_bundle_sha256") is not None:
+        payload["specification_bundle_sha256"] = query["specification_bundle_sha256"]
     return payload
 
 
@@ -443,23 +543,27 @@ def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
     profile = query.get("profile", {})
     hash_protocol_id = query.get("hash_protocol_id")
     protocol_v2 = hash_protocol_id == HASH_PROTOCOL_ID
-    method_id = "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1"
+    protocol_r3 = protocol_v2 and profile.get("distance_method_id") == DISTANCE_METHOD_R3
+    schema_id = "ddwmr-g2-record-r3-v1" if protocol_r3 else ("ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1")
+    method_id = R3_METHOD_ID if protocol_r3 else ("G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_R2" if protocol_v2 else "G2_COMP_CLIP_WHOLE_HOLD_INTERVAL_HULL_N1_V1")
     try:
         wall = _validate_profile(profile)
         budget = Budget(profile["max_rational_bits"], profile["max_rational_operations"], wall)
     except InvalidInput as exc:
         return {
-            "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1", "query_id": query.get("query_id"),
-            "source_revision": source_commit, "status": "INVALID_INPUT",
+            "schema": schema_id, "query_id": query.get("query_id"),
+            **({"producer_revision": source_commit} if protocol_r3 else {"source_revision": source_commit}),
+            "method_id": method_id,
+            "status": "INVALID_INPUT",
             "reason_codes": ["INVALID_RESOURCE_PROFILE"], "reason": str(exc),
             "review_status": "PENDING_INDEPENDENT_AUDIT",
             "elapsed_seconds_display_only": round(time.monotonic() - started, 6),
         }
     input_hash = canonical_hash(query_hash_payload(query))
     base = {
-        "schema": "ddwmr-g2-record-v2" if protocol_v2 else "ddwmr-g2-record-v1", "query_id": query["query_id"],
+        "schema": schema_id, "query_id": query["query_id"],
         "method_id": method_id,
-        "source_revision": source_commit,
+        **({"producer_revision": source_commit} if protocol_r3 else {"source_revision": source_commit}),
         "benchmark_sha256": query["benchmark_sha256"],
         "development_manifest_sha256": query["development_manifest_sha256"],
         "profile_id": profile["id"],
@@ -482,12 +586,27 @@ def run_query(query: dict[str, Any], source_commit: str) -> dict[str, Any]:
         base.update({
             "hash_protocol_id": hash_protocol_id,
             "profile_sha256": canonical_hash(profile),
-            "specification_sha256": canonical_hash({
+        })
+        if protocol_r3:
+            profile_hash = canonical_hash(profile)
+            base.update({
+                "distance_method_id": DISTANCE_METHOD_R3,
+                "distance_rounding_precision_bits": profile["distance_rounding_precision_bits"],
+                "specification_bundle_sha256": query.get("specification_bundle_sha256"),
+                "input_configuration_bundle_sha256": canonical_hash({
+                    "hash_protocol_id": hash_protocol_id,
+                    "benchmark_sha256": query["benchmark_sha256"],
+                    "profile_sha256": profile_hash,
+                    "development_manifest_sha256": query["development_manifest_sha256"],
+                }),
+            })
+        else:
+            # Historical R2 field name and semantics are preserved byte-for-byte.
+            base["specification_sha256"] = canonical_hash({
                 "hash_protocol_id": hash_protocol_id,
                 "benchmark_sha256": query["benchmark_sha256"],
                 "development_manifest_sha256": query["development_manifest_sha256"],
-            }),
-        })
+            })
     try:
         result = _evaluate_bounds(query["benchmark"], query["state_cell"], query["scene"], query["horizon"], query["action"], profile, budget)
         certified = result["contact_margin"] >= 0 and all(x["margin_lower"] >= 0 for x in result["collision"])

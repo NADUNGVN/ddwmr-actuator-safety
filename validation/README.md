@@ -17,7 +17,7 @@ Every safety predicate uses `fractions.Fraction` and closed rational intervals. 
 - `INVALID_INPUT`: the query violates this narrower representation contract; this says nothing about physical safety.
 - `EXECUTION_FAILURE`: an unexpected implementation failure; it is never converted to a mathematical result.
 
-The pilot uses one unsplit initial cell and one unsplit 12-label parameter cell, one whole-hold interval hull and no-op slab refinement. The hull conservatively encloses all time in `[0,T]`; repeating the same hull on more time slabs would not tighten it. In the current run, each query cap is 8192 bits, 1,000,000 rational operations, 15 seconds, 16 exponential terms, degree 18 trigonometric ranges, comparison order 16 and 24 root bisections. These are frozen development settings, not scientifically justified equal-cost method settings.
+The pilot uses one unsplit initial cell and one unsplit 12-label parameter cell, one whole-hold interval hull and no-op slab refinement. The hull conservatively encloses all time in `[0,T]`; repeating the same hull on more time slabs would not tighten it. The archived v1 profile used an 8192-bit cap. R2/R3 development profiles use 16384 bits, 1,000,000 rational operations and 15 seconds/query, with 16 exponential terms, degree 18 trigonometric ranges, comparison order 16 and 24 root bisections. These are frozen development settings, not scientifically justified equal-cost method settings.
 
 ## Frozen benchmark and pilot
 
@@ -44,6 +44,32 @@ For the originally archived run, regenerate its artifact hash ledger with `pytho
 The runner refuses to start with a dirty source tree and refuses to overwrite an existing record file unless explicitly requested. Commit the evaluator first so each record binds to an immutable source revision. A separate checker replays the arithmetic proof stages instead of calling the top-level evaluator; it shares the exact rational/interval primitives, model-map checker, and exponential/trigonometric/root primitives, which remain part of the disclosed trusted base. `verify_records` also checks that each selected original ID appears exactly once and that no omitted ID is silently counted.
 
 Actual pilot records, resource/UNKNOWN/failure ledgers, checker output, timing summaries and artifact hashes belong under `../results/validation/g2/`. Regenerating summaries does not rerun the evaluator. An alternate rerun should use a new `--output` path so committed evidence remains intact.
+
+## R3 directed dyadic distance method
+
+R3 adds method ID `G2_COMP_CLIP_WHOLE_HOLD_DYADIC_DISTANCE_N1_R3` while preserving all R2 code paths and artifacts. Before the R3 pilot, commit `docs/LUNA_G2_DISTANCE_ADDENDUM_R3_v1.md`, the implementation and verification code. Then freeze the R3 profile and the conditional remaining-ID list with `validation.scripts.freeze_r3_profile`, commit those files, freeze the content/provenance manifest with `validation.scripts.freeze_r3_manifest`, and commit that manifest before any R3 evaluator query.
+
+The distance method rounds exact nonnegative coordinate gaps down/up to multiples of `2^-24` using metered integer shifts and quotient/remainder division. Exact squaring of the directed bounds gives radicand bounds; rational root bisection encloses the rectangle's minimum distance. The collision lower margin remains `minimum_distance_lower - R_s - E_p`. The serialized minimum-distance upper endpoint does not bound every trajectory distance. The checker reconstructs directed rounding from the original query geometry. All integer shifts, divisions, increments and rational constructions consume the same finite per-query bit and operation budgets; no floating safety arithmetic or cap increase is used.
+
+Pilot reproduction, from the repository root after the freeze commits:
+
+```powershell
+python -m validation.verification.verify_bounded_distance_r3
+python -m validation.scripts.run_pilot_r3 --phase pilot
+python -m validation.scripts.verify_records_r3 --phase pilot
+python -m validation.scripts.verify_records --records results/validation/g2/r2/dev_pilot_records_r2_v1.jsonl --metadata results/validation/g2/r2/dev_pilot_run_metadata_r2_v1.json --report results/validation/g2/r3/r2_compatibility_record_check_r3_v1.json --benchmark validation/configs/benchmark_v1.json --pilot validation/configs/dev_pilot_r2_v1.json --manifest results/validation/g2/r2/development_manifest_r2_v1.json
+python -m validation.scripts.hash_results_r3 --phase pilot
+```
+
+The pilot checker writes a continuation decision. Only if it reports `continuation_allowed: true` and passes all hashes and replays, commit the pilot evidence checkpoint, then run the frozen remaining IDs once:
+
+```powershell
+python -m validation.scripts.run_pilot_r3 --phase conditional-full-grid --pilot-checker-report results/validation/g2/r3/dev_pilot_record_check_r3_v1.json
+python -m validation.scripts.verify_records_r3 --phase conditional-full-grid
+python -m validation.scripts.hash_results_r3 --phase full-grid
+```
+
+Markdown commitments are SHA-256 of immutable Git blob bytes with revision/path/object ID recorded. The separate specification bundle is semantic JSON over that ledger; JSON profile, manifest and result hashes use `ddwmr-semantic-json-sha256-v2`. Producer/checker revisions and their source-file commitments are stored separately. If the pilot condition fails, do not run the remaining 1728 IDs or tune precision/caps.
 
 ## Scientific limits
 

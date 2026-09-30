@@ -128,6 +128,56 @@ class Budget:
         self.max_completed_result_bits = max(self.max_completed_result_bits, bits)
         return value
 
+    def shift_left_nonnegative(self, value: int, shift: int, *, primitive_id: str) -> int:
+        """Meter an exact nonnegative integer left shift before constructing it."""
+        if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+            raise InvalidInput("integer shift input must be a nonnegative integer")
+        if not isinstance(shift, int) or isinstance(shift, bool) or shift < 0:
+            raise InvalidInput("integer shift count must be a nonnegative integer")
+        estimate = value.bit_length() + shift
+        self._tick(estimate, primitive_id=primitive_id, operands=(Fraction(value),))
+        result = value << shift
+        return int(self._check_result(Fraction(result), primitive_id=primitive_id, operands=(Fraction(value),)))
+
+    def divmod_nonnegative(self, numerator: int, denominator: int, *, primitive_id: str) -> tuple[int, int]:
+        """Meter exact nonnegative integer division and observe both outputs."""
+        if (not isinstance(numerator, int) or isinstance(numerator, bool) or numerator < 0
+                or not isinstance(denominator, int) or isinstance(denominator, bool) or denominator <= 0):
+            raise InvalidInput("integer divmod requires a nonnegative numerator and positive denominator")
+        estimate = max(numerator.bit_length(), denominator.bit_length())
+        operands = (Fraction(numerator), Fraction(denominator))
+        self._tick(estimate, primitive_id=primitive_id, operands=operands)
+        quotient, remainder = divmod(numerator, denominator)
+        self._check_result(Fraction(quotient), primitive_id=primitive_id, operands=operands)
+        remainder_bits = remainder.bit_length()
+        self.max_seen_bits = max(self.max_seen_bits, remainder_bits)
+        if remainder_bits > self.max_bits:
+            self._fail(
+                "RATIONAL_BIT_LIMIT", f"integer division remainder {remainder_bits} bits exceeds {self.max_bits}",
+                primitive_id=primitive_id, estimate_kind="reduced_result", estimate_bits=remainder_bits,
+                operands=operands, cap_name="max_rational_bits", cap_value=self.max_bits,
+            )
+        return quotient, remainder
+
+    def increment_nonnegative(self, value: int, *, primitive_id: str) -> int:
+        """Meter the exact +1 used by a nonintegral upward rounding."""
+        if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+            raise InvalidInput("integer increment input must be a nonnegative integer")
+        estimate = max(1, value.bit_length() + 1)
+        self._tick(estimate, primitive_id=primitive_id, operands=(Fraction(value),))
+        result = value + 1
+        return int(self._check_result(Fraction(result), primitive_id=primitive_id, operands=(Fraction(value),)))
+
+    def dyadic_fraction(self, numerator: int, denominator: int, *, primitive_id: str) -> Fraction:
+        """Construct a reduced rational from checked nonnegative integer parts."""
+        if (not isinstance(numerator, int) or isinstance(numerator, bool) or numerator < 0
+                or not isinstance(denominator, int) or isinstance(denominator, bool) or denominator <= 0):
+            raise InvalidInput("dyadic rational requires a nonnegative numerator and positive denominator")
+        operands = (Fraction(numerator), Fraction(denominator))
+        estimate = max(numerator.bit_length(), denominator.bit_length())
+        self._tick(estimate, primitive_id=primitive_id, operands=operands)
+        return self._check_result(Fraction(numerator, denominator), primitive_id=primitive_id, operands=operands)
+
     def add(self, a: Fraction, b: Fraction) -> Fraction:
         if a == -b:
             self._tick(1, primitive_id="fraction.add.cancellation", operands=(a, b))
