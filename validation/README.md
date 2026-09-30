@@ -66,8 +66,11 @@ The pilot checker writes a continuation decision. Only if it reports `continuati
 ```powershell
 python -m validation.scripts.run_pilot_r3 --phase conditional-full-grid --pilot-checker-report results/validation/g2/r3/dev_pilot_record_check_r3_v1.json
 python -m validation.scripts.verify_records_r3 --phase conditional-full-grid
+python -m validation.scripts.archive_records_r3 --remove-source-after-verification
 python -m validation.scripts.hash_results_r3 --phase full-grid
 ```
+
+The conditional full-grid JSONL can exceed common Git hosting blob limits. The archive command writes a deterministic gzip copy only after its record count and semantic hash match run metadata, then verifies that decompression has the exact source byte hash. Its archive manifest binds the compressed path to the runner's original logical JSONL path. To replay the full-grid checker again, decompress `conditional_full_grid_records_r3_v1.jsonl.gz` to the logical `.jsonl` path first.
 
 Markdown commitments are SHA-256 of immutable Git blob bytes with revision/path/object ID recorded. The separate specification bundle is semantic JSON over that ledger; JSON profile, manifest and result hashes use `ddwmr-semantic-json-sha256-v2`. Producer/checker revisions and their source-file commitments are stored separately. If the pilot condition fails, do not run the remaining 1728 IDs or tune precision/caps.
 

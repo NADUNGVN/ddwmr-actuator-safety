@@ -1,0 +1,31 @@
+{
+  "distance_method_id": "DIRECTED_DYADIC_EUCLIDEAN_MIN_DISTANCE_V1",
+  "distance_rounding_precision_bits": 24,
+  "evaluated_query_count": 1944,
+  "groups_with_at_least_one_certified_action": 140,
+  "groups_with_mixed_certificate_status": 8,
+  "invalid_or_execution_failure_count": 0,
+  "method_id": "G2_COMP_CLIP_WHOLE_HOLD_DYADIC_DISTANCE_N1_R3",
+  "not_run_query_count_after_phase": 0,
+  "original_query_universe": 1944,
+  "phase": "conditional-full-grid",
+  "proof_certified_count": 1196,
+  "proof_complete_unknown_count": 748,
+  "records_file_hashes": {
+    "results/validation/g2/r3/conditional_full_grid_records_r3_v1.jsonl": "de339ffcb5ee5e0c83f8d25e3077d9fd9316f83293982189aaffba0bdcf3b196",
+    "results/validation/g2/r3/dev_pilot_records_r3_v1.jsonl": "fdbce2ac5587247ababc0849c5fce8f9a596c3eb2175ed277545072c06acdc43"
+  },
+  "replay_counts": {
+    "completed_proofs": 1944,
+    "replayed_proofs": 1944,
+    "resource_record_integrity_only": 0
+  },
+  "resource_unknown_count": 0,
+  "schema": "ddwmr-g2-development-full-grid-summary-r3-v1",
+  "specification_bundle_sha256": "84b444d0be6e18c946697c3b95662ffd0f30dd228ae7ca5e742cee47d446c850",
+  "state_scene_horizon_group_count": 216,
+  "status_counts": {
+    "CERTIFIED": 1196,
+    "UNKNOWN": 748
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "archive_bytes": 34613266,
+  "archive_path": "results/validation/g2/r3/conditional_full_grid_records_r3_v1.jsonl.gz",
+  "archive_raw_bytes_sha256": "352b6c67480133350a7d1bfc89334a1beff1dc27c64cfda46391af27982fa874",
+  "archive_tool_path": "validation/scripts/archive_records_r3.py",
+  "archive_tool_revision": "266f979a6c2aaf3ca97ead522d18d33633d97e41",
+  "compression": {
+    "format": "gzip",
+    "level": 9,
+    "mtime_header": 0,
+    "python_version": "3.12.12",
+    "round_trip_raw_sha256_match": true,
+    "stored_filename": "",
+    "zlib_version": "1.3.1"
+  },
+  "logical_source_path": "results/validation/g2/r3/conditional_full_grid_records_r3_v1.jsonl",
+  "phase_id": "R3_CONDITIONAL_REMAINING_1728",
+  "producer_records_semantic_sha256": "de339ffcb5ee5e0c83f8d25e3077d9fd9316f83293982189aaffba0bdcf3b196",
+  "record_count": 1728,
+  "schema": "ddwmr-g2-r3-compressed-record-archive-v1",
+  "source_bytes": 147589521,
+  "source_raw_bytes_sha256": "de339ffcb5ee5e0c83f8d25e3077d9fd9316f83293982189aaffba0bdcf3b196",
+  "source_semantic_sha256": "de339ffcb5ee5e0c83f8d25e3077d9fd9316f83293982189aaffba0bdcf3b196"
+}
