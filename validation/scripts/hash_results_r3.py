@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 from pathlib import Path
 
 from validation.g2.evaluator import ROOT
-from validation.g2.hashing import HASH_PROTOCOL_ID, semantic_json_file_sha256, semantic_jsonl_file_sha256
+from validation.g2.hashing import HASH_PROTOCOL_ID, canonical_json_bytes, semantic_json_file_sha256
 from validation.g2.provenance import current_revision
 
 
@@ -29,13 +30,36 @@ PILOT_FILES = [
 ]
 FULL_FILES = PILOT_FILES + [
     "results/validation/g2/r3/SHA256SUMS_PILOT_R3.json",
-    "results/validation/g2/r3/conditional_full_grid_records_r3_v1.jsonl",
+    "results/validation/g2/r3/conditional_full_grid_records_r3_v1.jsonl.gz",
+    "results/validation/g2/r3/conditional_full_grid_archive_manifest_r3_v1.json",
     "results/validation/g2/r3/conditional_full_grid_run_metadata_r3_v1.json",
     "results/validation/g2/r3/full_grid_record_check_r3_v1.json",
     "results/validation/g2/r3/full_grid_summary_r3_v1.json",
     "results/validation/g2/r3/r2_to_r3_full_grid_transitions_r3_v1.jsonl",
     "results/validation/g2/r3/full_grid_action_group_summary_r3_v1.json",
 ]
+
+
+def semantic_jsonl_sha256_stream(stream) -> str:
+    """Hash canonical JSONL one record at a time, including gzip streams."""
+    digest = hashlib.sha256()
+    for raw_line in stream:
+        line = raw_line[:-1] if raw_line.endswith(b"\n") else raw_line
+        if line.endswith(b"\r"):
+            line = line[:-1]
+        if not line.strip():
+            continue
+        record = json.loads(line.decode("utf-8"))
+        digest.update(canonical_json_bytes(record) + b"\n")
+    return digest.hexdigest()
+
+
+def raw_file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def main() -> None:
@@ -51,10 +75,17 @@ def main() -> None:
         path = ROOT / relative
         if not path.is_file():
             raise SystemExit(f"required R3 artifact missing: {relative}")
-        semantic = semantic_jsonl_file_sha256(path) if path.suffix == ".jsonl" else semantic_json_file_sha256(path)
+        if path.name.endswith(".jsonl.gz"):
+            with gzip.open(path, "rb") as stream:
+                semantic = semantic_jsonl_sha256_stream(stream)
+        elif path.suffix == ".jsonl":
+            with path.open("rb") as stream:
+                semantic = semantic_jsonl_sha256_stream(stream)
+        else:
+            semantic = semantic_json_file_sha256(path)
         hashes[relative] = {
             "semantic_sha256": semantic,
-            "raw_bytes_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            "raw_bytes_sha256": raw_file_sha256(path),
             "bytes": path.stat().st_size,
         }
     ledger = {
