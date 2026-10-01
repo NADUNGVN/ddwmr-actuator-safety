@@ -1,0 +1,84 @@
+{
+  "schema": "ddwmr-g4-auer-composition-replay-profile-v1",
+  "profile_id": "AUER_R4_STORED_PROOF_TO_COMMON_REPLAY_V1",
+  "status": "FROZEN_BEFORE_FIRST_R5_REPLAY",
+  "scope": "One stored R4 DDWMR proof, one proof-derived NATIVE_TOTAL_HULL segment chain, one common collision/contact record, and its serialized composition. No producer rerun and no matched batch.",
+  "project_paths": {
+    "selected_case_input": "validation/baselines/auer2013/auer_r4_ddwmr_single_case_input_v1.json",
+    "benchmark": "validation/configs/benchmark_v1.json",
+    "r4_resource_profile": "validation/baselines/auer2013/small_case_resource_profile_v2.json",
+    "method_contract": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+    "arithmetic_backend_manifest": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json"
+  },
+  "frozen_sha256": {
+    "r4_source_snapshot_v10_manifest": "29ca0f22791ccc740ef377b232522dee88bbaf00367213bfc45cc07925c5bcd5",
+    "r4_output_artifact_manifest": "6a8d5501972cbb1351cb9ea09500427cb37f8b30c37673ee9e573e156ab6b1a7",
+    "selected_case_input": "3176cdc76861314cb6aaff1f47304ab61b8fd7040270f0504e45498e05b5bd76",
+    "benchmark": "b2bc12cd578229cfb6df4b426f93e0f472d69f6be36929df93e797ff79396a9e",
+    "r4_resource_profile": "539c59734fb949e4eab2d71ea0761dcd1032bf6ae92fa17fac53e520462a2cc4",
+    "method_contract": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+    "arithmetic_backend_manifest": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+    "r4_native_proof_file": "8d394d836c5b92b733403b16b1786cb7fe410ab8fb8610c694c0a7c88e5dde4e",
+    "r4_native_proof_body": "4e49a66b69d869758f28ecfdba84eccefde4e38d8a1fa4f70d3c6e3f2701be70",
+    "r4_evidence": "e05945b62bf058b76a121c32d316184e577158d3fc7789a6bfed1356c354ec4a",
+    "r5_common_record_copy": "1df9c6d5c146e96ca8e693542573f30c534b7e1428c0bbedbfb5fec421a53482",
+    "r5_composition_copy": "06386fd01a20503deb233817ac01f3359c2dbc6293a09e008030fab04249fb36"
+  },
+  "counts": {
+    "v10_snapshot_members": 720,
+    "r4_output_artifacts": 34
+  },
+  "case_identity": {
+    "query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+    "scene_id": "scene_d020_l-200",
+    "candidate_manifest_v2_input_sha256": "b59dc0f4bd05bf277384387115e7138d6df6450c187d2eefd38cae577a474e94",
+    "horizon": {"num": "1", "den": "50"},
+    "held_voltage": [{"num": "-1", "den": "1"}, {"num": "-1", "den": "1"}],
+    "benchmark_schema": "ddwmr-g2-benchmark-v1",
+    "arithmetic_backend_id": "DDWMR_EXACT_RATIONAL_TAYLOR_INTERVAL_V1",
+    "expected_common_predicate_status": "PASS_ON_SUPPLIED_TUBE"
+  },
+  "runtime": {
+    "executable": "C:/msys64/ucrt64/bin/python.exe",
+    "executable_sha256": "b5c33df60c2a8421dcf8117a67e848436b5d395c71ec1c0dfd96bad10f441d7f",
+    "version": "3.12.12 (main, Oct 10 2025, 12:42:57)  [GCC UCRT 15.2.0 64 bit (AMD64)]"
+  },
+  "r4_work_ledger": {
+    "combined_operation_cap": 2000000,
+    "producer_operations": 43917,
+    "native_replay_operations": 39081,
+    "tamper_replay_operations": 117033,
+    "common_predicate_operations": 2415,
+    "combined_operations": 202446,
+    "common_budget_remaining_operations": 1799969,
+    "derivation": "2,000,000 - 43,917 - 39,081 - 117,033 = 1,799,969"
+  },
+  "resource_limits": {
+    "max_rational_bits": 32768,
+    "native_replay_operation_cap": 2000000,
+    "common_rational_operation_cap": 1799969,
+    "max_rhs_jacobian_evaluations": 100000,
+    "max_serialized_proof_bytes": 536870912,
+    "wall_time_seconds_per_replay": 120,
+    "memory_limit_mib_per_replay": 1024,
+    "memory_guard": "Windows Job Object process-memory limit with child created suspended and assigned before resume; frozen R4 process_limiter launcher",
+    "resource_failure_category": "resource_limit"
+  },
+  "required_v10_source_members": [
+    "validation/baselines/auer2013/residual_ivp.py",
+    "validation/baselines/auer2013/replay_ivp.py",
+    "validation/g4/common_tube.py",
+    "validation/baselines/auer2013/process_limiter.py",
+    "validation/g2/rational.py",
+    "validation/g2/interval.py",
+    "validation/g2/hashing.py",
+    "validation/g2/model.py"
+  ],
+  "r5_default_artifacts": {
+    "common_record": "inputs/r4_common_check_v2.json",
+    "composition": "inputs/r4_composition_v1.json"
+  },
+  "matched_query_evaluations": 0,
+  "certificate_emitted": false,
+  "arithmetic_independence_disclosure": "The native replay rebuilds the 21-coordinate IVP record using replay_ivp.py without importing the producer. It shares validation.g2 rational/interval/Taylor arithmetic. The common checker reuses validation.g4.common_tube.py."
+}

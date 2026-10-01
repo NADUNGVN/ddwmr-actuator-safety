@@ -1,0 +1,28 @@
+{
+  "schema": "ddwmr-g4-auer-small-case-freeze-record-v1",
+  "frozen_date": "2026-09-30",
+  "method_contract": {
+    "path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v1.md",
+    "sha256": "b047e6edf4045540c3ba2ad52aab56bc39a0aca60033cb96a28b0017c237e379",
+    "method_id": "AUER2013_PIECEWISE_RESIDUAL_RECONSTRUCTION_DDWMR_V1"
+  },
+  "arithmetic_backend": {
+    "document_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND.md",
+    "manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v1.json",
+    "manifest_sha256": "a1f3760b7be06d6cd95b1f3137c4776128bcc5a62ef9a7211b7c1d406a35b5f9",
+    "backend_id": "DDWMR_EXACT_RATIONAL_TAYLOR_INTERVAL_V1"
+  },
+  "resource_profile": {
+    "path": "validation/baselines/auer2013/small_case_resource_profile_v1.json",
+    "sha256": "ab9a842d693862319e91351fae738af67aba0ceb4ea80bf2637d6ce0cadf35c2",
+    "profile_id": "AUER_EXACT_RATIONAL_SINGLE_CASE_DEV_V1"
+  },
+  "execution_disposition": {
+    "analytic_fixture_ivp_runs": 0,
+    "ddwmr_auer_ivp_runs": 0,
+    "reason": "Auer residual/Picard IVP producer, native full-time inclusion record writer, independent inclusion replay checker, and process-level memory enforcement are absent. No inclusion or arithmetic proof premise was evaluated; the solver branch is blocked before IVP execution.",
+    "profile_enforcement_ready": false,
+    "profile_limits_may_be_raised_or_retried": false,
+    "matched_query_count": 0
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "actual_range_closure": [
+    {
+      "den": "1",
+      "num": "-1"
+    },
+    {
+      "den": "1",
+      "num": "6"
+    }
+  ],
+  "auer_eq35_contains_actual_range": true,
+  "auer_eq35_derivative_enclosure": [
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "6"
+    }
+  ],
+  "auer_eq35_mean_value_enclosure": [
+    {
+      "den": "2",
+      "num": "-7"
+    },
+    {
+      "den": "2",
+      "num": "29"
+    }
+  ],
+  "domain": [
+    {
+      "den": "1",
+      "num": "-1"
+    },
+    {
+      "den": "1",
+      "num": "2"
+    }
+  ],
+  "exact_paper_reported_failure": "[-3/2,9/2] does not contain the function range [-1,6]",
+  "function_branches": {
+    "left": "x",
+    "right": "2*x+2",
+    "switch": "0"
+  },
+  "jump": {
+    "den": "1",
+    "num": "2"
+  },
+  "jump_quotient_interval": [
+    {
+      "den": "5",
+      "num": "4"
+    },
+    {
+      "den": "1",
+      "num": "4"
+    }
+  ],
+  "reference": "Auer, Kiel & Rauh (2013), \u00a74.1, Eqs. (34)-(35), p. 741",
+  "reference_point": {
+    "den": "2",
+    "num": "-1"
+  },
+  "schema": "auer2013-reference-eq34-reproduction-v1",
+  "scope_note": "This is the paper's scalar formula illustration, not its \u00a75 friction/hysteresis simulation or a DDWMR trajectory.",
+  "smooth_rule_contains_actual_range": false,
+  "smooth_rule_derivative": [
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "2"
+    }
+  ],
+  "smooth_rule_mean_value_enclosure": [
+    {
+      "den": "2",
+      "num": "-3"
+    },
+    {
+      "den": "2",
+      "num": "9"
+    }
+  ]
+}

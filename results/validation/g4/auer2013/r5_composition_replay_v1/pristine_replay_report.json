@@ -1,0 +1,60 @@
+{
+  "certificate_emitted": false,
+  "common_check_sha256": "9b41c31c83ba925a30321b8b1e1c07e2c0046125874beef6a09e161ca86e0cc0",
+  "common_predicate_status": "PASS_ON_SUPPLIED_TUBE",
+  "common_rational_operations": 2415,
+  "common_record_status": "PASS",
+  "composition_status": "PASS",
+  "created_utc": "2026-10-01T02:54:47+00:00",
+  "dependency_disclosure": {
+    "common_predicate": "validation.g4.common_tube.check_tube_segments",
+    "composition_expectation": "rebuilt from replay-validated proof and recomputed common result before comparing stored composition",
+    "native_checker": "validation.baselines.auer2013.replay_ivp.replay_native_proof; R4 producer not imported",
+    "shared_arithmetic": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library"
+  },
+  "detail": "stored native proof, proof-derived common record, and stored composition all replay and match",
+  "input_sha256": {
+    "arithmetic_backend_manifest": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+    "benchmark": "b2bc12cd578229cfb6df4b426f93e0f472d69f6be36929df93e797ff79396a9e",
+    "common_record": "1df9c6d5c146e96ca8e693542573f30c534b7e1428c0bbedbfb5fec421a53482",
+    "composition": "06386fd01a20503deb233817ac01f3359c2dbc6293a09e008030fab04249fb36",
+    "method_contract": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+    "native_proof_file": "8d394d836c5b92b733403b16b1786cb7fe410ab8fb8610c694c0a7c88e5dde4e",
+    "r4_evidence": "e05945b62bf058b76a121c32d316184e577158d3fc7789a6bfed1356c354ec4a",
+    "r4_resource_profile": "539c59734fb949e4eab2d71ea0761dcd1032bf6ae92fa17fac53e520462a2cc4",
+    "r5_profile": "4b0fa779b67c3a5dff3a38b8909b6246264f66f7039c34157cdf3828fe4e6851",
+    "selected_case_input": "3176cdc76861314cb6aaff1f47304ab61b8fd7040270f0504e45498e05b5bd76"
+  },
+  "matched_query_evaluations": 0,
+  "native_proof_file_sha256": "8d394d836c5b92b733403b16b1786cb7fe410ab8fb8610c694c0a7c88e5dde4e",
+  "native_proof_sha256": "4e49a66b69d869758f28ecfdba84eccefde4e38d8a1fa4f70d3c6e3f2701be70",
+  "native_replay": {
+    "native_status": "PROOF_COMPLETE",
+    "proof_sha256": "4e49a66b69d869758f28ecfdba84eccefde4e38d8a1fa4f70d3c6e3f2701be70",
+    "replayed": true,
+    "rhs_jacobian_combined_count": 4,
+    "rhs_jacobian_replay": "independent local interval AD implementation; producer RHS source not imported",
+    "rhs_jacobian_replay_evaluations": 4,
+    "shared_exact_arithmetic_source": "validation.g2.rational and validation.g2.interval",
+    "steps_replayed": 1,
+    "work": {
+      "max_observed_rational_bits": 300,
+      "rational_operation_attempts": 39081,
+      "rational_operations": 39081
+    }
+  },
+  "native_replay_status": "PASS",
+  "query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+  "r4_output_artifact_count_verified": 34,
+  "r4_output_artifact_manifest_sha256": "6a8d5501972cbb1351cb9ea09500427cb37f8b30c37673ee9e573e156ab6b1a7",
+  "r4_source_snapshot_member_count_verified": 720,
+  "r4_source_snapshot_v10_manifest_sha256": "29ca0f22791ccc740ef377b232522dee88bbaf00367213bfc45cc07925c5bcd5",
+  "r5_source_snapshot_member_count_verified": 726,
+  "r5_source_snapshot_v11_manifest_sha256": "d6ed85d98f630889912e30baaf00314ac4069c4dc846525c639832c64ff959eb",
+  "reason": null,
+  "research_disposition": "HOLD; G1 restricted PASS; G2/G3/G4 UNVERIFIED; physical correspondence UNVERIFIED",
+  "schema": "ddwmr-g4-auer-composition-replay-report-v1",
+  "segment_count": 1,
+  "segments_sha256": "298ca8c7282eb22045644f45131b3e5f65c6990dc184748564d669f809711cf4",
+  "status": "PASS"
+}

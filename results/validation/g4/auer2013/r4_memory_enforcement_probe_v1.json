@@ -1,0 +1,30 @@
+{
+  "command": [
+    "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "-m",
+    "validation.baselines.auer2013.r4_worker",
+    "--memory-probe-mib",
+    "256"
+  ],
+  "elapsed_wall_seconds": 0.1569999999992433,
+  "guard_runner_source_sha256": "d972673b8b21bae773a4bb35c356ba425359574231f9f437777c7b258e89fcd9",
+  "job_process_memory_limit_bytes_reported": 67108864,
+  "memory_limit_bytes": 67108864,
+  "memory_limit_mib": 64,
+  "peak_process_memory_bytes_reported_by_job": 14643200,
+  "probe_enforcement_verified": false,
+  "probe_requested_allocation_mib": 256,
+  "process_memory_cap_installed": true,
+  "schema": "ddwmr-g4-auer-windows-job-guard-record-v1",
+  "started_utc": "2026-09-30T17:30:57+00:00",
+  "status": "PROCESS_EXITED",
+  "test_limit_isolated_from_frozen_ivp_profile": true,
+  "timeout_seconds": 30,
+  "timeout_terminated_job": false,
+  "worker_created_suspended_and_assigned_before_resume": true,
+  "worker_exit_code": 1,
+  "worker_setup_error": null,
+  "worker_stdout_bytes": 959,
+  "worker_stdout_path": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\g4\\auer2013\\r4_memory_enforcement_probe_stdout_v1.log",
+  "worker_stdout_sha256": "346f2d85cb5546996f5746b79f0716b9f13366431aa51bb58496c8850afb3854"
+}

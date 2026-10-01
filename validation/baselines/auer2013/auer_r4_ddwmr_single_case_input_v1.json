@@ -1,0 +1,44 @@
+{
+  "schema": "ddwmr-g4-auer-r4-single-query-input-v1",
+  "query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+  "candidate_manifest_v2_input_sha256": "b59dc0f4bd05bf277384387115e7138d6df6450c187d2eefd38cae577a474e94",
+  "benchmark_path": "validation/configs/benchmark_v1.json",
+  "benchmark_sha256": "b2bc12cd578229cfb6df4b426f93e0f472d69f6be36929df93e797ff79396a9e",
+  "state_order": ["p_x", "p_y", "theta", "u", "r", "omega_L", "omega_R", "i_L", "i_R"],
+  "initial_state": [
+    [{"num": "-1", "den": "100"}, {"num": "1", "den": "100"}],
+    [{"num": "-1", "den": "100"}, {"num": "1", "den": "100"}],
+    [{"num": "-1", "den": "20"}, {"num": "1", "den": "20"}],
+    [{"num": "1", "den": "5"}, {"num": "3", "den": "10"}],
+    [{"num": "-1", "den": "5"}, {"num": "-1", "den": "10"}],
+    [{"num": "3", "den": "10"}, {"num": "1", "den": "2"}],
+    [{"num": "0", "den": "1"}, {"num": "1", "den": "5"}],
+    [{"num": "-1", "den": "10"}, {"num": "1", "den": "10"}],
+    [{"num": "-1", "den": "10"}, {"num": "1", "den": "10"}]
+  ],
+  "fixed_labels": {
+    "B_L": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "B_R": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "C_L": [{"num": "1", "den": "1"}, {"num": "11", "den": "10"}],
+    "C_R": [{"num": "1", "den": "1"}, {"num": "11", "den": "10"}],
+    "R_L": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "R_R": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "k_L": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "k_R": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "lambda_L": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "lambda_R": [{"num": "9", "den": "10"}, {"num": "11", "den": "10"}],
+    "rho_L": [{"num": "1", "den": "1"}, {"num": "11", "den": "10"}],
+    "rho_R": [{"num": "1", "den": "1"}, {"num": "11", "den": "10"}]
+  },
+  "held_voltage": [{"num": "-1", "den": "1"}, {"num": "-1", "den": "1"}],
+  "horizon": {"num": "1", "den": "50"},
+  "scene": {
+    "id": "scene_d020_l-200",
+    "p_o": [{"num": "13", "den": "25"}, {"num": "-1", "den": "5"}],
+    "R_s": {"num": "1", "den": "2"},
+    "clearance": {"num": "1", "den": "50"},
+    "lateral_offset": {"num": "-1", "den": "5"}
+  },
+  "selection_rule": "the existing frozen candidate-manifest v2 first row; no outcome-based reselection",
+  "parameter_semantics": "The twelve declared label intervals are carried as augmented coordinates with zero derivatives. One unchanged full label image and one common held voltage apply for the entire hold; interval boxing may lose correlation but may not narrow or resample labels."
+}

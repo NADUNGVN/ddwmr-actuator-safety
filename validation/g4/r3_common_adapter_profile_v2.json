@@ -1,0 +1,14 @@
+{
+  "schema": "ddwmr-g4-r3-common-adapter-profile-v1",
+  "profile_id": "R3_ARCHIVED_SINGLE_RECORD_COMMON_ADAPTER_EXACT_RATIONAL_V2",
+  "status": "FROZEN_BEFORE_ADAPTER_RETRY_AFTER_RUNNER_BUDGET_BINDING_FIX",
+  "scope": "Shared common-tube predicate and record replay for the one already-selected archived R3 proof. Does not rerun or alter the R3 native evaluator.",
+  "max_rational_bits": 32768,
+  "max_rational_operations": 2000000,
+  "wall_seconds": 60,
+  "sqrt_bisections": 24,
+  "memory_cap": "not separately enforced; exact-rational bit/operation/wall caps apply",
+  "retry_policy": "No cap change or retry under this profile. Any further code/profile change requires a new version.",
+  "version_reason": "Same numeric limits as v1; new version because v1 exposed an implementation bug where an adapted TubeSegment and common checker used different Budget objects.",
+  "selection_binding": "reuse the first frozen R3 record ID and its exact semantic/line hashes; no outcome-based reselection"
+}

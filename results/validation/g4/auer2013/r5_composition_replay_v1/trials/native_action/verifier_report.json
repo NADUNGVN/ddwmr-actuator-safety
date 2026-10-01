@@ -1,0 +1,11 @@
+{
+  "certificate_emitted": false,
+  "created_utc": "2026-10-01T02:54:52+00:00",
+  "detail": "native stored-proof replay rejected: proof_premise_mismatch: replayed field differs: DDWMR query/action binding",
+  "matched_query_evaluations": 0,
+  "native_reason": "proof_premise_mismatch",
+  "reason": "native_proof_failure",
+  "research_disposition": "HOLD; G1 restricted PASS; G2/G3/G4 UNVERIFIED; physical correspondence UNVERIFIED",
+  "schema": "ddwmr-g4-auer-composition-replay-report-v1",
+  "status": "REJECTED"
+}

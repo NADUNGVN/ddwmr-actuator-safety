@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Research\Teacher_Vien\projects\ddwmr-actuator-safety\results\validation\g4\auer2013\source_snapshot_v8\project\validation\baselines\auer2013\r4_worker.py", line 549, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\Research\Teacher_Vien\projects\ddwmr-actuator-safety\results\validation\g4\auer2013\source_snapshot_v8\project\validation\baselines\auer2013\r4_worker.py", line 542, in main
+    return _probe(args.memory_probe_mib)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Research\Teacher_Vien\projects\ddwmr-actuator-safety\results\validation\g4\auer2013\source_snapshot_v8\project\validation\baselines\auer2013\r4_worker.py", line 525, in _probe
+    block = bytearray(mebibytes * 1024 * 1024)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError

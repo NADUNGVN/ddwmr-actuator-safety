@@ -1,0 +1,15 @@
+{
+  "schema": "ddwmr-g4-r3-common-adapter-profile-v1",
+  "profile_id": "R3_ARCHIVED_SINGLE_RECORD_COMMON_ADAPTER_EXACT_RATIONAL_V3",
+  "status": "FROZEN_BEFORE_ADAPTER_RETRY_AFTER_BOUNDED_INTEGER_SERIALIZATION_FIX",
+  "scope": "Shared common-tube predicate and replay for the same selected archived R3 proof. Does not rerun or alter the R3 native evaluator.",
+  "max_rational_bits": 32768,
+  "max_rational_operations": 2000000,
+  "wall_seconds": 60,
+  "sqrt_bisections": 24,
+  "max_integer_string_digits": 10000,
+  "memory_cap": "not separately enforced; exact-rational bit/operation/wall caps apply",
+  "retry_policy": "No cap or serialization-limit changes under this profile. A further change requires a new profile version.",
+  "version_reason": "Same rational, operation, wall, and square-root limits as v2. Adds a finite Python integer-to-decimal serialization cap large enough to serialize every endpoint allowed by the 32768-bit rational cap.",
+  "selection_binding": "reuse the first frozen R3 record ID and its exact semantic/line hashes; no outcome-based reselection"
+}

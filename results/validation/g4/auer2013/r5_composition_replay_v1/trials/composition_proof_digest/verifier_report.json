@@ -1,0 +1,11 @@
+{
+  "certificate_emitted": false,
+  "created_utc": "2026-10-01T02:55:01+00:00",
+  "detail": "$.native_proof_sha256: stored value '0000000000000000000000000000000000000000000000000000000000000000', expected '4e49a66b69d869758f28ecfdba84eccefde4e38d8a1fa4f70d3c6e3f2701be70'",
+  "matched_query_evaluations": 0,
+  "native_reason": null,
+  "reason": "composition_mismatch",
+  "research_disposition": "HOLD; G1 restricted PASS; G2/G3/G4 UNVERIFIED; physical correspondence UNVERIFIED",
+  "schema": "ddwmr-g4-auer-composition-replay-report-v1",
+  "status": "REJECTED"
+}

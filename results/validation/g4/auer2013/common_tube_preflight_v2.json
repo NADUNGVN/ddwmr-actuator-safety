@@ -1,0 +1,2135 @@
+{
+  "check_count": 9,
+  "checks": {
+    "auer_adapter_full_step_schema": {
+      "fixture_only": true,
+      "radius_expansion_count": 1,
+      "schema": "auer2013-native-tube-segment-rational-time-binary64-state-v1",
+      "state_hull_is_total": true
+    },
+    "binary64_exact_rational_conversion": {
+      "conversion_is_exact_for_represented_float": true,
+      "exact_rational": {
+        "den": "36028797018963968",
+        "num": "3602879701896397"
+      },
+      "hex": "0x1.999999999999ap-4"
+    },
+    "coverage_gap_rejected": true,
+    "fixed_label_change_rejected": true,
+    "full_time_overrides_clear_endpoints": {
+      "both_endpoint_only_clearance_margins": [
+        {
+          "den": "2",
+          "num": "3"
+        },
+        {
+          "den": "2",
+          "num": "3"
+        }
+      ],
+      "full_hull_collision_margin": {
+        "den": "2",
+        "num": "-1"
+      },
+      "replay": {
+        "certificate_emitted": false,
+        "predicate_status": "UNKNOWN_ON_SUPPLIED_TUBE",
+        "replayed": true
+      },
+      "status": "UNKNOWN_ON_SUPPLIED_TUBE"
+    },
+    "positive_two_closed_slabs": {
+      "collision_margins": [
+        [
+          {
+            "den": "2305843009213693952",
+            "num": "31456623058725108549"
+          }
+        ],
+        [
+          {
+            "den": "2305843009213693952",
+            "num": "31456623058725108549"
+          }
+        ]
+      ],
+      "contact_margins": [
+        {
+          "den": "9223372036854775808",
+          "num": "18446744073709551615"
+        },
+        {
+          "den": "9223372036854775808",
+          "num": "18446744073709551615"
+        }
+      ],
+      "replay": {
+        "certificate_emitted": false,
+        "predicate_status": "PASS_ON_SUPPLIED_TUBE",
+        "replayed": true
+      },
+      "segment_count": 2,
+      "status": "PASS_ON_SUPPLIED_TUBE"
+    },
+    "radius_expanded_once": {
+      "expanded_hull": [
+        {
+          "den": "4",
+          "num": "3"
+        },
+        {
+          "den": "4",
+          "num": "9"
+        }
+      ],
+      "expansion_count": 1,
+      "input_center": [
+        [
+          {
+            "den": "1",
+            "num": "1"
+          },
+          {
+            "den": "1",
+            "num": "2"
+          }
+        ]
+      ],
+      "radius": {
+        "den": "4",
+        "num": "1"
+      }
+    },
+    "saturated_clip_corner": {
+      "at_one": [
+        {
+          "den": "1",
+          "num": "1"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "contact_checker_uses_exact_clip_value_range": true,
+      "crossing_one": [
+        {
+          "den": "1000",
+          "num": "999"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ]
+    },
+    "tampered_enclosure_rejected": {
+      "reason": "common_check_record_mismatch",
+      "replayed": false
+    }
+  },
+  "matched_query_evaluations": 0,
+  "not_ode_trajectories": true,
+  "not_safety_certificates": true,
+  "positive_fixture_record": {
+    "certificate_emitted": false,
+    "collision_pose_semantics": "STATE_HULL_ALREADY_INCLUDES_ANY_NATIVE_OR_ADAPTER_RADIUS; NO_SECOND_EXPANSION",
+    "fixed_label_semantics": "ONE_UNCHANGED_FULL_LABEL_IMAGE_ACROSS_ALL_SEGMENTS",
+    "full_closed_hold_covered": true,
+    "inputs": {
+      "benchmark_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b",
+      "horizon": {
+        "den": "10",
+        "num": "1"
+      },
+      "initial_state": [
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ]
+      ],
+      "scene_sha256": "26a975518cb7fe7484e3d809eaf1b779f5a23176f949bac0b157c86960879968"
+    },
+    "ode_tube_proof_replayed": false,
+    "predicate_status": "PASS_ON_SUPPLIED_TUBE",
+    "schema": "ddwmr-g4-common-tube-check-v1",
+    "segment_checks": [
+      {
+        "closed_time": {
+          "end": {
+            "den": "20",
+            "num": "1"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        },
+        "collision": [
+          {
+            "coordinate_gaps": [
+              {
+                "den": "1",
+                "num": "10"
+              },
+              {
+                "den": "1",
+                "num": "10"
+              }
+            ],
+            "exclusion_radius": {
+              "den": "2",
+              "num": "1"
+            },
+            "margin_lower": {
+              "den": "2305843009213693952",
+              "num": "31456623058725108549"
+            },
+            "obstacle_id": "fixture-far-obstacle",
+            "sqrt_bracket": [
+              {
+                "den": "2305843009213693952",
+                "num": "32609544563331955525"
+              },
+              {
+                "den": "1152921504606846976",
+                "num": "16304772281665977775"
+              }
+            ],
+            "squared_distance_lower": {
+              "den": "1",
+              "num": "200"
+            }
+          }
+        ],
+        "contact": {
+          "available_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "beta_upper": [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          "clip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "demand_upper": {
+            "den": "1",
+            "num": "0"
+          },
+          "margin_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "normalized_slip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "root_lower_upper_brackets": [
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ]
+          ]
+        },
+        "segment_id": "pass-0"
+      },
+      {
+        "closed_time": {
+          "end": {
+            "den": "10",
+            "num": "1"
+          },
+          "start": {
+            "den": "20",
+            "num": "1"
+          }
+        },
+        "collision": [
+          {
+            "coordinate_gaps": [
+              {
+                "den": "1",
+                "num": "10"
+              },
+              {
+                "den": "1",
+                "num": "10"
+              }
+            ],
+            "exclusion_radius": {
+              "den": "2",
+              "num": "1"
+            },
+            "margin_lower": {
+              "den": "2305843009213693952",
+              "num": "31456623058725108549"
+            },
+            "obstacle_id": "fixture-far-obstacle",
+            "sqrt_bracket": [
+              {
+                "den": "2305843009213693952",
+                "num": "32609544563331955525"
+              },
+              {
+                "den": "1152921504606846976",
+                "num": "16304772281665977775"
+              }
+            ],
+            "squared_distance_lower": {
+              "den": "1",
+              "num": "200"
+            }
+          }
+        ],
+        "contact": {
+          "available_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "beta_upper": [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          "clip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "demand_upper": {
+            "den": "1",
+            "num": "0"
+          },
+          "margin_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "normalized_slip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "root_lower_upper_brackets": [
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ]
+          ]
+        },
+        "segment_id": "pass-1"
+      }
+    ],
+    "segment_count": 2,
+    "segments": [
+      {
+        "enclosure_representation": "TOTAL_STATE_HULL",
+        "endpoint_end": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "20",
+            "num": "1"
+          }
+        },
+        "endpoint_start": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "1",
+            "num": "0"
+          }
+        },
+        "fixed_labels": {
+          "B_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "B_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ]
+        },
+        "provenance": {
+          "fixture": true,
+          "physical_trajectory_claim": false
+        },
+        "radius_expansion_count": 0,
+        "radius_expansion_mode": "NATIVE_TOTAL_HULL",
+        "schema": "ddwmr-g4-full-time-tube-segment-v1",
+        "segment_id": "pass-0",
+        "state_hull": [
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "time_closed": {
+          "end": {
+            "den": "20",
+            "num": "1"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        }
+      },
+      {
+        "enclosure_representation": "TOTAL_STATE_HULL",
+        "endpoint_end": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "10",
+            "num": "1"
+          }
+        },
+        "endpoint_start": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "20",
+            "num": "1"
+          }
+        },
+        "fixed_labels": {
+          "B_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "B_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ]
+        },
+        "provenance": {
+          "fixture": true,
+          "physical_trajectory_claim": false
+        },
+        "radius_expansion_count": 0,
+        "radius_expansion_mode": "NATIVE_TOTAL_HULL",
+        "schema": "ddwmr-g4-full-time-tube-segment-v1",
+        "segment_id": "pass-1",
+        "state_hull": [
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "time_closed": {
+          "end": {
+            "den": "10",
+            "num": "1"
+          },
+          "start": {
+            "den": "20",
+            "num": "1"
+          }
+        }
+      }
+    ],
+    "segments_sha256": "1174f05cb25619fa787d66d39b07d6e2ea3125a43e60312d8c4f9eace02920ca",
+    "shared_arithmetic": "validation.g2 exact-rational Interval/Budget; sqrt_lower",
+    "work": {
+      "completed_results": 3568,
+      "max_completed_result_bits": 130,
+      "max_observed_result_bits": 130,
+      "max_preoperation_estimate_bits": 130,
+      "max_rational_bits": 16384,
+      "max_rational_operations": 1000000,
+      "operation_attempts": 3678,
+      "operations_started": 3678
+    }
+  },
+  "schema": "ddwmr-g4-common-tube-preflight-v1",
+  "scope": "SYNTHETIC_INTERFACE_FIXTURES_ONLY",
+  "unknown_fixture_record": {
+    "certificate_emitted": false,
+    "collision_pose_semantics": "STATE_HULL_ALREADY_INCLUDES_ANY_NATIVE_OR_ADAPTER_RADIUS; NO_SECOND_EXPANSION",
+    "fixed_label_semantics": "ONE_UNCHANGED_FULL_LABEL_IMAGE_ACROSS_ALL_SEGMENTS",
+    "full_closed_hold_covered": true,
+    "inputs": {
+      "benchmark_sha256": "21632e1eebf58a5d7fea14224254738d0ff11ba689b94343afa47adbccea166b",
+      "horizon": {
+        "den": "10",
+        "num": "1"
+      },
+      "initial_state": [
+        [
+          {
+            "den": "1",
+            "num": "-2"
+          },
+          {
+            "den": "1",
+            "num": "-2"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ]
+      ],
+      "scene_sha256": "90291e4b80fee930bcce5b7132e417a7115748f0fa126cf3300747e7a846cb7d"
+    },
+    "ode_tube_proof_replayed": false,
+    "predicate_status": "UNKNOWN_ON_SUPPLIED_TUBE",
+    "schema": "ddwmr-g4-common-tube-check-v1",
+    "segment_checks": [
+      {
+        "closed_time": {
+          "end": {
+            "den": "10",
+            "num": "1"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        },
+        "collision": [
+          {
+            "coordinate_gaps": [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            "exclusion_radius": {
+              "den": "2",
+              "num": "1"
+            },
+            "margin_lower": {
+              "den": "2",
+              "num": "-1"
+            },
+            "obstacle_id": "fixture-center-obstacle",
+            "sqrt_bracket": [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            "squared_distance_lower": {
+              "den": "1",
+              "num": "0"
+            }
+          }
+        ],
+        "contact": {
+          "available_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "beta_upper": [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          "clip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "demand_upper": {
+            "den": "1",
+            "num": "0"
+          },
+          "margin_lower": {
+            "den": "9223372036854775808",
+            "num": "18446744073709551615"
+          },
+          "normalized_slip_ranges": [
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "root_lower_upper_brackets": [
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "18446744073709551616",
+                "num": "18446744073709551615"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ]
+          ]
+        },
+        "segment_id": "crossing-full-time-hull"
+      }
+    ],
+    "segment_count": 1,
+    "segments": [
+      {
+        "enclosure_representation": "TOTAL_STATE_HULL",
+        "endpoint_end": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "2"
+              },
+              {
+                "den": "1",
+                "num": "2"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "10",
+            "num": "1"
+          }
+        },
+        "endpoint_start": {
+          "state_hull": [
+            [
+              {
+                "den": "1",
+                "num": "-2"
+              },
+              {
+                "den": "1",
+                "num": "-2"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "0"
+              }
+            ]
+          ],
+          "time": {
+            "den": "1",
+            "num": "0"
+          }
+        },
+        "fixed_labels": {
+          "B_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "B_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "C_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "R_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "k_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_L": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "lambda_R": [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_L": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ],
+          "rho_R": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "11"
+            }
+          ]
+        },
+        "provenance": {
+          "fixture": true,
+          "physical_trajectory_claim": false
+        },
+        "radius_expansion_count": 0,
+        "radius_expansion_mode": "NATIVE_TOTAL_HULL",
+        "schema": "ddwmr-g4-full-time-tube-segment-v1",
+        "segment_id": "crossing-full-time-hull",
+        "state_hull": [
+          [
+            {
+              "den": "1",
+              "num": "-2"
+            },
+            {
+              "den": "1",
+              "num": "2"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "time_closed": {
+          "end": {
+            "den": "10",
+            "num": "1"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        }
+      }
+    ],
+    "segments_sha256": "6984e977177f105bf9af06560e5f15004f6834ec8ba176a7bbbf1048cf3ec77e",
+    "shared_arithmetic": "validation.g2 exact-rational Interval/Budget; sqrt_lower",
+    "work": {
+      "completed_results": 2746,
+      "max_completed_result_bits": 129,
+      "max_observed_result_bits": 129,
+      "max_preoperation_estimate_bits": 130,
+      "max_rational_bits": 16384,
+      "max_rational_operations": 1000000,
+      "operation_attempts": 2856,
+      "operations_started": 2856
+    }
+  }
+}

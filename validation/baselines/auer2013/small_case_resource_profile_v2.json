@@ -1,0 +1,59 @@
+{
+  "schema": "ddwmr-g4-auer-small-case-resource-profile-v2",
+  "profile_id": "AUER_EXACT_RATIONAL_SINGLE_CASE_DEV_V2",
+  "status": "FROZEN_BEFORE_FIRST_AUER_IVP; EXECUTION_ENABLED_WITH_WINDOWS_JOB_OBJECT_GUARD",
+  "purpose": "The prescribed analytic clip-corner fixture, followed only after proof-complete replay by the preselected DDWMR single query. Not the matched-batch profile.",
+  "arithmetic_backend_id": "DDWMR_EXACT_RATIONAL_TAYLOR_INTERVAL_V1",
+  "predecessor_profile": "validation/baselines/auer2013/small_case_resource_profile_v1.json",
+  "predecessor_profile_sha256": "ab9a842d693862319e91351fae738af67aba0ceb4ea80bf2637d6ce0cadf35c2",
+  "wall_time_seconds_per_ivp": 120,
+  "memory_limit_mib_per_ivp": 1024,
+  "memory_enforcement": {
+    "platform": "Windows",
+    "mechanism": "Windows Job Object JOBOBJECT_EXTENDED_LIMIT_INFORMATION with JOB_OBJECT_LIMIT_PROCESS_MEMORY and JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE; the IVP worker is created suspended, assigned to the job, then resumed",
+    "scope": "one worker process containing producer, independent native replay, tamper checks, and the single common predicate check",
+    "limit_bytes": 1073741824,
+    "timeout_mechanism": "parent monotonic-clock deadline; terminate the complete job on expiry",
+    "worker_child_processes": 0,
+    "enforcement_probe_required_before_ivp": true,
+    "probe": {
+      "isolated_job_limit_mib": 64,
+      "requested_allocation_mib": 256,
+      "retained_allocation_chunk_mib": 1,
+      "acceptance": "graceful MemoryError after retained chunks approach the installed limit; reported peak is at least 75 percent of the cap and no greater than the cap"
+    }
+  },
+  "rational_precision": "exact reduced rationals capped at 32768 bits for every numerator, denominator, and checked intermediate",
+  "max_rational_bits": 32768,
+  "max_rational_operations_per_ivp_combined_producer_replay_and_common_check": 2000000,
+  "max_accepted_steps": 512,
+  "max_rejected_step_attempts": 1024,
+  "max_step_halvings_per_attempt": 16,
+  "max_picard_iterations_per_step": 32,
+  "max_clip_branch_splits_per_ivp": 64,
+  "max_rhs_jacobian_evaluations_per_ivp": 100000,
+  "rhs_jacobian_evaluation_scope": "combined producer, native checker replay, and every proof tamper replay; reject before an evaluation that would exceed the cap; the common collision/contact predicate performs no RHS or Jacobian evaluation",
+  "max_serialized_proof_bytes": 536870912,
+  "transcendental_profile": {
+    "sine_taylor_degree": 20,
+    "cosine_taylor_degree": 20,
+    "matrix_exponential_taylor_degree": 20,
+    "square_root_bisections": 128,
+    "range_reduction": "none; exact rational Taylor polynomial plus global Lagrange remainder; broad range means UNKNOWN"
+  },
+  "residual_solver_profile": {
+    "method": "linear approximate path with exact rational slope; Auer residual derivative iteration and mean-value interval Jacobian on one complete closed slab",
+    "initial_residual_seed": "for analytic fixture, x residual derivative {0} and y derivative [-1,1]; for DDWMR, symmetric residual interval centered at zero with radius 1 plus the absolute initial RHS-minus-path-slope bound per component; fixed before the IVP",
+    "iteration_acceptance": "accept only when every newly recomputed residual-derivative interval is a subset of the previous interval and the derived full-time remainder is a subset of its rough predecessor",
+    "subdivision": "if inclusion fails, retain the rejected trial and bisect the time slab; action and complete fixed-label image remain unchanged",
+    "contact_or_collision_failure": "proof may remain complete; common predicate becomes UNKNOWN_ON_SUPPLIED_TUBE and is not called a safety certificate"
+  },
+  "retry_semantics": "No cap, precision, tolerance, model, input, or action changes. Only deterministic time bisection under the frozen step/rejection limits is allowed.",
+  "stopping_semantics": "Any process memory cap, timeout, rational cap, work cap, unresolved inclusion, unsupported operation, or failed replay stops the case without a proof-complete result; exact termination classification is retained.",
+  "matched_profile_reuse": false,
+  "selection_and_order": [
+    "analytic branch-crossing fixture first",
+    "DDWMR query only if independent analytic native-proof replay and exact-reference containment pass",
+    "never select another query from outcome"
+  ]
+}

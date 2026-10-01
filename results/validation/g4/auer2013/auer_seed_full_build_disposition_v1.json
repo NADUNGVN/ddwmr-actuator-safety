@@ -1,0 +1,19 @@
+﻿{
+    "schema":  "auer-seed-full-build-disposition-v1",
+    "status":  "BLOCKED_BEFORE_LINK",
+    "source_syntax_check":  "PASS",
+    "full_executable_built":  false,
+    "exact_source_revision":  "d1a09ceb3f68deb40357bdc89944b28997e9fb30",
+    "compiler":  "g++.exe (Rev8, Built by MSYS2 project) 15.2.0",
+    "compiler_target":  "x86_64-w64-mingw32",
+    "blocking_evidence":  [
+                              "PROFIL/BIAS 2.0.8 official source marks its Windows 32-bit GCC configuration as under development; the available x86-64 configuration targets Linux ELF.",
+                              "The PROFIL/BIAS x86-64 notes document a glibc/libm rounding-mode caveat; this machine is Windows UCRT64 and has no reviewed x86-64 directed-rounding configuration.",
+                              "The pinned source documentation requests PROFIL/BIAS 2.0.2/2.0.4; the official retrievable source is 2.0.8. Compatibility is not established by syntax-only compilation.",
+                              "The pinned VALENCIA 0.92_2e core lacks the 2013 piecewise derivative extension, so a successful legacy binary alone would not implement the selected paper method."
+                          ],
+    "decision":  "No unsupported rounding backend or unreviewed architecture substitution was used. No full executable/link attempt was made. Syntax-only compilation against PROFIL/BIAS 2.0.8 source headers and FADBAD++ 1.4 passed.",
+    "command":  "g++ -std=gnu++98 -O2 -frounding-math -fno-fast-math -ffp-contract=off -fsyntax-only -I external/valencia-basic/dependencies/Profil-2.0.8/src -I external/valencia-basic/dependencies/Profil-2.0.8/src/Base -I external/valencia-basic/dependencies/Profil-2.0.8/src/BIAS -I external/valencia-basic/dependencies/Profil-2.0.8/src/Packages -I external/valencia-basic/dependencies/fadbad-1.4/FADBAD++ external/valencia-basic/free-source/ValEncIA/ValEncIA-IVP_0.92_2e.cpp",
+    "build_log":  "results/validation/g4/auer2013/auer_seed_syntax_build.log",
+    "build_log_bytes":  0
+}

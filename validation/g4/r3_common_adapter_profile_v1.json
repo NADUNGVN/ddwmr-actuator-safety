@@ -1,0 +1,13 @@
+{
+  "schema": "ddwmr-g4-r3-common-adapter-profile-v1",
+  "profile_id": "R3_ARCHIVED_SINGLE_RECORD_COMMON_ADAPTER_EXACT_RATIONAL_V1",
+  "status": "FROZEN_FOR_ONE_COMMON_ADAPTER_REPLAY_AFTER_PRIOR_PROFILE_RESOURCE_STOP",
+  "scope": "Shared common-tube predicate and record replay for the single already-selected archived R3 proof. Does not rerun or alter the R3 native evaluator.",
+  "max_rational_bits": 32768,
+  "max_rational_operations": 2000000,
+  "wall_seconds": 60,
+  "sqrt_bisections": 24,
+  "memory_cap": "not separately enforced; exact-rational bit/operation/wall caps apply",
+  "retry_policy": "one declared common-adapter profile; no cap change or retry under this profile",
+  "selection_binding": "reuse the R3 record ID and both record hashes frozen before the first common-check result"
+}

@@ -1,0 +1,13 @@
+{
+  "checked_member_count": 718,
+  "checked_utc": "2026-09-30T17:40:30+00:00",
+  "expected_member_count": 718,
+  "manifest_sha256": "fe3309d5b17c6d2968c826eaf1a0759c3b9fbf848432b72842fff5b4db726d91",
+  "manifest_sidecar_match": true,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "schema": "ddwmr-g4-auer-source-integrity-v9-v1",
+  "sidecar_sha256": "fe3309d5b17c6d2968c826eaf1a0759c3b9fbf848432b72842fff5b4db726d91",
+  "snapshot_path": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\g4\\auer2013\\source_snapshot_v9",
+  "status": "PASS"
+}

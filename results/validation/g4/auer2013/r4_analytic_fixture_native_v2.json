@@ -1,0 +1,681 @@
+{
+  "proof": {
+    "binding": {
+      "arithmetic_backend_manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json",
+      "arithmetic_backend_manifest_sha256": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+      "arithmetic_dependency": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library",
+      "checker_source_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+      "input_path": "validation/baselines/auer2013/analytic_branch_crossing_fixture_v1.json",
+      "input_sha256": "1835b13d8fdb0b0758dd782ce47212038798afd8550dbd71357af219c6df306f",
+      "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+      "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+      "resource_profile_path": "validation/baselines/auer2013/small_case_resource_profile_v2.json",
+      "resource_profile_sha256": "539c59734fb949e4eab2d71ea0761dcd1032bf6ae92fa17fac53e520462a2cc4",
+      "solver_source_sha256": "3f15779ee772c7090951942186ef56ee5956d9569d2a1ff4c2f7e010646bf70f",
+      "source_snapshot_manifest_sha256": "29ca0f22791ccc740ef377b232522dee88bbaf00367213bfc45cc07925c5bcd5"
+    },
+    "case_id": "AUER_CLIP_BRANCH_CROSSING_ANALYTIC_V1",
+    "case_kind": "ANALYTIC_CLIP_BRANCH_CROSSING",
+    "exact_reference_containment_pass": true,
+    "global_endpoint": [
+      [
+        {
+          "den": "10",
+          "num": "11"
+        },
+        {
+          "den": "100",
+          "num": "111"
+        }
+      ],
+      [
+        {
+          "den": "80000",
+          "num": "15559"
+        },
+        {
+          "den": "80000",
+          "num": "15719"
+        }
+      ]
+    ],
+    "global_full_time_hull": [
+      [
+        {
+          "den": "10",
+          "num": "9"
+        },
+        {
+          "den": "100",
+          "num": "111"
+        }
+      ],
+      [
+        {
+          "den": "1000",
+          "num": "-1"
+        },
+        {
+          "den": "80000",
+          "num": "15719"
+        }
+      ]
+    ],
+    "initial_state": [
+      [
+        {
+          "den": "10",
+          "num": "9"
+        },
+        {
+          "den": "100",
+          "num": "91"
+        }
+      ],
+      [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "0"
+        }
+      ]
+    ],
+    "method_id": "AUER2013_PIECEWISE_RESIDUAL_RECONSTRUCTION_DDWMR_R4",
+    "rejected_step_attempts": [],
+    "schema": "ddwmr-g4-auer-native-residual-proof-v1",
+    "status": "PROOF_COMPLETE",
+    "step_records": [
+      {
+        "approximate_path": {
+          "derivative_range": [
+            [
+              {
+                "den": "1",
+                "num": "1"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "200",
+                "num": "181"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ]
+          ],
+          "full_time_range": [
+            [
+              {
+                "den": "200",
+                "num": "181"
+              },
+              {
+                "den": "200",
+                "num": "221"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "80000",
+                "num": "15639"
+              }
+            ]
+          ],
+          "kind": "EXACT_RATIONAL_PIECEWISE_C1",
+          "x": {
+            "formula": "xmid+t",
+            "xmid": {
+              "den": "200",
+              "num": "181"
+            }
+          },
+          "y": {
+            "formula": "xmid*t+t^2/2 for t<=1-xmid; t-(1-xmid)^2/2 for t>=1-xmid",
+            "switch_time": {
+              "den": "200",
+              "num": "19"
+            },
+            "xmid": {
+              "den": "200",
+              "num": "181"
+            },
+            "y0": {
+              "den": "1",
+              "num": "0"
+            }
+          }
+        },
+        "endpoint_end": [
+          [
+            {
+              "den": "10",
+              "num": "11"
+            },
+            {
+              "den": "100",
+              "num": "111"
+            }
+          ],
+          [
+            {
+              "den": "80000",
+              "num": "15559"
+            },
+            {
+              "den": "80000",
+              "num": "15719"
+            }
+          ]
+        ],
+        "endpoint_start": [
+          [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "100",
+              "num": "91"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "exact_reference_containment": {
+          "endpoint_reference": [
+            [
+              {
+                "den": "10",
+                "num": "11"
+              },
+              {
+                "den": "100",
+                "num": "111"
+              }
+            ],
+            [
+              {
+                "den": "200",
+                "num": "39"
+              },
+              {
+                "den": "20000",
+                "num": "3919"
+              }
+            ]
+          ],
+          "full_time_reference": [
+            [
+              {
+                "den": "10",
+                "num": "9"
+              },
+              {
+                "den": "100",
+                "num": "111"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "20000",
+                "num": "3919"
+              }
+            ]
+          ],
+          "switch_time_reference": [
+            {
+              "den": "100",
+              "num": "9"
+            },
+            {
+              "den": "10",
+              "num": "1"
+            }
+          ]
+        },
+        "full_time_total_hull": [
+          [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "100",
+              "num": "111"
+            }
+          ],
+          [
+            {
+              "den": "1000",
+              "num": "-1"
+            },
+            {
+              "den": "80000",
+              "num": "15719"
+            }
+          ]
+        ],
+        "inclusion": {
+          "closed_time_coverage": true,
+          "compact_convex_rough_domain": true,
+          "criterion": "Rdot_next([0,h]) subset Rdot_current([0,h]) and the integrated residual tube maps into the previous compact convex rough tube",
+          "derivative_subset_pass": true,
+          "integrated_tube_subset_pass": true,
+          "status": "PASS"
+        },
+        "initial_enclosure": [
+          [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "100",
+              "num": "91"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "initial_error": [
+          [
+            {
+              "den": "200",
+              "num": "-1"
+            },
+            {
+              "den": "200",
+              "num": "1"
+            }
+          ],
+          [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ]
+        ],
+        "residual_iterations": [
+          {
+            "accepted": true,
+            "active_switches": [
+              {
+                "intersects": false,
+                "switch": {
+                  "den": "1",
+                  "num": "-1"
+                }
+              },
+              {
+                "intersects": true,
+                "switch": {
+                  "den": "1",
+                  "num": "1"
+                }
+              }
+            ],
+            "approximate_path_derivative": [
+              [
+                {
+                  "den": "1",
+                  "num": "1"
+                },
+                {
+                  "den": "1",
+                  "num": "1"
+                }
+              ],
+              [
+                {
+                  "den": "200",
+                  "num": "181"
+                },
+                {
+                  "den": "1",
+                  "num": "1"
+                }
+              ]
+            ],
+            "clip_generalized_derivative": [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            "clip_input_interval": [
+              {
+                "den": "10",
+                "num": "9"
+              },
+              {
+                "den": "100",
+                "num": "111"
+              }
+            ],
+            "clip_value_interval": [
+              {
+                "den": "10",
+                "num": "9"
+              },
+              {
+                "den": "1",
+                "num": "1"
+              }
+            ],
+            "derivative_inclusion_componentwise": true,
+            "interval_jacobian": [
+              [
+                [
+                  {
+                    "den": "1",
+                    "num": "0"
+                  },
+                  {
+                    "den": "1",
+                    "num": "0"
+                  }
+                ],
+                [
+                  {
+                    "den": "1",
+                    "num": "0"
+                  },
+                  {
+                    "den": "1",
+                    "num": "0"
+                  }
+                ]
+              ],
+              [
+                [
+                  {
+                    "den": "1",
+                    "num": "0"
+                  },
+                  {
+                    "den": "1",
+                    "num": "1"
+                  }
+                ],
+                [
+                  {
+                    "den": "1",
+                    "num": "0"
+                  },
+                  {
+                    "den": "1",
+                    "num": "0"
+                  }
+                ]
+              ]
+            ],
+            "iteration": 1,
+            "jacobian_times_old_remainder": [
+              [
+                {
+                  "den": "1",
+                  "num": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0"
+                }
+              ],
+              [
+                {
+                  "den": "200",
+                  "num": "-1"
+                },
+                {
+                  "den": "200",
+                  "num": "1"
+                }
+              ]
+            ],
+            "new_full_time_remainder": [
+              [
+                {
+                  "den": "200",
+                  "num": "-1"
+                },
+                {
+                  "den": "200",
+                  "num": "1"
+                }
+              ],
+              [
+                {
+                  "den": "1000",
+                  "num": "-1"
+                },
+                {
+                  "den": "1000",
+                  "num": "1"
+                }
+              ]
+            ],
+            "new_residual_derivative": [
+              [
+                {
+                  "den": "1",
+                  "num": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0"
+                }
+              ],
+              [
+                {
+                  "den": "200",
+                  "num": "-1"
+                },
+                {
+                  "den": "200",
+                  "num": "1"
+                }
+              ]
+            ],
+            "old_full_time_remainder": [
+              [
+                {
+                  "den": "200",
+                  "num": "-1"
+                },
+                {
+                  "den": "200",
+                  "num": "1"
+                }
+              ],
+              [
+                {
+                  "den": "5",
+                  "num": "-1"
+                },
+                {
+                  "den": "5",
+                  "num": "1"
+                }
+              ]
+            ],
+            "previous_residual_derivative": [
+              [
+                {
+                  "den": "1",
+                  "num": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0"
+                }
+              ],
+              [
+                {
+                  "den": "1",
+                  "num": "-1"
+                },
+                {
+                  "den": "1",
+                  "num": "1"
+                }
+              ]
+            ],
+            "remainder_inclusion_componentwise": true,
+            "residual_base": [
+              [
+                {
+                  "den": "1",
+                  "num": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0"
+                }
+              ],
+              [
+                {
+                  "den": "1",
+                  "num": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0"
+                }
+              ]
+            ],
+            "rhs_on_approximate_path": [
+              [
+                {
+                  "den": "1",
+                  "num": "1"
+                },
+                {
+                  "den": "1",
+                  "num": "1"
+                }
+              ],
+              [
+                {
+                  "den": "200",
+                  "num": "181"
+                },
+                {
+                  "den": "1",
+                  "num": "1"
+                }
+              ]
+            ],
+            "switch_time_interval_from_initial_box": [
+              {
+                "den": "100",
+                "num": "9"
+              },
+              {
+                "den": "10",
+                "num": "1"
+              }
+            ]
+          }
+        ],
+        "rough_domain": [
+          [
+            {
+              "den": "10",
+              "num": "9"
+            },
+            {
+              "den": "100",
+              "num": "111"
+            }
+          ],
+          [
+            {
+              "den": "5",
+              "num": "-1"
+            },
+            {
+              "den": "80000",
+              "num": "31639"
+            }
+          ]
+        ],
+        "state_order": [
+          "x",
+          "y"
+        ],
+        "step_index": 0,
+        "time_closed": {
+          "end": {
+            "den": "5",
+            "num": "1"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        },
+        "work": {
+          "clip_branch_splits": 0,
+          "picard_iterations": 1,
+          "rhs_jacobian_evaluations": 0
+        }
+      }
+    ],
+    "time_horizon": {
+      "end": {
+        "den": "5",
+        "num": "1"
+      },
+      "start": {
+        "den": "1",
+        "num": "0"
+      }
+    },
+    "work": {
+      "producer_max_observed_rational_bits": 17,
+      "producer_rational_operations": 75
+    }
+  },
+  "proof_sha256": "6865026fae9376eced33b4f6ff6a7c9488882f37e33c645f5743aca630cda789"
+}

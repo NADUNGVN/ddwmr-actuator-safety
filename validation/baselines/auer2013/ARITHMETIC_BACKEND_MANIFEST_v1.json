@@ -1,0 +1,63 @@
+{
+  "schema": "ddwmr-g4-auer-arithmetic-backend-manifest-v1",
+  "backend_id": "DDWMR_EXACT_RATIONAL_TAYLOR_INTERVAL_V1",
+  "status": "FROZEN_CANDIDATE_BACKEND; INDEPENDENT_AUDIT_PENDING; AUER_IVP_EXECUTION_DISABLED",
+  "manifest_hash_semantics": "SHA-256 over exact file bytes; this file does not contain its own digest.",
+  "python_runtime": {
+    "executable": "C:/msys64/ucrt64/bin/python.exe",
+    "version": "3.12.12 (main, Oct 10 2025, 12:42:57) [GCC UCRT 15.2.0 64 bit (AMD64)]",
+    "executable_sha256": "b5c33df60c2a8421dcf8117a67e848436b5d395c71ec1c0dfd96bad10f441d7f",
+    "compiler_reported_by_interpreter": "GCC UCRT 15.2.0",
+    "project_compile_command": null,
+    "project_link_flags": [],
+    "reason": "Python source uses fractions.Fraction and arbitrary-precision integers; no Auer native binary has been built."
+  },
+  "numeric_model": {
+    "endpoint_representation": "reduced exact signed numerator / positive denominator",
+    "rounding_mode": "exact arithmetic; no machine rounding in proof endpoints",
+    "working_precision": "unbounded exact rational subject to max_rational_bits resource cap",
+    "frozen_max_rational_bits": 32768,
+    "underflow_subnormal_overflow_nan_infinity": "not representable in proof values; malformed/non-finite values are rejected",
+    "division_domain": "reject if denominator interval contains zero",
+    "serialization": "exact rational pairs; no decimal or binary64 endpoint serialization"
+  },
+  "transcendental_contract": {
+    "sin_cos": "exact rational Taylor polynomial plus global Lagrange remainder using derivative magnitude <= 1; intersect safely with [-1,1]; no host libm, argument reduction, or extrema search",
+    "exp": "no generic host exp; interval matrix exponential uses Taylor polynomial and rational remainder majorant e^q <= 3^ceil(q)",
+    "sqrt": "rational bisection with exact square comparisons",
+    "large_argument_behavior": "may return broad enclosure and UNKNOWN; no unverified fallback"
+  },
+  "proof_critical_source_files": [
+    {
+      "path": "validation/g2/rational.py",
+      "sha256": "8a2c16778b33898afd16c8da44945c2d41fd7d187cb11c7cb071745e68ed5c6e",
+      "covered_functions": ["Budget", "Interval", "parse_q", "qobj"]
+    },
+    {
+      "path": "validation/g2/interval.py",
+      "sha256": "e49e2e3880485d9a658e2435cfa06b784f98257b13c51fa4a2bf464f9c73e5c6",
+      "covered_functions": ["interval_sine", "interval_cosine", "interval_matrix_exponential", "sqrt_lower"]
+    },
+    {
+      "path": "validation/baselines/auer2013/piecewise.py",
+      "sha256": "9ae8fb192d279c41cf278529907a20a91febc388707732099ecd61df5fe5797e",
+      "covered_functions": ["clip_value", "clip_interval", "clip_derivative_interval", "DualInterval"]
+    },
+    {
+      "path": "validation/baselines/auer2013/rhs.py",
+      "sha256": "c0ae8a05c0455ea0692773466c5fa239ff374d364f51ac58438cf3e91eed1282",
+      "covered_functions": ["augmented_rhs", "parameter interval and Jacobian composition"]
+    }
+  ],
+  "excluded_proof_backend": {
+    "name": "PROFIL/BIAS 2.0.8 x86-64 Linux compatibility profile linked to host glibc/libm",
+    "reason": "all-input directed sine/cosine error contract unresolved; finite probes do not establish proof soundness",
+    "finite_probe_count": 19,
+    "used_for_auer_proof_output": false
+  },
+  "development_profile": {
+    "path": "validation/baselines/auer2013/small_case_resource_profile_v1.json",
+    "sha256": "ab9a842d693862319e91351fae738af67aba0ceb4ea80bf2637d6ce0cadf35c2"
+  },
+  "binary_claim": "No Auer solver binary exists. The PROFIL/BIAS and legacy VALENCIA binaries retained under results/validation/g4/auer2013/source_snapshot_v2 are not this backend and are not approved for proof output."
+}

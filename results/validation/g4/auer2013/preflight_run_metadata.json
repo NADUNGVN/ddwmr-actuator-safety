@@ -1,0 +1,83 @@
+﻿{
+    "schema":  "ddwmr-g4-auer-preflight-run-metadata-v1",
+    "status":  "LOCAL_UNCOMMITTED_SNAPSHOT",
+    "created_utc":  "2026-09-30T10:01:24.2315972Z",
+    "base_git_revision":  "aac7a369d0cf0cfa4e9e9395b10e65ea3f093e46",
+    "branch":  "luna/g2-validation-v1",
+    "worktree_status":  [
+                            "?? docs/CODEX_TO_LUNA_G4_AUER_PREFLIGHT_v1.md",
+                            "?? docs/reviews/G4_AUER_SOURCE_AND_APPLICABILITY_v1.md",
+                            "?? docs/reviews/GPT_TO_CODEX_G2_VALIDATION_R3_SCIENTIFIC_REVIEW_FULL_HANDOFF.md",
+                            "?? external/",
+                            "?? research/benchmarks/G4_AUER_MATCHED_PROTOCOL_v1.md",
+                            "?? research/theorem_notes/G4_AUER_BASELINE_CONTRACT_v1.md",
+                            "?? research/third_party/",
+                            "?? results/validation/g4/",
+                            "?? validation/baselines/",
+                            "?? validation/scripts/create_auer_source_snapshot.py",
+                            "?? validation/scripts/generate_auer_candidate_manifest.py"
+                        ],
+    "source_tree_clean":  false,
+    "snapshot_path":  "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\g4\\auer2013\\source_snapshot_v1",
+    "snapshot_manifest_sha256":  "f64ff41901ff99412965785c56bf9abef68b85c5efcf8e8c9dd0ae81e30724b2",
+    "snapshot_member_count":  324,
+    "source_integrity_before_and_after_pass":  true,
+    "working_directory":  "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\g4\\auer2013\\source_snapshot_v1\\project",
+    "runtime":  {
+                    "python_version":  "Python 3.12.12",
+                    "python_executable":  "C:\\msys64\\ucrt64\\bin\\python.exe",
+                    "python_executable_sha256":  "b5c33df60c2a8421dcf8117a67e848436b5d395c71ec1c0dfd96bad10f441d7f",
+                    "compiler_version":  "g++.exe (Rev8, Built by MSYS2 project) 15.2.0",
+                    "compiler_target_triple":  "x86_64-w64-mingw32",
+                    "compiler_executable":  "C:\\msys64\\ucrt64\\bin\\g++.exe",
+                    "compiler_executable_sha256":  "5fa84c1460fd741371f730788ba3f994cf1d682be866fe7d3ed799e81844670a",
+                    "platform":  "Windows 11 x64 / MSYS2 UCRT64"
+                },
+    "commands":  [
+                     {
+                         "id":  "candidate_manifest_only",
+                         "command":  "python -m validation.scripts.generate_auer_candidate_manifest --output ../runs/auer_matched_candidate_manifest_v1.json",
+                         "queries_evaluated":  0
+                     },
+                     {
+                         "id":  "clip_and_reference_preflight",
+                         "command":  "python -m validation.baselines.auer2013.verify_preflight --output ../runs/clip_preflight_checks_v1.json --reference-output ../runs/reference_eq34_reproduction_v1.json",
+                         "queries_evaluated":  0
+                     },
+                     {
+                         "id":  "pinned_seed_syntax_only",
+                         "command":  "g++ -std=gnu++98 -O2 -frounding-math -fno-fast-math -ffp-contract=off -fsyntax-only -I external/valencia-basic/dependencies/Profil-2.0.8/src -I external/valencia-basic/dependencies/Profil-2.0.8/src/Base -I external/valencia-basic/dependencies/Profil-2.0.8/src/BIAS -I external/valencia-basic/dependencies/Profil-2.0.8/src/Packages -I external/valencia-basic/dependencies/fadbad-1.4/FADBAD++ external/valencia-basic/free-source/ValEncIA/ValEncIA-IVP_0.92_2e.cpp",
+                         "exit_code":  0,
+                         "binary_created":  false
+                     }
+                 ],
+    "comparison_queries_run":  0,
+    "baseline_executable_sha256":  null,
+    "outputs":  [
+                    {
+                        "path":  "results\\validation\\g4\\auer2013\\auer_matched_candidate_manifest_v1.json",
+                        "bytes":  386740,
+                        "sha256":  "2af5e7925f1043850e7769224a111c7217f2bebf9510645b002b9947c61ae7eb"
+                    },
+                    {
+                        "path":  "results\\validation\\g4\\auer2013\\clip_preflight_checks_v1.json",
+                        "bytes":  8262,
+                        "sha256":  "4042eb4d517ba3640dbc9ccf214f4059c6d4e1adf00d7d220a8c0a3f3dce7ffc"
+                    },
+                    {
+                        "path":  "results\\validation\\g4\\auer2013\\reference_eq34_reproduction_v1.json",
+                        "bytes":  1572,
+                        "sha256":  "5524eb15fb624ae5c65e8acafb61f0e51abf05e2db69f015556328e73e99fd85"
+                    },
+                    {
+                        "path":  "results\\validation\\g4\\auer2013\\auer_seed_build_attempt.json",
+                        "bytes":  984,
+                        "sha256":  "6fdd6788d16cda674b908e22f1326b3a53bd1aeadf0e51205aff07fd21c558e3"
+                    },
+                    {
+                        "path":  "results\\validation\\g4\\auer2013\\auer_seed_syntax_build.log",
+                        "bytes":  0,
+                        "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    }
+                ]
+}

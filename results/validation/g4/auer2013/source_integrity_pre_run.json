@@ -1,0 +1,10 @@
+﻿{
+    "check":  "snapshot_source_integrity_before_run",
+    "pass":  true,
+    "member_count":  324,
+    "manifest_sha256":  "f64ff41901ff99412965785c56bf9abef68b85c5efcf8e8c9dd0ae81e30724b2",
+    "sidecar_matches":  true,
+    "mismatches":  [
+
+                   ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "ddwmr-g4-auer-r5-pre-freeze-setup-attempts-v1",
+  "scope_note": "These are two pre-freeze source-snapshot assembly checks, not native replay or common-predicate evaluations.",
+  "attempts": [
+    {
+      "attempt_id": "v11_snapshot_assembly_01",
+      "command": "python validation/scripts/create_auer_source_snapshot_v11.py",
+      "exit_code": 1,
+      "status": "FAILED_BEFORE_SNAPSHOT_CREATION",
+      "diagnostic": "v10 snapshot file set mismatch",
+      "diagnostic_sha256": "d4fec9bf62ef6c5e6d51b4be7aa20abb8083abe7a44db849185a51891288de96",
+      "diagnostic_hash_semantics": "SHA-256 of the normalized single UTF-8 diagnostic line plus LF; the original transient console stream was not saved.",
+      "source_sha256_at_attempt": null,
+      "source_hash_disposition": "The creator was revised before the failure was recorded; the exact transient file bytes are not recoverable from the command session.",
+      "resource_record": null,
+      "resource_disposition": "No verifier child or guarded numerical replay ran; Windows Job Object profile did not apply.",
+      "artifact_effect": "The v11 target directory did not exist; no v10 snapshot or R4 output was modified."
+    },
+    {
+      "attempt_id": "v11_snapshot_assembly_02",
+      "command": "python validation/scripts/create_auer_source_snapshot_v11.py",
+      "exit_code": 1,
+      "status": "FAILED_BEFORE_SNAPSHOT_CREATION",
+      "diagnostic": "v10 snapshot file set mismatch",
+      "diagnostic_sha256": "d4fec9bf62ef6c5e6d51b4be7aa20abb8083abe7a44db849185a51891288de96",
+      "diagnostic_hash_semantics": "SHA-256 of the normalized single UTF-8 diagnostic line plus LF; the original transient console stream was not saved.",
+      "source_sha256_at_attempt": null,
+      "source_hash_disposition": "The creator was revised before the failure was recorded; the exact transient file bytes are not recoverable from the command session.",
+      "resource_record": null,
+      "resource_disposition": "No verifier child or guarded numerical replay ran; Windows Job Object profile did not apply.",
+      "artifact_effect": "The v11 target directory did not exist; no v10 snapshot or R4 output was modified."
+    }
+  ],
+  "resolution": "The final creator checks all manifest-listed v10 members and tolerates only unlisted runtime-generated .pyc/__pycache__ extras. It copies all manifest-listed members and omits unlisted runtime cache files from v11.",
+  "final_v11_freeze_manifest_sha256": "d6ed85d98f630889912e30baaf00314ac4069c4dc846525c639832c64ff959eb"
+}

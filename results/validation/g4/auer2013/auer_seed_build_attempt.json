@@ -1,0 +1,10 @@
+﻿{
+    "schema":  "auer-seed-build-attempt-v1",
+    "command":  "g++ -std=gnu++98 -O2 -frounding-math -fno-fast-math -ffp-contract=off -fsyntax-only -I external/valencia-basic/dependencies/Profil-2.0.8/src -I external/valencia-basic/dependencies/Profil-2.0.8/src/Base -I external/valencia-basic/dependencies/Profil-2.0.8/src/BIAS -I external/valencia-basic/dependencies/Profil-2.0.8/src/Packages -I external/valencia-basic/dependencies/fadbad-1.4/FADBAD++ external/valencia-basic/free-source/ValEncIA/ValEncIA-IVP_0.92_2e.cpp",
+    "compiler":  "g++.exe (Rev8, Built by MSYS2 project) 15.2.0",
+    "source_snapshot_sha256":  "f64ff41901ff99412965785c56bf9abef68b85c5efcf8e8c9dd0ae81e30724b2",
+    "outcome":  "SYNTAX_ONLY_PASSED_LINK_NOT_ATTEMPTED",
+    "exit_code":  0,
+    "complete_executable_built":  false,
+    "note":  "Syntax-only compile checks source/API compatibility, not binary directed rounding, library link, solver inclusion, or Auer extension fidelity."
+}

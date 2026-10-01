@@ -1,0 +1,332 @@
+{
+  "all_checks_pass": true,
+  "branch_cases": [
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "0"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "-3"
+        },
+        {
+          "den": "1",
+          "num": "-2"
+        }
+      ],
+      "name": "strict_negative_saturation"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "1"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "2",
+          "num": "-1"
+        },
+        {
+          "den": "2",
+          "num": "1"
+        }
+      ],
+      "name": "strict_linear_branch"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "-2"
+        },
+        {
+          "den": "1",
+          "num": "-1"
+        }
+      ],
+      "name": "touch_negative_threshold"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "1"
+        },
+        {
+          "den": "1",
+          "num": "2"
+        }
+      ],
+      "name": "touch_positive_threshold"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "-2"
+        },
+        {
+          "den": "1",
+          "num": "0"
+        }
+      ],
+      "name": "cross_negative_threshold"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "2"
+        }
+      ],
+      "name": "cross_positive_threshold"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "-2"
+        },
+        {
+          "den": "1",
+          "num": "2"
+        }
+      ],
+      "name": "cross_both_thresholds"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "-1"
+        },
+        {
+          "den": "1",
+          "num": "-1"
+        }
+      ],
+      "name": "point_at_negative_threshold"
+    },
+    {
+      "derivative": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "domain": [
+        {
+          "den": "1",
+          "num": "1"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "name": "point_at_positive_threshold"
+    }
+  ],
+  "check_count": 20,
+  "checks": [
+    {
+      "detail": "D(Interval(lo=Fraction(-3, 1), hi=Fraction(-2, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,0]",
+      "name": "strict_negative_saturation",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(-1, 2), hi=Fraction(1, 2), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [1,1]",
+      "name": "strict_linear_branch",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(-2, 1), hi=Fraction(-1, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "touch_negative_threshold",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(1, 1), hi=Fraction(2, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "touch_positive_threshold",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(-2, 1), hi=Fraction(0, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "cross_negative_threshold",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(0, 1), hi=Fraction(2, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "cross_positive_threshold",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(-2, 1), hi=Fraction(2, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "cross_both_thresholds",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(-1, 1), hi=Fraction(-1, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "point_at_negative_threshold",
+      "pass": true
+    },
+    {
+      "detail": "D(Interval(lo=Fraction(1, 1), hi=Fraction(1, 1), budget=<validation.g2.rational.Budget object at 0x000001b6ff712a80>)) = [0,1]",
+      "name": "point_at_positive_threshold",
+      "pass": true
+    },
+    {
+      "detail": "212 ordered rational point pairs checked against D(I)*(a-b)",
+      "name": "exact rational clip secants",
+      "pass": true
+    },
+    {
+      "detail": "independent interval chain-rule row encloses exact clip differences for all declared state/label pairs",
+      "name": "multivariate affine mean-value inclusion",
+      "pass": true
+    },
+    {
+      "detail": "endpoint products are exact rational bounds; no floating rounding is involved in this layer",
+      "name": "outward rational interval arithmetic",
+      "pass": true
+    },
+    {
+      "detail": "nine physical RHS entries plus twelve exact dot(label)=0 coordinates; positivity witnesses checked",
+      "name": "21-coordinate fixed-label augmentation",
+      "pass": true
+    },
+    {
+      "detail": "InvalidInput: division node requires a checked strictly positive divisor",
+      "name": "positive-denominator/domain rejection",
+      "pass": true
+    },
+    {
+      "detail": "InvalidInput: the Auer baseline adapter requires exactly nine physical state intervals",
+      "name": "malformed physical state rejection",
+      "pass": true
+    },
+    {
+      "detail": "InvalidInput: interval lower endpoint exceeds upper endpoint",
+      "name": "reversed interval rejection",
+      "pass": true
+    },
+    {
+      "detail": "the small lemma checker recomputes the exact derivative product and difference",
+      "name": "clip lemma record round-trip",
+      "pass": true
+    },
+    {
+      "detail": "changing a claimed enclosure without changing its derivation is detected",
+      "name": "tampered lemma evidence rejected",
+      "pass": true
+    },
+    {
+      "detail": "exact output closure [-1,6] is not contained in the paper's naive [-3/2,9/2] mean-value enclosure",
+      "name": "published Eq. (34) failure reproduced",
+      "pass": true
+    },
+    {
+      "detail": "jump-corrected derivative and resulting mean-value enclosure contain the exact range",
+      "name": "published Eq. (35) correction reproduced",
+      "pass": true
+    }
+  ],
+  "comparison_queries_run": 0,
+  "elapsed_seconds_display_only": 0.109,
+  "exact_secant_pairs": 212,
+  "full_valencia_ivp_baseline": "NOT_BUILT_OR_VALIDATED",
+  "limitations": [
+    "The local checks do not validate Picard inclusion, full-time ODE tubes, or endpoint propagation.",
+    "The local checks do not establish source-faithful VALENCIA-IVP behavior.",
+    "No 1,944-query comparison was run."
+  ],
+  "runtime_environment": {
+    "executable": "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.12 (main, Oct 10 2025, 12:42:57)  [GCC UCRT 15.2.0 64 bit (AMD64)]"
+  },
+  "schema": "auer2013-targeted-preflight-checks-v1",
+  "shared_backend": "validation.g2.rational exact Fraction intervals and Budget",
+  "status": "PASS_FOR_CLIP_EXTENSION_AND_SCALAR_REFERENCE_ONLY"
+}

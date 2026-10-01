@@ -1,0 +1,33 @@
+{
+  "schema": "ddwmr-g4-r3-common-adapter-attempt-ledger-v2",
+  "selected_query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+  "record_semantic_sha256": "a46c6472271fd93f20154e9696c10a865ce97615de6c0aeda69c845f2f0254d3",
+  "record_line_bytes_sha256": "a46c6472271fd93f20154e9696c10aeda69c845f2f0254d3",
+  "attempts": [
+    {
+      "attempt": 1,
+      "profile": "frozen R3 native development profile; 16384-bit rational cap",
+      "native_r3_replay": "PASS",
+      "native_r3_evaluator_rerun": false,
+      "adapter_outcome": "STOPPED_BY_COMMON_CHECKER_RESOURCE_LIMIT",
+      "exact_diagnostic": "estimated rational intermediate 20826 bits exceeds 16384",
+      "predicate_result_emitted": false
+    },
+    {
+      "attempt": 2,
+      "profile": "r3_common_adapter_profile_v1.json",
+      "native_r3_evaluator_rerun": false,
+      "adapter_outcome": "IMPLEMENTATION_FAILURE_BEFORE_PREDICATE_RESULT",
+      "exact_diagnostic": "tube segments were parsed with a different arithmetic budget",
+      "source_line": "validation/g4/common_tube.py::_validate_segment_chain",
+      "reason": "runner created the segment and checker under separate Budget instances; neither common predicate nor adapter result was emitted"
+    },
+    {
+      "attempt": 3,
+      "profile": "validation/g4/r3_common_adapter_profile_v2.json",
+      "native_r3_evaluator_rerun": false,
+      "status": "PROFILE_FROZEN_BEFORE_RETRY; result is in the separate adapter fixture artifact"
+    }
+  ],
+  "batch_comparison_queries_run": 0
+}

@@ -1,0 +1,131 @@
+{
+  "backend_id": "DDWMR_EXACT_RATIONAL_TAYLOR_INTERVAL_V1",
+  "excluded_backend": {
+    "name": "PROFIL/BIAS 2.0.8 x86-64 with host glibc/libm sine/cosine",
+    "reason": "unresolved all-input directed transcendental error contract; finite probes do not certify all arguments",
+    "used_for_r4_proof_output": false
+  },
+  "independence_boundary": {
+    "checker_imports_producer": false,
+    "checker_imports_producer_ddwmr_rhs": false,
+    "independent_arithmetic_library": false,
+    "producer_and_checker_are_separate_modules": true,
+    "shared_dependency_with_g2_and_r3": true,
+    "shared_exact_arithmetic_sources": [
+      "validation/g2/rational.py",
+      "validation/g2/interval.py"
+    ]
+  },
+  "manifest_hash_semantics": "SHA-256 over exact file bytes; this file does not contain its own digest.",
+  "method_and_profile": {
+    "active_resource_profile_path": "validation/baselines/auer2013/small_case_resource_profile_v2.json",
+    "active_resource_profile_sha256": "539c59734fb949e4eab2d71ea0761dcd1032bf6ae92fa17fac53e520462a2cc4",
+    "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+    "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+    "process_limit": "Windows Job Object process commit-memory limit plus parent monotonic hard timeout",
+    "resource_profile_v1_path": "validation/baselines/auer2013/small_case_resource_profile_v1.json",
+    "resource_profile_v1_sha256": "ab9a842d693862319e91351fae738af67aba0ceb4ea80bf2637d6ce0cadf35c2"
+  },
+  "numeric_model": {
+    "division_domain": "reject if the divisor interval contains zero",
+    "endpoint_representation": "reduced exact signed numerator / positive denominator",
+    "max_rational_bits": 32768,
+    "nonfinite_values": "not representable as accepted proof endpoints",
+    "rounding_mode": "exact rational arithmetic; no binary floating-point proof endpoints",
+    "serialization": "exact rational numerator/denominator pairs",
+    "working_precision": "exact rationals bounded by the frozen rational bit/operation profile"
+  },
+  "proof_critical_source_files": [
+    {
+      "covered_functions": [
+        "Budget",
+        "Interval",
+        "parse_q",
+        "qobj"
+      ],
+      "path": "validation/g2/rational.py",
+      "sha256": "8a2c16778b33898afd16c8da44945c2d41fd7d187cb11c7cb071745e68ed5c6e"
+    },
+    {
+      "covered_functions": [
+        "interval_sine",
+        "interval_cosine",
+        "sqrt_lower"
+      ],
+      "path": "validation/g2/interval.py",
+      "sha256": "e49e2e3880485d9a658e2435cfa06b784f98257b13c51fa4a2bf464f9c73e5c6"
+    },
+    {
+      "covered_functions": [
+        "clip_value",
+        "clip_interval",
+        "clip_derivative_interval",
+        "DualInterval"
+      ],
+      "path": "validation/baselines/auer2013/piecewise.py",
+      "sha256": "9ae8fb192d279c41cf278529907a20a91febc388707732099ecd61df5fe5797e"
+    },
+    {
+      "covered_functions": [
+        "augmented_rhs",
+        "DDWMR interval RHS and Jacobian"
+      ],
+      "path": "validation/baselines/auer2013/rhs.py",
+      "sha256": "c0ae8a05c0455ea0692773466c5fa239ff374d364f51ac58438cf3e91eed1282"
+    },
+    {
+      "covered_functions": [
+        "Auer residual derivative iteration",
+        "outward integral bound",
+        "native full-time tube"
+      ],
+      "path": "validation/baselines/auer2013/residual_ivp.py",
+      "sha256": "3f15779ee772c7090951942186ef56ee5956d9569d2a1ff4c2f7e010646bf70f"
+    },
+    {
+      "covered_functions": [
+        "independent local interval AD",
+        "native proof replay",
+        "inclusion recomputation"
+      ],
+      "path": "validation/baselines/auer2013/replay_ivp.py",
+      "sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913"
+    },
+    {
+      "covered_functions": [
+        "resource-budgeted execution",
+        "record binding",
+        "one common predicate call"
+      ],
+      "path": "validation/baselines/auer2013/r4_worker.py",
+      "sha256": "0e9eb341faf7847d62fc8b8afdc16c0e427e64ec6b55253828a6e600f06745d7"
+    },
+    {
+      "covered_functions": [
+        "Windows Job Object process-memory limit",
+        "hard wall timeout"
+      ],
+      "path": "validation/baselines/auer2013/process_limiter.py",
+      "sha256": "a8d6edf16f092f15334ad94e715af3d9a3db5319c82b0488d5ddb1da50bc0a82"
+    }
+  ],
+  "python_runtime": {
+    "compiler_reported_by_interpreter": "GCC UCRT 15.2.0 64 bit (AMD64)",
+    "executable": "C:/msys64/ucrt64/bin/python.exe",
+    "executable_sha256": "b5c33df60c2a8421dcf8117a67e848436b5d395c71ec1c0dfd96bad10f441d7f",
+    "implementation": "CPython",
+    "project_compile_command": null,
+    "project_link_flags": [],
+    "reason": "Python exact-rational source; no native Auer executable or project compile/link step.",
+    "version": "3.12.12 (main, Oct 10 2025, 12:42:57)  [GCC UCRT 15.2.0 64 bit (AMD64)]"
+  },
+  "schema": "ddwmr-g4-auer-arithmetic-backend-manifest-v2",
+  "software_reproduction_claim": "paper-faithful Auer 2013 method reconstruction; not original VALENCIA software or binary reproduction",
+  "status": "R4_LOCAL_SOURCE_BOUND_CANDIDATE; independent proof replay implemented; external scientific review pending",
+  "transcendental_contract": {
+    "range_widening": "broad enclosures are accepted only if inclusion closes; otherwise UNKNOWN/resource stop",
+    "sin_cos": "exact rational Taylor polynomials with global Lagrange remainder and safe intersection with [-1,1]; no host libm or argument reduction",
+    "sqrt": "exact rational bisection and square comparisons for the common predicate checker",
+    "unsafe_fallback": "none"
+  }
+}

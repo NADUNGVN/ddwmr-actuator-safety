@@ -1,0 +1,32 @@
+{
+  "case": "ddwmr",
+  "combined_operation_cap": 2000000,
+  "combined_rational_operations": 0,
+  "elapsed_worker_seconds": 0.0930000000007567,
+  "matched_query_evaluations": 0,
+  "rational_work": {
+    "cap": 2000000,
+    "combined": 0,
+    "common_predicate": 0,
+    "native_replay": 0,
+    "producer": 0,
+    "tamper_replay": 0,
+    "within_cap": true
+  },
+  "rhs_jacobian_work": {
+    "cap": 100000,
+    "combined": 0,
+    "common_predicate": 0,
+    "native_replay": 0,
+    "producer": 0,
+    "tamper_replay": 0,
+    "within_cap": true
+  },
+  "schema": "ddwmr-g4-auer-r4-worker-evidence-v1",
+  "started_utc": "2026-09-30T17:37:22Z",
+  "status": "IMPLEMENTATION_FAILURE",
+  "termination": {
+    "detail": "_call_rhs() missing 1 required positional argument: 'trig_degree'",
+    "exception_type": "TypeError"
+  }
+}

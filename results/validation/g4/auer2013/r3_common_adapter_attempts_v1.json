@@ -1,0 +1,28 @@
+{
+  "schema": "ddwmr-g4-r3-common-adapter-attempt-ledger-v1",
+  "selected_query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+  "record_semantic_sha256": "a46c6472271fd93f20154e9696c10a865ce97615de6c0aeda69c845f2f0254d3",
+  "record_line_bytes_sha256": "a46c6472271fd93f20154e9696c10a865ce97615de6c0aeda69c845f2f0254d3",
+  "attempts": [
+    {
+      "attempt": 1,
+      "profile": "frozen R3 native development profile; 16384 rational bit cap",
+      "native_r3_replay": "PASS",
+      "native_r3_evaluator_rerun": false,
+      "adapter_outcome": "STOPPED_BY_COMMON_CHECKER_RESOURCE_LIMIT",
+      "exact_failed_operation": "validation/g4/common_tube.py::_collision_margin; validation/g2/rational.py::Budget.mul",
+      "exact_diagnostic": "estimated rational intermediate 20826 bits exceeds 16384",
+      "predicate_result_emitted": false,
+      "interpretation": "common-adapter resource stop only; no native R3 result was changed and no collision/contact predicate outcome was produced",
+      "stdout_stderr_capture": "Python traceback retained in the execution transcript; command exited 1 before writing the adapter result"
+    },
+    {
+      "attempt": 2,
+      "profile": "validation/g4/r3_common_adapter_profile_v1.json",
+      "profile_sha256": "aced7d63e120fbd1c5254f81633adf60e7e8f4e537ec7781a5fc1650aa5531e9",
+      "native_r3_evaluator_rerun": false,
+      "status": "PROFILE_FROZEN_BEFORE_RETRY; output will be stored as a separate fixture artifact"
+    }
+  ],
+  "batch_comparison_queries_run": 0
+}

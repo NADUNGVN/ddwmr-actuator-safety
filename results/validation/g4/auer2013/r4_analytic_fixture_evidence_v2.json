@@ -1,0 +1,166 @@
+{
+  "case": "analytic",
+  "combined_operation_cap": 2000000,
+  "combined_rational_operations": 430,
+  "elapsed_worker_seconds": 0.0319999999992433,
+  "matched_query_evaluations": 0,
+  "native_proof_file_sha256": "0dd28ad36d01ecafc87e540bc2515955f16eff5aba71a2a2eb719c4778a284e7",
+  "native_proof_path": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\g4\\auer2013\\r4_analytic_fixture_native_v2.json",
+  "native_proof_replay": {
+    "native_status": "PROOF_COMPLETE",
+    "proof_sha256": "6865026fae9376eced33b4f6ff6a7c9488882f37e33c645f5743aca630cda789",
+    "replayed": true,
+    "rhs_jacobian_combined_count": 0,
+    "rhs_jacobian_replay": "independent local interval AD implementation; producer RHS source not imported",
+    "rhs_jacobian_replay_evaluations": 0,
+    "shared_exact_arithmetic_source": "validation.g2.rational and validation.g2.interval",
+    "steps_replayed": 1,
+    "work": {
+      "max_observed_rational_bits": 17,
+      "rational_operation_attempts": 71,
+      "rational_operations": 71
+    }
+  },
+  "native_proof_sha256": "6865026fae9376eced33b4f6ff6a7c9488882f37e33c645f5743aca630cda789",
+  "producer_work": {
+    "configured_max_bits": 32768,
+    "configured_max_operations": 2000000,
+    "max_rational_bits": 17,
+    "operation_attempts": 75,
+    "operations": 75
+  },
+  "rational_work": {
+    "cap": 2000000,
+    "combined": 430,
+    "common_predicate": 0,
+    "native_replay": 71,
+    "producer": 75,
+    "tamper_replay": 284,
+    "within_cap": true
+  },
+  "rhs_jacobian_work": {
+    "cap": 100000,
+    "combined": 0,
+    "common_predicate": 0,
+    "native_replay": 0,
+    "producer": 0,
+    "tamper_replay": 0,
+    "within_cap": true
+  },
+  "schema": "ddwmr-g4-auer-r4-worker-evidence-v1",
+  "started_utc": "2026-09-30T17:41:26Z",
+  "status": "PROOF_COMPLETE_AND_REPLAYED",
+  "tamper_rejections": [
+    {
+      "checker_result": {
+        "detail": "replayed field differs: analytic residual proof step",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 17,
+          "rational_operation_attempts": 71,
+          "rational_operations": 71,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "fabricated_narrow_hull"
+    },
+    {
+      "checker_result": {
+        "detail": "replayed field differs: analytic residual proof step",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 17,
+          "rational_operation_attempts": 71,
+          "rational_operations": 71,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "altered_residual_iterate"
+    },
+    {
+      "checker_result": {
+        "detail": "replayed field differs: analytic residual proof step",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 17,
+          "rational_operation_attempts": 71,
+          "rational_operations": 71,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "changed_switch_interval"
+    },
+    {
+      "checker_result": {
+        "detail": "replayed field differs: analytic endpoint",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 17,
+          "rational_operation_attempts": 71,
+          "rational_operations": 71,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "altered_endpoint"
+    },
+    {
+      "checker_result": {
+        "detail": "native source/profile/input binding does not match frozen artifacts",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 0,
+          "rational_operation_attempts": 0,
+          "rational_operations": 0,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "changed_source_binding"
+    },
+    {
+      "checker_result": {
+        "detail": "native source/profile/input binding does not match frozen artifacts",
+        "rational_budget_failure_context": null,
+        "reason": "proof_premise_mismatch",
+        "replayed": false,
+        "work": {
+          "max_observed_rational_bits": 0,
+          "rational_operation_attempts": 0,
+          "rational_operations": 0,
+          "rhs_jacobian_combined_count": 0,
+          "rhs_jacobian_replay_evaluations": 0
+        }
+      },
+      "rejected": true,
+      "tamper": "changed_profile_binding"
+    },
+    {
+      "checker_result": {
+        "reason": "native_proof_digest_mismatch",
+        "replayed": false
+      },
+      "rejected": true,
+      "tamper": "changed_proof_digest"
+    }
+  ],
+  "tamper_replay_work_operations": 284
+}

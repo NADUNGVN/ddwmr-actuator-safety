@@ -1,0 +1,45 @@
+{
+  "schema": "ddwmr-g4-auer-single-case-preflight-blocker-v1",
+  "status": "BLOCKED_BEFORE_IVP",
+  "method_contract_sha256": "b047e6edf4045540c3ba2ad52aab56bc39a0aca60033cb96a28b0017c237e379",
+  "arithmetic_backend_manifest_sha256": "a1f3760b7be06d6cd95b1f3137c4776128bcc5a62ef9a7211b7c1d406a35b5f9",
+  "resource_profile_sha256": "ab9a842d693862319e91351fae738af67aba0ceb4ea80bf2637d6ce0cadf35c2",
+  "analytic_fixture": {
+    "name": "analytic Auer-method validation fixture; not Auer §5 reproduction",
+    "equations": ["x'=1", "y'=clip(x,-1,1)"],
+    "initial": {"x": ["0.9", "0.91"], "y": "0"},
+    "horizon": "0.2",
+    "run_attempted": false
+  },
+  "selected_ddwmr_query": {
+    "query_id": "state_low_neg__scene_d020_l-200__T_020__V_m1_m1",
+    "horizon": "1/50",
+    "held_voltage": ["-1", "-1"],
+    "run_attempted": false
+  },
+  "blocking_evidence": [
+    {
+      "premise": "source-faithful piecewise derivative path connected to an IVP solver",
+      "status": "MISSING",
+      "evidence": "validation/baselines/auer2013/rhs.py computes an interval RHS/Jacobian only; the pinned ValEncIA-IVP 0.92_2e seed is a smooth double-pendulum application and lacks the Auer 2013 piecewise derivative class."
+    },
+    {
+      "premise": "complete closed-slab residual/Picard inclusion producer and native record writer",
+      "status": "MISSING",
+      "evidence": "No Auer full-time step solver or machine-readable residual-iterate/inclusion record exists in validation/g4 or validation/baselines/auer2013."
+    },
+    {
+      "premise": "independent checker that recomputes the native inclusion and separate endpoint propagation",
+      "status": "MISSING",
+      "evidence": "validation/g4/common_tube.py checks predicates on a supplied total hull and deliberately reports certificate_emitted=false and ode_tube_proof_replayed=false."
+    },
+    {
+      "premise": "process-level memory enforcement for the frozen 1024 MiB profile",
+      "status": "MISSING",
+      "evidence": "The exact-rational Budget enforces rational bit/operation and periodic wall checks, but no verified process memory limit is wired to an Auer executable."
+    }
+  ],
+  "classification": "This is a pre-execution implementation blocker, not a failed numerical inclusion, not an arithmetic counterexample, and not UNKNOWN from an executed IVP. No solver result is claimed.",
+  "next_allowed_work": "Continue method/backend/profile documentation and replay one actual archived R3 proof through the existing R3 adapter. Do not run either Auer IVP or the 1,944-query comparison under this profile.",
+  "batch_comparison_queries_run": 0
+}

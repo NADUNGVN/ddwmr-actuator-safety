@@ -1,0 +1,11 @@
+{
+  "certificate_emitted": false,
+  "created_utc": "2026-10-01T02:55:06+00:00",
+  "detail": "$.held_voltage[0].num: stored value '0', expected '-1'",
+  "matched_query_evaluations": 0,
+  "native_reason": null,
+  "reason": "composition_mismatch",
+  "research_disposition": "HOLD; G1 restricted PASS; G2/G3/G4 UNVERIFIED; physical correspondence UNVERIFIED",
+  "schema": "ddwmr-g4-auer-composition-replay-report-v1",
+  "status": "REJECTED"
+}

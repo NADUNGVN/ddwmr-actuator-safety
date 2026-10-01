@@ -1,0 +1,10 @@
+{
+  "matched_query_evaluations": 0,
+  "r4_evidence_sha256_after": "e05945b62bf058b76a121c32d316184e577158d3fc7789a6bfed1356c354ec4a",
+  "r4_native_proof_sha256_after": "8d394d836c5b92b733403b16b1786cb7fe410ab8fb8610c694c0a7c88e5dde4e",
+  "r4_output_artifact_count": 34,
+  "r4_output_manifest_sha256": "6a8d5501972cbb1351cb9ea09500427cb37f8b30c37673ee9e573e156ab6b1a7",
+  "status": "PASS",
+  "v10_manifest_sha256": "29ca0f22791ccc740ef377b232522dee88bbaf00367213bfc45cc07925c5bcd5",
+  "v10_snapshot_member_count": 720
+}

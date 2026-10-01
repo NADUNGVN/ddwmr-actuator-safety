@@ -1,0 +1,26 @@
+{
+  "schema": "ddwmr-g4-auer-analytic-branch-crossing-fixture-v1",
+  "fixture_id": "AUER_CLIP_BRANCH_CROSSING_ANALYTIC_V1",
+  "scientific_label": "independent analytic Auer-method validation fixture; not Auer section 5 reproduction",
+  "state_order": ["x", "y"],
+  "initial_state": [
+    [{"num": "9", "den": "10"}, {"num": "91", "den": "100"}],
+    [{"num": "0", "den": "1"}, {"num": "0", "den": "1"}]
+  ],
+  "rhs_id": "x_prime_1_y_prime_clip_x_minus1_plus1",
+  "clip_switches": [
+    {"num": "-1", "den": "1"},
+    {"num": "1", "den": "1"}
+  ],
+  "time_interval": {"start": {"num": "0", "den": "1"}, "end": {"num": "1", "den": "5"}},
+  "analytic_switch_time": [{"num": "9", "den": "100"}, {"num": "1", "den": "10"}],
+  "exact_full_time_reference": [
+    [{"num": "9", "den": "10"}, {"num": "111", "den": "100"}],
+    [{"num": "0", "den": "1"}, {"num": "3919", "den": "20000"}]
+  ],
+  "exact_endpoint_reference": [
+    [{"num": "11", "den": "10"}, {"num": "111", "den": "100"}],
+    [{"num": "39", "den": "200"}, {"num": "3919", "den": "20000"}]
+  ],
+  "reference_derivation": "For x0 in [9/10,91/100], x(t)=x0+t and the unique +1 switch time is 1-x0 in [9/100,1/10]. Since x remains positive, y is nondecreasing and y(1/5)=1/5-(1-x0)^2/2, ranging from 39/200 to 3919/20000."
+}
