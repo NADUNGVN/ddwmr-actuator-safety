@@ -1,0 +1,86 @@
+{
+  "benchmark_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/benchmark_v1.json",
+  "classification": {
+    "CERTIFIED": "native proof complete, independent replay pass, common collision/contact pass, progress lower bound meets target",
+    "INVALID_OR_IMPLEMENTATION_FAILURE": "binding or execution defect; no method conclusion",
+    "RESOURCE_LIMIT": "frozen cap stopped execution",
+    "UNKNOWN": "proof or predicate does not establish the target without treating it as unsafe"
+  },
+  "common_target": {
+    "collision": "full closed hold against static circle center (1/2,1/10), radius 3/50",
+    "contact": "full closed hold algebraic contact reserve nonnegative",
+    "hold_s": "2",
+    "primary_criterion": "set of actions with replayed full-hold collision/contact and progress lower bound >= 7/20",
+    "progress": "p_x(T)-p_x(0) lower bound >= 7/20"
+  },
+  "development_note": "These are the three already observed G2 v6 inputs; outputs are development falsification evidence, not held-out confirmation.",
+  "methods": {
+    "auer": {
+      "comparison_ids": [
+        "W2_G4_AUER_ZERO",
+        "W2_G4_AUER_NOMINAL",
+        "W2_G4_AUER_ALTERNATIVE"
+      ],
+      "native_source": "local Auer?Kiel?Rauh 2013 residual/Picard reconstruction; not VALENCIA binary"
+    },
+    "v6": {
+      "comparison_ids": [
+        "W2_G4_V6_ZERO",
+        "W2_G4_V6_NOMINAL",
+        "W2_G4_V6_ALTERNATIVE"
+      ],
+      "native_source": "G2 centered v6 producer/checker, exact source hashes in freeze manifest"
+    }
+  },
+  "ordered_actions": [
+    {
+      "auer_action_id": "W2_V0",
+      "comparison_id": "W2_G4_V6_ZERO",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "auer_action_id": "W2_VHALF",
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "auer_action_id": "W2_V1",
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "peer_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "resource_caps": {
+    "memory_bytes": 1073741824,
+    "phase_wall_seconds": 7200,
+    "processes": 1,
+    "replay_audit_wall_seconds": 60,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "worker_wall_seconds": 60
+  },
+  "schema": "ddwmr-g4-w2-matched-v6-task-protocol-v1",
+  "status": "FROZEN_DEVELOPMENT_COMPARISON_ONLY",
+  "task_protocol": {
+    "path": "research/autonomous_w2/g2/task_protocol_v1.json",
+    "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+  }
+}

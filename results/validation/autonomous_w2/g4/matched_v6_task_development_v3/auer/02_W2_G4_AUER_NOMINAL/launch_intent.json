@@ -1,0 +1,28 @@
+{
+  "caps": {
+    "cpu_seconds": 60,
+    "max_processes": 1,
+    "memory_bytes": 1073741824,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "wall_seconds": 60
+  },
+  "command": [
+    "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "-B",
+    "-m",
+    "validation.autonomous_w2.g4.auer_w2_worker_v3",
+    "--comparison-id",
+    "W2_G4_AUER_NOMINAL",
+    "--output-dir",
+    "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\autonomous_w2\\g4\\matched_v6_task_development_v3\\auer\\02_W2_G4_AUER_NOMINAL"
+  ],
+  "comparison_id": "W2_G4_AUER_NOMINAL",
+  "method": "auer",
+  "ordinal": 2,
+  "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+  "prepared_utc": "2026-10-08T08:59:37.607609+00:00",
+  "retry_allowed": false,
+  "schema": "ddwmr-g4-w2-matched-launch-intent-v2",
+  "single_invocation": true
+}

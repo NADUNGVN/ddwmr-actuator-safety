@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/changed_protocol/binding.json",
+  "binding_sha256": "0f17fa2cceabdf71f692ef29b802856f5543b52149f7bb1935dd41cdd4c1c0ca",
+  "elapsed_seconds_display_only": null,
+  "expected_rejection_class": "FROZEN_PROTOCOL_OR_PROFILE_HASH",
+  "job_status": null,
+  "name": "changed_protocol",
+  "peak_memory_bytes": null,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/changed_protocol/record.json",
+  "record_sha256": "445d46d9dfb017a7ca6e7ded2ab035a39c6f3f71618457f9d70e6afb4a1574ac",
+  "rejected": false,
+  "returncode": null
+}

@@ -1,0 +1,30 @@
+{
+  "actions_frozen": 3,
+  "auer_1944": "NOT_RUN",
+  "confirmation_rows_before_execution": {
+    "auer": 0,
+    "v6": 0
+  },
+  "created_utc": "2026-10-08T08:55:31.174616+00:00",
+  "freeze_manifest_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/freeze_manifest_v4.json",
+  "freeze_manifest_sha256": "067995e0e60873c4c582946444a732ebc9d05eeb16eb1c601173d7ffc7c4a91e",
+  "legacy_r5_800": "NOT_RUN",
+  "native_call_limits": {
+    "auer": 3,
+    "retries": 0,
+    "v6": 3
+  },
+  "native_calls_before_execution": {
+    "auer": 0,
+    "v6": 0
+  },
+  "preflight_fixture_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v5/preflight_report_v4.json",
+  "preflight_fixture_sha256": "4e73485b549d357a8b4f9d2e5bb27e0d36849dd3205d977c075928464c5a21ee",
+  "protocol_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+  "protocol_sha256": "bd285159ac9067e27338ff81426effde924c2e480c7c05d678ae73262532ef62",
+  "schema": "ddwmr-g4-w2-matched-freeze-receipt-v4",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "source_closure_file_count": 77,
+  "source_closure_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/source_closure_v4.json",
+  "source_closure_sha256": "4a138dbd9eb26f1ba81f9d6b367c86e57dbce5ceab20d97bba3f4fe201fb7097"
+}

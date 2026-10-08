@@ -1,0 +1,563 @@
+{
+  "actions": [
+    {
+      "bounded_job": {
+        "cpu_seconds": 37.859375,
+        "peak_memory_bytes": 60198912,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 452453,
+        "wall_seconds_display_only": 38.203
+      },
+      "common_collision_margin_lower_m_exact": "1801476514195981144134943711048082443891/8507059173023461586584365185794205286400",
+      "common_contact_margin_lower_N_exact": "3894195195930528172668753390370956854784271528737517408089891/1961594292308337738698684194752395755031986076395010785280000",
+      "common_predicate_status": "PASS_ON_SUPPLIED_TUBE",
+      "common_record": {
+        "bytes": 4225239,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/common_record.json",
+        "sha256": "a56371746ace86b2a81d14195df653035fcb5cc6d519ef35cd3a98cdda99a63d"
+      },
+      "common_replay_recorded": true,
+      "common_replay_status": "PASS",
+      "common_segment_count": 256,
+      "comparison_id": "W2_G4_V6_ZERO",
+      "cost_seconds": {
+        "common_adapter": 10.203000000008615,
+        "common_replay_progress": 3.485000000000582,
+        "native_replay": 13.405999999988126,
+        "producer": 10.85899999999674,
+        "total_worker": 38.01600000000326
+      },
+      "final_status": "CERTIFIED_SAFETY_TASK_INELIGIBLE",
+      "launch_intent": {
+        "bytes": 934,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/launch_intent.json",
+        "sha256": "9a359e56221eccc4ac1edcbf57e4b96000e0c021149bdb4f47dbeecb0f69845a"
+      },
+      "launch_receipt": {
+        "bytes": 579135,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/launch_receipt.json",
+        "sha256": "a68412d4ab6090567a04bea32e8ec4004bef980e556ed60206d7decb0f1d6c3e"
+      },
+      "method": "v6",
+      "native_calls_counted": 1,
+      "native_center_slabs_recomputed": 256,
+      "native_proof_fields_recomputed": 46,
+      "native_replay_recorded": true,
+      "native_replay_status": "PASS",
+      "native_row": {
+        "bytes": 506904,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/native_row.json",
+        "sha256": "3ef3ee1ef7a329a54268e6c383184c4fad41c950f02a60d245e3763bff335b51"
+      },
+      "native_status": "CERTIFIED",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "producer_start": {
+        "bytes": 346,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/producer_start.json",
+        "sha256": "b5183e1f5d46213b2038b7caa9361484bd76ffd6e836d87ed1f9a30eb5aa0168"
+      },
+      "progress_m_decimal": [
+        0.17758228818404806,
+        0.24039824124206094
+      ],
+      "progress_m_exact": [
+        "68996717413082968571127788843203780216834372439904336053714236900530179809482806723772921/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000",
+        "93402837001345619594422907821122074844776899619356305012361867715861137578493726882627079/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000"
+      ],
+      "progress_record": {
+        "bytes": 537357,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/progress.json",
+        "sha256": "b50b1f2562914701a45dea758fb0b41c2770cec65e82f3a06c612bee891639b3"
+      },
+      "progress_threshold_m": "7/20",
+      "task_eligible": false,
+      "worker_job": {
+        "bytes": 604183,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/worker.job.json",
+        "sha256": "6348d522a52ce17e67bf900097f287fa95d767f46758f8646be43aa18ab4b2c7"
+      },
+      "worker_result": {
+        "bytes": 562039,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/01_W2_G4_V6_ZERO/worker_result.json",
+        "sha256": "45164072abc000e05bf95107d84d2fb0635bf5e2314db7b76e36a4c0f5577e79"
+      }
+    },
+    {
+      "bounded_job": {
+        "cpu_seconds": 35.390625,
+        "peak_memory_bytes": 60391424,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 481957,
+        "wall_seconds_display_only": 36.016
+      },
+      "common_collision_margin_lower_m_exact": "265460031085931815277686009139840624879/2126764793255865396646091296448551321600",
+      "common_contact_margin_lower_N_exact": "7787034887606017254698119621205763524925612271609129071419659/3923188584616675477397368389504791510063972152790021570560000",
+      "common_predicate_status": "PASS_ON_SUPPLIED_TUBE",
+      "common_record": {
+        "bytes": 4228533,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/common_record.json",
+        "sha256": "dd7206474a0e3cb2dc8df1b8f7cbf5a039bbd0f6d340132866743c4d0f2bad3e"
+      },
+      "common_replay_recorded": true,
+      "common_replay_status": "PASS",
+      "common_segment_count": 256,
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "cost_seconds": {
+        "common_adapter": 10.60899999999674,
+        "common_replay_progress": 3.5319999999919673,
+        "native_replay": 11.062000000005355,
+        "producer": 10.547000000005937,
+        "total_worker": 35.812999999994645
+      },
+      "final_status": "CERTIFIED_SAFETY_TASK_INELIGIBLE",
+      "launch_intent": {
+        "bytes": 943,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/launch_intent.json",
+        "sha256": "aef9da8ad9a23929fc81d4be82cdf589313f1e0be76ed073df6ea40104e51ec1"
+      },
+      "launch_receipt": {
+        "bytes": 608646,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/launch_receipt.json",
+        "sha256": "6c21bdd18a9205e2ecdcfbebf24143912a2f4e3487e248c75fd107aca4687145"
+      },
+      "method": "v6",
+      "native_calls_counted": 1,
+      "native_center_slabs_recomputed": 256,
+      "native_proof_fields_recomputed": 46,
+      "native_replay_recorded": true,
+      "native_replay_status": "PASS",
+      "native_row": {
+        "bytes": 506804,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/native_row.json",
+        "sha256": "a11a6d4a038dfb3ed92136115a42df45e92868a4991242f61bf3440340d6b5c3"
+      },
+      "native_status": "CERTIFIED",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "producer_start": {
+        "bytes": 349,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/producer_start.json",
+        "sha256": "d0a7d166e3005a096a54003cf2c5f693b3d686c993fbee1576485025b3dc7044"
+      },
+      "progress_m_decimal": [
+        0.27075852075476137,
+        0.3335744738109717
+      ],
+      "progress_m_exact": [
+        "105198831115065872771858261259914647858437069089001966490156509083232982705803664459497921/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000",
+        "129604950702628184645168336143816735033938496165296280739391207881958913864026566785302079/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000"
+      ],
+      "progress_record": {
+        "bytes": 566839,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/progress.json",
+        "sha256": "4ccce70cf9e384feb949c09ebfbcc3da25aac18e98a9f847503c125191e646e7"
+      },
+      "progress_threshold_m": "7/20",
+      "task_eligible": false,
+      "worker_job": {
+        "bytes": 643524,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/worker.job.json",
+        "sha256": "1f42bef1de9bb245dfcd0d3d600997ef3e593a45e9818e7b2e2b18cbe102f39c"
+      },
+      "worker_result": {
+        "bytes": 591543,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/02_W2_G4_V6_NOMINAL/worker_result.json",
+        "sha256": "a48c8645bd315439578efa35f04abea6dda337fc3399a389a7f6f0a9f31fbd18"
+      }
+    },
+    {
+      "bounded_job": {
+        "cpu_seconds": 39.8125,
+        "peak_memory_bytes": 61267968,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 483189,
+        "wall_seconds_display_only": 40.313
+      },
+      "common_collision_margin_lower_m_exact": "207311285127883252084370125090896646033/4253529586511730793292182592897102643200",
+      "common_contact_margin_lower_N_exact": "7683488427258212740479295611462342538878128228363284771578211/3923188584616675477397368389504791510063972152790021570560000",
+      "common_predicate_status": "PASS_ON_SUPPLIED_TUBE",
+      "common_record": {
+        "bytes": 4231803,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/common_record.json",
+        "sha256": "5a6cd60a2a73509b7e7852c86fd64452e28023b2eed6b2e6945346e4fc636f3f"
+      },
+      "common_replay_recorded": true,
+      "common_replay_status": "PASS",
+      "common_segment_count": 256,
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "cost_seconds": {
+        "common_adapter": 11.906000000002678,
+        "common_replay_progress": 3.422000000005937,
+        "native_replay": 12.062999999994645,
+        "producer": 12.656000000002678,
+        "total_worker": 40.094000000011874
+      },
+      "final_status": "CERTIFIED",
+      "launch_intent": {
+        "bytes": 955,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/launch_intent.json",
+        "sha256": "d8f19eae62e08062936dfefae442fbf2d76fa7ea9c98318ce8a633d9ab8622af"
+      },
+      "launch_receipt": {
+        "bytes": 609882,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/launch_receipt.json",
+        "sha256": "8bcf716746de537bd48970f8f1442ea3ce2b5939799589516a70b9668163fe0e"
+      },
+      "method": "v6",
+      "native_calls_counted": 1,
+      "native_center_slabs_recomputed": 256,
+      "native_proof_fields_recomputed": 46,
+      "native_replay_recorded": true,
+      "native_replay_status": "PASS",
+      "native_row": {
+        "bytes": 507414,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/native_row.json",
+        "sha256": "5288c6ca8f7a06539c7f23e9b83820b6004b7d25d4da2a6efc3671d1c1dc2241"
+      },
+      "native_status": "CERTIFIED",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "producer_start": {
+        "bytes": 353,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/producer_start.json",
+        "sha256": "c6b03237eee208fe84f2fc43bfdab43e1e869bf8c5f85712dda72ea1a32d1b4e"
+      },
+      "progress_m_decimal": [
+        0.36393475332547415,
+        0.42675070637988305
+      ],
+      "progress_m_exact": [
+        "141400944817048575300898282364802302564042144122371824680277043813267650473203546393166671/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000",
+        "165807064403910951367604217416265842236559726140365331330992740952433199068314388198833329/388533778445145814183892381364703781328481367810427904250362481947780857041041699635200000"
+      ],
+      "progress_record": {
+        "bytes": 568072,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/progress.json",
+        "sha256": "7c3b916cbf9e1bfe23ecadf47f741152ced5cb62dca82b202636de1e77c217d4"
+      },
+      "progress_threshold_m": "7/20",
+      "task_eligible": true,
+      "worker_job": {
+        "bytes": 645164,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/worker.job.json",
+        "sha256": "b4777e4fc16dec1cf1838efa9bf6bd7551ac195c400fbdaf78375713db502661"
+      },
+      "worker_result": {
+        "bytes": 592775,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/v6/03_W2_G4_V6_ALTERNATIVE/worker_result.json",
+        "sha256": "6b89e9feff15542cfe9841d81512105838877e43784fea594b7463624733dcf3"
+      }
+    },
+    {
+      "bounded_job": {
+        "cpu_seconds": 2.609375,
+        "peak_memory_bytes": 30916608,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 1672,
+        "wall_seconds_display_only": 2.86
+      },
+      "common_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "comparison_id": "W2_G4_AUER_ZERO",
+      "cost_seconds": {
+        "producer": 2.625,
+        "total_worker": 2.86
+      },
+      "final_status": "RESOURCE_LIMIT",
+      "launch_intent": {
+        "bytes": 823,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/launch_intent.json",
+        "sha256": "002cb8426092281a413297fddccbf9100c4f79fecda198ac626ff683012eea5d"
+      },
+      "launch_receipt": {
+        "bytes": 2447,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/launch_receipt.json",
+        "sha256": "213de3d793ec80798214420d73bf01ae9747ef7f811118b04ec82e07c622a29e"
+      },
+      "method": "auer",
+      "native_calls_counted": 1,
+      "native_proof": {
+        "bytes": 9956,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/native_proof.json",
+        "sha256": "7cb6e2de2def168ccec006d6119d691ddae3490b5e256524acfd420c0c4735b1"
+      },
+      "native_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "native_status": "RESOURCE_LIMIT",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "producer_start": {
+        "bytes": 275,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/producer_start.json",
+        "sha256": "d581fb390ebbfb3b7654d06861d5eb627006d7f2f1a577e7604e6b1aaa88a663"
+      },
+      "resource_stop": {
+        "accepted_steps": 0,
+        "completed_results": 424707,
+        "configured_cap_bits": 32768,
+        "configured_cap_name": "max_rational_bits",
+        "kind": "RATIONAL_BIT_LIMIT",
+        "maximum_observed_bits": 32167,
+        "native_proof_envelope_sha256": "7cb6e2de2def168ccec006d6119d691ddae3490b5e256524acfd420c0c4735b1",
+        "operation_attempts": 426578,
+        "operations_started": 426577,
+        "picard_iterations": 30,
+        "preoperation_estimate_bits": 33327,
+        "rejected_step_attempts": 1,
+        "rhs_jacobian_evaluations": 34,
+        "step_width_s": "2"
+      },
+      "task_eligible": false,
+      "worker_job": {
+        "bytes": 3137,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker.job.json",
+        "sha256": "6cc7aa091753733993f311edf0d201c3d22bcabe290d0f720554c6b3b3c40de0"
+      },
+      "worker_result": {
+        "bytes": 1939,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker_result.json",
+        "sha256": "2e41673d613872e3d10882947871205028667c8a95531f0ef763bf24bd34ba16"
+      }
+    },
+    {
+      "bounded_job": {
+        "cpu_seconds": 2.90625,
+        "peak_memory_bytes": 30982144,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 1697,
+        "wall_seconds_display_only": 3.0
+      },
+      "common_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "comparison_id": "W2_G4_AUER_NOMINAL",
+      "cost_seconds": {
+        "producer": 2.7810000000026776,
+        "total_worker": 3.0
+      },
+      "final_status": "RESOURCE_LIMIT",
+      "launch_intent": {
+        "bytes": 835,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/launch_intent.json",
+        "sha256": "d7973c62d9d9a41dbab5c5819b5906cf939b96edb9a7b30d27220394b5813057"
+      },
+      "launch_receipt": {
+        "bytes": 2491,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/launch_receipt.json",
+        "sha256": "8c2607eee8be143cd349ab6963962d28d43d4563a5eb1bbaa5971dda31a2cd56"
+      },
+      "method": "auer",
+      "native_calls_counted": 1,
+      "native_proof": {
+        "bytes": 9965,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/native_proof.json",
+        "sha256": "62c70f27d8fd08397b5600de273bbec6349abac06389da9d61ce6c4fa3900511"
+      },
+      "native_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "native_status": "RESOURCE_LIMIT",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "producer_start": {
+        "bytes": 278,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/producer_start.json",
+        "sha256": "915f417548e8ba1340066b5672cc45c792c4d4426de4b50ced45d70e9f7e8d2c"
+      },
+      "resource_stop": {
+        "accepted_steps": 0,
+        "completed_results": 424707,
+        "configured_cap_bits": 32768,
+        "configured_cap_name": "max_rational_bits",
+        "kind": "RATIONAL_BIT_LIMIT",
+        "maximum_observed_bits": 32167,
+        "native_proof_envelope_sha256": "62c70f27d8fd08397b5600de273bbec6349abac06389da9d61ce6c4fa3900511",
+        "operation_attempts": 426578,
+        "operations_started": 426577,
+        "picard_iterations": 30,
+        "preoperation_estimate_bits": 33327,
+        "rejected_step_attempts": 1,
+        "rhs_jacobian_evaluations": 34,
+        "step_width_s": "2"
+      },
+      "task_eligible": false,
+      "worker_job": {
+        "bytes": 3169,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/worker.job.json",
+        "sha256": "af563ac9cb8b4670fea9220c839c1f9f14d159efce7608619eb837b819396b3a"
+      },
+      "worker_result": {
+        "bytes": 1964,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/02_W2_G4_AUER_NOMINAL/worker_result.json",
+        "sha256": "3ed33d6bea26ad4c8daefeb35b5f8d304818b5bd45ac7f09435d2256df88b2c8"
+      }
+    },
+    {
+      "bounded_job": {
+        "cpu_seconds": 2.828125,
+        "peak_memory_bytes": 31035392,
+        "processes": 1,
+        "returncode": 0,
+        "status": "COMPLETED",
+        "stderr_bytes": 0,
+        "stdout_bytes": 1713,
+        "wall_seconds_display_only": 3.0
+      },
+      "common_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "comparison_id": "W2_G4_AUER_ALTERNATIVE",
+      "cost_seconds": {
+        "producer": 2.7810000000026776,
+        "total_worker": 3.0
+      },
+      "final_status": "RESOURCE_LIMIT",
+      "launch_intent": {
+        "bytes": 851,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/launch_intent.json",
+        "sha256": "f9d034efa2a7c363f123e0054d694781a9608b0bf4b898ded5c70e367f6474cf"
+      },
+      "launch_receipt": {
+        "bytes": 2523,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/launch_receipt.json",
+        "sha256": "9fb0c9cc1e60b8ffa3029eb5974909d73791abfc230a6bb3e5374756015a7122"
+      },
+      "method": "auer",
+      "native_calls_counted": 1,
+      "native_proof": {
+        "bytes": 9977,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/native_proof.json",
+        "sha256": "4506bbbf0b2a89143bc27566467d355ef978dc72364ff58879d3a74dc26f5472"
+      },
+      "native_replay_status": "NOT_RUN_NO_PROOF_COMPLETE_CERTIFICATE",
+      "native_status": "RESOURCE_LIMIT",
+      "no_retry": true,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "producer_start": {
+        "bytes": 282,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/producer_start.json",
+        "sha256": "f66e56e427845c2e6309335f92708c91b91db8e404d0a200df4785fe113e864f"
+      },
+      "resource_stop": {
+        "accepted_steps": 0,
+        "completed_results": 424707,
+        "configured_cap_bits": 32768,
+        "configured_cap_name": "max_rational_bits",
+        "kind": "RATIONAL_BIT_LIMIT",
+        "maximum_observed_bits": 32134,
+        "native_proof_envelope_sha256": "4506bbbf0b2a89143bc27566467d355ef978dc72364ff58879d3a74dc26f5472",
+        "operation_attempts": 426578,
+        "operations_started": 426577,
+        "picard_iterations": 30,
+        "preoperation_estimate_bits": 33285,
+        "rejected_step_attempts": 1,
+        "rhs_jacobian_evaluations": 34,
+        "step_width_s": "2"
+      },
+      "task_eligible": false,
+      "worker_job": {
+        "bytes": 3187,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/worker.job.json",
+        "sha256": "26b2a30e71960926e165ec0f677072069695fa339dbaac3cb4038cc19affc6e6"
+      },
+      "worker_result": {
+        "bytes": 1980,
+        "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/worker_result.json",
+        "sha256": "2de8b1a94cb1e6d147a18e02e7f0f87ac559db3bbed6a971bbcb3081148068f7"
+      }
+    }
+  ],
+  "disposition": "SCOPED_EXECUTION_COMPLETE_G2_REAUDIT_PENDING",
+  "exact_verified_eligible_sets": {
+    "auer": [],
+    "qualification": "Auer produced no proof-complete certificate to replay; the empty set means no eligible certificate was verified under the frozen producer/profile pipeline, not mathematical impossibility.",
+    "v6": [
+      "W2_G4_V6_ALTERNATIVE"
+    ]
+  },
+  "execution": {
+    "calls": {
+      "auer": 3,
+      "retry": 0,
+      "v6": 3
+    },
+    "completed_utc": "2026-10-08T08:59:43.669575+00:00",
+    "errors": [],
+    "lock_released": true,
+    "phase_receipt": {
+      "bytes": 1921840,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/matched_phase_receipt_v4.json",
+      "sha256": "d904e421c62ec02932f9f2d6e146c5571eaae8b736753c16f925c9c0a3a1e994"
+    },
+    "run_order": "v6 all three in frozen order, then Auer all three in frozen order",
+    "runner_seconds": 123.625,
+    "started_utc": "2026-10-08T08:57:40.071439+00:00",
+    "wall_cap_seconds": 7200
+  },
+  "freeze": {
+    "auer_stub_calls": 3,
+    "benchmark": {
+      "bytes": 13530,
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/benchmark_v3.json",
+      "sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94"
+    },
+    "freeze_receipt": {
+      "bytes": 1325,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/freeze_receipt_v4.json",
+      "sha256": "7dbab64e3d3e2279ef10e1198416cf500713ff19a4d4e32444be3f5d1bf56458"
+    },
+    "manifest": {
+      "bytes": 9177,
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/freeze_manifest_v4.json",
+      "sha256": "067995e0e60873c4c582946444a732ebc9d05eeb16eb1c601173d7ffc7c4a91e"
+    },
+    "native_source_snapshot": {
+      "bytes": 3657,
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/native_source_snapshot_v3.json",
+      "sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8"
+    },
+    "preflight": {
+      "bytes": 33123,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v5/preflight_report_v4.json",
+      "sha256": "4e73485b549d357a8b4f9d2e5bb27e0d36849dd3205d977c075928464c5a21ee"
+    },
+    "preflight_checks": "74/74",
+    "preflight_numeric_calls": 0,
+    "protocol": {
+      "bytes": 10606,
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+      "sha256": "bd285159ac9067e27338ff81426effde924c2e480c7c05d678ae73262532ef62"
+    },
+    "source_closure": {
+      "bytes": 19143,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/source_closure_v4.json",
+      "sha256": "4a138dbd9eb26f1ba81f9d6b367c86e57dbce5ceab20d97bba3f4fe201fb7097"
+    },
+    "source_closure_entries": 77,
+    "source_closure_mismatches": 0,
+    "source_closure_reverified_entries": 77,
+    "v6_stub_calls": 3
+  },
+  "peer_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "phase": "BOUNDED_DEVELOPMENT_FALSIFICATION",
+  "schema": "ddwmr-g4-w2-matched-v6-auer-result-manifest-v1",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "task_classification": "same three G2-consumed development actions; not held-out or fresh confirmation"
+}

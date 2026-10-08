@@ -1,0 +1,35 @@
+{
+  "job": {
+    "elapsed_seconds_display_only": 10.156,
+    "job": {
+      "active_processes_at_read": 0,
+      "peak_memory_bytes": 14524416,
+      "terminated_processes": 0,
+      "total_kernel_time_100ns": 781250,
+      "total_processes": 1,
+      "total_user_time_100ns": 99375000
+    },
+    "pid": 32092,
+    "process_assigned_before_resume": true,
+    "process_in_job": true,
+    "returncode": 0,
+    "status": "COMPLETED",
+    "stderr": {
+      "bytes_observed": 0,
+      "drain_stopped_on_overflow": false,
+      "overflow": false,
+      "prefix_base64": "",
+      "sha256_retained_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin_error": null,
+    "stdout": {
+      "bytes_observed": 961,
+      "drain_stopped_on_overflow": false,
+      "overflow": false,
+      "prefix_base64": "ew0KICAiY2VudGVyX3NsYWJzX3JlY29tcHV0ZWQiOiAyNTYsDQogICJmaXhlZF9jZW50ZXJfcmVmZXJlbmNlX2NoYWluaW5nX3JlY29tcHV0ZWQiOiB0cnVlLA0KICAiaGVsZF92b2x0YWdlX2NvbnN0YW50X3JlY29tcHV0ZWQiOiB0cnVlLA0KICAicHJvb2ZfZmllbGRzX3JlY29tcHV0ZWQiOiA0NiwNCiAgInJlY29tcHV0ZWRfY2xpcF9iZXRhX3VwcGVyIjogIjM4OTE3Mjc2MzY0NDkwNTIzMzQ1NDY5NTI3NzcvMzk2MTQwODEyNTcxMzIxNjg3OTY3NzE5NzUxNjgiLA0KICAicmVjb21wdXRlZF9jb2xsaXNpb25fbWFyZ2luX2xvd2VyX20iOiAiMzg5NTQ0MTE0Nzg5MzYwNzE0NDY4NjcyNDkxMS8xOTgwNzA0MDYyODU2NjA4NDM5ODM4NTk4NzU4NCIsDQogICJyZWNvbXB1dGVkX2NvbnRhY3RfbWFyZ2luX2xvd2VyX04iOiAiNzgyNjEyODM1MTgzOTY0NzczMDQwODE2NjczMDEvMzk2MTQwODEyNTcxMzIxNjg3OTY3NzE5NzUxNjgiLA0KICAicmVjb21wdXRlZF9wcm9ncmVzc19lbmNsb3N1cmVfbSI6IFsNCiAgICAiMTQwNzExMDI5NTExNTA5Njk0NjM1NzI2MDA0NzUvNzkyMjgxNjI1MTQyNjQzMzc1OTM1NDM5NTAzMzYiLA0KICAgICI5NTIyMzYzMTgxMDA5NTIxMTA5MTMyNDY5NDAxLzM5NjE0MDgxMjU3MTMyMTY4Nzk2NzcxOTc1MTY4Ig0KICBdLA0KICAicmVjb21wdXRlZF9zYWZldHlfc3RhdHVzIjogIkNFUlRJRklFRCIsDQogICJyZWNvbXB1dGVkX3Rhc2tfZWxpZ2libGUiOiBmYWxzZSwNCiAgInJlcGxheWVkIjogdHJ1ZSwNCiAgInNjaGVtYSI6ICJHMl9XMl9DRU5URVJFRF9SRVNJRFVBTF9SRVBMQVlfdjYiLA0KICAic2hhcmVkX3RydXN0IjogWw0KICAgICJQeXRob24gZnJhY3Rpb25zLkZyYWN0aW9uIiwNCiAgICAidmFsaWRhdGlvbi5hdXRvbm9tb3VzX3cyLmcyLnJhdGlvbmFsX2ludGVydmFsX3YzLkkvQnVkZ2V0L291dHdhcmQgOTYtYml0IGFyaXRobWV0aWMiDQogIF0NCn0NCg==",
+      "sha256_retained_prefix": "9ed44ff541e60f285116e9df4fb83384c589147b87e3ab0e9674185d3800eec8"
+    },
+    "termination_reason": null
+  },
+  "launch_error": null
+}

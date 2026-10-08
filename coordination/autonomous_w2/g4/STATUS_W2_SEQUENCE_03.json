@@ -1,0 +1,92 @@
+{
+    "workflow":  "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+    "session":  "DDWMR | LUNA-G4-AUER",
+    "owner":  "g4",
+    "phase":  "AWAITING_PEER_INPUT",
+    "sequence":  3,
+    "utc":  "2026-10-07T09:39:53Z",
+    "branch":  "main",
+    "head":  "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+    "working_tree_baseline":  "Shared tree was already dirty before this W2 pass; new writes limited to G4-owned coordination/autonomous_w2/g4, validation/autonomous_w2/g4, and docs/reviews/autonomous_w2/g4 prefixes.",
+    "objective":  "Complete G4 W2 source/baseline review, independently audit the first immutable G2 candidate and run matched confirmation only after sound proof, falsifiable task, and frozen workload are available.",
+    "assignment":  {
+                       "sha256":  "90D3C7139CBBBE6379CF7D270E7342173554F78CE5F7261764A066470B339D22",
+                       "path":  "docs/CODEX_TO_LUNA_G4_AUTONOMOUS_COMPLETION_W2.md"
+                   },
+    "workflow_file":  {
+                          "sha256":  "B68DD49067276B6DD1319192A92E9FAEB923DA64480A5C2000DE18DAD7C27908",
+                          "path":  "docs/DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2.md"
+                      },
+    "artifacts":  [
+                      {
+                          "path":  "docs/reviews/autonomous_w2/g4/AUDIT_CHECKLIST_AND_SOURCE_CROSSWALK_v1.md",
+                          "sha256":  "84AFB049A38E8A9C23E0E7ED5032C2939A557C286987E34164F206E5EA6411CA",
+                          "bytes":  16701
+                      },
+                      {
+                          "path":  "validation/autonomous_w2/g4/audit_source_closure.py",
+                          "sha256":  "113BA8AC6E3A0EF0A72FD37C877004532DB6C4CCD8B5AA8001AAE54AC8FEDA57",
+                          "bytes":  4764
+                      },
+                      {
+                          "path":  "coordination/autonomous_w2/g4/PEER_AUDIT_INPUT_v1.md",
+                          "sha256":  "0E95D6DB6DF267EFDA644B3DDEC7E3CD9D5474B0EAF486FCEAE4769DD0A10E88",
+                          "bytes":  2681
+                      },
+                      {
+                          "path":  "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+                          "sha256":  "DF906D137F6F516AC9D5EED84D3F8ABE32B97243C30E3957C3218735894FD53E",
+                          "bytes":  1597
+                      },
+                      {
+                          "path":  "coordination/autonomous_w2/g4/INPUT_REQUEST_TO_G2.md",
+                          "sha256":  "B3F2B0BE4896F186685FB7C32AB97F3AEF842A09FD18377C15EBA0AE22F793C7",
+                          "bytes":  980
+                      },
+                      {
+                          "path":  "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_01.json",
+                          "sha256":  "BA604D1C5B1396F75AC304B56A07C464FAFA9C56B75BA6A0D1E95FA0269831F9",
+                          "bytes":  1430
+                      },
+                      {
+                          "path":  "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_02.json",
+                          "sha256":  "9B0C92DECC3A71131ABEDB5880D847A8BC612433B19C1A2947FC7C54EC993698",
+                          "bytes":  5477
+                      },
+                      {
+                          "path":  "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_AUTONOMOUS_W2_FULL_HANDOFF.md",
+                          "sha256":  "910E550162F49039BCEF46AB53832FD1D920A6898D87C2C041034A9EBB086C2B",
+                          "bytes":  17133
+                      }
+                  ],
+    "peer_release_consumed":  null,
+    "peer_status_observed":  {
+                                 "path":  "coordination/autonomous_w2/g2/STATUS.json",
+                                 "sha256":  "4F0982DE0FD671FA70DB2B69193342052F6ED601C8F4F8960947B7E9A00EBE63",
+                                 "sequence":  1,
+                                 "observed_utc":  "2026-10-07T09:38:52Z",
+                                 "release_artifacts":  [
+
+                                                       ]
+                             },
+    "work_counts":  {
+                        "historical_r19_closure":  {
+                                                       "verified":  571,
+                                                       "mismatches":  4,
+                                                       "declared":  575
+                                                   },
+                        "source_closure_audit_executions":  2,
+                        "g4_native_smoke_attempts_per_method":  0,
+                        "fresh_confirmation_rows_per_method":  0,
+                        "g4_development_attempts_per_method":  0
+                    },
+    "constraints":  [
+                        "Only G4 W2 owned prefixes are writable.",
+                        "No branch switch, reset, clean, commit or push.",
+                        "Historical R19/R20 artifacts are read-only; no consumed ID retry.",
+                        "No G4 query, solver, worker, stage or batch in this pass.",
+                        "Future confirmation capped at 8 groups x 3 actions per method; worker/replay/audit \u003c=60 s and \u003c=1 GiB; phase \u003c=2 h."
+                    ],
+    "blocker":  "G2 STATUS sequence 1 has artifacts=[] and no immutable candidate/proof/source release hash; release-scoped decision and matched confirmation cannot yet be made.",
+    "next_action":  "Consume the first immutable G2 W2 release and publish an exact release-bound audit decision; if accepted and a prospective task/criterion is frozen, prepare and run the bounded matched comparison."
+}

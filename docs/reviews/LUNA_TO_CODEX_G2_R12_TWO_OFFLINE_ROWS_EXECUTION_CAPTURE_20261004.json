@@ -1,0 +1,25 @@
+{
+  "capture_status": "COMPLETE",
+  "exact_command": "python -B validation/scripts/run_g2_r12_picard_stage.py --root . --authorization research/benchmarks/G2_R12_CODEX_SCOPE_DECISION_v1.json --stage-dir results/validation/g2/decision_domain_r12_whole_hold_picard_v1",
+  "argv": [
+    "python",
+    "-B",
+    "validation/scripts/run_g2_r12_picard_stage.py",
+    "--root",
+    ".",
+    "--authorization",
+    "research/benchmarks/G2_R12_CODEX_SCOPE_DECISION_v1.json",
+    "--stage-dir",
+    "results/validation/g2/decision_domain_r12_whole_hold_picard_v1"
+  ],
+  "start_utc": "2026-10-04T08:00:24.003585Z",
+  "working_directory": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety",
+  "stdout_path": "docs/reviews/LUNA_TO_CODEX_G2_R12_TWO_OFFLINE_ROWS_EXECUTION_CAPTURE_20261004.stdout.bin",
+  "stderr_path": "docs/reviews/LUNA_TO_CODEX_G2_R12_TWO_OFFLINE_ROWS_EXECUTION_CAPTURE_20261004.stderr.bin",
+  "exit_code": 0,
+  "end_utc": "2026-10-04T08:00:28.551207Z",
+  "stdout_sha256": "a551461679e33eb3c9beb36934fb0b0cb7d1ccc7f17856834a5c7556715d48c7",
+  "stdout_bytes": 2556,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

@@ -1,0 +1,96 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/G4_INPUT_CRITERION_SUPPORT_v1.md": "7a7779550fb737622739dc40e7937d5c10475dc6e5b2e390df0e24d8f80ebda6",
+    "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v6.json": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "coordination/autonomous_w2/g4/G4_TO_G2_MATCHED_TASK_RESULT_v1.md": "c3ccc36da36c8d150237d5b335da2882aa7e91291431599f9ba3c8f81311c39f",
+    "coordination/autonomous_w2/g4/G4_TO_G2_V6_MATCHED_INPUT_MAPPING_V4.md": "3aaa1e65c8ca9a48ecc2ff1dca95c539a112caafc98b1d43812795ead252b9f1",
+    "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md": "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0",
+    "docs/CODEX_W2_V6_PEER_CONTINUATION.md": "fe1f1b7af52e5d854729cc5b44eeef787205c5745a26291cf3ccbaf3500c6f98",
+    "research/autonomous_w2/g4/matched_v6_task_development_v2/benchmark_v2.json": "6bdc22747e8248b1ae5eb7141c5fea0f8020e14a4e8b85529d38461bad7546f1",
+    "research/autonomous_w2/g4/matched_v6_task_development_v2/freeze_manifest_v3.json": "b5637ae30f0e20c7cdd8621a94c323ba25db620c4531feb5b56fc5b3a97d81ff",
+    "research/autonomous_w2/g4/matched_v6_task_development_v2/protocol_v2.json": "262bde676e676fa10763295f329ae0134daa2264919e33156dcd3abd758d8ecc",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/binding_preflight_v4.json": "70f1146aaf194f464ddf12b2d6e2b3bd02b77c1bc610725351b4c783a022fe92",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/freeze_receipt_v3.json": "ea9ddaa5c6c2f991c78e253f1cb0d921b69a5819ce2d15c94c7cc52491d1c18f",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/mapping_preflight_v3.json": "b3116894ed53f7a9efda17abb0e1f5d33521926a74304bce4c11347cd22ecd68",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/matched_phase_receipt_v3.json": "cba039075e1c6d9143bae7dc3dc3b319056ad10be023e5c246049848bcb11661",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/preflight_failure_ledger_v5.json": "e24c150481d9668e17de00f9624674030a8a58cae7026f92bf12858b3fba2bc9",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/saved_replay_preflight_v8.json": "d20c1bb699a6ffdee4afa3ba123a4e4438f883d9823e861e09db5f44e6327e75",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/source_closure_v3.json": "02b562d7f9bbb748efe8fa1fdb44bc29a2c63a6fc38233625771d5ccb8c7b113",
+    "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/v6/01_W2_G4_V6_ZERO/worker_result.json": "c9698fd0858e3dd80a7c9ad3ddae65567aeda1979c24e7ec7e2f6e2628b8d42b",
+    "validation/autonomous_w2/g4/auer_w2_worker_v2.py": "1f952110584d42e6d44fc54936a9c336dda49cfbc958d351482ee2e02ec7dfcc",
+    "validation/autonomous_w2/g4/freeze_matched_v6_w2_v2.py": "7dd973946017fa3f5c199eedd208c9979a4138eabb43383e986f1fa3fec7dc53",
+    "validation/autonomous_w2/g4/run_matched_v6_w2_v2.py": "9ef730b6921e39667e83ecffc8eff85c46e08c66728be8c9c5cf150b8afe1efd",
+    "validation/autonomous_w2/g4/v6_w2_worker_v2.py": "80e356ddc7812ffb526a2e94861dd1a794c32f8625bae2ccfe6b4f740bb8a8d8"
+  },
+  "assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md",
+    "sha256": "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0"
+  },
+  "blocker": "v6 worker accessed action[\"peer_saved_row_sha256\"] although the frozen protocol action has no such key; a binding defect terminated the phase before producer_start.json.",
+  "branch": "main",
+  "constraints": [
+    "No retry or later action after the binding defect.",
+    "G2 remains at 24/24 native attempts; no G2 producer was launched.",
+    "No batch 1,944, R5/800, confirmation rows, commit, push, reset or clean."
+  ],
+  "continuation": {
+    "path": "docs/CODEX_W2_V6_PEER_CONTINUATION.md",
+    "sha256": "fe1f1b7af52e5d854729cc5b44eeef787205c5745a26291cf3ccbaf3500c6f98"
+  },
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.12",
+    "shell": "PowerShell",
+    "timezone": "Asia/Saigon"
+  },
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempt_accounting": {
+    "auer_native_calls": 0,
+    "auer_native_limit": 3,
+    "auer_worker_launches": 0,
+    "retries": 0,
+    "v6_native_calls": 0,
+    "v6_native_limit": 3,
+    "v6_worker_launches": 1
+  },
+  "next_action": "Complete the self-contained Markdown report with preserved failure evidence and scoped inconclusive disposition; no retry in this comparison phase.",
+  "objective": "Compare G2 v6 and the local Auer reconstruction on the same three development actions under W2 caps; replay and report a scoped conclusion.",
+  "owner": "g4",
+  "peer_release_consumed": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "session": "DDWMR | LUNA-G2-SCOPE",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_status_observed": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+    "phase": "FINISHED",
+    "sequence": 18,
+    "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+  },
+  "peer_support": {
+    "path": "coordination/autonomous_w2/g2/G4_INPUT_CRITERION_SUPPORT_v1.md",
+    "sha256": "7a7779550fb737622739dc40e7937d5c10475dc6e5b2e390df0e24d8f80ebda6"
+  },
+  "phase": "ACTIVE",
+  "phase_result": {
+    "auer_native_calls": 0,
+    "auer_worker_invocations": 0,
+    "comparison_valid": false,
+    "compute_lock_released": true,
+    "frozen_actions": 3,
+    "retry_count": 0,
+    "status": "TECHNICAL_INCONCLUSIVE_PRELAUNCH_BINDING_DEFECT",
+    "v6_native_calls": 0,
+    "v6_worker_invocations": 1
+  },
+  "previous_status": {
+    "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_04.json",
+    "sha256": "98d8f9f98200f32db2fd0a74975b21a1dc7df929bffbed4a4b9a37cb1c6d16c7"
+  },
+  "sequence": 5,
+  "session": "DDWMR | LUNA-G4-AUER",
+  "utc": "2026-10-08T03:46:33.623701+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_baseline": "Shared tree was already dirty. This W2 continuation wrote only G4-owned coordination, validation, results, and docs prefixes; no peer or historical sources were edited."
+}

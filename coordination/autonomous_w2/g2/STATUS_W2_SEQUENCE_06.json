@@ -1,0 +1,73 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/AUDIT_REQUEST_TO_G4_v3.md": "43ba3175762186fcae8caeab639e83ffb29cf0b6211dcfdd6ff9710fc87cc0b8",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v2.json": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v3.json": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v3.json.sha256": "8517d1870b0fc41433fc8fb58ee563de44abc90b655b76b182a44ee9577239de",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v3.md": "0193967acece803cafe02f2ed35c48b287952eb5e81a0276e1bb3528cdf7f2fd",
+    "research/autonomous_w2/g2/development_plan_v3.json": "c0c50e98dd1abff6def0347cf44215e0109b7300bd02d581496608216b10b4da",
+    "research/autonomous_w2/g2/task_protocol_v1.json": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+    "results/validation/autonomous_w2/g2/development_v1/stage_receipt.json": "3339ee37e855d8f127dc31c2d43824130b2c603ad6bb44f37f470e41afc25c53",
+    "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "results/validation/autonomous_w2/g2/development_v3/freeze_receipt_v3.json": "deb9eeb5af4148e911dc0f69ebe91ec788a12b2487435055ae0ee0d07c6880ea",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v3.json": "9535421566db3d3556fdde869edc3f30a77ad5510712af4572131e4ef4192204",
+    "validation/autonomous_w2/g2/profile_v3.json": "d1b84b2b753c4e9d5df563331678b4bee271297b830f417b787245c3ae94376a"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit or push.",
+    "No peer source or manifest edits.",
+    "R5 800/800 remains NOT_RUN.",
+    "No G4 confirmation inputs/outcomes are run or inspected by G2.",
+    "All v1/v2 attempts remain preserved; no retries under those plans.",
+    "V3 is a frozen three-row candidate-only development plan with one launch per row."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_at_release": 12,
+    "cumulative_if_complete": 15,
+    "frozen_plan_rows": 3,
+    "remaining_after_plan_if_complete": 9
+  },
+  "next_action": "Run the three immutable v3 candidate rows once; preserve every receipt, then mutation-replay a saved proof row if one exists and consume G4's release-bound audit decision.",
+  "objective": "Complete bounded v3 development, independent replay/mutations and release-bound G4 audit; then issue a qualified G2 W2 disposition.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "PUBLISHED",
+  "previous_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v2.json",
+    "sha256": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad"
+  },
+  "previous_stage": {
+    "attempts_counted": 6,
+    "path": "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json",
+    "sha256": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "status_counts": {
+      "REPLAYED": 3,
+      "RESOURCE_UNKNOWN": 3
+    }
+  },
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v3.json",
+    "sha256": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "state": "FROZEN_ARITHMETIC_CORRECTION_CANDIDATE_FOR_G4_AUDIT_AND_BOUNDED_DEVELOPMENT"
+  },
+  "sequence": 6,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:29:29.162751+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared working tree is retained; G2 writes remain within G2-owned W2 prefixes."
+}

@@ -1,0 +1,15 @@
+# Assignment — DDWMR | LUNA-G2-SCOPE — R14 source-bound two-row candidate
+
+Read `AGENTS.md`, all four canonical `research_context` files, the R13 handoff, and `docs/reviews/CODEX_G2_R13_DIAGNOSTIC_CANDIDATE_REVIEW.md` first. This assignment prepares a **NO-GO candidate** for review. It authorizes no real row, native query, R5 study, retry, commit or push.
+
+1. Preserve all R5/R6/R10/R11/R12/R13 source and result bytes. Keep the R12 stopped intent and all R13 fixture evidence. Treat R5 source indices 0, 12 and 24 as consumed development observations, even though the R5 study manifest still says 800/800 `NOT_RUN`.
+2. Prepare a new versioned source-bound two-row stage using the R13 diagnostic transport. Bound a single exact R10 Picard worker entry point, canonical R5 query bytes, manifest/source closure, fixed resource limits and a separate future Codex GO. Write an intent before each worker call; persist a bounded diagnostic pair and the producer record when present; bind all raw hashes in a write-once terminal. An invalid, resource or interrupted outcome stops the pair and cannot be retried. The independent checker must replay the R10 record and recompute the declared paired decision, not trust the producer status.
+3. Make the independent checker resource bounded: inspect file type and byte size before content reads, hash by streaming with explicit caps, reject symlinks/reparse paths and extra artifacts, and bound JSON size/depth where applicable. For the worker, prove from the pinned source that it cannot create descendants or use a process-tree containment mechanism; the Windows process-group creation flag alone is insufficient. Keep overflow/timeout/capture-incomplete outcomes distinct and preserve partial evidence.
+4. Predeclare the next pair **before any output is observed** using this fixed rule: among R5 development groups with the same state `S_LOW_NEG` and horizon `T_250MS` as R12, take the first later group in canonical R5 manifest order whose zero and symmetric positive-voltage actions have never been attempted. The present manifest points to `S_LOW_NEG__D_OFFSET_LEFT__T_250MS`, nominal index **62** (`V_L0_R0`) then positive index **74** (`V_Lp1_Rp1`). Independently verify IDs, raw query hashes and all consumed-intent ledgers; if the rule or non-consumption check disagrees, stop without substituting another pair. Preserve the predeclared paired truth table and report development overlap.
+5. Build a fresh manifest/source closure and non-query interface evidence in a new namespace. No GO marker or executable receipt may be self-issued. Do not run either real row, the 800-row study, native `run_query`, or the old R12 stage. Return one detailed Markdown handoff for Codex review with hashes, exact source/authorization binding, bounded-resource argument, checker scope, two-row selection and explicit `NOT_RUN` ledger.
+
+Reply in exactly three short chat lines:
+
+`Session: DDWMR | LUNA-G2-SCOPE`  
+`Status: <DONE or BLOCKED; R14 0/2 real rows; R5 800/800 NOT_RUN>`  
+`Handoff: <absolute Markdown path>`

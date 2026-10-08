@@ -1,0 +1,52 @@
+{
+  "action_id": "W2_G2_DEV_001_ALTERNATIVE",
+  "attempt": 3,
+  "binding_path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_03.json",
+  "binding_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+  "checker": {
+    "elapsed_seconds_display_only": 10.047,
+    "launch_error": null,
+    "peak_memory_bytes": 14790656,
+    "rejection": null,
+    "replayed": true,
+    "returncode": 0,
+    "status": "COMPLETED",
+    "stdout_bytes": 962,
+    "stdout_sha256": "292d497db1ac54cd5245bb6b8e0d95b6d6bd035a013517c2da270c4c505ca96d"
+  },
+  "clip_beta_upper": "15276074917056108741500566373/79228162514264337593543950336",
+  "collision_margin_lower_m": "2670824871109264502891134307/79228162514264337593543950336",
+  "contact_margin_lower_N": "152161516478907364663119485379/79228162514264337593543950336",
+  "counted_as_native_configuration_attempt": true,
+  "internal_error_radius_full_hold": "1231904722609599851192049275/79228162514264337593543950336",
+  "interval_operations": 1643414,
+  "max_rational_bits": 2040,
+  "native_attempt_ordinal": 24,
+  "no_retry": true,
+  "progress_enclosure_m": [
+    "7208866586077414115959602677/19807040628566084398385987584",
+    "33809089754892191080072691477/79228162514264337593543950336"
+  ],
+  "reason_codes": [
+    "ALL_WHOLE_HOLD_AND_TASK_PREDICATES_PROVED"
+  ],
+  "replay_sha256": "38ba67273d56c798347f37dae16b74e5a3751e52f3eebeb53d6291b3e7b6ad92",
+  "row_sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6",
+  "safety_status": "CERTIFIED",
+  "schema": "G2_W2_V6_ATTEMPT_INTENT_v1",
+  "started_utc": "2026-10-07T11:33:30.824510+00:00",
+  "status": "REPLAYED",
+  "task_eligible": true,
+  "worker": {
+    "elapsed_seconds_display_only": 10.218,
+    "failure_reason": null,
+    "launch_error": null,
+    "parsed": true,
+    "peak_memory_bytes": 14958592,
+    "returncode": 0,
+    "schema": "G2_W2_CENTERED_RESIDUAL_ROW_v6",
+    "status": "COMPLETED",
+    "stdout_bytes": 416631,
+    "stdout_sha256": "f92e3e17cde90b50827493411488127a755d38b2724c5ba5c2f36d3292e2535f"
+  }
+}

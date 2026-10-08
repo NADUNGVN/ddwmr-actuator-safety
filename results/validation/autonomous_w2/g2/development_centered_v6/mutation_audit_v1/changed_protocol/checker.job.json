@@ -1,0 +1,32 @@
+{
+  "elapsed_seconds_display_only": 0.14,
+  "job": {
+    "active_processes_at_read": 0,
+    "peak_memory_bytes": 12550144,
+    "terminated_processes": 0,
+    "total_kernel_time_100ns": 625000,
+    "total_processes": 1,
+    "total_user_time_100ns": 0
+  },
+  "pid": 12812,
+  "process_assigned_before_resume": true,
+  "process_in_job": true,
+  "returncode": 2,
+  "status": "NONZERO_EXIT",
+  "stderr": {
+    "bytes_observed": 0,
+    "drain_stopped_on_overflow": false,
+    "overflow": false,
+    "prefix_base64": "",
+    "sha256_retained_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin_error": null,
+  "stdout": {
+    "bytes_observed": 137,
+    "drain_stopped_on_overflow": false,
+    "overflow": false,
+    "prefix_base64": "eyJyZWplY3Rpb24iOiAiUmVwbGF5UmVqZWN0OkZST1pFTl9QUk9UT0NPTF9PUl9QUk9GSUxFX0hBU0giLCAicmVwbGF5ZWQiOiBmYWxzZSwgInNjaGVtYSI6ICJHMl9XMl9DRU5URVJFRF9SRVNJRFVBTF9SRVBMQVlfRkFJTFVSRV92MSJ9DQo=",
+    "sha256_retained_prefix": "a8171972c2b1f9296ef343389cc790518631fb920db993c4fd34aaddf673619e"
+  },
+  "termination_reason": null
+}

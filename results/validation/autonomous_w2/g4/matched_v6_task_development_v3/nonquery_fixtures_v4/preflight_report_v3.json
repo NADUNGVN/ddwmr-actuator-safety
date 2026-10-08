@@ -1,0 +1,333 @@
+{
+  "auer_manifest_preflight_sha256": "b41b84247165d40940985b4398455682cba2fa814899220c74168046943156b9",
+  "cases": [
+    {
+      "binding_sha256": "937d28c1f5bb525dbfba8bfac23b014fbbdcddd280870de4bb0147086e40dfd2",
+      "comparison_id": "W2_G4_V6_ZERO",
+      "fixture": "valid_worker_route_boundary_01",
+      "numeric_producer_calls": 0,
+      "producer_entrypoint_stub_calls": 1,
+      "producer_start_marker_fixture_only": true,
+      "result": "PASS",
+      "saved_row_sha256": "9aa7a3f86c8572be81349cc2ffb9a67d67e7bd4a67b37c95b2c7208548a1593a"
+    },
+    {
+      "binding_sha256": "aa9ee910f57f6aa5a0be6d0dd681f337e72b32738ee0cceb83c986bef9a8d0d7",
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "fixture": "valid_worker_route_boundary_02",
+      "numeric_producer_calls": 0,
+      "producer_entrypoint_stub_calls": 2,
+      "producer_start_marker_fixture_only": true,
+      "result": "PASS",
+      "saved_row_sha256": "f5ad26449b65a1ccae7af7f7029209e66fc2af656a7fe3956f91d55822420ca7"
+    },
+    {
+      "binding_sha256": "a6a89a5321f34fa04f816e8d7ead87e2c0fdfbdd75b94b845a0d5e71cca4cd9b",
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "fixture": "valid_worker_route_boundary_03",
+      "numeric_producer_calls": 0,
+      "producer_entrypoint_stub_calls": 3,
+      "producer_start_marker_fixture_only": true,
+      "result": "PASS",
+      "saved_row_sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6"
+    },
+    {
+      "fixture": "missing_required_saved_row_hash",
+      "reason": "REQUIRED_BINDING_FIELD_MISSING:peer_saved_row_sha256",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "wrong_saved_row_hash_pair",
+      "reason": "SAVED_ROW_PATH_HASH_PAIR_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "wrong_saved_row_path",
+      "reason": "PATH_ESCAPES_PROJECT:PEER_SAVED_ROW",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "wrong_action_id",
+      "reason": "OUTER_BINDING_CORE_ACTION_ID_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "wrong_physical_input_digest",
+      "reason": "CANONICAL_PHYSICAL_INPUT_BINDING",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "changed_peer_release_pin",
+      "reason": "PEER_RELEASE_BINDING_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "changed_core_hash_pin",
+      "reason": "CORE_BINDING_PATH_HASH_PAIR_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "changed_source_pin",
+      "reason": "SOURCE_PIN_MISMATCH:coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "duplicate_action_mapping",
+      "reason": "DUPLICATE_FROZEN_ACTION_MAPPING",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "missing_action_mapping",
+      "reason": "FROZEN_ACTION_COUNT_NOT_THREE",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "stale_receipt_reference",
+      "reason": "AUTHORITATIVE_FREEZE_RECEIPT_PATH_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "stale_closure_reference",
+      "reason": "RECEIPT_SOURCE_CLOSURE_PATH_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "stale_receipt_closure_hash",
+      "reason": "RECEIPT_SOURCE_CLOSURE_HASH_MISMATCH",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "comparison_id": "W2_G4_AUER_ZERO",
+      "fixture": "valid_auer_worker_route_boundary_01",
+      "native_calls": 0,
+      "native_case_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "producer_stub_calls": 1,
+      "result": "PASS"
+    },
+    {
+      "comparison_id": "W2_G4_AUER_NOMINAL",
+      "fixture": "valid_auer_worker_route_boundary_02",
+      "native_calls": 0,
+      "native_case_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "producer_stub_calls": 2,
+      "result": "PASS"
+    },
+    {
+      "comparison_id": "W2_G4_AUER_ALTERNATIVE",
+      "fixture": "valid_auer_worker_route_boundary_03",
+      "native_calls": 0,
+      "native_case_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "producer_stub_calls": 3,
+      "result": "PASS"
+    },
+    {
+      "fixture": "wrong_action_voltage",
+      "reason": "AUER_ACTION_VOLTAGE_OR_ORDER_MISMATCH:1",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "wrong_physical_digest",
+      "reason": "AUER_ACTION_PHYSICAL_DIGEST_MISMATCH:1",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "duplicate_manifest_mapping",
+      "reason": "AUER_DUPLICATE_MANIFEST_MAPPING",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "missing_manifest_mapping",
+      "reason": "AUER_CANONICAL_CASE_COUNT_NOT_THREE",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_case_path_escape",
+      "reason": "AUER_PATH_INVALID:CASE",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_case_wrong_voltage",
+      "reason": "AUER_NATIVE_CASE_ACTION_VOLTAGE",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_case_wrong_initial_box",
+      "reason": "AUER_NATIVE_CASE_INITIAL_BOX",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_case_wrong_labels",
+      "reason": "AUER_NATIVE_CASE_FIXED_LABEL_SET",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_case_wrong_horizon",
+      "reason": "AUER_NATIVE_CASE_HORIZON",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "native_binding_missing_required_field",
+      "reason": "AUER_NATIVE_BINDING_FIELD_MISSING:resource_profile_path",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "stale_profile_closure_path",
+      "reason": "AUER_PROFILE_SOURCE_CLOSURE_PATH_STALE",
+      "result": "PASS_REJECTED"
+    },
+    {
+      "fixture": "actual_python_module_entrypoint_v6",
+      "native_calls": 0,
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "fixture": "actual_python_module_entrypoint_auer",
+      "native_calls": 0,
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "count": 3,
+      "fixture": "auer_producer_stub_route_count",
+      "result": "PASS"
+    },
+    {
+      "count": 3,
+      "fixture": "producer_stub_route_count",
+      "result": "PASS"
+    },
+    {
+      "decision": "CONTINUE_VALID_COMPLETION",
+      "fixture": "completed_valid_replayed",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "CONTINUE_PROOF_COMPLETE_UNKNOWN",
+      "fixture": "completed_proof_unknown",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "CONTINUE_EXPLICIT_WORKER_RESOURCE_LIMIT",
+      "fixture": "explicit_arithmetic_or_worker_resource",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "CONTINUE_EXPLICIT_RESOURCE:WALL_LIMIT",
+      "fixture": "explicit_supervisor_wall",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "CONTINUE_EXPLICIT_RESOURCE:CPU_LIMIT",
+      "fixture": "explicit_supervisor_cpu",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "CONTINUE_EXPLICIT_RESOURCE:STDOUT_OR_STDERR_LIMIT",
+      "fixture": "explicit_supervisor_output",
+      "result": "PASS",
+      "stop": false
+    },
+    {
+      "decision": "STOP_WORKER_IMPLEMENTATION_FAILURE",
+      "fixture": "binding_or_replay_failure",
+      "result": "PASS",
+      "stop": true
+    },
+    {
+      "decision": "STOP_COMMON_REPLAY_MISSING_OR_FAILED",
+      "fixture": "common_replay_missing",
+      "result": "PASS",
+      "stop": true
+    },
+    {
+      "decision": "STOP_AMBIGUOUS_OR_FAILED_CHILD:JOB_LIMIT_OR_CHILD_FAILURE",
+      "fixture": "ambiguous_child_exit",
+      "result": "PASS",
+      "stop": true
+    },
+    {
+      "decision": "STOP_AMBIGUOUS_OR_FAILED_CHILD:NONZERO_EXIT",
+      "fixture": "nonzero_exit_even_if_error_mentions_limit",
+      "result": "PASS",
+      "stop": true
+    },
+    {
+      "fixture": "common_scorer_valid_record_replay",
+      "native_calls": 0,
+      "predicate_status": "PASS_ON_SUPPLIED_TUBE",
+      "replay": {
+        "certificate_emitted": false,
+        "predicate_status": "PASS_ON_SUPPLIED_TUBE",
+        "recorded_work_counters_trusted": false,
+        "replay_work": {
+          "completed_results": 5874,
+          "max_completed_result_bits": 257,
+          "max_observed_result_bits": 257,
+          "max_preoperation_estimate_bits": 258,
+          "max_rational_bits": 32768,
+          "max_rational_operations": 2000000,
+          "operation_attempts": 6039,
+          "operations_started": 6039
+        },
+        "replayed": true,
+        "semantic_fields_compared": [
+          "certificate_emitted",
+          "collision_pose_semantics",
+          "fixed_label_semantics",
+          "full_closed_hold_covered",
+          "inputs",
+          "ode_tube_proof_replayed",
+          "predicate_status",
+          "schema",
+          "segment_checks",
+          "segment_count",
+          "segments",
+          "segments_sha256",
+          "shared_arithmetic"
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "fixture": "common_scorer_wrong_horizon_rejected",
+      "native_calls": 0,
+      "replay": {
+        "detail": "common replay horizon differs from frozen task",
+        "reason": "invalid_or_tampered_tube",
+        "replayed": false
+      },
+      "result": "PASS"
+    },
+    {
+      "fixture": "common_scorer_wrong_initial_state_rejected",
+      "native_calls": 0,
+      "replay": {
+        "detail": "common replay initial state differs from frozen task",
+        "reason": "invalid_or_tampered_tube",
+        "replayed": false
+      },
+      "result": "PASS"
+    }
+  ],
+  "checks_count": 47,
+  "closure_fixture_sha256": "da2a8b59aaa56cde6e0418297bc5fafba5d0e4de054105d215a2a33f65aa4e14",
+  "fail_count": 0,
+  "freeze_fixture_sha256": "0e383818fe923be2d08d480dbb9089912e761e54880fe1f5d785cca0a5f5322b",
+  "native_calls": 0,
+  "pass_count": 47,
+  "producer_invocations": 0,
+  "producer_marker_written_by_fixtures_only": true,
+  "receipt_fixture_sha256": "bfec9a8b3cd2cbb0a39b374e5acd1955e22c27d5eb414a3ac119d7c789599a1d",
+  "result": "PASS_NONQUERY_FIXTURES",
+  "schema": "ddwmr-g4-w2-v3-nonquery-setup-and-stop-fixtures",
+  "session": "DDWMR | LUNA-G4-AUER"
+}

@@ -1,0 +1,43 @@
+{
+    "schema":  "ddwmr-g4-r11-stage-authorization-v1",
+    "decision":  "GO",
+    "lane":  "DDWMR | LUNA-G4-AUER",
+    "authorization_receipt_project_relative":  "results/validation/g4/auer2013/protocol_v3_r11_batch/authorizations/stage_01.json",
+    "review_identity":  {
+                            "review_path":  "docs/reviews/CODEX_G4_AUER_R11_R2_STAGE_01_REVIEW.md",
+                            "review_sha256":  "180372e0741b77df6d786cfe18817d8c9dbd358654cbe5c6e058bd7a457eb1df",
+                            "reviewed_candidate_manifest_sha256":  "193dbead525d1a1c2fae00920a2ff385e7281a6a28aae00e69d72ea7778d106d",
+                            "reviewed_source_closure_sha256":  "dbe23888fac40caf518009dd96f888e1da45eace388d9ace8cffe906074cbf7b"
+                        },
+    "candidate":  {
+                      "manifest_path":  "research/benchmarks/G4_AUER_BATCH_FREEZE_MANIFEST_CANDIDATE_v11_R2.json",
+                      "manifest_sha256":  "193dbead525d1a1c2fae00920a2ff385e7281a6a28aae00e69d72ea7778d106d",
+                      "manifest_sidecar_path":  "research/benchmarks/G4_AUER_BATCH_FREEZE_MANIFEST_CANDIDATE_v11_R2.sha256",
+                      "source_closure_path":  "research/benchmarks/G4_AUER_MATCHED_SOURCE_CLOSURE_v3_R11_R2.json",
+                      "source_closure_sha256":  "dbe23888fac40caf518009dd96f888e1da45eace388d9ace8cffe906074cbf7b",
+                      "stage_schedule_path":  "research/benchmarks/G4_AUER_R10_STAGE_SCHEDULE.json",
+                      "stage_schedule_sha256":  "212b6a09526379188acad46aa05070626b5248a76bc64047d18dd47f9c136e9c",
+                      "canonical_output_root_project_relative":  "results/validation/g4/auer2013/protocol_v3_r11_batch",
+                      "canonical_output_root_absolute":  "D:/Research/Teacher_Vien/projects/ddwmr-actuator-safety/results/validation/g4/auer2013/protocol_v3_r11_batch"
+                  },
+    "authorization_scope":  {
+                                "stage_id":  "stage_01",
+                                "exact_ordered_query_ids_sha256_lf":  "80383e5344268b6a7f402579615d9dbe076fd38c30b9a0bd8741951cc359c8f2",
+                                "exact_query_id_count":  11,
+                                "canonical_output_root_project_relative":  "results/validation/g4/auer2013/protocol_v3_r11_batch",
+                                "canonical_output_root_absolute":  "D:/Research/Teacher_Vien/projects/ddwmr-actuator-safety/results/validation/g4/auer2013/protocol_v3_r11_batch",
+                                "stage_directory_project_relative":  "results/validation/g4/auer2013/protocol_v3_r11_batch/stage_01",
+                                "authorization_receipt_project_relative":  "results/validation/g4/auer2013/protocol_v3_r11_batch/authorizations/stage_01.json",
+                                "method_order":  [
+                                                     "r3",
+                                                     "auer"
+                                                 ],
+                                "one_stage_only":  true,
+                                "one_invocation_per_method_per_id":  true,
+                                "one_read_only_composition_audit_per_method_per_id":  true,
+                                "no_retry_or_id_substitution":  true,
+                                "resource_limits_unchanged":  true,
+                                "batch_start_authorized":  true
+                            },
+    "effect":  "One exact stage_01 execution only; no later stage, scientific comparison, gate pass, or retry authority."
+}`n

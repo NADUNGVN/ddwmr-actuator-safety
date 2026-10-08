@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "ReplayReject:RECOMPUTED_FIELDS_MISMATCH:slabs",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/omitted_last_slab/binding.json",
+  "binding_sha256": "56ea5ea6f990063314bd8e455ec0ae8684003d76ea781c57b0341b3c3ceede51",
+  "elapsed_seconds_display_only": 10.031,
+  "expected_rejection_class": "RECOMPUTED_FIELDS_MISMATCH",
+  "job_status": "NONZERO_EXIT",
+  "name": "omitted_last_slab",
+  "peak_memory_bytes": 14741504,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/omitted_last_slab/record.json",
+  "record_sha256": "e7ff9b0555c88b74a710af818477b0e074f134ec020daa7087e81187f18e234d",
+  "rejected": true,
+  "returncode": 2
+}

@@ -1,0 +1,29 @@
+{
+  "comparison_series_order": 16,
+  "distance_method_id": "DIRECTED_DYADIC_EUCLIDEAN_MIN_DISTANCE_V1",
+  "distance_rounding_contract": "exact_floor_ceil_integer_shift_division; all primitives charged to Budget",
+  "distance_rounding_precision_bits": 24,
+  "exp_taylor_degree": 16,
+  "hash_protocol_id": "ddwmr-semantic-json-sha256-v2",
+  "id": "G2_W2_R3_BASELINE_PILOT_ORDER_V1",
+  "initial_state_leaf_limit": 1,
+  "initial_state_split_depth": 0,
+  "integration_panels": 1,
+  "max_rational_bits": 16384,
+  "max_rational_operations": 5000000,
+  "outer_worker_memory_cap_bytes": 1073741824,
+  "outer_worker_wall_cap_seconds": 60,
+  "parameter_leaf_limit": 1,
+  "parameter_split_depth": 0,
+  "predictor_depth": 1,
+  "reason_for_cap": "Reuses the prior R3 pilot numerical orders (exp=16, trig=18, comparison=16, sqrt=24, one whole-hold panel) and pins the W2 common outer 60 s / 1 GiB envelope. The operation cap is 5,000,000 and bit cap 16,384; any resource UNKNOWN is retained.",
+  "resource_diagnostic_schema": "ddwmr-g2-resource-diagnostic-v1",
+  "specification_bundle_sha256": "93e7cea7c78d48a1843c111937bf6cbf1436e001dbe5f46b8b42887b16806772",
+  "sqrt_bisections": 24,
+  "time_slab_count": 1,
+  "trig_taylor_degree": 18,
+  "wall_seconds_per_query": {
+    "den": "1",
+    "num": "60"
+  }
+}

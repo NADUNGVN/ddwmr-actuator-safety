@@ -1,0 +1,170 @@
+{
+  "artifacts": {
+    "peer_audit": {
+      "path": "coordination/autonomous_w2/g2/G4_WRAPPER_INPUT_SCORER_AUDIT_v3.md",
+      "sha256": "7615d8057b2461973dd1d78901d7250a461e20e9abbc05bf502844494d3aae00"
+    },
+    "source_input_inventory": {
+      "path": "coordination/autonomous_w2/g2/G4_V3_WRAPPER_INPUT_SCORER_HASH_INVENTORY_v3.json",
+      "sha256": "a5a5d2af2990c28c9d8572cb2b883fd1f854a4944ca43030095df62b9f35772a",
+      "entries": 106
+    },
+    "g4_status_provenance_addendum": {
+      "path": "coordination/autonomous_w2/g2/G4_STATUS_POINTER_PROVENANCE_ADDENDUM_v3.md",
+      "sha256": "f709f17905ee2c9a96ec72906502591fa382a34dd776ef4535884dbf84b64577"
+    },
+    "v6_receipt_schema_erratum": {
+      "path": "docs/reviews/autonomous_w2/g2/V6_ATTEMPT_RECEIPT_SCHEMA_ERRATUM_v1.md",
+      "sha256": "a20fb713fe9d6ee3893b0cb652b23a5bd44b94b053ab896babe185db38bea223",
+      "revalidated_receipts": 4
+    },
+    "g4_saved_nonquery_report_observed": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/preflight_report_v3.json",
+      "sha256": "71562e7581ab252e50eb8e37d768298ded1aa5f5d83181759a3a47d458eb30bc",
+      "result": "PASS_NONQUERY_FIXTURES",
+      "checks": "47/47",
+      "native_calls": 0,
+      "source_closure_current_for_worker": false
+    }
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No G4-owned source, manifest, profile, input, result, release, or status file was modified.",
+    "No native query, worker, producer, fixture, replay, preflight runner, stage, retry, or study was run by G2 in this continuation.",
+    "No inspection of held-out G4 outcomes; observed only the v3 development candidate and G4 nonquery fixture report.",
+    "G2 release v6, receipts, rows, replays, and STATUS sequence 18 remain byte-identical.",
+    "R5 remains 800/800 NOT_RUN; Auer 1,944 batch remains NOT_RUN.",
+    "No branch switch, commit, or push."
+  ],
+  "gate_statuses": {
+    "G1": "PASS_RESTRICTED_REDUCED_MODEL_SCOPE",
+    "G2": "UNVERIFIED",
+    "G3": "UNVERIFIED",
+    "G4": "UNVERIFIED",
+    "physical_platform_correspondence": "UNVERIFIED",
+    "overall": "HOLD"
+  },
+  "handoff": {
+    "path": "docs/reviews/autonomous_w2/g2/G2_W2_G4_WRAPPER_INPUT_SCORER_AUDIT_FULL_HANDOFF_v3.md",
+    "sha256": "588551c3ed7d72104065fa2944ecbc2387e7d5efce90f4f5152c08657f7901d4"
+  },
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 24,
+    "g4_confirmation_rows_run_by_g2": 0,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "remaining_attempts": 0,
+    "v1_attempts": 6,
+    "v2_attempts": 6,
+    "v3_attempts": 3,
+    "v4_attempts": 3,
+    "v5_attempts": 3,
+    "v6_attempts": 3
+  },
+  "next_action": "G4 should repair benchmark and top-level native-snapshot pointers, complete explicit fail-before-marker and scorer mutations, rerun a source-bound nonquery preflight, and publish a new immutable G4 STATUS before any producer.",
+  "objective": "Audit current G4 v3 wrapper/input/scorer, close the v6 terminal-receipt erratum, and send hash-bound correction notes through G2-owned files; no query execution.",
+  "owner": "g2",
+  "peer_release_consumed": {
+    "session": "DDWMR | LUNA-G4-AUER",
+    "g2_release_path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "g2_release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "g4_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v4.json",
+    "g4_audit_sha256": "c031ce24dfb537d2b0abfe02ed70b3e7146741851c917ff417b01996ecf8f4eb",
+    "decision": "ACCEPT_FOR_SCOPED_VALIDATION",
+    "contribution_disposition": "NO_SUPPORTED_CONTRIBUTION_ON_TESTED_SCOPE",
+    "cross_method_task_utility": "UNMEASURED_NOT_REFUTED"
+  },
+  "peer_response": {
+    "path": "coordination/autonomous_w2/g2/G4_PEER_RESPONSE_TO_V6_AUDIT_v1.md",
+    "release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "sha256": "a220b9dcbd09488c669de9aab1fe33f1fb152bbd10f3c9a001b4e07c2813bcdc"
+  },
+  "peer_status_observed": {
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "98d8f9f98200f32db2fd0a74975b21a1dc7df929bffbed4a4b9a37cb1c6d16c7",
+    "sequence": 4,
+    "phase": "FINISHED",
+    "audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v4.json",
+    "audit_sha256": "c031ce24dfb537d2b0abfe02ed70b3e7146741851c917ff417b01996ecf8f4eb",
+    "decision": "ACCEPT_FOR_SCOPED_VALIDATION",
+    "peer_release_manifest_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "observed_utc": "2026-10-08T01:21:08Z"
+  },
+  "phase": "FINISHED",
+  "previous_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v5.json",
+    "sha256": "1fa1a1e14f311a49fdf6f92b79ecdb362a69004317ee5a512be3bfa0efe8776e"
+  },
+  "previous_stage": {
+    "attempts_counted": 3,
+    "path": "results/validation/autonomous_w2/g2/development_v4/stage_receipt.json",
+    "sha256": "2e53f8d2e3d64c93d4a86a08856fe0d359d066c5c3b4f6fc93c8f170dedc168b",
+    "status_counts": {
+      "REPLAYED": 3
+    }
+  },
+  "previous_status": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+    "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+  },
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "state": "FROZEN_FOR_G4_AUDIT_AND_BOUNDED_DEVELOPMENT"
+  },
+  "saved_record_replay": {
+    "center_slabs_per_row": 256,
+    "evidence_inventory_entries_verified": 139,
+    "native_rows_added": 0,
+    "path": "results/validation/autonomous_w2/g2/peer_replay_v6_v1.json",
+    "proof_fields_per_row": 46,
+    "replayed_rows": 3,
+    "sha256": "3d3b9ea086b6fb94e94037df896d41ea526f998c2bd64700b6b24a11334ffcfc"
+  },
+  "scientific_disposition": "G2 centered-residual contribution remains NO_SUPPORTED_CONTRIBUTION_ON_TESTED_SCOPE; cross-method task utility remains UNMEASURED_NOT_REFUTED. The current G4 v3 candidate is not ready to freeze because candidate provenance pointers conflict and the saved preflight source closure is stale for the current worker.",
+  "sequence": 19,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "stage_result": {
+    "all_required_mutations_rejected": true,
+    "attempts_counted": 3,
+    "mutation_audit_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/mutation_audit_report.json",
+    "mutation_audit_sha256": "83039f92675e6d1ce2f52f1df40e67e8337dbeddaddc2124167bb84f2b736673",
+    "path": "results/validation/autonomous_w2/g2/development_centered_v6/stage_receipt.json",
+    "safety_certified_rows": 3,
+    "sha256": "9b906c008af8ff51f92bb55d4f1fe072f9a4ebdc48f4caf64c29feec58f0aa36",
+    "status_counts": {
+      "REPLAYED": 3
+    },
+    "task_eligible_rows": 1,
+    "task_ineligible_by_upper_rows": 2
+  },
+  "utc": "2026-10-08T08:10:48Z",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared branch main at HEAD 94c60f627a2ce1a8d52101050bdc0ce9d2e59afe. Only new G2-owned audit/handoff/inventory/provenance/STATUS sequence 19 and mutable G2 STATUS were written; G4 files were read only.",
+  "peer_input_support": {
+    "path": "coordination/autonomous_w2/g2/G4_INPUT_CRITERION_SUPPORT_v1.md",
+    "sha256": "7a7779550fb737622739dc40e7937d5c10475dc6e5b2e390df0e24d8f80ebda6"
+  },
+  "current_peer_status_observed": {
+    "session": "DDWMR | LUNA-G4-AUER",
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "06d77d3ed5cdb942c92df5826d0d2c80f4eac0dac6caee871685e0569bd4c309",
+    "sequence_path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_08.json",
+    "sequence_sha256": "06d77d3ed5cdb942c92df5826d0d2c80f4eac0dac6caee871685e0569bd4c309",
+    "sequence": 8,
+    "phase": "ACTIVE",
+    "observed_utc": "2026-10-08T08:10:48Z",
+    "note": "Status predates saved preflight report and current Auer worker bytes; see G4_STATUS_POINTER_PROVENANCE_ADDENDUM_v3.md."
+  },
+  "peer_nonquery_report_observed": {
+    "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/preflight_report_v3.json",
+    "sha256": "71562e7581ab252e50eb8e37d768298ded1aa5f5d83181759a3a47d458eb30bc",
+    "reported_result": "PASS_NONQUERY_FIXTURES",
+    "checks": "47/47",
+    "numeric_calls": 0,
+    "audit_caveat": "Its source closure pins an earlier Auer worker hash; report does not bind preflight source hash."
+  }
+}

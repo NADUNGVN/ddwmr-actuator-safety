@@ -1,0 +1,91 @@
+{
+  "schema": "ddwmr-g4-w2-release-audit-state-v4",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "published_utc": "2026-10-07T17:07:16Z",
+  "peer_session": "DDWMR | LUNA-G2-SCOPE",
+  "peer_status_path": "coordination/autonomous_w2/g2/STATUS.json",
+  "peer_status_sequence_observed": 17,
+  "peer_status_sha256_observed": "04542186C6122529157AD9A5F51398B5958DDBD197882DF4C75BA417F56AAEBC",
+  "peer_release_path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+  "peer_release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+  "decision": "ACCEPT_FOR_SCOPED_VALIDATION",
+  "decision_scope": "The three frozen G2 v6 development rows and the declared clip-interior synthetic task only. This decision is not matched confirmation, not support for arbitrary v6 inputs, and not G2/G4 gate acceptance.",
+  "proof_audit": {
+    "release_json_and_sidecar_match": true,
+    "declared_source_files_verified": "31/31",
+    "declared_evidence_inventory_files_rehashed_with_size": "139/139",
+    "g2_saved_checker_replay": "3/3; each replay recomputed 46 proof fields and 256 ordered center slabs",
+    "independent_g4_exact_fraction_audit": "all three rows passed; independently rebuilt parameter matrix bounds, logarithmic norms, exponential/residual radius, 256 Taylor partial slabs, clip first-exit, contact, collision, and progress inequalities",
+    "independent_g4_pose_collision_audit": {
+      "status": "COMPLETED",
+      "rows": 3,
+      "all_pass": true,
+      "audit_result_path": "results/validation/autonomous_w2/g4/pose_collision_audit_v1.json",
+      "audit_result_sha256": "B5D13CDEF35597CC8E527B5022AB51CEA5C1A775D245C2066B91308214321D5D",
+      "receipt_path": "results/validation/autonomous_w2/g4/pose_collision_audit_receipt_v1.json",
+      "receipt_sha256": "416A837E9E72C18E60C0DB31E4911584F91CF0A0297C08335590181CFAA36400",
+      "auditor_path": "validation/autonomous_w2/g4/audit_g2_v6_pose_collision.py",
+      "auditor_sha256": "EA0A887C6859236F018088E4A8A8A471ED79459793D9A7B0B0B59F5B0F3472E7",
+      "runner_path": "validation/autonomous_w2/g4/run_pose_collision_audit_capped.py",
+      "runner_sha256": "FCC78F93117072E4FC93AAAF27C90ADCD7380A31C07C39782257D8F1E523676C",
+      "wall_seconds_display_only": 0.125,
+      "peak_memory_bytes": 12034048,
+      "job_processes": 1,
+      "native_attempts_added": 0
+    },
+    "supervised_exact_fraction_audit": {
+      "status": "COMPLETED",
+      "rows": 3,
+      "all_pass": true,
+      "audit_result_path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_result.json",
+      "audit_result_sha256": "D4077BCAFEBD31EDE5B6BD072E7F5FD510DA08C25A57FA10D015F154E88FCE5E",
+      "receipt_path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_receipt.json",
+      "receipt_sha256": "1349DCEE00864C32DEA898A28094FCA2BF1F08B3689113872350E4F0610DB321",
+      "runner_path": "validation/autonomous_w2/g4/run_exact_bound_audit_capped.py",
+      "runner_sha256": "8BF7C1570BC10991833AD1537FAA48E5092FAA71F159A3266231163A0ECD4AA0",
+      "wall_seconds_display_only": 17.968,
+      "peak_memory_bytes": 14295040,
+      "job_processes": 1,
+      "native_attempts_added": 0
+    },
+    "shared_arithmetic": "G2 producer/checker share rational_interval_v3.I/Budget; G4's second bound derivation uses a separate stdlib fractions.Fraction interval/Taylor implementation.",
+    "native_attempts_added_by_g4": 0
+  },
+  "finite_result": {
+    "safety_certified_actions": 3,
+    "eligible_task_actions": 1,
+    "zero_and_nominal": "CERTIFIED for collision/contact but uniformly below the frozen 7/20 m progress threshold by their upper bounds",
+    "alternative": "CERTIFIED for collision/contact and above the frozen threshold by its lower bound",
+    "scope": "One two-second synthetic task, a narrow positive-width state box and [0.9999,1.0001]^12 fixed-label image; symmetric held voltages; proved clip-interior branch."
+  },
+  "nonblocking_reporting_defect": "G2 v6 per-attempt attempt_receipt.json retains the G2_W2_V6_ATTEMPT_INTENT_v1 schema label. The stage receipt, row schema, source bindings, replay hashes, and recomputed mathematical fields are intact; this label defect is not treated as a safety-proof defect. Preserve it and publish any correction as a new artifact before future stages.",
+  "novelty_and_comparison": {
+    "generic_centered_comparison_novelty": "NOT_SUPPORTED; logarithmic-norm/variation-of-constants comparison, affine Taylor reference validation, parameter interval bounds, and tube predicates are established generic methods.",
+    "ddwmr_specific_original_inequality": "NONE_IDENTIFIED_IN_V6_BEYOND_SPECIALIZATION_AND_COEFFICIENT_ACCOUNTING",
+    "matched_comparison": "NOT_RUN; no outcome-independent fresh input family or cross-method primary criterion/resource effect was frozen on this release. The three G2 v6 rows are consumed development data, and the released checker/input parser hardcodes their protocol/action set.",
+    "cross_method_task_utility": "UNMEASURED; the finite v6 task distinction is relative to its zero/nominal comparators and does not show that Auer or R3 cannot certify the alternative.",
+    "package_disposition": "NO_SUPPORTED_CONTRIBUTION_ON_TESTED_SCOPE",
+    "global_novelty_claim": "Not made; this result does not prove absence of every possible DDWMR-specific contribution."
+  },
+  "work_counts": {
+    "g2_native_attempts": "24/24 consumed; v6 added 3; no allowance remains",
+    "g2_held_out_rows": 0,
+    "g4_native_smoke_attempts_per_method": 0,
+    "g4_development_producer_attempts_per_method": 0,
+    "g4_fresh_confirmation_rows_per_method": 0,
+    "g4_read_only_saved_replays": 3,
+    "g4_supervised_nonquery_audits": 2,
+    "historical_r19_r20_pairs": "10 descriptive development pairs; Auer 9/10 and R3 6/10; not reused",
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "legacy_1944_query_batch": "not run"
+  },
+  "next_action": "Close this W2 G4 package with the scoped negative contribution verdict. Any new numerical study needs a new independently justified claim/task, a G4-owned supported-input adapter, a new source/task/resource freeze, and unused inputs; it cannot relabel v6 development data as confirmation.",
+  "gate_statuses": {
+    "G1": "PASS_RESTRICTED_REDUCED_MODEL_SCOPE",
+    "G2": "UNVERIFIED",
+    "G3": "UNVERIFIED",
+    "G4": "UNVERIFIED",
+    "physical_platform_correspondence": "UNVERIFIED",
+    "overall": "HOLD"
+  }
+}

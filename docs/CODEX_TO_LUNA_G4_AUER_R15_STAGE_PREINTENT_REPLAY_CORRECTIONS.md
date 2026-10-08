@@ -1,0 +1,14 @@
+# Assignment — DDWMR | LUNA-G4-AUER — R15 pre-intent stop replay
+
+Read `AGENTS.md`, all four canonical `research_context` files, `docs/reviews/CODEX_G4_AUER_R14_STAGE_REPLAY_AND_GO_BINDING_REVIEW.md`, the R14 handoff/protocol and exact R14 source first. Work in a new versioned G4 candidate namespace. Preserve the reviewed R9/R11/R12/R13/R14 files and results byte-for-byte. Do not commit, push, clean, issue an executable GO receipt, run a query, retry an observed ID or start a stage in this assignment.
+
+1. Correct the runner/checker mismatch when R3 fails before its invocation intent **after one or more completed ID pairs**. The present runner sets `prelaunch_stop` based on an empty method list for the current ID, even when stage `progress` is nonempty; its checker accepts `prelaunch_stop` only for an empty stage. Define and enforce one exact stop disposition for each prefix length 0–9. Bind the completed prefix, failing next ID, method, remaining `NOT_RUN` IDs, stage terminal and method/audit counters without calling the next worker. Preserve the one-shot no-retry rule.
+2. Handle failures after a query/method directory is created but before its invocation intent is written. The runner currently can leave an empty method namespace while recording a zero-attempt prelaunch stop, which its checker rejects. Keep the existing bytes and directory evidence; do not delete or reinterpret a worker call. Make any source-generated terminal either independently replayable with explicit conservative accounting or a clearly classified unresolved class-3 stop that cannot restart or be reported as a complete comparison.
+3. Add non-query **full-stage** fixtures for: a valid first pair followed by a pre-intent R3 failure at ID 2; the same after a later valid prefix; an empty method namespace before intent at ID 1 and after a prefix; read-only restart refusal; and negative counter/prefix/stop tampering. Check analogous pre-intent paths for Auer and the audit handoff. Fixtures may use synthetic bytes only and must not invoke a live worker, native proof replay or composition auditor. Report expected versus observed classifications and exact source hashes.
+4. Preserve the 1,944-ID universe, R9/R11 historical strata, R12 1,942-ID order and same ten first-stage IDs. Refresh the versioned manifest, closure, schedule, sidecars, templates and fixture report only after the source paths agree. Add an erratum for the R14 handoff's incorrect R13 manifest hash; the actual R13 raw hash is `a583703d84eb9285b1ff12647bbfb40c7a45e2b4b92cfba0035c8bbf49c4ba82`. Stop and report any remaining source-generated replay gap.
+
+Write a detailed Markdown handoff under `docs/reviews/LUNA_TO_CODEX_G4_AUER_R15_..._FULL_HANDOFF.md`. Reply in exactly three short chat lines:
+
+`Session: DDWMR | LUNA-G4-AUER`  
+`Status: <DONE or BLOCKED; no new query; R15 first stage 0/10 attempted>`  
+`Handoff: <absolute Markdown path>`

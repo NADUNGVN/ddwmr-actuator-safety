@@ -1,0 +1,19 @@
+{
+  "profile_id": "G2_W2_SIGNED_VOF_EXACT_INTERVAL_V1",
+  "time_slabs": 16,
+  "slab_duration_s": "1/8",
+  "matrix_taylor_degree": 20,
+  "tail_bound": "q^(N+1)/(N+1)! / (1-q/(N+2)); require q/(N+2)<1, q=||A_aug||_inf*h",
+  "sqrt_bisections": 48,
+  "interval_operation_cap": 5000000,
+  "rational_bit_cap": 16384,
+  "worker_wall_cap_seconds": 60,
+  "worker_memory_cap_bytes": 1073741824,
+  "worker_process_cap": 1,
+  "stdout_cap_bytes": 8388608,
+  "stderr_cap_bytes": 1048576,
+  "phase_wall_cap_seconds": 7200,
+  "partial_slab_policy": "enclose exp(A*tau) for all tau in [0,h] by interval Taylor terms and an outward symmetric norm tail; endpoint uses tau=h and carries the resulting interval to the next slab",
+  "parameter_policy": "same complete exact label cell and label order reused unchanged on every slab; no parameter subdivision or reset",
+  "unknown_policy": "return UNKNOWN or RESOURCE_UNKNOWN on failed branch, margin, arithmetic cap, wall limit, memory limit, output cap, or unsupported input; preserve row and reason"
+}

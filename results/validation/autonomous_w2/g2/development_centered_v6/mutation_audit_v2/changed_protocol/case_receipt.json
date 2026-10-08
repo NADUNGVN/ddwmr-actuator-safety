@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "ReplayReject:FROZEN_PROTOCOL_OR_PROFILE_HASH",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_protocol/binding.json",
+  "binding_sha256": "26399d6a36a0e8ef390cdfd54eeb54b85d0db1154dd15f5b250d1c179ca1ef20",
+  "elapsed_seconds_display_only": 0.141,
+  "expected_rejection_class": "FROZEN_PROTOCOL_OR_PROFILE_HASH",
+  "job_status": "NONZERO_EXIT",
+  "name": "changed_protocol",
+  "peak_memory_bytes": 12333056,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_protocol/record.json",
+  "record_sha256": "913ce1a4c225171446e00fab835f9ace1dd625c53b766c40a8ad7c4ed223d1d4",
+  "rejected": true,
+  "returncode": 2
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ddwmr-g4-w2-release-audit-state-v1",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "observed_utc": "2026-10-07T09:38:52Z",
+  "peer_session": "DDWMR | LUNA-G2-SCOPE",
+  "peer_status_path": "coordination/autonomous_w2/g2/STATUS.json",
+  "peer_status_sequence": 1,
+  "peer_status_sha256": "4F0982DE0FD671FA70DB2B69193342052F6ED601C8F4F8960947B7E9A00EBE63",
+  "peer_release_manifest_path": null,
+  "peer_release_manifest_sha256": null,
+  "decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+  "decision_basis": "G2 STATUS reports artifacts=[] and peer_release_consumed=null; no source/proof hash can be bound.",
+  "audit_framework_path": "docs/reviews/autonomous_w2/g4/AUDIT_CHECKLIST_AND_SOURCE_CROSSWALK_v1.md",
+  "audit_framework_sha256": "84AFB049A38E8A9C23E0E7ED5032C2939A557C286987E34164F206E5EA6411CA",
+  "historical_r19_closure_audit": {
+    "manifest_path": "research/benchmarks/G4_AUER_MATCHED_SOURCE_CLOSURE_v3_R19_PROSPECTIVE.json",
+    "manifest_sha256": "A50BC0452E6B8F164988A4AF8D669E563381F157F86188CA8C7EE1FB1518CA76",
+    "declared_dependencies": 575,
+    "verified": 571,
+    "mismatches": [
+      "AGENTS.md",
+      "research_context/DECISION_LOG.md",
+      "research_context/MASTER_RESEARCH_CONTEXT_v2.md",
+      "research_context/REVIEW_GATE.md"
+    ]
+  },
+  "native_query_attempts_this_w2_g4": 0,
+  "confirmation_rows_this_w2_g4_per_method": 0,
+  "historical_pilot_reused_as_confirmation": false,
+  "next_action": "Consume the first immutable G2 W2 release and audit every proof, source, code, task, endpoint, arithmetic and resource binding against that exact release."
+}

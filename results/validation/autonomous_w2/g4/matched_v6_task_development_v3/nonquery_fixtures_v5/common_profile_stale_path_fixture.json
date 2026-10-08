@@ -1,0 +1,44 @@
+{
+  "common_check_record_replay_required": true,
+  "common_progress_rule": "same closed-slab interval integral sum(duration * u * cos(theta)) intersected with same endpoint displacement bound for both methods",
+  "historical_r4_sqrt_alignment": "128 bisections matches the frozen R4 common-check setting. The old R3 v5 parity fixture was generated with common-adapter profile v4 at 24 bisections and remains untouched; it is interface evidence only.",
+  "matched_workers": {
+    "auer_module": "validation.autonomous_w2.g4.auer_w2_worker_v3",
+    "auer_replay_module": "native audit and common replay inside validation.autonomous_w2.g4.auer_w2_worker_v3",
+    "common_unknown_preserves_native_proof": true,
+    "invocation_scope": "one comparison ID per bounded child; no batch mode",
+    "predicate_unknown_does_not_trigger_native_refinement": true,
+    "v6_module": "validation.autonomous_w2.g4.v6_w2_worker_v3",
+    "v6_replay_module": "native audit and common replay inside validation.autonomous_w2.g4.v6_w2_worker_v3"
+  },
+  "max_common_record_bytes": 8388608,
+  "max_integer_string_digits": 10000,
+  "max_progress_record_bytes": 1048576,
+  "max_rational_bits": 32768,
+  "max_rational_operations_per_common_stage": 2000000,
+  "max_stderr_bytes": 1048576,
+  "max_stdout_bytes": 8388608,
+  "max_worker_result_bytes": 1048576,
+  "memory_cap": "No separate predicate-process cap; the same single-worker external Job Object cap covers the complete query pipeline.",
+  "profile_id": "G4_COMMON_TUBE_W2_MATCHED_V6_60S_V3",
+  "protocol_candidate": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+  "radius_contract": {
+    "centered_residual_v6": {
+      "additional_common_radius_expansion": false,
+      "source": "method-native replayed v6 center/radius full-slab enclosure, then one G4 tube conversion"
+    },
+    "local_auer": {
+      "additional_common_radius_expansion": false,
+      "source": "method-native replayed Auer full-slab total hull"
+    }
+  },
+  "schema": "ddwmr-g4-common-predicate-resource-profile-v1",
+  "scope": "one of the same three full-hold action inputs after method-native proof replay",
+  "source_closure_manifest_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v5/source_closure_stale_profile_fixture.json",
+  "sqrt_bisections": 128,
+  "stage_wall_seconds_ceiling": 60,
+  "standalone_certificate_emitted": false,
+  "status": "FROZEN_DEVELOPMENT_ONLY_W2",
+  "unknown_policy": "UNKNOWN_ON_SUPPLIED_TUBE is retained as predicate uncertainty; never refine native steps based on it or reinterpret it as collision.",
+  "wall_seconds": 60
+}

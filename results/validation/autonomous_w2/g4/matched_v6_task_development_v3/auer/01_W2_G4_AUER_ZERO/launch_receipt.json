@@ -1,0 +1,58 @@
+{
+  "caps": {
+    "cpu_seconds": 60,
+    "max_processes": 1,
+    "memory_bytes": 1073741824,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "wall_seconds": 60
+  },
+  "command": [
+    "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "-B",
+    "-m",
+    "validation.autonomous_w2.g4.auer_w2_worker_v3",
+    "--comparison-id",
+    "W2_G4_AUER_ZERO",
+    "--output-dir",
+    "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\autonomous_w2\\g4\\matched_v6_task_development_v3\\auer\\01_W2_G4_AUER_ZERO"
+  ],
+  "comparison_id": "W2_G4_AUER_ZERO",
+  "completed_utc": "2026-10-08T08:59:37.607609+00:00",
+  "environment_allowlist": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONUTF8": "1"
+  },
+  "job_receipt_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker.job.json",
+  "job_receipt_sha256": "6cc7aa091753733993f311edf0d201c3d22bcabe290d0f720554c6b3b3c40de0",
+  "job_returncode": 0,
+  "job_status": "COMPLETED",
+  "method": "auer",
+  "native_calls_counted": 1,
+  "no_retry": true,
+  "ordinal": 1,
+  "peer_action_id": "W2_G2_DEV_001_ZERO",
+  "producer_start_marker_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/producer_start.json",
+  "producer_start_marker_sha256": "d581fb390ebbfb3b7654d06861d5eb627006d7f2f1a577e7604e6b1aaa88a663",
+  "schema": "ddwmr-g4-w2-matched-action-launch-receipt-v2",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "stderr_bytes_retained": 0,
+  "stderr_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker.stderr.bin",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes_retained": 1672,
+  "stdout_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker.stdout.bin",
+  "stdout_sha256": "62458c128c079b271d3619b8cfd2c302efcb8788a0f84308a86fcf94d0a94dd4",
+  "voltage": [
+    "0",
+    "0"
+  ],
+  "worker_result_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/01_W2_G4_AUER_ZERO/worker_result.json",
+  "worker_result_sha256": "2e41673d613872e3d10882947871205028667c8a95531f0ef763bf24bd34ba16",
+  "worker_result_summary": {
+    "final_status": "RESOURCE_LIMIT",
+    "native_proof_bytes": 9956,
+    "native_status": "RESOURCE_LIMIT",
+    "producer_wall_seconds": 2.625
+  }
+}

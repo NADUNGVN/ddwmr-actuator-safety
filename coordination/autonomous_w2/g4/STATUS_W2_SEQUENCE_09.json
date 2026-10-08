@@ -1,0 +1,65 @@
+{
+    "schema":  "ddwmr-autonomous-w2-owner-status-v1",
+    "session":  "DDWMR | LUNA-G4-AUER",
+    "owner":  "g4",
+    "workflow":  "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+    "sequence":  9,
+    "utc":  "2026-10-08T08:42:15.2006292+00:00",
+    "phase":  "ACTIVE",
+    "phase_started_utc":  "2026-10-08T08:42:15.2006292+00:00",
+    "branch":  "main",
+    "head":  "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+    "objective":  "Start the corrected bounded v6/Auer development phase: finish v3 worker-binding and stale-path corrections, bind the exact source closure, pass nonquery route/stop fixtures, freeze v4, then run at most the three frozen actions once per method under the existing caps.",
+    "assignment":  {
+                       "sha256":  "80bca7d84d8977e7ba209af55dd00c76d36def49d326c57df0c84d398cee0b8f",
+                       "path":  "docs/CODEX_W2_V6_MATCHED_BINDING_CORRECTION_CONTINUATION.md"
+                   },
+    "primary_assignment":  {
+                               "sha256":  "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0",
+                               "path":  "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md"
+                           },
+    "peer_release_consumed":  {
+                                  "sha256":  "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+                                  "path":  "coordination/autonomous_w2/g2/releases/RELEASE_v6.json"
+                              },
+    "peer_status_observed":  {
+                                 "phase":  null,
+                                 "path":  "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_19.json",
+                                 "sha256":  "feedd8ef25ba5f7dfc1155354419bf31ae3456d7931e0b870e3b02f1e9348d2d",
+                                 "sequence":  19
+                             },
+    "peer_audit_observed":  {
+                                "sha256":  "7615d8057b2461973dd1d78901d7250a461e20e9abbc05bf502844494d3aae00",
+                                "path":  "coordination/autonomous_w2/g2/G4_WRAPPER_INPUT_SCORER_AUDIT_v3.md"
+                            },
+    "previous_status":  {
+                            "sha256":  "06d77d3ed5cdb942c92df5826d0d2c80f4eac0dac6caee871685e0569bd4c309",
+                            "path":  "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_08.json"
+                        },
+    "artifacts":  {
+
+                  },
+    "next_action":  "Run fresh source-bound preflight, receive/reconcile G2 file audit if available, freeze the corrected v3 candidate under a new immutable receipt, then execute at most 3 v6 and 3 Auer calls with no retry.",
+    "blocker":  null,
+    "resource_caps":  {
+                          "max_processes":  1,
+                          "retry":  false,
+                          "replay_audit_wall_seconds":  60,
+                          "worker_wall_seconds":  60,
+                          "auer_calls_max":  3,
+                          "v6_calls_max":  3,
+                          "phase_wall_seconds":  7200,
+                          "replay_audit_cpu_seconds":  60,
+                          "memory_bytes":  1073741824,
+                          "worker_cpu_seconds":  60
+                      },
+    "work_counts_before_phase":  {
+                                     "g4_prior_v6_native_calls":  0,
+                                     "g2_native_attempts":  "24/24 consumed",
+                                     "g4_prior_auer_worker_attempts":  0,
+                                     "g4_prior_auer_native_calls":  0,
+                                     "g4_prior_v6_worker_attempts":  1,
+                                     "auer_1944":  "NOT_RUN",
+                                     "r5_800":  "NOT_RUN"
+                                 }
+}

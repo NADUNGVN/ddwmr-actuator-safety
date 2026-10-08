@@ -1,0 +1,197 @@
+{
+  "artifacts": {
+    "binding_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/binding_preflight_v4.json",
+      "sha256": "70f1146aaf194f464ddf12b2d6e2b3bd02b77c1bc610725351b4c783a022fe92"
+    },
+    "execution_failure_ledger": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/matched_execution_failure_ledger_v1.json",
+      "sha256": "9ef3d81f21928da458b61da97e1914fb681a77f48179beda6e37168141ff6a95"
+    },
+    "freeze_manifest": {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v2/freeze_manifest_v3.json",
+      "sha256": "b5637ae30f0e20c7cdd8621a94c323ba25db620c4531feb5b56fc5b3a97d81ff"
+    },
+    "freeze_receipt": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/freeze_receipt_v3.json",
+      "sha256": "ea9ddaa5c6c2f991c78e253f1cb0d921b69a5819ce2d15c94c7cc52491d1c18f"
+    },
+    "handoff": {
+      "path": "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_W2_V6_MATCHED_TASK_FALSIFICATION_FULL_HANDOFF.md",
+      "sha256": "ea1eda2028370170b9eec85052a84994912595e57078a89541149544efa39771"
+    },
+    "mapping_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/mapping_preflight_v3.json",
+      "sha256": "b3116894ed53f7a9efda17abb0e1f5d33521926a74304bce4c11347cd22ecd68"
+    },
+    "peer_coordination_result": {
+      "path": "coordination/autonomous_w2/g4/G4_TO_G2_MATCHED_TASK_RESULT_v1.md",
+      "sha256": "c3ccc36da36c8d150237d5b335da2882aa7e91291431599f9ba3c8f81311c39f"
+    },
+    "peer_release": {
+      "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+      "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+    },
+    "peer_status_snapshot": {
+      "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+      "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+    },
+    "phase_receipt": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/matched_phase_receipt_v3.json",
+      "sha256": "cba039075e1c6d9143bae7dc3dc3b319056ad10be023e5c246049848bcb11661"
+    },
+    "preflight_failure_ledger": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/preflight_failure_ledger_v5.json",
+      "sha256": "e24c150481d9668e17de00f9624674030a8a58cae7026f92bf12858b3fba2bc9"
+    },
+    "resource_probe": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/resource_probe_v2/probe_receipt.json",
+      "sha256": "5d35a5508bd3df5b841fcdef0fc2941f14b2bb184dbf4056ee4b3328e2a4505f"
+    },
+    "saved_replay_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/saved_replay_preflight_v8.json",
+      "sha256": "d20c1bb699a6ffdee4afa3ba123a4e4438f883d9823e861e09db5f44e6327e75"
+    },
+    "source_closure": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/source_closure_v3.json",
+      "sha256": "02b562d7f9bbb748efe8fa1fdb44bc29a2c63a6fc38233625771d5ccb8c7b113"
+    }
+  },
+  "assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md",
+    "sha256": "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0"
+  },
+  "blocker": "The first v6 worker read action[\"peer_saved_row_sha256\"], absent from the frozen protocol action; it stopped before producer_start.json. This invalidated the comparison; the runner released the lock and stopped.",
+  "branch": "main",
+  "constraints": [
+    "No retry or later action after the binding defect.",
+    "No G2 source/status/release/task/row edited.",
+    "No Auer 1,944-query batch or R5/800 study.",
+    "No confirmation rows, commit, push, branch switch, reset or clean."
+  ],
+  "continuation": {
+    "path": "docs/CODEX_W2_V6_PEER_CONTINUATION.md",
+    "sha256": "fe1f1b7af52e5d854729cc5b44eeef787205c5745a26291cf3ccbaf3500c6f98"
+  },
+  "decision": {
+    "contribution_disposition": "NO_METHOD_VERDICT_FROM_THIS_COMPARISON",
+    "cross_method_action_availability": "UNMEASURED",
+    "matched_comparison": "TECHNICAL_INCONCLUSIVE_PRELAUNCH_BINDING_DEFECT",
+    "project_gate": "HOLD; G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED"
+  },
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.12",
+    "shell": "PowerShell",
+    "timezone": "Asia/Saigon"
+  },
+  "final_artifact_inventory": {
+    "binding_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/binding_preflight_v4.json",
+      "sha256": "70f1146aaf194f464ddf12b2d6e2b3bd02b77c1bc610725351b4c783a022fe92"
+    },
+    "execution_failure_ledger": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/matched_execution_failure_ledger_v1.json",
+      "sha256": "9ef3d81f21928da458b61da97e1914fb681a77f48179beda6e37168141ff6a95"
+    },
+    "freeze_manifest": {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v2/freeze_manifest_v3.json",
+      "sha256": "b5637ae30f0e20c7cdd8621a94c323ba25db620c4531feb5b56fc5b3a97d81ff"
+    },
+    "freeze_receipt": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/freeze_receipt_v3.json",
+      "sha256": "ea9ddaa5c6c2f991c78e253f1cb0d921b69a5819ce2d15c94c7cc52491d1c18f"
+    },
+    "handoff": {
+      "path": "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_W2_V6_MATCHED_TASK_FALSIFICATION_FULL_HANDOFF.md",
+      "sha256": "ea1eda2028370170b9eec85052a84994912595e57078a89541149544efa39771"
+    },
+    "mapping_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/mapping_preflight_v3.json",
+      "sha256": "b3116894ed53f7a9efda17abb0e1f5d33521926a74304bce4c11347cd22ecd68"
+    },
+    "peer_coordination_result": {
+      "path": "coordination/autonomous_w2/g4/G4_TO_G2_MATCHED_TASK_RESULT_v1.md",
+      "sha256": "c3ccc36da36c8d150237d5b335da2882aa7e91291431599f9ba3c8f81311c39f"
+    },
+    "peer_release": {
+      "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+      "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+    },
+    "peer_status_snapshot": {
+      "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+      "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+    },
+    "phase_receipt": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/matched_phase_receipt_v3.json",
+      "sha256": "cba039075e1c6d9143bae7dc3dc3b319056ad10be023e5c246049848bcb11661"
+    },
+    "preflight_failure_ledger": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/preflight_failure_ledger_v5.json",
+      "sha256": "e24c150481d9668e17de00f9624674030a8a58cae7026f92bf12858b3fba2bc9"
+    },
+    "resource_probe": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/resource_probe_v2/probe_receipt.json",
+      "sha256": "5d35a5508bd3df5b841fcdef0fc2941f14b2bb184dbf4056ee4b3328e2a4505f"
+    },
+    "saved_replay_preflight": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/saved_replay_preflight_v8.json",
+      "sha256": "d20c1bb699a6ffdee4afa3ba123a4e4438f883d9823e861e09db5f44e6327e75"
+    },
+    "source_closure": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v2/source_closure_v3.json",
+      "sha256": "02b562d7f9bbb748efe8fa1fdb44bc29a2c63a6fc38233625771d5ccb8c7b113"
+    }
+  },
+  "handoff": {
+    "path": "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_W2_V6_MATCHED_TASK_FALSIFICATION_FULL_HANDOFF.md",
+    "sha256": "ea1eda2028370170b9eec85052a84994912595e57078a89541149544efa39771"
+  },
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "next_action": "No current-phase action remains. If continuing later, use a new G4-owned wrapper/protocol version with binding-field fixtures, correct all stale path metadata, refreeze, and re-audit before any producer execution.",
+  "objective": "Compare v6 and local Auer on the same three consumed G2 development actions; freeze, execute, replay and report a scoped verdict.",
+  "owner": "g4",
+  "peer_release_consumed": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "session": "DDWMR | LUNA-G2-SCOPE",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_response": {
+    "path": "coordination/autonomous_w2/g2/G4_INPUT_CRITERION_SUPPORT_v1.md",
+    "sha256": "7a7779550fb737622739dc40e7937d5c10475dc6e5b2e390df0e24d8f80ebda6"
+  },
+  "peer_status_observed": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+    "phase": "FINISHED",
+    "sequence": 18,
+    "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+  },
+  "phase": "FINISHED",
+  "previous_status": {
+    "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_06.json",
+    "sha256": "9eaef3823de87b2a33313489a8be70ffbe88ac04216a46f8076d8c73c344a5b0"
+  },
+  "sequence": 7,
+  "session": "DDWMR | LUNA-G4-AUER",
+  "status_note": "Terminal sequence binds the final corrected report hash; sequence 06 is preserved as the earlier pointer version.",
+  "utc": "2026-10-08T03:54:13.055540+00:00",
+  "work_counts": {
+    "auer_1944": "NOT_RUN",
+    "auer_native_calls": 0,
+    "auer_worker_invocations": 0,
+    "bounded_read_only_replay_processes": 16,
+    "confirmation_rows_per_method": "0/24",
+    "fresh_native_replays": 0,
+    "frozen_actions": 3,
+    "g2_native_attempts": "24/24 consumed",
+    "held_out_rows": 0,
+    "preflight_events": 12,
+    "r5_800": "NOT_RUN",
+    "retries": 0,
+    "saved_g2_v6_common_replays_passed": 3,
+    "saved_g2_v6_native_replays_passed": 3,
+    "v6_native_calls": 0,
+    "v6_worker_invocations": 1
+  },
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2"
+}

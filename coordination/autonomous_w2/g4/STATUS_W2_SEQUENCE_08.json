@@ -1,0 +1,59 @@
+{
+  "artifacts": {},
+  "assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_BINDING_CORRECTION_CONTINUATION.md",
+    "sha256": "80bca7d84d8977e7ba209af55dd00c76d36def49d326c57df0c84d398cee0b8f"
+  },
+  "blocker": null,
+  "branch": "main",
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "next_action": "Build v3 candidate; coordinate actual worker/scorer audit with G2; run nonquery fixtures and freeze before any producer.",
+  "objective": "Correct v6 outer-binding consumption and stale manifest paths; verify actual worker route and fail-closed fixtures; freeze v3 and finish the authorized three-action-per-method development comparison.",
+  "owner": "g4",
+  "peer_release_consumed": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_status_observed": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+    "phase": "FINISHED",
+    "sequence": 18,
+    "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+  },
+  "phase": "ACTIVE",
+  "phase_started_utc": "2026-10-08T06:30:54.202783+00:00",
+  "previous_status": {
+    "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_07.json",
+    "sha256": "856299596c93eea6e29b59dba31d04014cf76d98d5233a5d885d3ca9578d0a1c"
+  },
+  "primary_assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md",
+    "sha256": "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0"
+  },
+  "resource_caps": {
+    "auer_calls_max": 3,
+    "max_processes": 1,
+    "memory_bytes": 1073741824,
+    "phase_wall_seconds": 7200,
+    "replay_audit_cpu_seconds": 60,
+    "replay_audit_wall_seconds": 60,
+    "retry": false,
+    "v6_calls_max": 3,
+    "worker_cpu_seconds": 60,
+    "worker_wall_seconds": 60
+  },
+  "schema": "ddwmr-autonomous-w2-owner-status-v1",
+  "sequence": 8,
+  "session": "DDWMR | LUNA-G4-AUER",
+  "utc": "2026-10-08T06:30:54.202783+00:00",
+  "work_counts_before_phase": {
+    "auer_1944": "NOT_RUN",
+    "g2_native_attempts": "24/24 consumed",
+    "g4_prior_auer_native_calls": 0,
+    "g4_prior_auer_worker_attempts": 0,
+    "g4_prior_v6_native_calls": 0,
+    "g4_prior_v6_worker_attempts": 1,
+    "r5_800": "NOT_RUN"
+  },
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2"
+}

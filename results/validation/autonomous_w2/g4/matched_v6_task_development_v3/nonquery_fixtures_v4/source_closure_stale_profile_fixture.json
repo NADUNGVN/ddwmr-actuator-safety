@@ -1,0 +1,251 @@
+{
+  "files": [
+    {
+      "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+      "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+      "size_bytes": 14317
+    },
+    {
+      "path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_01.json",
+      "sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "size_bytes": 5394
+    },
+    {
+      "path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_02.json",
+      "sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "size_bytes": 5407
+    },
+    {
+      "path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_03.json",
+      "sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "size_bytes": 5415
+    },
+    {
+      "path": "research/autonomous_w2/g2/task_protocol_v1.json",
+      "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+      "size_bytes": 2867
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_input_manifest_v3.json",
+      "sha256": "b41b84247165d40940985b4398455682cba2fa814899220c74168046943156b9",
+      "size_bytes": 29192
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "size_bytes": 6702
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+      "sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "size_bytes": 6705
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+      "sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "size_bytes": 6709
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_profile_v3.json",
+      "sha256": "81dbf776abf69872f884d11ccff1538275eeafcc8b507703e679e8bfdce81ab9",
+      "size_bytes": 6147
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/benchmark_v3.json",
+      "sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94",
+      "size_bytes": 13530
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/common_profile_v3.json",
+      "sha256": "7b01cb4678ae239a21878023bb3d5d9917b46150bca4ee7debde3bdf795afa8a",
+      "size_bytes": 2512
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/g2_profile_centered_v6.json",
+      "sha256": "8252ceecd3a07c9811fd601945d16b9f33318d120340441c3fff94b117ee03a2",
+      "size_bytes": 1343
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/g2_release_v6.json",
+      "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+      "size_bytes": 14317
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/g2_task_protocol_v1.json",
+      "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+      "size_bytes": 2867
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/native_source_snapshot_v3.json",
+      "sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8",
+      "size_bytes": 3657
+    },
+    {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+      "sha256": "4bc3e1dff3bb29f8ed881add8cc103eb25dfab49b0d1766b9ea5a2ac31d5f896",
+      "size_bytes": 15229
+    },
+    {
+      "path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_01_W2_G2_DEV_001_ZERO/row.json",
+      "sha256": "9aa7a3f86c8572be81349cc2ffb9a67d67e7bd4a67b37c95b2c7208548a1593a",
+      "size_bytes": 506904
+    },
+    {
+      "path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_02_W2_G2_DEV_001_NOMINAL/row.json",
+      "sha256": "f5ad26449b65a1ccae7af7f7029209e66fc2af656a7fe3956f91d55822420ca7",
+      "size_bytes": 506804
+    },
+    {
+      "path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json",
+      "sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6",
+      "size_bytes": 507414
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_bindings_fixture.json",
+      "sha256": "dba0752bc569d3e1209bda022648f752d9089cbeb527c99fab7fad2807fc67d8",
+      "size_bytes": 5934
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_manifest_fixture.json",
+      "sha256": "2fffaf0fbf715ca9943404663c7318992007d5391860dd81f3d95b58207fef20",
+      "size_bytes": 28006
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_profile_fixture.json",
+      "sha256": "1ba90976a7d3bcb33ad3bbb6e4d0eae1d35a8919c7597ec30ecd0437efff9124",
+      "size_bytes": 6086
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_profile_stale_path_fixture.json",
+      "sha256": "829a057d2e10960deb3d2ec5c2d7138b72fbd8f09d34217ace6bd1709c70bf3f",
+      "size_bytes": 6002
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/common_profile_fixture.json",
+      "sha256": "6dbadfcd4f81b08dc352ffde0ca51691e789231cfd800eeac01fceda5e82ce8b",
+      "size_bytes": 2622
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/common_profile_stale_path_fixture.json",
+      "sha256": "006e1ad304e2aa68b5d82fe442a4e73f3c2fb75870c2f4dbffdddd2bf650bfcd",
+      "size_bytes": 2636
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/v6_profile_fixture.json",
+      "sha256": "99175d7f2ec8e39249f6f5097af05a4d72a2bb1244b56abf320de658f5f3f451",
+      "size_bytes": 1343
+    },
+    {
+      "path": "validation/autonomous_w2/g2/checker_centered_v6.py",
+      "sha256": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+      "size_bytes": 18599
+    },
+    {
+      "path": "validation/autonomous_w2/g2/producer_centered_v6.py",
+      "sha256": "83341f26f92da69a55d6bb945aecbebaf70417b860a59dad43a6c5cad4e78f26",
+      "size_bytes": 14237
+    },
+    {
+      "path": "validation/autonomous_w2/g2/producer_v4.py",
+      "sha256": "f43bd7073d42e367449f288ddf153a5639ddd25bfa15b710c020ddcaf5e5fc94",
+      "size_bytes": 18775
+    },
+    {
+      "path": "validation/autonomous_w2/g2/profile_centered_v6.json",
+      "sha256": "8252ceecd3a07c9811fd601945d16b9f33318d120340441c3fff94b117ee03a2",
+      "size_bytes": 1343
+    },
+    {
+      "path": "validation/autonomous_w2/g2/rational_interval_v3.py",
+      "sha256": "7e9cb675e5a9241c1742097824bb39ca73419d8496ad79cb6207693c0a71b754",
+      "size_bytes": 6901
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_snapshot_v3/__init__.py",
+      "sha256": "99a718d8f9f76de99c8a3c9bbdd838aca4573d180fde8f6e3a7a29cca0320a3d",
+      "size_bytes": 77
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_snapshot_v3/piecewise.py",
+      "sha256": "9ae8fb192d279c41cf278529907a20a91febc388707732099ecd61df5fe5797e",
+      "size_bytes": 7456
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_snapshot_v3/replay_r9_w2.py",
+      "sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+      "size_bytes": 32874
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_snapshot_v3/rhs.py",
+      "sha256": "c0ae8a05c0455ea0692773466c5fa239ff374d364f51ac58438cf3e91eed1282",
+      "size_bytes": 6315
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_snapshot_v3/solver_r9_w2.py",
+      "sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa",
+      "size_bytes": 31824
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_w2_adapter_v3.py",
+      "sha256": "21622bddf9060bea6066841dff95454f49c157e923cba6da8b2004e0b11b7cbd",
+      "size_bytes": 5232
+    },
+    {
+      "path": "validation/autonomous_w2/g4/auer_w2_worker_v3.py",
+      "sha256": "13a1e0aebb47ff397a57f812e4f3016ac675b64ae46701ba10588f7cddef5e97",
+      "size_bytes": 39730
+    },
+    {
+      "path": "validation/autonomous_w2/g4/matched_v6_common_v3.py",
+      "sha256": "fb9d39d3a262210fd45d53863533359ca55e8a8778c32c4c12bff8e95ef5b46b",
+      "size_bytes": 17275
+    },
+    {
+      "path": "validation/autonomous_w2/g4/run_matched_v6_w2_v3.py",
+      "sha256": "ea3650973dd6d703e2063f1c887673f93e008dbcab0c07e6659a516673bca281",
+      "size_bytes": 13411
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_snapshot_v3/__init__.py",
+      "sha256": "cd375fcd4210e3f1be868f432bcbe211b5dc7df0425fc00c70dbcd5d08335c71",
+      "size_bytes": 77
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_snapshot_v3/checker_centered_v6.py",
+      "sha256": "f90bd5194698b1afb038a9ada28310b33eef0f11a8f00bb3afe0b50f79345458",
+      "size_bytes": 18670
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_snapshot_v3/producer_centered_v6.py",
+      "sha256": "a6c84356595d6e3b634a86272ef278eae7034117de58075b6c1ddff601600ec4",
+      "size_bytes": 14308
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_snapshot_v3/producer_v4.py",
+      "sha256": "136b08fe9280007c888a390bbc59735a69e69a4025ea799059b523c33a7fceb3",
+      "size_bytes": 18846
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_snapshot_v3/rational_interval_v3.py",
+      "sha256": "7e9cb675e5a9241c1742097824bb39ca73419d8496ad79cb6207693c0a71b754",
+      "size_bytes": 6901
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_w2_adapter_v3.py",
+      "sha256": "b0209eefc47574dd4a7c7acfaaa36ece3cb90ee55b912c6e913e614d429ba5d1",
+      "size_bytes": 11919
+    },
+    {
+      "path": "validation/autonomous_w2/g4/v6_w2_worker_v3.py",
+      "sha256": "a665d7a55e27b85eafaf45c4ecb0d83f500f7ae893f4f2ddfa8ee2fb112ceb9e",
+      "size_bytes": 28592
+    },
+    {
+      "path": "validation/autonomous_w2/g4/windows_job_supervisor_v3.py",
+      "sha256": "443fda557ef40ea6253996a329bc07f28ed017c134a1114a8bfc8a09880354c0",
+      "size_bytes": 20709
+    }
+  ],
+  "schema": "ddwmr-g4-w2-v3-preflight-source-closure-fixture",
+  "status": "NONQUERY_FIXTURE_ONLY"
+}

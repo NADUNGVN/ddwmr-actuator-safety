@@ -1,0 +1,11 @@
+{
+  "action_id": "W2_G2_DEV_001_ZERO",
+  "attempt": 1,
+  "binding_path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_01.json",
+  "binding_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+  "counted_as_native_configuration_attempt": true,
+  "native_attempt_ordinal": 22,
+  "no_retry": true,
+  "schema": "G2_W2_V6_ATTEMPT_INTENT_v1",
+  "started_utc": "2026-10-07T11:32:40.449806+00:00"
+}

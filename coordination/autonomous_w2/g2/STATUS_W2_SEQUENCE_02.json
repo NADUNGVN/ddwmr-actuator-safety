@@ -1,0 +1,53 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/AUDIT_REQUEST_TO_G4_v1.md": "8e44839d0a7d6eb77dafe08bcb84d8208477465016cdf40b6da5c45f13d5fa20",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v1.md": "53112d7bd46a98a5d251a5d814dab41c5910e067eff6cfe837c0edd5fef2b018",
+    "research/autonomous_w2/g2/development_plan_v1.json": "4589be922dd3e2d2b73a47f504ddfbbd32891c0a7d865ffda6cd9b3e5c93be07",
+    "research/autonomous_w2/g2/task_protocol_v1.json": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+    "results/validation/autonomous_w2/g2/development_v1/freeze_receipt_v1.json": "e52c829196533d00e60bd781103e0b0523c386378802d33d23c1327550b04e37",
+    "results/validation/autonomous_w2/g2/job_supervisor_fixture_v1.json": "c7b0761d8329d3ff990c7954e427d62efbe35482cd9c2b98fbeb1bffd95dee9e",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v1.json": "2607db01dae7038433b6fcc934806f0d6c8c7df00c4e8dfe207da5e14b3b54b9",
+    "validation/autonomous_w2/g2/profile_v1.json": "4a65745d8149384fefd7f205940dda0fdbf9db30db9599f55ae737d69c428be9"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit, or push.",
+    "No peer source or manifest edits.",
+    "Legacy R5 800-row study remains 800/800 NOT_RUN.",
+    "No G4 confirmation outputs inspected or executed by G2.",
+    "No retry of any failed native development row."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_at_release": 0,
+    "frozen_plan_rows": 6
+  },
+  "next_action": "Acquire coordination/autonomous_w2/COMPUTE.lock and run the six immutable candidate/R3 development rows once; consume G4 audit decision at the next work boundary.",
+  "objective": "Release a signed VOF clip-interior enclosure and prospective progress task for G4 audit, then execute bounded matched development rows.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "PUBLISHED",
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v1.json",
+    "sha256": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "state": "PRE_RUN_CANDIDATE_FOR_G4_MATHEMATICAL_AND_CODE_AUDIT"
+  },
+  "sequence": 2,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:02:57.587379+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared tree contains pre-existing G4 and project edits; G2 writes remain inside G2-owned W2 prefixes."
+}

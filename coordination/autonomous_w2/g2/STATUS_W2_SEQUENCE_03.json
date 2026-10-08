@@ -1,0 +1,60 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/AUDIT_REQUEST_TO_G4_v1.md": "8e44839d0a7d6eb77dafe08bcb84d8208477465016cdf40b6da5c45f13d5fa20",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "docs/reviews/autonomous_w2/g2/W2_V1_DEVELOPMENT_FAILURE_POSTMORTEM.md": "0bc0e3dc45931f4069a629da1ecd5342020f87efa253e465cbf0ca453c4da8ab",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v1.md": "53112d7bd46a98a5d251a5d814dab41c5910e067eff6cfe837c0edd5fef2b018",
+    "research/autonomous_w2/g2/development_plan_v1.json": "4589be922dd3e2d2b73a47f504ddfbbd32891c0a7d865ffda6cd9b3e5c93be07",
+    "research/autonomous_w2/g2/task_protocol_v1.json": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+    "results/validation/autonomous_w2/g2/development_v1/freeze_receipt_v1.json": "e52c829196533d00e60bd781103e0b0523c386378802d33d23c1327550b04e37",
+    "results/validation/autonomous_w2/g2/development_v1/stage_receipt.json": "3339ee37e855d8f127dc31c2d43824130b2c603ad6bb44f37f470e41afc25c53",
+    "results/validation/autonomous_w2/g2/job_supervisor_fixture_v1.json": "c7b0761d8329d3ff990c7954e427d62efbe35482cd9c2b98fbeb1bffd95dee9e",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v1.json": "2607db01dae7038433b6fcc934806f0d6c8c7df00c4e8dfe207da5e14b3b54b9",
+    "validation/autonomous_w2/g2/profile_v1.json": "4a65745d8149384fefd7f205940dda0fdbf9db30db9599f55ae737d69c428be9"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit, or push.",
+    "No peer source or manifest edits.",
+    "Legacy R5 800-row study remains 800/800 NOT_RUN.",
+    "No G4 confirmation outputs inspected or executed by G2.",
+    "No retry of any failed native development row.",
+    "V1 failed outputs are immutable development evidence and remain counted.",
+    "No G4 held-out outcomes were read or run."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_at_sequence_03": 6,
+    "cumulative_if_v2_complete": 12,
+    "v1_candidate_execution_failure": 3,
+    "v1_r3_replay_binding_failure": 3,
+    "v2_repair_rows_to_freeze": 6
+  },
+  "next_action": "Complete v2 serializer/hash regression fixtures, freeze a new source closure and six explicitly counted repair attempts, then publish release v2 for direct G4 audit.",
+  "objective": "Preserve and postmortem six failed v1 development attempts, correct the integer serialization cap and R3 semantic benchmark hash in a versioned candidate, then continue bounded development.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "consumed_release_sha256": null,
+    "decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "path": "coordination/autonomous_w2/g4/STATUS.json",
+    "phase": "AWAITING_PEER_INPUT",
+    "sequence": 3,
+    "sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "ACTIVE",
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v1.json",
+    "sha256": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "state": "PRE_RUN_CANDIDATE_FOR_G4_MATHEMATICAL_AND_CODE_AUDIT"
+  },
+  "sequence": 3,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:15:44.324679+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared tree contains pre-existing G4 and project edits; G2 writes remain inside G2-owned W2 prefixes."
+}

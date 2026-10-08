@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "ReplayReject:RECOMPUTED_FIELDS_MISMATCH:slabs",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_center_label/binding.json",
+  "binding_sha256": "56730d8821d308e758a1a0cb7bf474b5722af34dc82dd3b1d9a8889ebd1693ad",
+  "elapsed_seconds_display_only": 10.079,
+  "expected_rejection_class": "RECOMPUTED_FIELDS_MISMATCH",
+  "job_status": "NONZERO_EXIT",
+  "name": "changed_center_label",
+  "peak_memory_bytes": 14888960,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_center_label/record.json",
+  "record_sha256": "07f8a7a605c43bae5622a2595571d1c11e7d8615b9daf1e333a1b17582f89cde",
+  "rejected": true,
+  "returncode": 2
+}

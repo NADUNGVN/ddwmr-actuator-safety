@@ -1,0 +1,102 @@
+{
+  "actions": [
+    {
+      "auer_id": "W2_G4_AUER_ZERO",
+      "auer_input_digest": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "auer_native_binding_sha256": "70b0f2fbd7aecf954a6bd59e14a34e1fb13ce37962b6481095363f96fdf2fd81",
+      "auer_native_input_file_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "comparison_id": "W2_G4_V6_ZERO",
+      "external_id": "W2_G4_V6_ZERO",
+      "native_binding_sha256": "937d28c1f5bb525dbfba8bfac23b014fbbdcddd280870de4bb0147086e40dfd2",
+      "ordinal": 1,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "v6_native_binding_input_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "v6_native_binding_sha256": "937d28c1f5bb525dbfba8bfac23b014fbbdcddd280870de4bb0147086e40dfd2",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_NOMINAL",
+      "auer_input_digest": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "auer_native_binding_sha256": "a85c63976dc9ced27421ec569f5c94fee631f9c568106ce9141b7239bef18dff",
+      "auer_native_input_file_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "external_id": "W2_G4_V6_NOMINAL",
+      "native_binding_sha256": "aa9ee910f57f6aa5a0be6d0dd681f337e72b32738ee0cceb83c986bef9a8d0d7",
+      "ordinal": 2,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "v6_native_binding_input_sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "v6_native_binding_sha256": "aa9ee910f57f6aa5a0be6d0dd681f337e72b32738ee0cceb83c986bef9a8d0d7",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_ALTERNATIVE",
+      "auer_input_digest": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "auer_native_binding_sha256": "1ea25ad5b3d7feca73270d41b32a7ed1bbce6d99f2f199dfa2fef6dcc329e9a8",
+      "auer_native_input_file_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "external_id": "W2_G4_V6_ALTERNATIVE",
+      "native_binding_sha256": "a6a89a5321f34fa04f816e8d7ead87e2c0fdfbdd75b94b845a0d5e71cca4cd9b",
+      "ordinal": 3,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "v6_native_binding_input_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "v6_native_binding_sha256": "a6a89a5321f34fa04f816e8d7ead87e2c0fdfbdd75b94b845a0d5e71cca4cd9b",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "auer_binding_paths": {
+    "W2_G4_AUER_ALTERNATIVE": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_bindings_fixture.json",
+    "W2_G4_AUER_NOMINAL": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_bindings_fixture.json",
+    "W2_G4_AUER_ZERO": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_bindings_fixture.json"
+  },
+  "auer_bindings_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_bindings_fixture.json",
+  "auer_bindings_sha256": "dba0752bc569d3e1209bda022648f752d9089cbeb527c99fab7fad2807fc67d8",
+  "auer_manifest_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_manifest_fixture.json",
+  "auer_manifest_sha256": "2fffaf0fbf715ca9943404663c7318992007d5391860dd81f3d95b58207fef20",
+  "auer_profile_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/auer_profile_fixture.json",
+  "benchmark_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/benchmark_v3.json",
+  "benchmark_sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94",
+  "common_profile_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/common_profile_fixture.json",
+  "freeze_receipt_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/freeze_receipt_fixture.json",
+  "method_worker_modules": {
+    "auer": "validation.autonomous_w2.g4.auer_w2_worker_v3",
+    "v6": "validation.autonomous_w2.g4.v6_w2_worker_v3"
+  },
+  "native_source_snapshot_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/native_source_snapshot_v3.json",
+  "native_source_snapshot_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8",
+  "peer_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "primary_criterion": "For each method, report the exact set of actions whose independent method-native replay, common full-hold collision/contact replay, and common progress lower bound >=7/20 all pass; compare sets directly.",
+  "protocol_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+  "protocol_sha256": "4bc3e1dff3bb29f8ed881add8cc103eb25dfab49b0d1766b9ea5a2ac31d5f896",
+  "schema": "ddwmr-g4-w2-v3-preflight-freeze-fixture",
+  "source_closure_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/source_closure_fixture.json",
+  "source_closure_sha256": "da2a8b59aaa56cde6e0418297bc5fafba5d0e4de054105d215a2a33f65aa4e14",
+  "status": "NONQUERY_FIXTURE_ONLY",
+  "task_protocol": {
+    "path": "research/autonomous_w2/g2/task_protocol_v1.json",
+    "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+  },
+  "v6_binding_paths": {
+    "W2_G4_V6_ALTERNATIVE": "research/autonomous_w2/g4/matched_v6_task_development_v3/v6_bindings/03.json",
+    "W2_G4_V6_NOMINAL": "research/autonomous_w2/g4/matched_v6_task_development_v3/v6_bindings/02.json",
+    "W2_G4_V6_ZERO": "research/autonomous_w2/g4/matched_v6_task_development_v3/v6_bindings/01.json"
+  },
+  "v6_profile_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/v6_profile_fixture.json"
+}

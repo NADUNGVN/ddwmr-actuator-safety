@@ -1,0 +1,154 @@
+{
+  "branch": "main",
+  "created_utc": "2026-10-08T00:14:42.684114+00:00",
+  "g4_status_artifacts": {
+    "current_matches": 16,
+    "mismatches": [],
+    "total": 16
+  },
+  "gate_status": "HOLD; G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED",
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "inventory": {
+    "current_path_matches": 138,
+    "current_path_mismatches": [
+      {
+        "current_bytes": 7362,
+        "current_sha256": "98d8f9f98200f32db2fd0a74975b21a1dc7df929bffbed4a4b9a37cb1c6d16c7",
+        "expected_bytes": 5772,
+        "expected_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554",
+        "path": "coordination/autonomous_w2/g4/STATUS.json"
+      }
+    ],
+    "historical_reconstruction": {
+      "bytes": 5772,
+      "classification": "Mutable coordination pointer updated from sequence 3 to 4; scientific source/proof files unchanged. The archived inventory has not been repinned.",
+      "original_expected_path": "coordination/autonomous_w2/g4/STATUS.json",
+      "preserved_same_bytes_path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_03.json",
+      "sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+    },
+    "path": "results/validation/autonomous_w2/g2/development_centered_v6/evidence_inventory_v1.json",
+    "total": 139
+  },
+  "producer_invocations_added": 0,
+  "references": [
+    {
+      "bytes": 14317,
+      "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+      "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+    },
+    {
+      "bytes": 6172,
+      "path": "results/validation/autonomous_w2/g2/peer_replay_v6_v1.json",
+      "sha256": "3d3b9ea086b6fb94e94037df896d41ea526f998c2bd64700b6b24a11334ffcfc"
+    },
+    {
+      "bytes": 33053,
+      "path": "results/validation/autonomous_w2/g2/development_centered_v6/evidence_inventory_v1.json",
+      "sha256": "5de4f15150a0df2a2ce52c6eff047a9e886895b1d14814eff40c0072e7f0933f"
+    },
+    {
+      "bytes": 5772,
+      "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_03.json",
+      "sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+    },
+    {
+      "bytes": 7362,
+      "path": "coordination/autonomous_w2/g4/STATUS.json",
+      "sha256": "98d8f9f98200f32db2fd0a74975b21a1dc7df929bffbed4a4b9a37cb1c6d16c7"
+    },
+    {
+      "bytes": 2696,
+      "path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_result.json",
+      "sha256": "d4077bcafebd31ede5b6bd072e7f5fd510da08c25a57fa10d015f154e88fce5e"
+    },
+    {
+      "bytes": 3620,
+      "path": "results/validation/autonomous_w2/g4/pose_collision_audit_v1.json",
+      "sha256": "b5d13cdef35597cc8e527b5022ab51cea5c1a775d245c2066b91308214321d5d"
+    },
+    {
+      "bytes": 6240,
+      "path": "results/validation/autonomous_w2/g4/replay_g2_v6_saved_789d6b37_r2/replay_receipt.json",
+      "sha256": "26c17c0419c151a0cf6bb6e16671a12827207cb6ef608f085f685780d5542c43"
+    },
+    {
+      "bytes": 6457,
+      "path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v4.json",
+      "sha256": "c031ce24dfb537d2b0abfe02ed70b3e7146741851c917ff417b01996ecf8f4eb"
+    },
+    {
+      "bytes": 5622,
+      "path": "results/validation/autonomous_w2/g2/development_centered_v6/freeze_receipt_v6.json",
+      "sha256": "d57bcec7cf992dae258bc65ebaf6ffba444ee0df5ebe00845df939d3f4ab87e8"
+    },
+    {
+      "bytes": 6346,
+      "path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_receipt.json",
+      "sha256": "1349dcee00864c32dea898a28094fca2bf1f08b3689113872350e4f0610db321"
+    },
+    {
+      "bytes": 7111,
+      "path": "results/validation/autonomous_w2/g4/pose_collision_audit_receipt_v1.json",
+      "sha256": "416a837e9e72c18e60c0db31e4911584f91cf0a0297c08335590181cfaa36400"
+    }
+  ],
+  "replays_or_audits_executed_by_codex": 0,
+  "repository_root": "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety",
+  "review_method": "Read-only SHA-256, byte-size and serialized-result cross-binding checks. No scientific evaluator, fixture, producer, replay or auditor was executed by Codex. Saved peer audits and inspected source support the scoped review; metadata checks do not replace IVP proof.",
+  "saved_result_crossbindings": [
+    {
+      "action_id": "W2_G2_DEV_001_ZERO",
+      "binding_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "full_time_saved_center_slabs": 256,
+      "progress_enclosure_m_exact": [
+        "14071102951150969463572600475/79228162514264337593543950336",
+        "9522363181009521109132469401/39614081257132168796771975168"
+      ],
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_01_W2_G2_DEV_001_ZERO/row.json",
+      "record_sha256": "9aa7a3f86c8572be81349cc2ffb9a67d67e7bd4a67b37c95b2c7208548a1593a",
+      "role": "zero",
+      "saved_proofs_and_audits_agree": true,
+      "saved_safety_status": "CERTIFIED",
+      "task_eligible": false,
+      "uniform_task_ineligible_by_upper": true
+    },
+    {
+      "action_id": "W2_G2_DEV_001_NOMINAL",
+      "binding_sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "full_time_saved_center_slabs": 256,
+      "progress_enclosure_m_exact": [
+        "21453284647730333525723986385/79228162514264337593543950336",
+        "26426908058455596087150334179/79228162514264337593543950336"
+      ],
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_02_W2_G2_DEV_001_NOMINAL/row.json",
+      "record_sha256": "f5ad26449b65a1ccae7af7f7029209e66fc2af656a7fe3956f91d55822420ca7",
+      "role": "nominal",
+      "saved_proofs_and_audits_agree": true,
+      "saved_safety_status": "CERTIFIED",
+      "task_eligible": false,
+      "uniform_task_ineligible_by_upper": true
+    },
+    {
+      "action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "binding_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "full_time_saved_center_slabs": 256,
+      "progress_enclosure_m_exact": [
+        "7208866586077414115959602677/19807040628566084398385987584",
+        "33809089754892191080072691477/79228162514264337593543950336"
+      ],
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json",
+      "record_sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6",
+      "role": "alternative",
+      "saved_proofs_and_audits_agree": true,
+      "saved_safety_status": "CERTIFIED",
+      "task_eligible": true,
+      "uniform_task_ineligible_by_upper": false
+    }
+  ],
+  "schema": "DDWMR_CODEX_W2_V6_SAVED_EVIDENCE_VERIFICATION_v1",
+  "source_closure": {
+    "current_matches": 31,
+    "mismatches": [],
+    "total": 31
+  }
+}

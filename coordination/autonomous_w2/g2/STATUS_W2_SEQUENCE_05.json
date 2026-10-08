@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v2.json": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "docs/reviews/autonomous_w2/g2/W2_V1_DEVELOPMENT_FAILURE_POSTMORTEM.md": "0bc0e3dc45931f4069a629da1ecd5342020f87efa253e465cbf0ca453c4da8ab",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v2.md": "ffde2e95e77ef584b887fd2f5d8e717453aa87367745b0c203c0aec259759d8c",
+    "research/autonomous_w2/g2/development_plan_v2.json": "b28e554891cf4d4f32fb24b324e7dd516e79452cdfe6665414ac4ccffe9e6f99",
+    "results/validation/autonomous_w2/g2/development_v1/stage_receipt.json": "3339ee37e855d8f127dc31c2d43824130b2c603ad6bb44f37f470e41afc25c53",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_01_W2_G2_DEV_001_ZERO/attempt_receipt.json": "0adba5ae00a2b7de206f48867aa4a45510808b2927ea0d23fd95a4d03876e41c",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_01_W2_G2_DEV_001_ZERO/row.json": "6d6967d01a4f434386ccb8c5e2aca100eaba89c2a1326614b444786e8cb2beab",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_01_W2_G2_DEV_001_ZERO/worker.stdout.bin": "0b8788b23a165cb07d012b488c0b4ce9aa4e11205ec9b4ab27024a7d382a79e7",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_02_W2_G2_DEV_001_NOMINAL/attempt_receipt.json": "e25e88bf7963439821fbe32a222aef815a40f35a484762b08f20f94c3ba0078e",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_02_W2_G2_DEV_001_NOMINAL/row.json": "6d6967d01a4f434386ccb8c5e2aca100eaba89c2a1326614b444786e8cb2beab",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_02_W2_G2_DEV_001_NOMINAL/worker.stdout.bin": "0b8788b23a165cb07d012b488c0b4ce9aa4e11205ec9b4ab27024a7d382a79e7",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_03_W2_G2_DEV_001_ALTERNATIVE/attempt_receipt.json": "85ebd63ed46be1cd4451ab1e7c09a0e2cb72657a6c33bdd14ec1ed83e99ae469",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json": "6d6967d01a4f434386ccb8c5e2aca100eaba89c2a1326614b444786e8cb2beab",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_03_W2_G2_DEV_001_ALTERNATIVE/worker.stdout.bin": "0b8788b23a165cb07d012b488c0b4ce9aa4e11205ec9b4ab27024a7d382a79e7",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_04_W2_G2_DEV_001_ZERO/attempt_receipt.json": "79957f65053266a165331f7d82574569d69c7efc309c7e497a7290ba7577ab42",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_04_W2_G2_DEV_001_ZERO/replay.json": "bb38afb4d72c9cb7ea02905f5a36af3ca4587bff2e3c69016d8684b81399ca80",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_04_W2_G2_DEV_001_ZERO/row.json": "f5747dcac0410d8ab054ddfcbb2d1392cef9568fe56cad0a2d537a9a8bd0296b",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_04_W2_G2_DEV_001_ZERO/worker.stdout.bin": "78cc758eefd250c1fcb913b79fabdef4ce5beffd378937a242bfcc885157757b",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_05_W2_G2_DEV_001_NOMINAL/attempt_receipt.json": "ce04b64f458bd54c7054b8851b406c1862f676993a1e7bda9e88d142dd3dd4e4",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_05_W2_G2_DEV_001_NOMINAL/replay.json": "950edbdfc7eebd29ae0964bcc2649f27f8f44481e3d61e38738158f571b59304",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_05_W2_G2_DEV_001_NOMINAL/row.json": "efd63ead643eb876ff27918f7fdd43043902a8cc0bce93dcfa16806580c08e98",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_05_W2_G2_DEV_001_NOMINAL/worker.stdout.bin": "fdfe6cfb76c01c3d72588299a89201c2dc2d9f99ff6b66b2c70588dd19c2aebc",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_06_W2_G2_DEV_001_ALTERNATIVE/attempt_receipt.json": "ca7c28649ac0df5b6444fa1e0462d006cd4c9203e68501a299620f9cb7985413",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_06_W2_G2_DEV_001_ALTERNATIVE/replay.json": "838502026aff90c768aed1ba97de211c00e08340d3a2400947a4790dafacbcb8",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_06_W2_G2_DEV_001_ALTERNATIVE/row.json": "3f4d79077be7075dd29b5bebd59be87e95924e4874925945a20d803c242faeff",
+    "results/validation/autonomous_w2/g2/development_v2/attempt_06_W2_G2_DEV_001_ALTERNATIVE/worker.stdout.bin": "2f9af4f74eec8ffcb252381d98c43c56fe6f46f0129a622a6f1d2f7cd51b5886",
+    "results/validation/autonomous_w2/g2/development_v2/freeze_receipt_v2.json": "2bc11bc9d108ebe4886fe6121ea59887520c6d34031a08461ad5cb8f2fd81798",
+    "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v2.json": "459e53fd1c6fbda70577f9112067dd64bb7ed908960c9eb76c579c8bbf50b4f9"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit, or push.",
+    "No peer source or manifest edits.",
+    "R5 800/800 remains NOT_RUN.",
+    "No G4 held-out confirmation outcomes inspected or run by G2.",
+    "V1 and v2 evidence are immutable development records; no retry under their frozen plans."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "latest_stage": {
+    "attempts_counted": 6,
+    "path": "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json",
+    "sha256": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "status_counts": {
+      "REPLAYED": 3,
+      "RESOURCE_UNKNOWN": 3
+    }
+  },
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 12,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "remaining_attempts": 12,
+    "v1_failed_attempts": 6,
+    "v2_attempts": 6,
+    "v2_candidate_resource_unknown": 3,
+    "v2_r3_replayed_unknown": 3
+  },
+  "next_action": "Implement and fixture-check outward fixed-grid rational interval arithmetic as a versioned serializer/representation correction. If its source-bound nonquery checks pass, freeze a new development plan before using any remaining native attempts.",
+  "objective": "Complete bounded G2 enclosure/usefulness verification; diagnose the v2 rational-bit resource stop and, if sound, publish one frozen arithmetic representation correction within remaining attempt allowance.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "ACTIVE",
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v2.json",
+    "sha256": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "state": "DEVELOPMENT_COMPLETE_SOURCE_CORRECTION_CANDIDATE"
+  },
+  "sequence": 5,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:23:00.103928+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared tree contains pre-existing G4 and project edits; G2 writes remain within G2-owned W2 prefixes."
+}

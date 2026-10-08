@@ -1,0 +1,75 @@
+{
+  "bindings": [
+    {
+      "comparison_id": "W2_G4_AUER_ZERO",
+      "native_binding": {
+        "arithmetic_backend_manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json",
+        "arithmetic_backend_manifest_sha256": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+        "arithmetic_dependency": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library",
+        "checker_source_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+        "input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+        "input_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+        "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+        "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+        "resource_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_profile_v3.json",
+        "resource_profile_sha256": "df1af1bc14e99755a46b9a662255419b4d169501496b7e4b71517192e16a90f1",
+        "solver_source_sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa",
+        "source_snapshot_manifest_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8"
+      },
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "native_case_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "ordinal": 1,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6"
+    },
+    {
+      "comparison_id": "W2_G4_AUER_NOMINAL",
+      "native_binding": {
+        "arithmetic_backend_manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json",
+        "arithmetic_backend_manifest_sha256": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+        "arithmetic_dependency": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library",
+        "checker_source_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+        "input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+        "input_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+        "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+        "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+        "resource_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_profile_v3.json",
+        "resource_profile_sha256": "df1af1bc14e99755a46b9a662255419b4d169501496b7e4b71517192e16a90f1",
+        "solver_source_sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa",
+        "source_snapshot_manifest_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8"
+      },
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+      "native_case_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "ordinal": 2,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b"
+    },
+    {
+      "comparison_id": "W2_G4_AUER_ALTERNATIVE",
+      "native_binding": {
+        "arithmetic_backend_manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json",
+        "arithmetic_backend_manifest_sha256": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+        "arithmetic_dependency": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library",
+        "checker_source_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+        "input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+        "input_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+        "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+        "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+        "resource_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_profile_v3.json",
+        "resource_profile_sha256": "df1af1bc14e99755a46b9a662255419b4d169501496b7e4b71517192e16a90f1",
+        "solver_source_sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa",
+        "source_snapshot_manifest_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8"
+      },
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+      "native_case_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "ordinal": 3,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb"
+    }
+  ],
+  "native_source_snapshot_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/native_source_snapshot_v3.json",
+  "native_source_snapshot_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8",
+  "schema": "ddwmr-g4-w2-auer-native-bindings-v3",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "status": "FROZEN_DEVELOPMENT_ONLY_W2"
+}

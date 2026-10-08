@@ -1,0 +1,778 @@
+{
+  "V_max": {
+    "den": "1",
+    "num": "1"
+  },
+  "actions": [
+    {
+      "V": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "0"
+        }
+      ],
+      "id": "W2_V0"
+    },
+    {
+      "V": [
+        {
+          "den": "2",
+          "num": "1"
+        },
+        {
+          "den": "2",
+          "num": "1"
+        }
+      ],
+      "id": "W2_VHALF"
+    },
+    {
+      "V": [
+        {
+          "den": "1",
+          "num": "1"
+        },
+        {
+          "den": "1",
+          "num": "1"
+        }
+      ],
+      "id": "W2_V1"
+    }
+  ],
+  "coordinate_scaling": [
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "1"
+    },
+    {
+      "den": "1",
+      "num": "1"
+    }
+  ],
+  "counts": {
+    "actions": 3,
+    "horizons": 1,
+    "queries": 3,
+    "scenes": 1,
+    "state_cells": 1
+  },
+  "fixed_parameters": {
+    "B_L": {
+      "var": "B_L"
+    },
+    "B_R": {
+      "var": "B_R"
+    },
+    "C_L": {
+      "var": "C_L"
+    },
+    "C_R": {
+      "var": "C_R"
+    },
+    "I_z": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "J_L": {
+      "args": [
+        {
+          "const": {
+            "den": "1",
+            "num": "1"
+          }
+        },
+        {
+          "var": "rho_L"
+        }
+      ],
+      "op": "div"
+    },
+    "J_R": {
+      "args": [
+        {
+          "const": {
+            "den": "1",
+            "num": "1"
+          }
+        },
+        {
+          "var": "rho_R"
+        }
+      ],
+      "op": "div"
+    },
+    "L_L": {
+      "var": "lambda_L"
+    },
+    "L_R": {
+      "var": "lambda_R"
+    },
+    "R_L": {
+      "var": "R_L"
+    },
+    "R_R": {
+      "var": "R_R"
+    },
+    "R_w": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "b": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "c_r": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "c_u": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "k_L": {
+      "var": "k_L"
+    },
+    "k_R": {
+      "var": "k_R"
+    },
+    "m": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    },
+    "v_s": {
+      "const": {
+        "den": "1",
+        "num": "1"
+      }
+    }
+  },
+  "gear_witness": {
+    "L": {
+      "B_motor": {
+        "args": [
+          {
+            "var": "B_L"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "100"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "B_wheel": {
+        "den": "1",
+        "num": "0"
+      },
+      "J_motor": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "const": {
+                      "den": "1",
+                      "num": "1"
+                    }
+                  },
+                  {
+                    "var": "rho_L"
+                  }
+                ],
+                "op": "div"
+              },
+              {
+                "const": {
+                  "den": "10",
+                  "num": "1"
+                }
+              }
+            ],
+            "op": "sub"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "100"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "J_wheel": {
+        "den": "10",
+        "num": "1"
+      },
+      "k_motor": {
+        "args": [
+          {
+            "var": "k_L"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "10"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "n": {
+        "den": "1",
+        "num": "10"
+      }
+    },
+    "R": {
+      "B_motor": {
+        "args": [
+          {
+            "var": "B_R"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "100"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "B_wheel": {
+        "den": "1",
+        "num": "0"
+      },
+      "J_motor": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "const": {
+                      "den": "1",
+                      "num": "1"
+                    }
+                  },
+                  {
+                    "var": "rho_R"
+                  }
+                ],
+                "op": "div"
+              },
+              {
+                "const": {
+                  "den": "10",
+                  "num": "1"
+                }
+              }
+            ],
+            "op": "sub"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "100"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "J_wheel": {
+        "den": "10",
+        "num": "1"
+      },
+      "k_motor": {
+        "args": [
+          {
+            "var": "k_R"
+          },
+          {
+            "const": {
+              "den": "1",
+              "num": "10"
+            }
+          }
+        ],
+        "op": "div"
+      },
+      "n": {
+        "den": "1",
+        "num": "10"
+      }
+    }
+  },
+  "horizons": [
+    {
+      "T": {
+        "den": "1",
+        "num": "2"
+      },
+      "id": "T_200"
+    }
+  ],
+  "law": {
+    "L_phi": {
+      "den": "1",
+      "num": "1"
+    },
+    "name": "clip"
+  },
+  "parameter_cell": {
+    "id": "theta_v6_full_12d",
+    "labels": {
+      "B_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "B_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "C_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "C_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "R_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "R_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "k_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "k_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "lambda_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "lambda_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "rho_L": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ],
+      "rho_R": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    }
+  },
+  "parameter_labels": [
+    {
+      "name": "rho_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "rho_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "C_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "C_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "lambda_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "lambda_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "R_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "R_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "B_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "B_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "k_L",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    },
+    {
+      "name": "k_R",
+      "range": [
+        {
+          "den": "10000",
+          "num": "9999"
+        },
+        {
+          "den": "10000",
+          "num": "10001"
+        }
+      ]
+    }
+  ],
+  "plant_scope": "MASTER v2.1 reduced nine-state ideal planar DDWMR; exact G2 v6 synthetic task",
+  "scenes": [
+    {
+      "R_s": {
+        "den": "50",
+        "num": "3"
+      },
+      "id": "scene_v6_static_circle",
+      "p_o": [
+        {
+          "den": "2",
+          "num": "1"
+        },
+        {
+          "den": "10",
+          "num": "1"
+        }
+      ]
+    }
+  ],
+  "schema": "ddwmr-g4-w2-matched-v6-benchmark-v2",
+  "source_spec": "research/autonomous_w2/g4/matched_v6_task_development_v2/protocol_v2.json",
+  "state_cells": [
+    {
+      "box": [
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10",
+            "num": "3"
+          },
+          {
+            "den": "10000",
+            "num": "3001"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10000",
+            "num": "2499"
+          },
+          {
+            "den": "4",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10000",
+            "num": "2499"
+          },
+          {
+            "den": "4",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ]
+      ],
+      "coordinates": [
+        "p_x",
+        "p_y",
+        "theta",
+        "u",
+        "r",
+        "omega_L",
+        "omega_R",
+        "i_L",
+        "i_R"
+      ],
+      "id": "state_v6_full_box"
+    }
+  ],
+  "status": "FROZEN_DEVELOPMENT_ONLY_W2",
+  "task_target": {
+    "full_hold_collision_contact": true,
+    "progress_metric": "p_x(T)-p_x(0)=integral_0^T u(t)*cos(theta(t)) dt",
+    "required_progress_m": {
+      "den": "20",
+      "num": "7"
+    }
+  }
+}

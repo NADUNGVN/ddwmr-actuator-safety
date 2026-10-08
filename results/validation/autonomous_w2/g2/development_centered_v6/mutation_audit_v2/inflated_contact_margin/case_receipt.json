@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "ReplayReject:RECOMPUTED_FIELDS_MISMATCH:contact_margin_lower_N",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/inflated_contact_margin/binding.json",
+  "binding_sha256": "5a91f233b3e554b0dd1e5745a4db1d39cc71659aa3e825131b908ead66797512",
+  "elapsed_seconds_display_only": 10.156,
+  "expected_rejection_class": "RECOMPUTED_FIELDS_MISMATCH",
+  "job_status": "NONZERO_EXIT",
+  "name": "inflated_contact_margin",
+  "peak_memory_bytes": 14848000,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/inflated_contact_margin/record.json",
+  "record_sha256": "0ca0baa5fd1f1b29a801e5ef4159968015d1e2365aa1894ba7aecd05a2b0f88b",
+  "rejected": true,
+  "returncode": 2
+}

@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/AUDIT_REQUEST_TO_G4_v6.md": "a61482e4bc07390f987b2bf495e6ddbd9c961c3b5996a2c6b60d2e9b132af088",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v6.json": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v6.json.sha256": "f8e2a9e977224a7d75ab2da19f5469760c19f1fff8a8b6841613a70f61cdd771",
+    "research/autonomous_w2/g2/HYPOTHESIS_CENTERED_RESIDUAL_TUBE_v1.md": "56b535dffb543e2f0f1717c66db833741b829cdb59f3cc5c181c056b4d6e012e",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v6.md": "78159d9388939be7601a7ba33eb6b9a1c0c41255952cd79a08f8166efc4351b6",
+    "research/autonomous_w2/g2/development_plan_centered_v6.json": "c9d6abfd689a2f6db59dbaf7aeb7f4b86c0769739930ef5747c422b37996f5bb",
+    "results/validation/autonomous_w2/g2/centered_error_tube_preflight_v2.json": "28f19a1da23a7fde255ef7e7c512d48d97f8734d2a51dd3146f4dae457720ccc",
+    "results/validation/autonomous_w2/g2/centered_v6_nonquery_fixtures_v1.json": "966471571e45c90db6c8966075149b92660b8455152ccc791421e84e958bd862",
+    "results/validation/autonomous_w2/g2/development_centered_v6/freeze_receipt_v6.json": "d57bcec7cf992dae258bc65ebaf6ffba444ee0df5ebe00845df939d3f4ab87e8",
+    "results/validation/autonomous_w2/g2/pre_run_validation_centered_v6.json": "2212db2422f71126c4d33a7f655e3eb50f3e6a8a3ef53ca4066da75772ac4850",
+    "results/validation/autonomous_w2/g2/pre_run_validation_centered_v6_v2.json": "0ead714c53b35809c0c843c69542fde77def6d6645a68aa1c559745b63240eb4",
+    "results/validation/autonomous_w2/g2/pre_run_validation_centered_v6_v3.json": "4c4e93e67796eb45b5b3d66317334702b7c75a7b745b4b10ae9c8a04c8c6b26f",
+    "validation/autonomous_w2/g2/centered_v6_nonquery_fixtures.py": "2a997b6df78fc76dd82168b2e4a1eff9ada3356a5f7e2147ccb7a79b16092095",
+    "validation/autonomous_w2/g2/checker_centered_v6.py": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+    "validation/autonomous_w2/g2/producer_centered_v6.py": "83341f26f92da69a55d6bb945aecbebaf70417b860a59dad43a6c5cad4e78f26",
+    "validation/autonomous_w2/g2/profile_centered_v6.json": "8252ceecd3a07c9811fd601945d16b9f33318d120340441c3fff94b117ee03a2",
+    "validation/autonomous_w2/g2/run_stage_centered_v6.py": "f1c7470a9e5cf2d8afc6736dd02c6b643da9f6ad99683422e4ac06f0a54646c3"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit or push.",
+    "No peer source or manifest edits.",
+    "R5 remains 800/800 NOT_RUN.",
+    "No G4 confirmation inputs/outcomes are run or inspected by G2.",
+    "All v1-v4 attempts remain preserved; no retries under those plans.",
+    "V5 changes only the fixed time partition to 256 slabs of 1/128 s."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 21,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "planned_frozen_attempts": 3,
+    "remaining_attempts": 3,
+    "v1_attempts": 6,
+    "v2_attempts": 6,
+    "v3_attempts": 3,
+    "v4_attempts": 3,
+    "v5_attempts": 3
+  },
+  "next_action": "Read the G4-owned release decision directly. Complete G2's one-shot frozen 3-row development stage with no retry, then replay saved proof and run mutation audits.",
+  "objective": "Release the centered residual v6 runnable candidate for direct G4 audit, then use only the three remaining bounded development actions.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "observed_utc": "2026-10-07T11:31:28.497146+00:00",
+    "phase": "AWAITING_PEER_INPUT",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "PUBLISHED",
+  "previous_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v5.json",
+    "sha256": "1fa1a1e14f311a49fdf6f92b79ecdb362a69004317ee5a512be3bfa0efe8776e"
+  },
+  "previous_stage": {
+    "attempts_counted": 3,
+    "path": "results/validation/autonomous_w2/g2/development_v4/stage_receipt.json",
+    "sha256": "2e53f8d2e3d64c93d4a86a08856fe0d359d066c5c3b4f6fc93c8f170dedc168b",
+    "status_counts": {
+      "REPLAYED": 3
+    }
+  },
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+    "state": "FROZEN_FOR_G4_AUDIT_AND_BOUNDED_DEVELOPMENT"
+  },
+  "sequence": 15,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "stage_result": {
+    "all_candidate_rows_replayed": false,
+    "path": null,
+    "status": "NOT_RUN_AT_RELEASE",
+    "task_eligible_rows": null
+  },
+  "utc": "2026-10-07T11:31:28.496145+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared tree retained; G2 writes confined to G2-owned W2 prefixes; G4 files read only; no branch switch, commit or push."
+}

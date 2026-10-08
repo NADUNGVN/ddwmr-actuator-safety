@@ -105,6 +105,16 @@ Independent G1 review of authoritative v2.1 at commit `8341014eac52ea66fe38559d6
 - G3, operational controller/safety-filter integration, closed-loop and hardware work are not part of this assignment. G1 restricted PASS; G2/G3/G4 UNVERIFIED; HOLD. Scientific plant version remains v2.1; workflow revision W1 records the authorization change.
 - The pending validation-only policy patch is superseded, not applied verbatim. Earlier records of prohibitions describe historical authority and must not override this entry or current MASTER sections 3/32.
 
+## 2026-10-07 — HOLD — workflow W2; autonomous two-session G2/G4 verification
+
+- Owner instruction: "ok vậy làm rỏ các đầu việc cần thực hiện để hoàn thiện, từ giờ tôi muốn 2 luna max tự đảm nhiệm 2 đầu việc kiểm chứng chứ không cần đợi bạn nữa".
+- Adopt workflow revision W2, extending W1 without changing plant formulation v2.1. The owner starts/continues `DDWMR | LUNA-G2-SCOPE` and `DDWMR | LUNA-G4-AUER`; Codex does not launch execution agents.
+- G2 owns sound enclosure/task usefulness research, implementation and development verification. G4 owns independent proof/code audit, primary-source contribution screening and bounded matched comparison. They exchange immutable releases and audit decisions through owned repository files, so routine corrections do not require user relay or another Codex GO.
+- Current contract: `docs/DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2.md`; assignments: `docs/CODEX_TO_LUNA_G2_AUTONOMOUS_COMPLETION_W2.md` and `docs/CODEX_TO_LUNA_G4_AUTONOMOUS_COMPLETION_W2.md`. Record all failures, source/profile changes and denominators; preserve historical R3/R5/Auer artifacts. Do not open legacy large batches or modify their counts under a new label.
+- This supersedes old per-iteration Codex review/GO waits for the same authorized G2/G4 scope. It does not accept unsound proofs, authorize a plant change, erase mathematical blockers, or promote gates. Peer disagreement is resolved by derivation/evidence; model agreement is not proof.
+- Keep work within the existing shared repo and assigned prefixes, with no branch switch, commit or push. Final reports remain detailed Markdown; Luna chat summaries are exactly Session / Status / Handoff.
+- G3, operational controller/closed-loop/hardware work and physical correspondence remain separate. **HOLD; G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED.** Scientific equations/assumptions and literature findings are unchanged; only workflow revision is incremented.
+
 ## Version maintenance (current)
 
 For a substantive decision: update MASTER, increment its declared version, append decision/reason/consequence here, update matrix/gates if affected, and mark old claims superseded. The current filename is the canonical entry point; if renamed for a future version, update AGENTS.md and README together. Do not leave two current masters.

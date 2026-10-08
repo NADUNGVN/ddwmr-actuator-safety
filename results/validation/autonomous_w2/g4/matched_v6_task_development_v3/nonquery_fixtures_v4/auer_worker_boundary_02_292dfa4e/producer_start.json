@@ -1,0 +1,7 @@
+{
+  "comparison_id": "W2_G4_AUER_NOMINAL",
+  "method": "local_auer2013_residual_picard_reconstruction",
+  "native_case_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+  "producer_invocation_ordinal": 1,
+  "schema": "ddwmr-g4-w2-producer-start-v1"
+}

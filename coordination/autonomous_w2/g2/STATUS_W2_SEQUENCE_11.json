@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/AUDIT_REQUEST_TO_G4_v4.md": "0621a9ff4009456250e96c14c56cef12088d9e6155222fe71266a955a99c9a38",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v2.json": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v3.json": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v4.json": "54ddbba89872aa81a7585e37e896dc534c8d6f1745e463d81dbb54765bf3b4e4",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v4.json.sha256": "7083cdc3e4f50ce3390fda74dd27137732ba354b2ad2d26e5eeff9aeeba8e764",
+    "docs/reviews/autonomous_w2/g2/W2_V3_DEVELOPMENT_FAILURE_POSTMORTEM.md": "d058e7f6ab6339185b436bc85d0b67231187f482d06029f1b3a37902c20b2efd",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v4.md": "03a38e6a9f6d9a709cb805524f1273fb93c4934cabbeaa7784ab86e84b5982ce",
+    "research/autonomous_w2/g2/development_plan_v4.json": "d3037eea38498d5743cf5f986d59123ec3d69a8f1252eb9973fba21d1893ee10",
+    "research/autonomous_w2/g2/task_protocol_v1.json": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+    "results/validation/autonomous_w2/g2/clip_branch_point_witness_v1.json": "286bfbe9c433724f812454c9191c144121a86e0568d2e9e32cca67e1ca87ab8f",
+    "results/validation/autonomous_w2/g2/development_v1/stage_receipt.json": "3339ee37e855d8f127dc31c2d43824130b2c603ad6bb44f37f470e41afc25c53",
+    "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "results/validation/autonomous_w2/g2/development_v3/stage_receipt.json": "b52ff0267b9ee948ebc0818d9296096c4224aedb5f6bb01d0609c6e4a7efdde2",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_01_W2_G2_DEV_001_ZERO/attempt_receipt.json": "478fe94c50c23011a924e9163d212497c04d38bcee77b3d381f5ffac2ecb7947",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_01_W2_G2_DEV_001_ZERO/replay.json": "0c1951f0f1e986af3f7cad120d3b882d89d02c794003e741cb81d80b1356bd3d",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_01_W2_G2_DEV_001_ZERO/row.json": "e43918c8604043e5f5e0e0409644ca5ecc015b55bdfadf2efd9729999711169d",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_02_W2_G2_DEV_001_NOMINAL/attempt_receipt.json": "db1233baf847f3194255917154adee65804fe4aa315a98d27b362539e3406ab6",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_02_W2_G2_DEV_001_NOMINAL/replay.json": "71e28d2943aa569349b848eb9e9b1303b4cd5b7de5a17f74cb0a5c46191bca8d",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_02_W2_G2_DEV_001_NOMINAL/row.json": "f408ea9a79a1c7291c6ce4f96464b435ccbdfd7d849b7eb3de60fb08c8239eb7",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/attempt_receipt.json": "b69d4967a030b4201eca3155429a062545dea5c8f4e09eafafb3d4ae14b9a52a",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/mutation_audit_process/mutation_audit_receipt.json": "ed731436bbc88334c315477fea21de554c9964f36dc3d060d71d4041d27a36fd",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/mutation_audit_report.json": "16281d57c27ae9acdfce52d1096e6086e529cdfb024b72ddb8d4409cb98d9272",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/replay.json": "61b9c84f0e2039bdae6d80b6e1d5ada2d8e6f72d035d2b528ecf4d5729f7c580",
+    "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json": "5f86b8291fe4714c7103a5f4662f630587061f692d0f075adbcb303a305d081e",
+    "results/validation/autonomous_w2/g2/development_v4/freeze_receipt_v4.json": "0516194cc60d4dca14c893f746e20e25844cebf6fe0d6715252787e3864e7eb8",
+    "results/validation/autonomous_w2/g2/development_v4/stage_receipt.json": "2e53f8d2e3d64c93d4a86a08856fe0d359d066c5c3b4f6fc93c8f170dedc168b",
+    "results/validation/autonomous_w2/g2/fixtures/status_aggregation_v4.json": "0ae0302647b7431eebe135b42de26e2bacb18a12abb47ce8096ae1404b0fe590",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v4.json": "79c403c2ac96fd9467fd0937989bd2128304bcc5d058fd4e069d1633810501e8",
+    "validation/autonomous_w2/g2/clip_branch_point_witness_v1.py": "79aea99e38281487c1d3ae07485eaa833ade7ceb4c9065757cab60bf2ab8edd7",
+    "validation/autonomous_w2/g2/profile_v4.json": "5bed269bc8c7fe22f2e0ee7021f8fc4a66b420db33eabbab7a8fcd4d33ebf37b"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit or push.",
+    "No peer source or manifest edits.",
+    "R5 800/800 remains NOT_RUN.",
+    "No G4 confirmation inputs/outcomes are run or inspected by G2.",
+    "All v1-v3 attempts remain preserved; no retries under those plans.",
+    "V4 is a frozen three-row candidate-only development plan with one launch per row."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "mutation_audit": {
+    "all_required_mutations_rejected": true,
+    "native_attempts_added": 0,
+    "path": "results/validation/autonomous_w2/g2/development_v4/attempt_03_W2_G2_DEV_001_ALTERNATIVE/mutation_audit_report.json",
+    "sha256": "16281d57c27ae9acdfce52d1096e6086e529cdfb024b72ddb8d4409cb98d9272"
+  },
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 18,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "remaining_attempts": 6,
+    "v1_attempts": 6,
+    "v2_attempts": 6,
+    "v3_attempts": 3,
+    "v4_attempts": 3
+  },
+  "next_action": "Freeze a finer 256-slab v5 profile and same-task producer/checker bindings as development only; run each of the three actions once if all hash and resource prechecks pass, then mutation-replay any proof row and consume G4 audit decisions.",
+  "objective": "Use the v4 failure evidence and exact center-point clip witness to evaluate one bounded refinement of the same signed VOF method; preserve the v4 release and audit trail.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "ACTIVE",
+  "point_branch_witness": {
+    "all_three_actions_stay_in_strict_clip_interior": true,
+    "path": "results/validation/autonomous_w2/g2/clip_branch_point_witness_v1.json",
+    "scope": "one exact allowed center point; not a whole-domain/contact/collision/task certificate",
+    "sha256": "286bfbe9c433724f812454c9191c144121a86e0568d2e9e32cca67e1ca87ab8f"
+  },
+  "previous_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v3.json",
+    "sha256": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693"
+  },
+  "previous_stage": {
+    "attempts_counted": 3,
+    "path": "results/validation/autonomous_w2/g2/development_v3/stage_receipt.json",
+    "sha256": "b52ff0267b9ee948ebc0818d9296096c4224aedb5f6bb01d0609c6e4a7efdde2",
+    "status_counts": {
+      "EXECUTION_FAILURE": 3
+    }
+  },
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v4.json",
+    "sha256": "54ddbba89872aa81a7585e37e896dc534c8d6f1745e463d81dbb54765bf3b4e4",
+    "state": "FROZEN_NESTED_STATUS_CORRECTION_CANDIDATE_FOR_G4_AUDIT_AND_BOUNDED_DEVELOPMENT"
+  },
+  "sequence": 11,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "stage_result": {
+    "all_candidate_rows_replayed": true,
+    "path": "results/validation/autonomous_w2/g2/development_v4/stage_receipt.json",
+    "sha256": "2e53f8d2e3d64c93d4a86a08856fe0d359d066c5c3b4f6fc93c8f170dedc168b",
+    "status_counts": {
+      "REPLAYED": 3
+    },
+    "task_eligible_rows": 0
+  },
+  "utc": "2026-10-07T10:46:39.372509+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared working tree is retained; G2 writes remain within G2-owned W2 prefixes."
+}

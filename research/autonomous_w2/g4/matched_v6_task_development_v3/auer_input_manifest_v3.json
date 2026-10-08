@@ -1,0 +1,1186 @@
+{
+  "benchmark_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/benchmark_v3.json",
+  "benchmark_sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94",
+  "cases": [
+    {
+      "action_id": "W2_V0",
+      "canonical_physical_input": {
+        "fixed_constants": {
+          "I_z": "1",
+          "R_w": "1",
+          "V_max": "1",
+          "b": "1",
+          "c_r": "1",
+          "c_u": "1",
+          "m": "1",
+          "v_s": "1"
+        },
+        "formulation": "MASTER v2.1 reduced nine-state DDWMR",
+        "hold_s": "2",
+        "initial_box": [
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "3/10",
+            "3001/10000"
+          ],
+          [
+            "0",
+            "1/100000"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ]
+        ],
+        "label_semantics": "Each label is one fixed true parameter for the complete trajectory and is reused unchanged across all verification slabs.",
+        "lipschitz_constant": "1",
+        "obstacle": {
+          "center_m": [
+            "1/2",
+            "1/10"
+          ],
+          "inflated_radius_m": "3/50",
+          "kind": "static_circle"
+        },
+        "parameter_label_bounds": [
+          "9999/10000",
+          "10001/10000"
+        ],
+        "parameter_label_order": [
+          "rho_L",
+          "rho_R",
+          "C_L",
+          "C_R",
+          "lambda_L",
+          "lambda_R",
+          "R_L",
+          "R_R",
+          "B_L",
+          "B_R",
+          "k_L",
+          "k_R"
+        ],
+        "parameter_maps": {
+          "J_j": "1/rho_j",
+          "L_j": "lambda_j"
+        },
+        "progress_metric": "p_x(T)-p_x(0)=integral_0^T u(t)*cos(theta(t)) dt",
+        "required_progress_m": "7/20",
+        "schema": "ddwmr-g4-w2-canonical-physical-input-v2",
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "task_protocol_sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+        "traction_law": "clip(s,-1,1)",
+        "voltage": [
+          "0",
+          "0"
+        ]
+      },
+      "comparison_id": "W2_G4_AUER_ZERO",
+      "input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "native_case_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "ordinal": 1,
+      "payload": {
+        "action": {
+          "V": [
+            {
+              "den": "1",
+              "num": "0"
+            },
+            {
+              "den": "1",
+              "num": "0"
+            }
+          ],
+          "id": "W2_V0"
+        },
+        "horizon": {
+          "T": {
+            "den": "1",
+            "num": "2"
+          },
+          "id": "T_200"
+        },
+        "parameter_cell": {
+          "id": "theta_v6_full_12d",
+          "labels": {
+            "B_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "B_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ]
+          }
+        },
+        "scene": {
+          "R_s": {
+            "den": "50",
+            "num": "3"
+          },
+          "id": "scene_v6_static_circle",
+          "p_o": [
+            {
+              "den": "2",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "1"
+            }
+          ]
+        },
+        "state_cell": {
+          "box": [
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10",
+                "num": "3"
+              },
+              {
+                "den": "10000",
+                "num": "3001"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ]
+          ],
+          "coordinates": [
+            "p_x",
+            "p_y",
+            "theta",
+            "u",
+            "r",
+            "omega_L",
+            "omega_R",
+            "i_L",
+            "i_R"
+          ],
+          "id": "state_v6_full_box"
+        }
+      },
+      "payload_sha256": "9b77a357c3f3d7f63da214a9d08210d44b4ba92ecee1ca55d84268df968d4c07",
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "query_id": "W2_G4_AUER_ZERO"
+    },
+    {
+      "action_id": "W2_VHALF",
+      "canonical_physical_input": {
+        "fixed_constants": {
+          "I_z": "1",
+          "R_w": "1",
+          "V_max": "1",
+          "b": "1",
+          "c_r": "1",
+          "c_u": "1",
+          "m": "1",
+          "v_s": "1"
+        },
+        "formulation": "MASTER v2.1 reduced nine-state DDWMR",
+        "hold_s": "2",
+        "initial_box": [
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "3/10",
+            "3001/10000"
+          ],
+          [
+            "0",
+            "1/100000"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ]
+        ],
+        "label_semantics": "Each label is one fixed true parameter for the complete trajectory and is reused unchanged across all verification slabs.",
+        "lipschitz_constant": "1",
+        "obstacle": {
+          "center_m": [
+            "1/2",
+            "1/10"
+          ],
+          "inflated_radius_m": "3/50",
+          "kind": "static_circle"
+        },
+        "parameter_label_bounds": [
+          "9999/10000",
+          "10001/10000"
+        ],
+        "parameter_label_order": [
+          "rho_L",
+          "rho_R",
+          "C_L",
+          "C_R",
+          "lambda_L",
+          "lambda_R",
+          "R_L",
+          "R_R",
+          "B_L",
+          "B_R",
+          "k_L",
+          "k_R"
+        ],
+        "parameter_maps": {
+          "J_j": "1/rho_j",
+          "L_j": "lambda_j"
+        },
+        "progress_metric": "p_x(T)-p_x(0)=integral_0^T u(t)*cos(theta(t)) dt",
+        "required_progress_m": "7/20",
+        "schema": "ddwmr-g4-w2-canonical-physical-input-v2",
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "task_protocol_sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+        "traction_law": "clip(s,-1,1)",
+        "voltage": [
+          "1/2",
+          "1/2"
+        ]
+      },
+      "comparison_id": "W2_G4_AUER_NOMINAL",
+      "input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+      "native_case_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "ordinal": 2,
+      "payload": {
+        "action": {
+          "V": [
+            {
+              "den": "2",
+              "num": "1"
+            },
+            {
+              "den": "2",
+              "num": "1"
+            }
+          ],
+          "id": "W2_VHALF"
+        },
+        "horizon": {
+          "T": {
+            "den": "1",
+            "num": "2"
+          },
+          "id": "T_200"
+        },
+        "parameter_cell": {
+          "id": "theta_v6_full_12d",
+          "labels": {
+            "B_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "B_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ]
+          }
+        },
+        "scene": {
+          "R_s": {
+            "den": "50",
+            "num": "3"
+          },
+          "id": "scene_v6_static_circle",
+          "p_o": [
+            {
+              "den": "2",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "1"
+            }
+          ]
+        },
+        "state_cell": {
+          "box": [
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10",
+                "num": "3"
+              },
+              {
+                "den": "10000",
+                "num": "3001"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ]
+          ],
+          "coordinates": [
+            "p_x",
+            "p_y",
+            "theta",
+            "u",
+            "r",
+            "omega_L",
+            "omega_R",
+            "i_L",
+            "i_R"
+          ],
+          "id": "state_v6_full_box"
+        }
+      },
+      "payload_sha256": "81bbb3f1a3ddaaecddad3056b4246be8e92d1c665cd6f1a3d31ce85d80173c6d",
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "query_id": "W2_G4_AUER_NOMINAL"
+    },
+    {
+      "action_id": "W2_V1",
+      "canonical_physical_input": {
+        "fixed_constants": {
+          "I_z": "1",
+          "R_w": "1",
+          "V_max": "1",
+          "b": "1",
+          "c_r": "1",
+          "c_u": "1",
+          "m": "1",
+          "v_s": "1"
+        },
+        "formulation": "MASTER v2.1 reduced nine-state DDWMR",
+        "hold_s": "2",
+        "initial_box": [
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "3/10",
+            "3001/10000"
+          ],
+          [
+            "0",
+            "1/100000"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "2499/10000",
+            "1/4"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ],
+          [
+            "-1/100000",
+            "1/100000"
+          ]
+        ],
+        "label_semantics": "Each label is one fixed true parameter for the complete trajectory and is reused unchanged across all verification slabs.",
+        "lipschitz_constant": "1",
+        "obstacle": {
+          "center_m": [
+            "1/2",
+            "1/10"
+          ],
+          "inflated_radius_m": "3/50",
+          "kind": "static_circle"
+        },
+        "parameter_label_bounds": [
+          "9999/10000",
+          "10001/10000"
+        ],
+        "parameter_label_order": [
+          "rho_L",
+          "rho_R",
+          "C_L",
+          "C_R",
+          "lambda_L",
+          "lambda_R",
+          "R_L",
+          "R_R",
+          "B_L",
+          "B_R",
+          "k_L",
+          "k_R"
+        ],
+        "parameter_maps": {
+          "J_j": "1/rho_j",
+          "L_j": "lambda_j"
+        },
+        "progress_metric": "p_x(T)-p_x(0)=integral_0^T u(t)*cos(theta(t)) dt",
+        "required_progress_m": "7/20",
+        "schema": "ddwmr-g4-w2-canonical-physical-input-v2",
+        "state_order": [
+          "p_x",
+          "p_y",
+          "theta",
+          "u",
+          "r",
+          "omega_L",
+          "omega_R",
+          "i_L",
+          "i_R"
+        ],
+        "task_protocol_sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a",
+        "traction_law": "clip(s,-1,1)",
+        "voltage": [
+          "1",
+          "1"
+        ]
+      },
+      "comparison_id": "W2_G4_AUER_ALTERNATIVE",
+      "input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "native_case_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+      "native_case_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "ordinal": 3,
+      "payload": {
+        "action": {
+          "V": [
+            {
+              "den": "1",
+              "num": "1"
+            },
+            {
+              "den": "1",
+              "num": "1"
+            }
+          ],
+          "id": "W2_V1"
+        },
+        "horizon": {
+          "T": {
+            "den": "1",
+            "num": "2"
+          },
+          "id": "T_200"
+        },
+        "parameter_cell": {
+          "id": "theta_v6_full_12d",
+          "labels": {
+            "B_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "B_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "C_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "R_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "k_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "lambda_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_L": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ],
+            "rho_R": [
+              {
+                "den": "10000",
+                "num": "9999"
+              },
+              {
+                "den": "10000",
+                "num": "10001"
+              }
+            ]
+          }
+        },
+        "scene": {
+          "R_s": {
+            "den": "50",
+            "num": "3"
+          },
+          "id": "scene_v6_static_circle",
+          "p_o": [
+            {
+              "den": "2",
+              "num": "1"
+            },
+            {
+              "den": "10",
+              "num": "1"
+            }
+          ]
+        },
+        "state_cell": {
+          "box": [
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10",
+                "num": "3"
+              },
+              {
+                "den": "10000",
+                "num": "3001"
+              }
+            ],
+            [
+              {
+                "den": "1",
+                "num": "0"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "10000",
+                "num": "2499"
+              },
+              {
+                "den": "4",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ],
+            [
+              {
+                "den": "100000",
+                "num": "-1"
+              },
+              {
+                "den": "100000",
+                "num": "1"
+              }
+            ]
+          ],
+          "coordinates": [
+            "p_x",
+            "p_y",
+            "theta",
+            "u",
+            "r",
+            "omega_L",
+            "omega_R",
+            "i_L",
+            "i_R"
+          ],
+          "id": "state_v6_full_box"
+        }
+      },
+      "payload_sha256": "6b52b739cd6ed0431ab518d4a1e28aaea42d2f4308d5954f59e2c7b89ccb48d8",
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "query_id": "W2_G4_AUER_ALTERNATIVE"
+    }
+  ],
+  "input_digest_contract": "SHA256 canonical JSON of canonical_physical_input, which includes G2 task protocol digest, full nine-state box, independent twelve-label image, fixed constants/maps, clip law, voltage, 2s horizon, static obstacle, progress metric and 7/20 threshold; distinct payload hash binds legacy-native solver fields.",
+  "parameter_label_order": [
+    "rho_L",
+    "rho_R",
+    "C_L",
+    "C_R",
+    "lambda_L",
+    "lambda_R",
+    "R_L",
+    "R_R",
+    "B_L",
+    "B_R",
+    "k_L",
+    "k_R"
+  ],
+  "peer_release_path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+  "peer_release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+  "schema": "ddwmr-g4-w2-auer-input-manifest-v3",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "status": "FROZEN_DEVELOPMENT_ONLY_W2",
+  "task_protocol_path": "research/autonomous_w2/g2/task_protocol_v1.json",
+  "task_protocol_sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+}

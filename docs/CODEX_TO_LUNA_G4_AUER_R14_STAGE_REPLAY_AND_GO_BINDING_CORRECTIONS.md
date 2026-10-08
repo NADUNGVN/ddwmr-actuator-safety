@@ -1,0 +1,14 @@
+# Assignment — DDWMR | LUNA-G4-AUER — R14 stage replay and GO-binding corrections
+
+Read `AGENTS.md`, all four `research_context` files, `docs/reviews/CODEX_G4_AUER_R13_PROSPECTIVE_RUNNER_AND_CHECKER_REVIEW.md`, the R13 handoff/protocol and exact R13 source first. Work in a new versioned G4 candidate namespace on the shared branch. Preserve R9, R11, R12 and R13 inputs/results byte-for-byte. Do not commit, push, clean, issue a GO receipt, run a query, retry an observed ID or start a stage in this assignment.
+
+1. Repair the R13 checker’s `STOPPED_BEFORE_FIRST_INTENT` replay: put the zero-attempt branch before the ten-row-complete requirement, reconcile stage intent/terminal/authorization, zero method/audit intents, zero launches, no query directory and ten `NOT_RUN` IDs; remove the undefined `expected_worker_intents` reference. Treat a missing stage terminal or unresolved method/audit intent as class 3 with no retry. Version the correction and refresh source hashes; do not edit the reviewed R13 bytes.
+2. Add **full-stage synthetic, non-query** receipt fixtures beyond the existing method-bundle cases. Cover: prelaunch failure before first intent; R3 class 3 stopping before Auer; an R3 class 2 followed by Auer class 1/2 and continuation to the next ID; all ten class-1/2 pairs completing one stage; parent interruption with intent only; resource-limit class 2; invalid/missing audit; wrong ordered prefix; and refusal to restart or auto-advance after a stop. Reconcile every stage-level and per-method count. No fixture may invoke a live worker, native proof replay or auditor, and synthetic positive receipts must remain labeled contract-only.
+3. Make a future exact-scope GO receipt fail if its cited review is unrelated, says NO-GO, or lacks the exact candidate manifest/closure/schedule, stage ID and ten-ID digest. Prepare a dedicated machine-checkable review-decision schema or equivalent binding for a later Codex GO decision; keep its current value NO-GO or absent. Add negative GO-binding fixtures. Do not manufacture a Codex GO decision or executable receipt.
+4. Preserve the 1,944-ID universe, R9/R11 observed strata, 1,942-ID R12 order and ten-ID first stage. Freeze the corrected runner, checker, fixtures, protocol, manifest, closure, sidecars and non-executable authorization template only after all non-query contract evidence is complete. Record exact hashes, source inventory, outcomes and limits in the handoff. Stop the affected branch and report any unresolved source or replay defect rather than running query 1.
+
+Write a detailed Markdown handoff under `docs/reviews/LUNA_TO_CODEX_G4_AUER_R14_..._FULL_HANDOFF.md`. Reply in exactly three short chat lines:
+
+`Session: DDWMR | LUNA-G4-AUER`  
+`Status: <DONE or BLOCKED; no new query; R13 0/10 attempted>`  
+`Handoff: <absolute Markdown path>`

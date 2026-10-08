@@ -1,0 +1,154 @@
+{
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "owner": "g4",
+  "phase": "FINISHED",
+  "sequence": 4,
+  "utc": "2026-10-07T17:13:52Z",
+  "branch": "main",
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "environment": {
+    "os": "Windows",
+    "shell": "PowerShell",
+    "python": "3.12.12",
+    "timezone": "Asia/Saigon"
+  },
+  "working_tree_baseline": "Shared tree was already dirty before this W2 continuation; new artifacts were written only under G4-owned coordination/autonomous_w2/g4, validation/autonomous_w2/g4, results/validation/autonomous_w2/g4, and docs/reviews/autonomous_w2/g4 prefixes. Historical status sequences and audit-state versions remain preserved.",
+  "assignment": {
+    "path": "docs/CODEX_TO_LUNA_G4_AUTONOMOUS_COMPLETION_W2.md",
+    "sha256": "90D3C7139CBBBE6379CF7D270E7342173554F78CE5F7261764A066470B339D22"
+  },
+  "continuation": {
+    "path": "docs/CODEX_W2_V6_PEER_CONTINUATION.md",
+    "sha256": "FE1F1B7AF52E5D854729CC5B44EEEF787205C5745A26291CF3CCBAF3500C6F98"
+  },
+  "workflow_file": {
+    "path": "docs/DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2.md",
+    "sha256": "B68DD49067276B6DD1319192A92E9FAEB923DA64480A5C2000DE18DAD7C27908"
+  },
+  "peer_release_consumed": {
+    "session": "DDWMR | LUNA-G2-SCOPE",
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_status_observed": {
+    "path": "coordination/autonomous_w2/g2/STATUS.json",
+    "sha256": "04542186C6122529157AD9A5F51398B5958DDBD197882DF4C75BA417F56AAEBC",
+    "sequence": 17,
+    "observed_utc": "2026-10-07T16:22:05.357032+00:00"
+  },
+  "objective": "Complete the independent, exact-release G4 audit of G2 v6, close the pose/collision arithmetic cross-check, assess method overlap and determine whether the W2 matched-comparison branch has a justified primary effect.",
+  "decision": {
+    "release_scoped_soundness": "ACCEPT_FOR_SCOPED_VALIDATION",
+    "scope": "Three G2 v6 development rows and their frozen two-second narrow clip-interior synthetic task only.",
+    "contribution_disposition": "NO_SUPPORTED_CONTRIBUTION_ON_TESTED_SCOPE",
+    "cross_method_task_utility": "UNMEASURED_NOT_REFUTED",
+    "matched_comparison": "NOT_RUN; no cross-method primary criterion or independently justified binding resource effect was frozen. The v6 inputs are development data and current method runners require a G4-owned adapter/source freeze for this task.",
+    "gate_status": "HOLD; G1 restricted PASS; G2/G3/G4 and physical correspondence UNVERIFIED"
+  },
+  "artifacts": [
+    {
+      "path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v4.json",
+      "sha256": "C031CE24DFB537D2B0ABFE02ED70B3E7146741851C917FF417B01996ECF8F4EB",
+      "bytes": 6457
+    },
+    {
+      "path": "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_AUTONOMOUS_W2_FULL_HANDOFF_v2.md",
+      "sha256": "2CEF194E813C3CEF1E8B07399BC27FD7FC472B7978C1F347A103034E33AD2592",
+      "bytes": 20443
+    },
+    {
+      "path": "docs/reviews/autonomous_w2/g4/AUDIT_CHECKLIST_AND_SOURCE_CROSSWALK_v1.md",
+      "sha256": "84AFB049A38E8A9C23E0E7ED5032C2939A557C286987E34164F206E5EA6411CA",
+      "bytes": 16701
+    },
+    {
+      "path": "validation/autonomous_w2/g4/replay_g2_v6_saved.py",
+      "sha256": "777DC73179CDB4D767D8478E363A1B0FF619B57F3AE9044738370B2E88CA8677",
+      "bytes": 10268
+    },
+    {
+      "path": "validation/autonomous_w2/g4/audit_g2_v6_exact_bounds.py",
+      "sha256": "9103EFB58EC2F08354CD2AFD43225BB3847C55EEB7C7ABCDCA306BE75CA833FE",
+      "bytes": 16689
+    },
+    {
+      "path": "validation/autonomous_w2/g4/run_exact_bound_audit_capped.py",
+      "sha256": "8BF7C1570BC10991833AD1537FAA48E5092FAA71F159A3266231163A0ECD4AA0",
+      "bytes": 5972
+    },
+    {
+      "path": "validation/autonomous_w2/g4/audit_g2_v6_pose_collision.py",
+      "sha256": "EA0A887C6859236F018088E4A8A8A471ED79459793D9A7B0B0B59F5B0F3472E7",
+      "bytes": 5666
+    },
+    {
+      "path": "validation/autonomous_w2/g4/run_pose_collision_audit_capped.py",
+      "sha256": "FCC78F93117072E4FC93AAAF27C90ADCD7380A31C07C39782257D8F1E523676C",
+      "bytes": 4952
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/replay_g2_v6_saved_789d6b37_r2/replay_receipt.json",
+      "sha256": "26C17C0419C151A0CF6BB6E16671A12827207CB6EF608F085F685780D5542C43",
+      "bytes": 6240
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_result.json",
+      "sha256": "D4077BCAFEBD31EDE5B6BD072E7F5FD510DA08C25A57FA10D015F154E88FCE5E",
+      "bytes": 2696
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/exact_bound_audit_v2_supervised/audit_receipt.json",
+      "sha256": "1349DCEE00864C32DEA898A28094FCA2BF1F08B3689113872350E4F0610DB321",
+      "bytes": 6346
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/pose_collision_audit_v1.json",
+      "sha256": "B5D13CDEF35597CC8E527B5022AB51CEA5C1A775D245C2066B91308214321D5D",
+      "bytes": 3620
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/pose_collision_audit_receipt_v1.json",
+      "sha256": "416A837E9E72C18E60C0DB31E4911584F91CF0A0297C08335590181CFAA36400",
+      "bytes": 7111
+    },
+    {
+      "path": "results/validation/autonomous_w2/g4/audit_attempts_v2.json",
+      "sha256": "3873D7FF51A508119B80961513B5652F9ED6A73C97D3080F9A54663AADCA05F0",
+      "bytes": 3809
+    },
+    {
+      "path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v3.json",
+      "sha256": "B01F4C0D2CC78479A24D58CB7413D8384825140EF20FC99F47B21939BA708912",
+      "bytes": 5260,
+      "note": "Preserved provisional wording; final corrected interpretation is in audit state v4."
+    },
+    {
+      "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_03.json",
+      "sha256": "38C88EAF048EC04478A1EB99BFD40977222B2149B10E84FCED75D162C9468554",
+      "bytes": 5772,
+      "note": "Preserved stale pre-v6 no-release status."
+    }
+  ],
+  "work_counts": {
+    "g2_native_attempts": "24/24 consumed; no additional G2 attempts",
+    "g4_saved_check_replays": 3,
+    "g4_independent_nonquery_audits": 2,
+    "g4_smoke_or_development_producer_attempts_per_method": 0,
+    "g4_confirmation_rows_per_method": "0/24",
+    "historical_r19_r20_pairs": "10 descriptive development pairs, Auer 9/10 and R3 6/10; not reused",
+    "legacy_auer_1944": "NOT_RUN",
+    "legacy_r5_800": "800/800 NOT_RUN"
+  },
+  "constraints": [
+    "Only G4-owned W2 prefixes were written.",
+    "No G2 source, status, release, proof or snapshot was edited.",
+    "R19/R20 evidence was not changed or reused as confirmation.",
+    "No Auer 1,944 batch, no stage, no new method producer, and no retry was run.",
+    "Two read-only G4 audit workers stayed below 60 seconds and 1 GiB under Windows Job Objects.",
+    "No branch switch, reset, clean, commit or push."
+  ],
+  "blocker": null,
+  "next_action": "W2 G4 package complete. Any future numerical work must first define a new plant-specific claim or cross-method primary criterion/task, then freeze a supported G4-owned adapter, source closure, W2 resource profile and exact unused confirmation inputs. Do not relabel development or R19/R20 IDs.",
+  "final_handoff": "docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_AUTONOMOUS_W2_FULL_HANDOFF_v2.md"
+}

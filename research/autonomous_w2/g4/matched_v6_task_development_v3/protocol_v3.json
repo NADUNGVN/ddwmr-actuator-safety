@@ -1,0 +1,228 @@
+{
+  "accounting": {
+    "auer_1944": "NOT_RUN",
+    "g2_native_attempts": "24/24 consumed; no producer launched by G2",
+    "g4_confirmation_rows_per_method": "0/24",
+    "g4_w2_auer_native_calls_before_phase": 0,
+    "g4_w2_v6_native_calls_before_phase": 0,
+    "r5_800": "800/800 NOT_RUN"
+  },
+  "actions": [
+    {
+      "auer_id": "W2_G4_AUER_ZERO",
+      "auer_input_digest": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "auer_native_binding_sha256": "57f16e5fde920cb738f8f5fab6e890f77ab0c709971fb73280519f97f17eed7a",
+      "auer_native_input_file_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "comparison_id": "W2_G4_V6_ZERO",
+      "external_id": "W2_G4_V6_ZERO",
+      "native_binding_sha256": "fa7f19096678424a159404ca5840723d6dcb13f32dae6174d6f1b86104485d3a",
+      "ordinal": 1,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "physical_input_sha256": "dc0dcda534dd56e7a1a409977efb5c0565e25c0ca976dcebae189609c4342fa6",
+      "v6_native_binding_input_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "v6_native_binding_sha256": "fa7f19096678424a159404ca5840723d6dcb13f32dae6174d6f1b86104485d3a",
+      "v6_native_input_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_NOMINAL",
+      "auer_input_digest": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "auer_native_binding_sha256": "74bf06acbaa60bbda78461b5359eacab0ca50033f8e91073077979d042698226",
+      "auer_native_input_file_sha256": "22005f295640bedcde8efdfbc9e107e47d7e991bc804cc35e34e6c11003cae7d",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/02_W2_G4_AUER_NOMINAL.json",
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "external_id": "W2_G4_V6_NOMINAL",
+      "native_binding_sha256": "cf7e50f5108b28550306d8571460ff4e08230defd1101a90fcb681bf8f5a3b9d",
+      "ordinal": 2,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "physical_input_sha256": "80f15195b6a29757fa4bd03a20acc0f25b82a4f7e946d6f0308984ca9d6bec4b",
+      "v6_native_binding_input_sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "v6_native_binding_sha256": "cf7e50f5108b28550306d8571460ff4e08230defd1101a90fcb681bf8f5a3b9d",
+      "v6_native_input_sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_ALTERNATIVE",
+      "auer_input_digest": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "auer_native_binding_sha256": "8b8d04b72eef7f62043d3d64467ce12dbcbbc445673e58a0e447f90ffed42f97",
+      "auer_native_input_file_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+      "auer_native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "external_id": "W2_G4_V6_ALTERNATIVE",
+      "native_binding_sha256": "79d6895ea88670fc0546e18072376874f6fd8aea282ebc0f033d73397d07eaa9",
+      "ordinal": 3,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+      "v6_native_binding_input_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "v6_native_binding_sha256": "79d6895ea88670fc0546e18072376874f6fd8aea282ebc0f033d73397d07eaa9",
+      "v6_native_input_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "benchmark": {
+    "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/benchmark_v3.json",
+    "sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94"
+  },
+  "candidate_version": "matched_v6_task_development_v3",
+  "classification": {
+    "CERTIFIED": "fresh native proof completed, method-native independent replay passed, common full-hold collision/contact replay passed, and common progress lower bound is >=7/20",
+    "CERTIFIED_SAFETY_TASK_INELIGIBLE": "common collision/contact replay passes and the common progress upper bound is <7/20",
+    "INVALID_OR_IMPLEMENTATION_FAILURE": "input, source, proof replay, common replay, binding, or execution defect; comparison conclusion is invalid",
+    "PROOF_COMPLETE_COMMON_UNKNOWN": "native proof replay passes but the common full-hold collision/contact check is UNKNOWN",
+    "RESOURCE_LIMIT": "frozen worker/replay wall, memory, operation, bit, output, or proof-size cap stops work",
+    "SAFETY_CERTIFIED_PROGRESS_UNRESOLVED": "common collision/contact replay passes but the common progress interval straddles 7/20",
+    "UNKNOWN": "proof-complete method-native UNKNOWN with no unsafe interpretation"
+  },
+  "common_target": {
+    "collision": "inflated static circle center=(1/2,1/10) m, radius=3/50 m",
+    "common_progress_rule": "intersection of same full-slab sum(duration*interval(u*cos(theta))) and common endpoint displacement enclosure for both methods",
+    "contact": "MASTER v2.1 algebraic tangential-reaction admissibility on the full hold",
+    "full_closed_hold_collision_contact": true,
+    "hold_s": "2",
+    "progress": "p_x(T)-p_x(0)=integral_0^T u*cos(theta) dt",
+    "required_progress_m": "7/20"
+  },
+  "development_data_status": {
+    "all_three_are_consumed_development_data": true,
+    "confirmation_rows": 0,
+    "held_out_rows": 0,
+    "not_a_statistical_sample": true,
+    "v6_actions_already_observed_before_this_freeze": [
+      "W2_G2_DEV_001_ZERO",
+      "W2_G2_DEV_001_NOMINAL",
+      "W2_G2_DEV_001_ALTERNATIVE"
+    ]
+  },
+  "interpretation_policy": {
+    "Auer unsupported/invalid/resource result is not evidence of v6 mathematical superiority": true,
+    "no conditional fresh confirmation in this phase": true,
+    "no generic novelty claim from implementation difference": true,
+    "no universal method superiority": true,
+    "offline 60-second cap is not a robot deadline": true,
+    "quick UNKNOWN is not equal-coverage speed superiority": true
+  },
+  "native_call_limits": {
+    "auer": 3,
+    "per_action": 1,
+    "retries": 0,
+    "v6": 3
+  },
+  "ordered_actions": [
+    {
+      "auer_id": "W2_G4_AUER_ZERO",
+      "external_id": "W2_G4_V6_ZERO",
+      "method_pair": [
+        "centered_residual_v6",
+        "local_auer2013_residual_picard_reconstruction"
+      ],
+      "ordinal": 1,
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_NOMINAL",
+      "external_id": "W2_G4_V6_NOMINAL",
+      "method_pair": [
+        "centered_residual_v6",
+        "local_auer2013_residual_picard_reconstruction"
+      ],
+      "ordinal": 2,
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "auer_id": "W2_G4_AUER_ALTERNATIVE",
+      "external_id": "W2_G4_V6_ALTERNATIVE",
+      "method_pair": [
+        "centered_residual_v6",
+        "local_auer2013_residual_picard_reconstruction"
+      ],
+      "ordinal": 3,
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "peer_reaudit_request": {
+    "path": "coordination/autonomous_w2/g4/G4_TO_G2_V3_SOURCE_REAUDIT_REQUEST_v3.md",
+    "sha256": "2db210108cee7cbe6029b9c61425d545d20b6a07a54a5481275b98b892d965cd"
+  },
+  "peer_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_source_audit": {
+    "disposition": "PARTIAL at the audit snapshot; G4's corrected v3 source set is separately bound to re-audit request v3",
+    "path": "coordination/autonomous_w2/g2/G4_WRAPPER_INPUT_SCORER_AUDIT_v3.md",
+    "sha256": "7615d8057b2461973dd1d78901d7250a461e20e9abbc05bf502844494d3aae00"
+  },
+  "peer_status_snapshot": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_18.json",
+    "phase": "FINISHED",
+    "sequence": 18,
+    "sha256": "5151843465cbfe9685a6fdcf2a80145471536063b9868087ac85d036219d1187"
+  },
+  "phase": "BOUNDED_DEVELOPMENT_FALSIFICATION",
+  "primary_criterion": "For each method, report the exact set of actions whose independent method-native replay, common full-hold collision/contact replay, and common progress lower bound >=7/20 all pass; compare sets directly.",
+  "question": "On the exact G2 v6 synthetic 2-second task and the same three previously observed voltage actions, does the local Auer reconstruction also produce a replayed useful task certificate?",
+  "resource_caps": {
+    "memory_bytes_per_worker_or_replay_audit": 1073741824,
+    "phase_wall_seconds": 7200,
+    "processes_per_bounded_child": 1,
+    "replay_audit_cpu_seconds": 60,
+    "replay_audit_wall_seconds": 60,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "worker_cpu_seconds": 60,
+    "worker_wall_seconds": 60
+  },
+  "run_order": "all three v6 producers in frozen order, then all three Auer producers in frozen order; no concurrent method workers",
+  "schema": "ddwmr-g4-w2-matched-v6-task-protocol-v3",
+  "secondary_metrics": [
+    "common progress enclosure and width",
+    "minimum common full-hold collision and contact margins",
+    "proof byte count",
+    "native worker wall/CPU/peak job memory",
+    "native replay plus common adapter/check/replay wall/CPU/peak job memory",
+    "combined offline validation cost per action"
+  ],
+  "session": "DDWMR | LUNA-G4-AUER",
+  "status": "FROZEN_DEVELOPMENT_ONLY_W2",
+  "stop_policy": {
+    "continue_after": [
+      "proof-complete UNKNOWN",
+      "frozen wall/cpu/memory/arithmetic/output/resource stop"
+    ],
+    "never_continue_as": "baseline method limitation when support or checker is invalid",
+    "ordered_calls": "v6 zero, nominal, alternative; then local Auer zero, nominal, alternative",
+    "retry": "forbidden",
+    "stop_after": [
+      "input/source/binding defect",
+      "proof replay defect",
+      "common checker defect",
+      "runner integrity defect"
+    ]
+  },
+  "task_protocol": {
+    "path": "research/autonomous_w2/g2/task_protocol_v1.json",
+    "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+  }
+}

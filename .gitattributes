@@ -1,6 +1,19 @@
 # Preserve the imported review byte-for-byte for its recorded SHA-256 provenance.
 docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md -text
+docs/reviews/GPT_TO_CODEX_G4_AUER_R5_SCIENTIFIC_REVIEW_FULL_HANDOFF.md -text
 
 # Keep hashed Auer run logs byte-for-byte across Windows and Unix checkouts.
 results/validation/g4/auer2013/*.log -text
 results/validation/g4/auer2013/**/*.log -text
+
+# Scientific snapshots contain byte-level SHA-256 bindings. Preserve their bytes
+# across platforms; publication must not normalize their line endings.
+AGENTS.md -text
+research_context/** -text
+coordination/** -text
+research/** -text
+validation/** -text
+results/** -text
+docs/** -text
+
+README.md text eol=lf

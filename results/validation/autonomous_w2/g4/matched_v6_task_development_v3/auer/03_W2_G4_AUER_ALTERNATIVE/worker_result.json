@@ -1,0 +1,45 @@
+{
+  "comparison_id": "W2_G4_AUER_ALTERNATIVE",
+  "final_status": "RESOURCE_LIMIT",
+  "native_calls_counted": 1,
+  "native_input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/03_W2_G4_AUER_ALTERNATIVE.json",
+  "native_input_sha256": "0e22e82951de8d9aa4c90e869ef4f54063d63b70bced750438519aabb0a71b0d",
+  "native_proof_bytes": 9977,
+  "native_proof_file_sha256": "4506bbbf0b2a89143bc27566467d355ef978dc72364ff58879d3a74dc26f5472",
+  "native_proof_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/auer/03_W2_G4_AUER_ALTERNATIVE/native_proof.json",
+  "native_proof_record_sha256": "09da95c17e347a5797d464d6abb5be7ed37e951a91107e7781781adf018eebd3",
+  "native_status": "RESOURCE_LIMIT",
+  "native_termination": {
+    "detail": "estimated rational intermediate 33285 bits exceeds 32768",
+    "failure_context": {
+      "completed_results": 424707,
+      "configured_cap_name": "max_rational_bits",
+      "configured_cap_value": 32768,
+      "estimate_kind": "preoperation_intermediate_upper_estimate",
+      "estimated_or_observed_bits": 33285,
+      "kind": "RATIONAL_BIT_LIMIT",
+      "max_completed_result_bits": 32134,
+      "max_observed_result_bits": 32134,
+      "max_preoperation_estimate_bits": 33285,
+      "operand_bit_lengths": [
+        {
+          "denominator_bits": 1484,
+          "numerator_bits": 1585
+        }
+      ],
+      "operation_attempts": 426578,
+      "operations_started": 426577,
+      "primitive_id": "fraction.pow",
+      "schema": "ddwmr-g2-resource-diagnostic-v1",
+      "stage_id": "unclassified"
+    },
+    "kind": "RATIONAL_BIT_LIMIT"
+  },
+  "no_retry": true,
+  "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+  "physical_input_sha256": "3d5844de37384fa3f0b52b1cea6a7580f42d1b4fd84fbc2e857e5aecc593d0bb",
+  "producer_max_observed_rational_bits": 32134,
+  "producer_rational_operations": 426577,
+  "producer_wall_seconds": 2.7810000000026776,
+  "schema": "ddwmr-g4-w2-auer-result-v2"
+}

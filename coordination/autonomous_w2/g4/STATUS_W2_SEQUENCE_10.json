@@ -1,0 +1,87 @@
+{
+  "artifacts": {
+    "freeze_manifest": {
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v3/freeze_manifest_v4.json",
+      "sha256": "067995e0e60873c4c582946444a732ebc9d05eeb16eb1c601173d7ffc7c4a91e"
+    },
+    "freeze_receipt": {
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/freeze_receipt_v4.json",
+      "sha256": "7dbab64e3d3e2279ef10e1198416cf500713ff19a4d4e32444be3f5d1bf56458"
+    },
+    "peer_reaudit_request": {
+      "path": "coordination/autonomous_w2/g4/G4_TO_G2_V3_SOURCE_REAUDIT_REQUEST_v3.md",
+      "sha256": "2db210108cee7cbe6029b9c61425d545d20b6a07a54a5481275b98b892d965cd"
+    },
+    "preflight_report": {
+      "checks": "74/74",
+      "native_calls": 0,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v5/preflight_report_v4.json",
+      "sha256": "4e73485b549d357a8b4f9d2e5bb27e0d36849dd3205d977c075928464c5a21ee"
+    },
+    "source_closure": {
+      "files": 77,
+      "path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/source_closure_v4.json",
+      "sha256": "4a138dbd9eb26f1ba81f9d6b367c86e57dbce5ceab20d97bba3f4fe201fb7097"
+    }
+  },
+  "assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_BINDING_CORRECTION_CONTINUATION.md",
+    "sha256": "80bca7d84d8977e7ba209af55dd00c76d36def49d326c57df0c84d398cee0b8f"
+  },
+  "blocker": null,
+  "branch": "main",
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "next_action": "Run validation.autonomous_w2.g4.run_matched_v6_w2_v3 once; preserve all receipts and stop on binding/replay/ambiguous child failure.",
+  "objective": "Corrected v3 candidate frozen; execute the exact three-action v6/Auer development comparison once per method under W2 caps.",
+  "owner": "g4",
+  "peer_audit_observed": {
+    "path": "coordination/autonomous_w2/g2/G4_WRAPPER_INPUT_SCORER_AUDIT_v3.md",
+    "sha256": "7615d8057b2461973dd1d78901d7250a461e20e9abbc05bf502844494d3aae00"
+  },
+  "peer_release_consumed": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "peer_status_observed": {
+    "path": "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_19.json",
+    "phase": "FINISHED",
+    "sequence": 19,
+    "sha256": "feedd8ef25ba5f7dfc1155354419bf31ae3456d7931e0b870e3b02f1e9348d2d"
+  },
+  "phase": "PUBLISHED",
+  "phase_started_utc": "2026-10-08T08:42:15.2006292+00:00",
+  "previous_status": {
+    "path": "coordination/autonomous_w2/g4/STATUS_W2_SEQUENCE_08.json",
+    "sha256": "06d77d3ed5cdb942c92df5826d0d2c80f4eac0dac6caee871685e0569bd4c309"
+  },
+  "primary_assignment": {
+    "path": "docs/CODEX_W2_V6_MATCHED_TASK_FALSIFICATION.md",
+    "sha256": "206f8d4af19c8f30edc74ef4b669a0251f6bec5309f2999adc1b9ee2933082a0"
+  },
+  "resource_caps": {
+    "auer_calls_max": 3,
+    "max_processes": 1,
+    "memory_bytes": 1073741824,
+    "phase_wall_seconds": 7200,
+    "replay_audit_cpu_seconds": 60,
+    "replay_audit_wall_seconds": 60,
+    "retry": false,
+    "v6_calls_max": 3,
+    "worker_cpu_seconds": 60,
+    "worker_wall_seconds": 60
+  },
+  "schema": "ddwmr-autonomous-w2-owner-status-v1",
+  "sequence": 10,
+  "session": "DDWMR | LUNA-G4-AUER",
+  "utc": "2026-10-08T08:57:34.007714+00:00",
+  "work_counts_before_phase": {
+    "auer_1944": "NOT_RUN",
+    "g2_native_attempts": "24/24 consumed",
+    "g4_prior_auer_native_calls": 0,
+    "g4_prior_auer_worker_attempts": 0,
+    "g4_prior_v6_native_calls": 0,
+    "g4_prior_v6_worker_attempts": 1,
+    "r5_800": "NOT_RUN"
+  },
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2"
+}

@@ -1,0 +1,82 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/STATUS_W2_SEQUENCE_06.json": "0cc49e9ea46092d86ef43e88cde5965cebe7e9bcd54733d18c3cf4396453c6bb",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v2.json": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v3.json": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v3.md": "0193967acece803cafe02f2ed35c48b287952eb5e81a0276e1bb3528cdf7f2fd",
+    "research/autonomous_w2/g2/development_plan_v3.json": "c0c50e98dd1abff6def0347cf44215e0109b7300bd02d581496608216b10b4da",
+    "results/validation/autonomous_w2/g2/development_v1/stage_receipt.json": "3339ee37e855d8f127dc31c2d43824130b2c603ad6bb44f37f470e41afc25c53",
+    "results/validation/autonomous_w2/g2/development_v2/stage_receipt.json": "41c865921164c929d78cd944da7e25b60835bb3936bcbf5fe443de155baba048",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_01_W2_G2_DEV_001_ZERO/attempt_receipt.json": "e6cff8e747127733d08e4c43da2a9e6e5731e7b55e9326d0bc432219861f0fb0",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_01_W2_G2_DEV_001_ZERO/row.json": "788792badf3872b1d030954750216a134d62403062c91f7e148c69fb444f2e32",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_01_W2_G2_DEV_001_ZERO/worker.job.json": "d81f147a1b6876134875858ab4ad49dba7c817f9a6c8a6a38d8abfd3b8dc6428",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_01_W2_G2_DEV_001_ZERO/worker.stdout.bin": "f14891645603be138b80f36589844eb9add8739dee751e9e60dced45b197df1d",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_02_W2_G2_DEV_001_NOMINAL/attempt_receipt.json": "f17a93ca20a9fdb9ee56fbfe1ece4c6d36dda2ae9556fcad69dc381251612b06",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_02_W2_G2_DEV_001_NOMINAL/row.json": "788792badf3872b1d030954750216a134d62403062c91f7e148c69fb444f2e32",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_02_W2_G2_DEV_001_NOMINAL/worker.job.json": "60f13562b285a41e9aaf2d1031e1f43c2818111fac2283a43648d7358dbfb5e4",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_02_W2_G2_DEV_001_NOMINAL/worker.stdout.bin": "f14891645603be138b80f36589844eb9add8739dee751e9e60dced45b197df1d",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_03_W2_G2_DEV_001_ALTERNATIVE/attempt_receipt.json": "d7df67831ec8d85f06bd4a4833ae607468d5bd7d94e7821a0fc35237742f9706",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json": "788792badf3872b1d030954750216a134d62403062c91f7e148c69fb444f2e32",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_03_W2_G2_DEV_001_ALTERNATIVE/worker.job.json": "3b33cf0150d1c839b3d3b7c31223990c3cc57072ef8b2a73143d37bc6dc0052a",
+    "results/validation/autonomous_w2/g2/development_v3/attempt_03_W2_G2_DEV_001_ALTERNATIVE/worker.stdout.bin": "f14891645603be138b80f36589844eb9add8739dee751e9e60dced45b197df1d",
+    "results/validation/autonomous_w2/g2/development_v3/freeze_receipt_v3.json": "deb9eeb5af4148e911dc0f69ebe91ec788a12b2487435055ae0ee0d07c6880ea",
+    "results/validation/autonomous_w2/g2/development_v3/stage_receipt.json": "b52ff0267b9ee948ebc0818d9296096c4224aedb5f6bb01d0609c6e4a7efdde2",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v3.json": "9535421566db3d3556fdde869edc3f30a77ad5510712af4572131e4ef4192204"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit or push.",
+    "No peer source/manifest edits.",
+    "All v1-v3 outputs remain immutable source-bound development evidence; no retry under old plans.",
+    "R5 800/800 remains NOT_RUN.",
+    "No G4 confirmation rows are run or evaluated by G2."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "latest_stage": {
+    "attempts_counted": 3,
+    "failure_reason": "KeyError collision_margin_lower in producer status aggregation after all slabs were evaluated.",
+    "path": "results/validation/autonomous_w2/g2/development_v3/stage_receipt.json",
+    "sha256": "b52ff0267b9ee948ebc0818d9296096c4224aedb5f6bb01d0609c6e4a7efdde2",
+    "status_counts": {
+      "EXECUTION_FAILURE": 3
+    }
+  },
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 15,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "remaining_attempts": 9,
+    "v1_attempts": 6,
+    "v2_attempts": 6,
+    "v3_attempts": 3,
+    "v3_execution_failures": 3
+  },
+  "next_action": "Preserve v3 worker traces; correct the two slab-key lookups to the nested proof schema in a new v4 release, preflight it without query, then use at most six attempts total to test the three fixed actions once.",
+  "objective": "Correct the v3 post-evaluation status aggregation defect in a new frozen source version and finish bounded task-result replay within the W2 attempt cap.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "ACTIVE",
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v3.json",
+    "sha256": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "state": "CANDIDATE_V3_DEVELOPMENT_FAILED_PRESERVED"
+  },
+  "sequence": 7,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:30:32.917781+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared working tree retained; G2 writes remain in G2-owned W2 prefixes."
+}

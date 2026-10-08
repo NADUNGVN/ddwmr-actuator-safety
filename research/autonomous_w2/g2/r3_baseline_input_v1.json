@@ -1,0 +1,193 @@
+{
+  "benchmark_path": "research/autonomous_w2/g2/r3_baseline_benchmark_v1.json",
+  "horizon": {
+    "T": {
+      "den": "1",
+      "num": "2"
+    },
+    "id": "W2_G2_DEV_001_T_2S"
+  },
+  "legacy_source_benchmark_path": "validation/configs/benchmark_v1.json",
+  "query_actions": [
+    {
+      "action": {
+        "V": [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "1",
+            "num": "0"
+          }
+        ],
+        "id": "W2_G2_DEV_001_ZERO"
+      },
+      "query_id": "W2_G2_DEV_001_MOVING_STATE_BOX__W2_G2_DEV_001_STATIC_CIRCLE__W2_G2_DEV_001_T_2S__W2_G2_DEV_001_ZERO"
+    },
+    {
+      "action": {
+        "V": [
+          {
+            "den": "2",
+            "num": "1"
+          },
+          {
+            "den": "2",
+            "num": "1"
+          }
+        ],
+        "id": "W2_G2_DEV_001_NOMINAL"
+      },
+      "query_id": "W2_G2_DEV_001_MOVING_STATE_BOX__W2_G2_DEV_001_STATIC_CIRCLE__W2_G2_DEV_001_T_2S__W2_G2_DEV_001_NOMINAL"
+    },
+    {
+      "action": {
+        "V": [
+          {
+            "den": "1",
+            "num": "1"
+          },
+          {
+            "den": "1",
+            "num": "1"
+          }
+        ],
+        "id": "W2_G2_DEV_001_ALTERNATIVE"
+      },
+      "query_id": "W2_G2_DEV_001_MOVING_STATE_BOX__W2_G2_DEV_001_STATIC_CIRCLE__W2_G2_DEV_001_T_2S__W2_G2_DEV_001_ALTERNATIVE"
+    }
+  ],
+  "scene": {
+    "R_s": {
+      "den": "50",
+      "num": "3"
+    },
+    "id": "W2_G2_DEV_001_STATIC_CIRCLE",
+    "p_o": [
+      {
+        "den": "2",
+        "num": "1"
+      },
+      {
+        "den": "10",
+        "num": "1"
+      }
+    ]
+  },
+  "schema": "G2_W2_R3_COMPARATOR_INPUT_v1",
+  "scope": "same W2 initial state, fixed-label bounds, circle, two-second common held-voltage actions, and progress threshold; legacy R3 full-hold comparison/one panel; development only",
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "source_commit": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "state_cell": {
+    "box": [
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10",
+          "num": "3"
+        },
+        {
+          "den": "10000",
+          "num": "3001"
+        }
+      ],
+      [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10000",
+          "num": "2499"
+        },
+        {
+          "den": "4",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10000",
+          "num": "2499"
+        },
+        {
+          "den": "4",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ]
+    ],
+    "coordinates": [
+      "p_x",
+      "p_y",
+      "theta",
+      "u",
+      "r",
+      "omega_L",
+      "omega_R",
+      "i_L",
+      "i_R"
+    ],
+    "id": "W2_G2_DEV_001_MOVING_STATE_BOX"
+  },
+  "task_progress_threshold": {
+    "den": "20",
+    "num": "7"
+  },
+  "task_protocol_path": "research/autonomous_w2/g2/task_protocol_v1.json"
+}

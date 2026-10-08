@@ -1,0 +1,19 @@
+# Codex to Luna — close the v3 R4 proof-to-common composition gap
+
+**Date:** 2026-10-02  
+**Review:** `docs/reviews/CODEX_G4_AUER_PROTOCOL_V3_R4_SOURCE_REVIEW.md`  
+**Authority:** MASTER v2.1 and `AGENTS.md`. Read the four canonical `research_context/` files first.  
+**Boundary:** The shared tree remains uncommitted and unpushed. Preserve all old candidates and R3 v5/R4/R5 evidence. Do not run query 1 or the 1,944-query batch. No gate, MASTER, G3, controller, or hardware work.
+
+The R4 candidate fixes all four deterministic R3 Auer source-contract mismatches and removes stale probe paths from the guard profile. Manifest v5 and its 53 listed dependency hashes match. The remaining final-freeze blocker is the persistent composition check: `validate_matched_result_v3_r4.py` verifies proof and common-file digests separately, but does not prove that the common record's scene, tube, endpoints and margins were derived from the validated native proof for that frozen query. The archived R5 verifier checks one older frozen case and cannot validate arbitrary prospective IDs.
+
+## Required correction
+
+1. Create a **new versioned candidate** with a read-only, per-query proof-to-common composition verifier for **both Auer and R3**. It must reconstruct the exact frozen query and input hash and load the stored native proof, common record and delivered result from disk. Keep native proof replay and the common predicate replay as separate explicit premises; never infer either from a result status string alone.
+2. For Auer, compare the common record's serialized segments with segments deterministically reconstructed from the validated proof's full-time hulls, endpoints, times, unchanged label image, `NATIVE_TOTAL_HULL` mode, zero radius expansion, and proof/file/source provenance. For R3, do the corresponding comparison using the declared R3 adapter and `CENTER_PLUS_RADIUS_ONCE` semantics. Compare the common record's benchmark, scene, horizon and initial-state bindings to the frozen query in both arms.
+3. Recompute or replay the common predicate from those exact reconstructed segments and the frozen scene. Require exact agreement of status, segment checks, margins, and the delivered result's collision/contact margin vectors. A self-hash, a `full_closed_hold_covered=true` flag, or an asserted `native_replay_status=PASS` is not a substitute for these comparisons.
+4. Reject source/binding changes and independently mutated stored artifacts with specific premise errors. Include non-query or archived-proof fixtures for changed scene, substituted segment hull, changed endpoint, altered proof provenance, mutated margin vector, and recomputed artifact digests. Do not fabricate a new trajectory proof to make fixtures pass. The fixture must exercise the **full composition verifier**, not only JSON Schema shapes.
+5. Keep offline verification resource use and timing separate from the matched worker's declared 120-second/1-GiB method measurement. State exactly which checks occur inside the guarded worker and which run as independent read-only artifact audit. Do not silently give either method extra unreported compute budget.
+6. Version and hash-bind every changed verifier, validator, worker, guard, schema, profile or protocol source as applicable. Recompute the source closure and transitive import audit, verify all 1,944 ordered IDs remain unchanged and `NOT_RUN`, and refresh any probe evidence whose source identity changes. Preserve the original R4 candidate v5 and its probe records byte-for-byte.
+
+Return a complete Markdown handoff in `docs/reviews/` with the new source diff, hashes, composition premises, mutation results, exact fixture scope, resource accounting, and the unchanged zero-query state. The output is another review candidate, not authorization for a matched query. Query 1 and batch start remain separate decisions after independent source/proof review.

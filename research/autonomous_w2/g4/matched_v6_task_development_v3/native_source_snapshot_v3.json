@@ -1,0 +1,77 @@
+{
+  "copies": [
+    {
+      "adaptations": [
+        "ROOT anchor only: parents[3] to parents[4]"
+      ],
+      "origin_path": "validation/autonomous_w2/g2/producer_centered_v6.py",
+      "origin_sha256": "83341f26f92da69a55d6bb945aecbebaf70417b860a59dad43a6c5cad4e78f26",
+      "snapshot_path": "validation/autonomous_w2/g4/v6_snapshot_v3/producer_centered_v6.py",
+      "snapshot_sha256": "a6c84356595d6e3b634a86272ef278eae7034117de58075b6c1ddff601600ec4"
+    },
+    {
+      "adaptations": [
+        "ROOT anchor only: parents[3] to parents[4]"
+      ],
+      "origin_path": "validation/autonomous_w2/g2/producer_v4.py",
+      "origin_sha256": "f43bd7073d42e367449f288ddf153a5639ddd25bfa15b710c020ddcaf5e5fc94",
+      "snapshot_path": "validation/autonomous_w2/g4/v6_snapshot_v3/producer_v4.py",
+      "snapshot_sha256": "136b08fe9280007c888a390bbc59735a69e69a4025ea799059b523c33a7fceb3"
+    },
+    {
+      "adaptations": [
+        "none; byte-identical snapshot"
+      ],
+      "origin_path": "validation/autonomous_w2/g2/rational_interval_v3.py",
+      "origin_sha256": "7e9cb675e5a9241c1742097824bb39ca73419d8496ad79cb6207693c0a71b754",
+      "snapshot_path": "validation/autonomous_w2/g4/v6_snapshot_v3/rational_interval_v3.py",
+      "snapshot_sha256": "7e9cb675e5a9241c1742097824bb39ca73419d8496ad79cb6207693c0a71b754"
+    },
+    {
+      "adaptations": [
+        "ROOT anchor only: parents[3] to parents[4]"
+      ],
+      "origin_path": "validation/autonomous_w2/g2/checker_centered_v6.py",
+      "origin_sha256": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+      "snapshot_path": "validation/autonomous_w2/g4/v6_snapshot_v3/checker_centered_v6.py",
+      "snapshot_sha256": "f90bd5194698b1afb038a9ada28310b33eef0f11a8f00bb3afe0b50f79345458"
+    },
+    {
+      "adaptations": [
+        "package import path v2 to v3; same solver equations and numerical profile"
+      ],
+      "origin_path": "validation/baselines/auer2013/residual_ivp_g4_matched_v3_r9.py",
+      "origin_sha256": "a72b3dd3af804d24c6edbaa023b4ef528cd276345752454eedece9d234650df9",
+      "snapshot_path": "validation/autonomous_w2/g4/auer_snapshot_v3/solver_r9_w2.py",
+      "snapshot_sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa"
+    },
+    {
+      "adaptations": [
+        "none; byte-identical snapshot"
+      ],
+      "origin_path": "validation/baselines/auer2013/replay_ivp.py",
+      "origin_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+      "snapshot_path": "validation/autonomous_w2/g4/auer_snapshot_v3/replay_r9_w2.py",
+      "snapshot_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913"
+    },
+    {
+      "adaptations": [
+        "none; byte-identical snapshot"
+      ],
+      "origin_path": "validation/baselines/auer2013/rhs.py",
+      "origin_sha256": "c0ae8a05c0455ea0692773466c5fa239ff374d364f51ac58438cf3e91eed1282",
+      "snapshot_path": "validation/autonomous_w2/g4/auer_snapshot_v3/rhs.py",
+      "snapshot_sha256": "c0ae8a05c0455ea0692773466c5fa239ff374d364f51ac58438cf3e91eed1282"
+    },
+    {
+      "adaptations": [
+        "none; byte-identical snapshot"
+      ],
+      "origin_path": "validation/baselines/auer2013/piecewise.py",
+      "origin_sha256": "9ae8fb192d279c41cf278529907a20a91febc388707732099ecd61df5fe5797e",
+      "snapshot_path": "validation/autonomous_w2/g4/auer_snapshot_v3/piecewise.py",
+      "snapshot_sha256": "9ae8fb192d279c41cf278529907a20a91febc388707732099ecd61df5fe5797e"
+    }
+  ],
+  "schema": "ddwmr-g4-w2-native-source-snapshot-map-v3"
+}

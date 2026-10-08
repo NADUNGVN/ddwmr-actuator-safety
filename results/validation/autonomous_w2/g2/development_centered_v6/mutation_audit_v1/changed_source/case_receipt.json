@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/changed_source/binding.json",
+  "binding_sha256": "1d8b08cc55593fe3539118be83cd7d9ec700067f7f12b96e376c1f933d8d1e7f",
+  "elapsed_seconds_display_only": null,
+  "expected_rejection_class": "SOURCE_CLOSURE_HASH",
+  "job_status": null,
+  "name": "changed_source",
+  "peak_memory_bytes": null,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/changed_source/record.json",
+  "record_sha256": "5f76619659e4a1e48fb6a1a55ceca8bcc0bed2da2509a9a3242dab7ce8c3c183",
+  "rejected": false,
+  "returncode": null
+}

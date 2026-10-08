@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/inflated_contact_margin/binding.json",
+  "binding_sha256": "3e3661d803fb1e0720ef59ca62ab746fcd94666392e7140633cbd140099918c4",
+  "elapsed_seconds_display_only": null,
+  "expected_rejection_class": "RECOMPUTED_FIELDS_MISMATCH",
+  "job_status": null,
+  "name": "inflated_contact_margin",
+  "peak_memory_bytes": null,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v1/inflated_contact_margin/record.json",
+  "record_sha256": "08178256b52369e789d94febe90dd70b1c5f9cce8f2f4a8dbfab6a63a7fc1ae7",
+  "rejected": false,
+  "returncode": null
+}

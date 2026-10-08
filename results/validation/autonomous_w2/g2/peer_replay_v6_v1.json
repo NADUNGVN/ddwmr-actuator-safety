@@ -1,0 +1,106 @@
+{
+  "completed_utc": "2026-10-07T16:20:19.890082+00:00",
+  "evidence_inventory_entries_verified": 139,
+  "evidence_inventory_path": "results/validation/autonomous_w2/g2/development_centered_v6/evidence_inventory_v1.json",
+  "evidence_inventory_sha256": "5de4f15150a0df2a2ce52c6eff047a9e886895b1d14814eff40c0072e7f0933f",
+  "legacy_800_row_study": "800/800 NOT_RUN",
+  "native_queries_or_producer_rows_added": 0,
+  "purpose": "Read-only full checker replay of saved development records for the G4 v6 audit.",
+  "release_path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+  "release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+  "replays": [
+    {
+      "action_id": "W2_G2_DEV_001_ZERO",
+      "binding_path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_01.json",
+      "binding_sha256": "1d66ea54e813b24b34f13634958b1891be594ce2a8e59b0bc3e9a5414b7a1174",
+      "center_slabs_recomputed": 256,
+      "checker_path": "validation/autonomous_w2/g2/checker_centered_v6.py",
+      "checker_sha256": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+      "fixed_center_reference_chaining_recomputed": true,
+      "held_voltage_constant_recomputed": true,
+      "proof_fields_recomputed": 46,
+      "recomputed_clip_beta_upper": "3891727636449052334546952777/39614081257132168796771975168",
+      "recomputed_collision_margin_lower_m": "3895441147893607144686724911/19807040628566084398385987584",
+      "recomputed_contact_margin_lower_N": "78261283518396477304081667301/39614081257132168796771975168",
+      "recomputed_progress_enclosure_m": [
+        "14071102951150969463572600475/79228162514264337593543950336",
+        "9522363181009521109132469401/39614081257132168796771975168"
+      ],
+      "recomputed_safety_status": "CERTIFIED",
+      "recomputed_task_eligible": false,
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_01_W2_G2_DEV_001_ZERO/row.json",
+      "record_sha256": "9aa7a3f86c8572be81349cc2ffb9a67d67e7bd4a67b37c95b2c7208548a1593a",
+      "replayed": true,
+      "schema": "G2_W2_CENTERED_RESIDUAL_REPLAY_v6",
+      "shared_trust": [
+        "Python fractions.Fraction",
+        "validation.autonomous_w2.g2.rational_interval_v3.I/Budget/outward 96-bit arithmetic"
+      ]
+    },
+    {
+      "action_id": "W2_G2_DEV_001_NOMINAL",
+      "binding_path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_02.json",
+      "binding_sha256": "9e74de0f362b3dfc61b6d57852fc0149933abc9c12a9fb2cf18f30a518b92873",
+      "center_slabs_recomputed": 256,
+      "checker_path": "validation/autonomous_w2/g2/checker_centered_v6.py",
+      "checker_sha256": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+      "fixed_center_reference_chaining_recomputed": true,
+      "held_voltage_constant_recomputed": true,
+      "proof_fields_recomputed": 46,
+      "recomputed_clip_beta_upper": "2240937478180599319672112041/19807040628566084398385987584",
+      "recomputed_collision_margin_lower_m": "4382493237077295763196543625/39614081257132168796771975168",
+      "recomputed_contact_margin_lower_N": "78011818439612592728950992287/39614081257132168796771975168",
+      "recomputed_progress_enclosure_m": [
+        "21453284647730333525723986385/79228162514264337593543950336",
+        "26426908058455596087150334179/79228162514264337593543950336"
+      ],
+      "recomputed_safety_status": "CERTIFIED",
+      "recomputed_task_eligible": false,
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_02_W2_G2_DEV_001_NOMINAL/row.json",
+      "record_sha256": "f5ad26449b65a1ccae7af7f7029209e66fc2af656a7fe3956f91d55822420ca7",
+      "replayed": true,
+      "schema": "G2_W2_CENTERED_RESIDUAL_REPLAY_v6",
+      "shared_trust": [
+        "Python fractions.Fraction",
+        "validation.autonomous_w2.g2.rational_interval_v3.I/Budget/outward 96-bit arithmetic"
+      ]
+    },
+    {
+      "action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "binding_path": "research/autonomous_w2/g2/bindings_centered_v6/attempt_03.json",
+      "binding_sha256": "185ead9399a662892b15389cc3b05a4c2171f36a9a288850fc843f5565bee1fb",
+      "center_slabs_recomputed": 256,
+      "checker_path": "validation/autonomous_w2/g2/checker_centered_v6.py",
+      "checker_sha256": "a0e581cd6b2612a0fd7c51cd71e3b11b7deb08878b26450e83d21f2110473a25",
+      "fixed_center_reference_chaining_recomputed": true,
+      "held_voltage_constant_recomputed": true,
+      "proof_fields_recomputed": 46,
+      "recomputed_clip_beta_upper": "15276074917056108741500566373/79228162514264337593543950336",
+      "recomputed_collision_margin_lower_m": "2670824871109264502891134307/79228162514264337593543950336",
+      "recomputed_contact_margin_lower_N": "152161516478907364663119485379/79228162514264337593543950336",
+      "recomputed_progress_enclosure_m": [
+        "7208866586077414115959602677/19807040628566084398385987584",
+        "33809089754892191080072691477/79228162514264337593543950336"
+      ],
+      "recomputed_safety_status": "CERTIFIED",
+      "recomputed_task_eligible": true,
+      "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/attempt_03_W2_G2_DEV_001_ALTERNATIVE/row.json",
+      "record_sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6",
+      "replayed": true,
+      "schema": "G2_W2_CENTERED_RESIDUAL_REPLAY_v6",
+      "shared_trust": [
+        "Python fractions.Fraction",
+        "validation.autonomous_w2.g2.rational_interval_v3.I/Budget/outward 96-bit arithmetic"
+      ]
+    }
+  ],
+  "schema": "G2_W2_V6_SAVED_RECORD_PEER_REPLAY_v1",
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "shared_trust_limits": [
+    "Python fractions.Fraction",
+    "validation.autonomous_w2.g2.rational_interval_v3.I/Budget and outward 96-bit arithmetic",
+    "replay reconstructs all stored fields independently of the producer module but shares the interval arithmetic backend"
+  ],
+  "stage_receipt_path": "results/validation/autonomous_w2/g2/development_centered_v6/stage_receipt.json",
+  "stage_receipt_sha256": "9b906c008af8ff51f92bb55d4f1fe072f9a4ebdc48f4caf64c29feec58f0aa36"
+}

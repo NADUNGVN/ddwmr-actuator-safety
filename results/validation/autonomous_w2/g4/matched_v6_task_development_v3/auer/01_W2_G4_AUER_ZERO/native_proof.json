@@ -1,0 +1,450 @@
+{
+  "proof": {
+    "binding": {
+      "arithmetic_backend_manifest_path": "validation/baselines/auer2013/ARITHMETIC_BACKEND_MANIFEST_v2.json",
+      "arithmetic_backend_manifest_sha256": "254b448b5458fb9f9ebcd84e9a4e03cc7251124d3241ad00f4626aba7bcef085",
+      "arithmetic_dependency": "shared validation.g2 exact Fraction/Interval/Budget and Taylor sin/cos; separately disclosed and not an independent arithmetic library",
+      "checker_source_sha256": "c8ebcb30b890090a0dcb45e6f80c93b15e1bb63f8401c33af3c288c88bfbc913",
+      "input_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_native_inputs/01_W2_G4_AUER_ZERO.json",
+      "input_sha256": "c2f829d00d43d03e63b59475ebae4a3fcada697e1072e5ff3963e1b50ca4ad4a",
+      "method_contract_path": "docs/reviews/G4_AUER_METHOD_CONTRACT_v2.md",
+      "method_contract_sha256": "2a5d74de613ccf5f716035732b31ee1dcca69ad3d11d45d1d1267a517a63fc63",
+      "resource_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/auer_profile_v3.json",
+      "resource_profile_sha256": "df1af1bc14e99755a46b9a662255419b4d169501496b7e4b71517192e16a90f1",
+      "solver_source_sha256": "69fc2a55412da02542f4fed5bf2dff1e4b8fe63c55468743a98e5f4ed76f62fa",
+      "source_snapshot_manifest_sha256": "6417ee7e27aed8bf95186229c6630f2eb1a828387aa4370119a0f08a1fee75b8"
+    },
+    "case_id": "W2_G4_AUER_ZERO",
+    "case_kind": "DDWMR_SINGLE_QUERY",
+    "initial_state": [
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10",
+          "num": "3"
+        },
+        {
+          "den": "10000",
+          "num": "3001"
+        }
+      ],
+      [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10000",
+          "num": "2499"
+        },
+        {
+          "den": "4",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "10000",
+          "num": "2499"
+        },
+        {
+          "den": "4",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ],
+      [
+        {
+          "den": "100000",
+          "num": "-1"
+        },
+        {
+          "den": "100000",
+          "num": "1"
+        }
+      ]
+    ],
+    "method_id": "AUER2013_PIECEWISE_RESIDUAL_RECONSTRUCTION_DDWMR_R4",
+    "query_action_binding": {
+      "benchmark_sha256": "afb48622180ce526f2c4412a094d696d92dd4c84c2e80a0b8e8507f147c3be94",
+      "candidate_manifest_v2_input_sha256": "9b77a357c3f3d7f63da214a9d08210d44b4ba92ecee1ca55d84268df968d4c07",
+      "fixed_labels": {
+        "B_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "B_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "C_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "C_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "R_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "R_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "k_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "k_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "lambda_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "lambda_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "rho_L": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ],
+        "rho_R": [
+          {
+            "den": "10000",
+            "num": "9999"
+          },
+          {
+            "den": "10000",
+            "num": "10001"
+          }
+        ]
+      },
+      "held_voltage": [
+        {
+          "den": "1",
+          "num": "0"
+        },
+        {
+          "den": "1",
+          "num": "0"
+        }
+      ],
+      "horizon": {
+        "den": "1",
+        "num": "2"
+      },
+      "initial_state": [
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10",
+            "num": "3"
+          },
+          {
+            "den": "10000",
+            "num": "3001"
+          }
+        ],
+        [
+          {
+            "den": "1",
+            "num": "0"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10000",
+            "num": "2499"
+          },
+          {
+            "den": "4",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "10000",
+            "num": "2499"
+          },
+          {
+            "den": "4",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ],
+        [
+          {
+            "den": "100000",
+            "num": "-1"
+          },
+          {
+            "den": "100000",
+            "num": "1"
+          }
+        ]
+      ],
+      "scene": {
+        "R_s": {
+          "den": "50",
+          "num": "3"
+        },
+        "id": "scene_v6_static_circle",
+        "p_o": [
+          {
+            "den": "2",
+            "num": "1"
+          },
+          {
+            "den": "10",
+            "num": "1"
+          }
+        ]
+      },
+      "state_order": [
+        "p_x",
+        "p_y",
+        "theta",
+        "u",
+        "r",
+        "omega_L",
+        "omega_R",
+        "i_L",
+        "i_R"
+      ]
+    },
+    "query_id": "W2_G4_AUER_ZERO",
+    "rejected_step_attempts": [
+      {
+        "attempt_index": 0,
+        "detail": "estimated rational intermediate 33327 bits exceeds 32768",
+        "partial_work_counters": {
+          "clip_branch_splits": 0,
+          "picard_iterations": 30,
+          "rhs_jacobian_evaluations": 34
+        },
+        "reason": "RATIONAL_BIT_LIMIT",
+        "step_index": 0,
+        "step_width": {
+          "den": "1",
+          "num": "2"
+        },
+        "time_closed": {
+          "end": {
+            "den": "1",
+            "num": "2"
+          },
+          "start": {
+            "den": "1",
+            "num": "0"
+          }
+        }
+      }
+    ],
+    "schema": "ddwmr-g4-auer-native-residual-proof-v1",
+    "status": "RESOURCE_LIMIT",
+    "step_records": [],
+    "termination": {
+      "detail": "estimated rational intermediate 33327 bits exceeds 32768",
+      "failure_context": {
+        "completed_results": 424707,
+        "configured_cap_name": "max_rational_bits",
+        "configured_cap_value": 32768,
+        "estimate_kind": "preoperation_intermediate_upper_estimate",
+        "estimated_or_observed_bits": 33327,
+        "kind": "RATIONAL_BIT_LIMIT",
+        "max_completed_result_bits": 32167,
+        "max_observed_result_bits": 32167,
+        "max_preoperation_estimate_bits": 33327,
+        "operand_bit_lengths": [
+          {
+            "denominator_bits": 1485,
+            "numerator_bits": 1587
+          }
+        ],
+        "operation_attempts": 426578,
+        "operations_started": 426577,
+        "primitive_id": "fraction.pow",
+        "schema": "ddwmr-g2-resource-diagnostic-v1",
+        "stage_id": "unclassified"
+      },
+      "kind": "RATIONAL_BIT_LIMIT"
+    },
+    "time_horizon": {
+      "end": {
+        "den": "1",
+        "num": "2"
+      },
+      "start": {
+        "den": "1",
+        "num": "0"
+      }
+    },
+    "work": {
+      "accepted_steps": 0,
+      "clip_branch_splits": 0,
+      "max_observed_rational_bits": 32167,
+      "picard_iterations": 30,
+      "rational_operations": 426577,
+      "rejected_step_attempts": 1,
+      "rhs_jacobian_evaluations": 34
+    }
+  },
+  "proof_sha256": "419a563f1abaae9e70b5352a242fb8580c9b522c88b241294afc469d31f74870"
+}

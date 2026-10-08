@@ -1,0 +1,31 @@
+{
+  "candidate": {
+    "manifest_sha256": "e02cde6dfb5c8d07cbac053ebb0db945a4961b4aa1bc383c5dbf5660d707d556",
+    "source_closure_sha256": "0488078d3be68e8ddc3da4478553403023ee1c79e4243ac0306dac8b7765d152",
+    "schedule_sha256": "b2e833cdb20c1d31fde899373ae4d7f2332bd359cc4888d6ddb917840ae96b92",
+    "runner_sha256": "50ed4b51627661c65eff93b3e098ddaf59a4e86a72896f07af94c04478084f3e",
+    "checker_sha256": "23abbd52a7193ae5149474f2835e828e7b0cea9e6b74ac05deec3462a33ee01b"
+  },
+  "decision": "GO",
+  "effect": "EXACT_R15_STAGE_REVIEW_DECISION",
+  "review_path": "docs/reviews/CODEX_G4_AUER_R15_EXACT_STAGE_GO_REVIEW.md",
+  "review_sha256": "a22f56e2f4e529008abe67da608da19e2882cda627e860b5dfd046bc2d0b7532",
+  "schema": "ddwmr-g4-r15-codex-review-decision-v1",
+  "stage": {
+    "stage_id": "r15_continuation_01",
+    "query_ids": [
+      "state_low_pos__scene_d020_l+200__T_100__V_m1_p1",
+      "state_high_neg__scene_d050_l-200__T_020__V_0_m1",
+      "state_high_mid__scene_d050_l+000__T_050__V_0_0",
+      "state_high_pos__scene_d050_l+200__T_100__V_0_p1",
+      "state_low_neg__scene_d100_l-200__T_020__V_p1_m1",
+      "state_low_mid__scene_d100_l+000__T_050__V_p1_0",
+      "state_low_pos__scene_d100_l+200__T_100__V_p1_p1",
+      "state_high_neg__scene_d200_l-200__T_020__V_m1_m1",
+      "state_high_mid__scene_d200_l+000__T_050__V_m1_0",
+      "state_high_pos__scene_d200_l+200__T_100__V_m1_p1"
+    ],
+    "query_count": 10,
+    "ordered_ids_sha256_lf": "58a888845732cc8f5220656444d0b6ae9aa19a96eed1c014a7f907e9fac55bbd"
+  }
+}

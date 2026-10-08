@@ -1,0 +1,10 @@
+{
+  "candidate_plan": "research/autonomous_w2/g4/matched_v6_task_development_v3",
+  "candidate_result": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3",
+  "historical_candidate_unchanged": true,
+  "ordered_action_count": 3,
+  "peer_release_sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55",
+  "schema": "ddwmr-g4-w2-v3-preparation-receipt",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "task_sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+}

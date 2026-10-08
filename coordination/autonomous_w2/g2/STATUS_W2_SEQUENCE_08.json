@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "coordination/autonomous_w2/g2/releases/RELEASE_v1.json": "344485ddcb797ef6101ed48485702a96f773286ed9cf8f8d25429b45d05c34e0",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v2.json": "d3fc4c01b7df4b1716d066f148e9830a45b9ec27c26ddbaeed4cc868be4064ad",
+    "coordination/autonomous_w2/g2/releases/RELEASE_v3.json": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "docs/reviews/autonomous_w2/g2/W2_V3_DEVELOPMENT_FAILURE_POSTMORTEM.md": "d058e7f6ab6339185b436bc85d0b67231187f482d06029f1b3a37902c20b2efd",
+    "research/autonomous_w2/g2/PROOF_TO_CODE_MAP_v4.md": "03a38e6a9f6d9a709cb805524f1273fb93c4934cabbeaa7784ab86e84b5982ce",
+    "results/validation/autonomous_w2/g2/development_v3/stage_receipt.json": "b52ff0267b9ee948ebc0818d9296096c4224aedb5f6bb01d0609c6e4a7efdde2",
+    "results/validation/autonomous_w2/g2/fixtures/status_aggregation_v4.json": "0ae0302647b7431eebe135b42de26e2bacb18a12abb47ce8096ae1404b0fe590",
+    "results/validation/autonomous_w2/g2/pre_run_validation_v4.json": "79c403c2ac96fd9467fd0937989bd2128304bcc5d058fd4e069d1633810501e8",
+    "validation/autonomous_w2/g2/checker_v4.py": "ce68b4206cee043c86ac146b3f03c2e2b0371f7e048c1bb163c6fb173939f451",
+    "validation/autonomous_w2/g2/producer_v4.py": "f43bd7073d42e367449f288ddf153a5639ddd25bfa15b710c020ddcaf5e5fc94"
+  },
+  "blocker": null,
+  "branch": "main",
+  "constraints": [
+    "No branch switch, reset, clean, commit or push.",
+    "No peer source/manifest edits.",
+    "R5 remains 800/800 NOT_RUN.",
+    "No G4 confirmation outcomes are run or inspected by G2.",
+    "v1-v3 attempts and artifacts remain preserved; only a new frozen plan may use future attempts."
+  ],
+  "head": "94c60f627a2ce1a8d52101050bdc0ce9d2e59afe",
+  "native_attempts": {
+    "G2_limit": 24,
+    "count_completed": 15,
+    "held_out_rows": 0,
+    "legacy_800_row_study": "800/800 NOT_RUN",
+    "remaining_attempts": 9,
+    "v1_attempts": 6,
+    "v2_attempts": 6,
+    "v3_attempts": 3
+  },
+  "next_action": "Freeze v4 sources/profile/task/bindings after the independent nested-key fixture; publish an exact release request to G4 through its owned input file, then run three frozen development actions once.",
+  "objective": "Run v4 nested-status regression preflight, freeze a versioned correction and complete the remaining bounded development without retries.",
+  "owner": "g2",
+  "peer_release_consumed": null,
+  "peer_status_observed": {
+    "phase": "AWAITING_PEER_INPUT",
+    "release_audit_decision": "NOT_ISSUED_NO_IMMUTABLE_G2_RELEASE",
+    "release_audit_path": "coordination/autonomous_w2/g4/RELEASE_AUDIT_STATE_v1.json",
+    "release_audit_sha256": "df906d137f6f516ac9d5eed84d3f8abe32b97243c30e3957c3218735894fd53e",
+    "release_consumed": null,
+    "sequence": 3,
+    "status_path": "coordination/autonomous_w2/g4/STATUS.json",
+    "status_sha256": "38c88eaf048ec04478a1eb99bfd40977222b2149b10e84fced75d162c9468554"
+  },
+  "phase": "ACTIVE",
+  "release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v3.json",
+    "sha256": "fdc8b393a3dff8e26af67922c52cd025e9e8f9eab141adf4d91403b864697693",
+    "state": "FAILED_DEVELOPMENT_PRESERVED; V4_CORRECTION_PREPARING"
+  },
+  "sequence": 8,
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "utc": "2026-10-07T10:33:11.242168+00:00",
+  "workflow": "DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2",
+  "working_tree_note": "Shared working tree retained; G2 writes remain in G2-owned W2 prefixes."
+}

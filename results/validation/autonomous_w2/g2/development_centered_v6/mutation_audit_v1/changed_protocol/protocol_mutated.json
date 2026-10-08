@@ -1,0 +1,153 @@
+{
+  "actions": [
+    {
+      "id": "W2_G2_DEV_001_ZERO",
+      "role": "zero",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "W2_G2_DEV_001_NOMINAL",
+      "role": "nominal",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "id": "W2_G2_DEV_001_ALTERNATIVE",
+      "role": "alternative",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "declared_utc": "2026-10-07",
+  "model": {
+    "fixed_constants": {
+      "I_z": "1",
+      "R_w": "1",
+      "V_max": "1",
+      "b": "1",
+      "c_r": "1",
+      "c_u": "1",
+      "m": "1",
+      "v_s": "1"
+    },
+    "fixed_label_bounds": [
+      "9999/10000",
+      "10001/10000"
+    ],
+    "fixed_label_order": [
+      "rho_L",
+      "rho_R",
+      "C_L",
+      "C_R",
+      "lambda_L",
+      "lambda_R",
+      "R_L",
+      "R_R",
+      "B_L",
+      "B_R",
+      "k_L",
+      "k_R"
+    ],
+    "formulation": "MASTER v2.1 reduced nine-state DDWMR",
+    "label_semantics": "Each label is one fixed true parameter for the complete trajectory and is reused unchanged across all verification slabs.",
+    "lipschitz_constant": "1",
+    "parameter_maps": {
+      "J_j": "1/rho_j",
+      "L_j": "lambda_j"
+    },
+    "phi": "clip(s,-1,1)"
+  },
+  "protocol_id": "G2_W2_VOF_TASK_V1",
+  "protocol_state": "FROZEN_FOR_DEVELOPMENT_NOT_CONFIRMATION",
+  "scope": {
+    "G3_or_recursive_safety_claim": false,
+    "g4_confirmation_rows_run_by_g2": 0,
+    "historical_800_row_study": "NOT_RUN",
+    "native_attempts_before_protocol_record": 0,
+    "physical_platform_claim": false,
+    "positive_width_fixed_parameter_domain": true,
+    "positive_width_initial_state": true
+  },
+  "selection_rule": {
+    "comparators": [
+      "zero-only",
+      "nominal-only"
+    ],
+    "eligibility": "same replayed full-hold collision and contact certificate AND progress_lower >= 7/20",
+    "interpretation": "A certificate-level task-action distinction does not prove an UNKNOWN comparator unsafe or physically task-infeasible.",
+    "selector": "keep nominal if eligible; otherwise choose alternative if eligible; otherwise no certified task action"
+  },
+  "session": "DDWMR | LUNA-G2-SCOPE",
+  "task": {
+    "description": "Synthetic one-hold forward approach command",
+    "hold_s": "2",
+    "independent_task_rationale": "Declared as a 0.175 m/s mean-forward-progress requirement over a 2 s synthetic hold before any W2 evaluator output; not selected from margins or an action-gap bound.",
+    "initial_box": [
+      [
+        "-1/100000",
+        "1/100000"
+      ],
+      [
+        "-1/100000",
+        "1/100000"
+      ],
+      [
+        "-1/100000",
+        "1/100000"
+      ],
+      [
+        "3/10",
+        "3001/10000"
+      ],
+      [
+        "0",
+        "1/100000"
+      ],
+      [
+        "2499/10000",
+        "1/4"
+      ],
+      [
+        "2499/10000",
+        "1/4"
+      ],
+      [
+        "-1/100000",
+        "1/100000"
+      ],
+      [
+        "-1/100000",
+        "1/100000"
+      ]
+    ],
+    "initial_box_state_order": [
+      "p_x",
+      "p_y",
+      "theta",
+      "u",
+      "r",
+      "omega_L",
+      "omega_R",
+      "i_L",
+      "i_R"
+    ],
+    "obstacle": {
+      "center_m": [
+        "1/2",
+        "1/10"
+      ],
+      "inflated_radius_m": "3/50",
+      "kind": "static_circle"
+    },
+    "progress_metric": "p_x(T)-p_x(0)=integral_0^T u(t)*cos(theta(t)) dt",
+    "required_progress_m": "351/1000"
+  },
+  "workflow": "W2"
+}

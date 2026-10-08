@@ -1,0 +1,14 @@
+{
+  "actual_rejection": "ReplayReject:SOURCE_CLOSURE_HASH:results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_source/probe_source.txt",
+  "binding_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_source/binding.json",
+  "binding_sha256": "8f5b05c83f98550276daf3741e77685fc9774c3ec7f1319731747e1bb783353b",
+  "elapsed_seconds_display_only": 0.156,
+  "expected_rejection_class": "SOURCE_CLOSURE_HASH",
+  "job_status": "NONZERO_EXIT",
+  "name": "changed_source",
+  "peak_memory_bytes": 12378112,
+  "record_path": "results/validation/autonomous_w2/g2/development_centered_v6/mutation_audit_v2/changed_source/record.json",
+  "record_sha256": "b94a07f500ca4133a4970f7dbcaec924d2c2be095b8397a1cbbd9c818986f2bb",
+  "rejected": true,
+  "returncode": 2
+}

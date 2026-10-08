@@ -1,0 +1,8 @@
+{
+  "comparison_id": "W2_G4_V6_ALTERNATIVE",
+  "method": "centered_residual_v6",
+  "peer_saved_row_sha256": "e69bf3594432cb33bd8285815c61fc5426d5fb2e57b38daf56d56f2798e70cb6",
+  "producer_invocation_ordinal": 1,
+  "schema": "ddwmr-g4-w2-producer-start-v1",
+  "source_binding_sha256": "79d6895ea88670fc0546e18072376874f6fd8aea282ebc0f033d73397d07eaa9"
+}

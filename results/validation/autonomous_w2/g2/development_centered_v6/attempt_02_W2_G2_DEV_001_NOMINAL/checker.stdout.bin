@@ -1,0 +1,21 @@
+{
+  "center_slabs_recomputed": 256,
+  "fixed_center_reference_chaining_recomputed": true,
+  "held_voltage_constant_recomputed": true,
+  "proof_fields_recomputed": 46,
+  "recomputed_clip_beta_upper": "2240937478180599319672112041/19807040628566084398385987584",
+  "recomputed_collision_margin_lower_m": "4382493237077295763196543625/39614081257132168796771975168",
+  "recomputed_contact_margin_lower_N": "78011818439612592728950992287/39614081257132168796771975168",
+  "recomputed_progress_enclosure_m": [
+    "21453284647730333525723986385/79228162514264337593543950336",
+    "26426908058455596087150334179/79228162514264337593543950336"
+  ],
+  "recomputed_safety_status": "CERTIFIED",
+  "recomputed_task_eligible": false,
+  "replayed": true,
+  "schema": "G2_W2_CENTERED_RESIDUAL_REPLAY_v6",
+  "shared_trust": [
+    "Python fractions.Fraction",
+    "validation.autonomous_w2.g2.rational_interval_v3.I/Budget/outward 96-bit arithmetic"
+  ]
+}

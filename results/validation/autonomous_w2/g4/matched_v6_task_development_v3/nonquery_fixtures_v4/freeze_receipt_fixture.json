@@ -1,0 +1,9 @@
+{
+  "freeze_manifest_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/freeze_manifest_fixture.json",
+  "freeze_manifest_sha256": "0e383818fe923be2d08d480dbb9089912e761e54880fe1f5d785cca0a5f5322b",
+  "protocol_path": "research/autonomous_w2/g4/matched_v6_task_development_v3/protocol_v3.json",
+  "protocol_sha256": "4bc3e1dff3bb29f8ed881add8cc103eb25dfab49b0d1766b9ea5a2ac31d5f896",
+  "schema": "ddwmr-g4-w2-v3-preflight-receipt-fixture",
+  "source_closure_path": "results/validation/autonomous_w2/g4/matched_v6_task_development_v3/nonquery_fixtures_v4/source_closure_fixture.json",
+  "source_closure_sha256": "da2a8b59aaa56cde6e0418297bc5fafba5d0e4de054105d215a2a33f65aa4e14"
+}

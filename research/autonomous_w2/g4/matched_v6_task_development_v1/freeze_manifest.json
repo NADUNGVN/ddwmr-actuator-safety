@@ -1,0 +1,100 @@
+{
+  "auer_manifest_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/auer_input_manifest.json",
+  "auer_manifest_sha256": "1bfeb2d6601aaedbc378c67586e0a5876184f82f0d34e9913fed2b46e13543e2",
+  "auer_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/auer_profile.json",
+  "auer_profile_sha256": "b0d3f20b8b744dcc06bb38a5d6f5394da0a9ec19eb1c084c8e1e41402620af71",
+  "benchmark_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/benchmark_v1.json",
+  "benchmark_sha256": "1cb51adf857cd8de68f6d31f7acc19be451124a8fc86cf60d68cc232cec07ed1",
+  "caps": {
+    "memory_bytes": 1073741824,
+    "phase_wall_seconds": 7200,
+    "processes": 1,
+    "replay_audit_wall_seconds": 60,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "worker_wall_seconds": 60
+  },
+  "common_profile_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/common_profile.json",
+  "common_profile_sha256": "e4c15b24a78607254744e4331799014a3c35d6500f23de3c1d8f97422dee5169",
+  "frozen_utc": "2026-10-08T00:00:00Z",
+  "held_out_rows": 0,
+  "legacy_auer_1944": "NOT_RUN",
+  "legacy_r5_800": "800/800 NOT_RUN",
+  "native_call_limits": {
+    "auer": 3,
+    "retries": 0,
+    "v6": 3
+  },
+  "ordered_actions": [
+    {
+      "auer_action_id": "W2_V0",
+      "comparison_id": "W2_G4_V6_ZERO",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "voltage": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "auer_action_id": "W2_VHALF",
+      "comparison_id": "W2_G4_V6_NOMINAL",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "voltage": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "auer_action_id": "W2_V1",
+      "comparison_id": "W2_G4_V6_ALTERNATIVE",
+      "method": "v6",
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "voltage": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "peer_release": {
+    "path": "coordination/autonomous_w2/g2/releases/RELEASE_v6.json",
+    "sha256": "789d6b371f3a74c1f5241d08d187956e549bc2776648145869754971e16b8e55"
+  },
+  "primary_criterion": "set of actions with replayed full-hold collision/contact and progress lower bound >= 7/20",
+  "protocol_path": "research/autonomous_w2/g4/matched_v6_task_development_v1/protocol.json",
+  "protocol_sha256": "a2738a7ad23fbefb889b4f6c5d778f6128d36694e6efd37472fa1828c01b33a5",
+  "schema": "ddwmr-g4-w2-matched-v6-freeze-v1",
+  "session": "DDWMR | LUNA-G4-AUER",
+  "source_closure_pending_scripts": [
+    "validation/autonomous_w2/g4/v6_runner.py",
+    "validation/autonomous_w2/g4/auer_w2_worker.py",
+    "validation/autonomous_w2/g4/auer_w2_replay.py",
+    "validation/autonomous_w2/g4/matched_stage.py"
+  ],
+  "status": "FROZEN_BEFORE_NATIVE_CALLS",
+  "task_protocol": {
+    "path": "research/autonomous_w2/g2/task_protocol_v1.json",
+    "sha256": "8bc1c8fd460a62dc3f7ff1c8e4bef2dbaddbcaffbadd75d6c2c487e9e311c15a"
+  },
+  "v6_bindings": [
+    {
+      "external_id": "W2_G4_V6_ZERO",
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v1/v6_bindings/01.json",
+      "peer_action_id": "W2_G2_DEV_001_ZERO",
+      "sha256": "c545eb870feb98af37f73b78ee7c52af14d8c72a081571f6342eced10a25820d"
+    },
+    {
+      "external_id": "W2_G4_V6_NOMINAL",
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v1/v6_bindings/02.json",
+      "peer_action_id": "W2_G2_DEV_001_NOMINAL",
+      "sha256": "31f7d3e386cb181ce3961130994564d4ac80997fcb6ea3ac4410aee9ff25809c"
+    },
+    {
+      "external_id": "W2_G4_V6_ALTERNATIVE",
+      "path": "research/autonomous_w2/g4/matched_v6_task_development_v1/v6_bindings/03.json",
+      "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+      "sha256": "3e7b5e5afdee58e385464c40f4156170776a8adf15ef1bbc5eb6cb4f1d881455"
+    }
+  ]
+}

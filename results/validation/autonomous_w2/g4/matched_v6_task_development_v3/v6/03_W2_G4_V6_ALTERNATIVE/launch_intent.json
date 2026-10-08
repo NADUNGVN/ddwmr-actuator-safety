@@ -1,0 +1,28 @@
+{
+  "caps": {
+    "cpu_seconds": 60,
+    "max_processes": 1,
+    "memory_bytes": 1073741824,
+    "stderr_bytes": 1048576,
+    "stdout_bytes": 8388608,
+    "wall_seconds": 60
+  },
+  "command": [
+    "C:\\msys64\\ucrt64\\bin\\python.exe",
+    "-B",
+    "-m",
+    "validation.autonomous_w2.g4.v6_w2_worker_v3",
+    "--binding",
+    "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\research\\autonomous_w2\\g4\\matched_v6_task_development_v3\\v6_bindings\\03.json",
+    "--output-dir",
+    "D:\\Research\\Teacher_Vien\\projects\\ddwmr-actuator-safety\\results\\validation\\autonomous_w2\\g4\\matched_v6_task_development_v3\\v6\\03_W2_G4_V6_ALTERNATIVE"
+  ],
+  "comparison_id": "W2_G4_V6_ALTERNATIVE",
+  "method": "v6",
+  "ordinal": 3,
+  "peer_action_id": "W2_G2_DEV_001_ALTERNATIVE",
+  "prepared_utc": "2026-10-08T08:58:54.372733+00:00",
+  "retry_allowed": false,
+  "schema": "ddwmr-g4-w2-matched-launch-intent-v2",
+  "single_invocation": true
+}

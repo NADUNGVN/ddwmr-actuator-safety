@@ -2,7 +2,11 @@
 
 Independent research repository for Thầy Viễn. **HOLD - G1 PASS for restricted reduced-model scope; G2/G3/G4 UNVERIFIED.**
 
-**Current assignment (workflow W1): [Luna validation handoff](docs/LUNA_VALIDATION_HANDOFF_v1.md).** User authorized G2/G4 validation code and personally mediates Luna execution. Codex prepares/reviews the work; no autonomous delegation. The earlier blanket code prohibition is superseded for this scope. No operational controller or G3 is opened.
+**Current research question (2026-10-08): [Independent G3 feasibility and prior-art assignment](docs/G3_FEASIBILITY_RESEARCH_ASSIGNMENT.md).** Determine whether a useful recursive safe set and an observable voltage policy offer a defensible next contribution. The required output is a self-contained Markdown report. This stage evaluates the direction before G3 implementation.
+
+**Latest completed work: [W2 final scientific disposition](docs/reviews/autonomous_w2/CODEX_W2_FINAL_DISPOSITION_2026_10_08.md).** The finite synthetic development record is accepted; the contribution verdict is `NO_SUPPORTED_CONTRIBUTION_ON_TESTED_SCOPE`. G2/G3/G4 remain UNVERIFIED. The W2 [G2 audit](docs/reviews/autonomous_w2/g2/LUNA_TO_CODEX_G2_W2_V6_FINAL_FROZEN_RESULT_AUDIT_FULL_HANDOFF_v1.md) and [G4 resource attribution](docs/reviews/autonomous_w2/g4/LUNA_TO_CODEX_G4_W2_V6_FINAL_RESOURCE_ATTRIBUTION_FULL_HANDOFF_v1.md) contain the evidence and limitations.
+
+[Publication index and scope](docs/RESEARCH_PUBLICATION_2026_10_08.md) identify the source, result and provenance files included for independent review. The public snapshot does not promote a gate.
 
 [Cập nhật tiến độ ngày 2026-09-29](docs/PROGRESS_SUMMARY_2026-09-29.md): Cases A/B accepted; Case C accepted by GPT in narrow synthetic scope, with practical usefulness still unverified. This summary does not change MASTER or the research gates.
 
@@ -19,19 +23,19 @@ Adopted formulation v2.1: nine-state reduced ideal planar DDWMR, motor-voltage i
 
 ## Session instruction
 
-> Read `research_context/MASTER_RESEARCH_CONTEXT_v2.md`, `DECISION_LOG.md`, `LITERATURE_MATRIX.md`, and `REVIEW_GATE.md` before reasoning. Treat MASTER as authoritative. Follow workflow W1 and `docs/LUNA_VALIDATION_HANDOFF_v1.md` for authorized validation code; it is not operational GO. Report contradictions, blockers or overlap explicitly; do not repair assumptions silently.
+> Read `AGENTS.md` and all four `research_context/` files before reasoning. Treat MASTER as authoritative. For the new independent research stage follow `docs/G3_FEASIBILITY_RESEARCH_ASSIGNMENT.md`. W2 governs the completed G2/G4 verification packages; W1 is historical. Report contradictions, blockers or overlap explicitly; do not repair assumptions silently.
 
 ## GPT review handoff
 
-Use [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) to review the current context, then G1, then the remaining gates in separate exchanges. The GitHub repository is public as verified on 2026-09-28. If repository access fails, attach the four context files. Report the reviewed commit when available. Publishing this repository does not change the research HOLD.
+The current external research entry point is [G3_FEASIBILITY_RESEARCH_ASSIGNMENT.md](docs/G3_FEASIBILITY_RESEARCH_ASSIGNMENT.md). Report the exact reviewed Git commit and return `docs/reviews/G3_FEASIBILITY_PRIOR_ART_RESEARCH_FULL_HANDOFF.md` as an actual Markdown file. [GPT_REVIEW_REQUEST.md](docs/GPT_REVIEW_REQUEST.md) is the historical formulation-review route. The GitHub repository is public, verified again on 2026-10-08. Publishing this repository does not change the research HOLD.
 
 The [GPT R2 review](docs/reviews/GPT_TO_CODEX_REVIEW_12edd1b_R2_FULL_HANDOFF.md) and [finalization response](docs/reviews/CODEX_FINALIZATION_RESPONSE_12edd1b.md) record the reviewed formulation. The [R2 proposal](docs/proposals/v2_1/README.md) and [finalization package](docs/proposals/v2_1_finalization/README.md) are archived review artifacts, not alternate authoritative masters. Adoption provenance belongs in DECISION_LOG and the dated adoption commit.
 
-G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. User-authorized validation coding under workflow W1 may proceed; G3 and operational implementation remain outside this assignment.
+G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/reviews/GPT_TO_CODEX_G1_REVIEW_8341014e_PASS.md). Physical-platform correspondence UNVERIFIED; G2/G3/G4 UNVERIFIED. The W2 validation work is governed by its recorded scope; the independent research assignment does not open G3 implementation.
 
 ## Current G2 research package
 
-**Current execution handoff:** [Luna validation assignment](docs/LUNA_VALIDATION_HANDOFF_v1.md). The [WP1 GPT request](docs/GPT_WP1_CONSOLIDATED_REVIEW_REQUEST.md) remains a scientific review route, not a prerequisite for user-authorized development. The earlier [consolidated review](docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md) accepted Case C. Historical review requests retain their then-current statuses.
+**Completed execution workflow:** [Autonomous G2/G4 verification W2](docs/DDWMR_AUTONOMOUS_VERIFICATION_WORKFLOW_W2.md), followed by the [final disposition](docs/reviews/autonomous_w2/CODEX_W2_FINAL_DISPOSITION_2026_10_08.md). The earlier [Luna validation assignment](docs/LUNA_VALIDATION_HANDOFF_v1.md), [WP1 GPT request](docs/GPT_WP1_CONSOLIDATED_REVIEW_REQUEST.md) and [consolidated review](docs/reviews/GPT_TO_CODEX_DDWMR_CONSOLIDATED_REVIEW_FULL_HANDOFF.md) remain historical context. Read dated final dispositions before older candidate claims.
 
 - [Analytic enclosure candidate](research/theorem_notes/G2_ENCLOSURE_CANDIDATE_v1.md): proof draft, full-hold collision/contact checks and finite-evaluation obligations.
 - [Prior-art overlap and blockers](docs/reviews/G2_PRIOR_ART_AND_BLOCKERS_v1.md).
@@ -40,7 +44,7 @@ G1 PASS - restricted reduced-model scope, per [independent G1 review](docs/revie
 - [R2 response](docs/reviews/CODEX_RESPONSE_TO_G2_REVIEW_7390942f_R2.md) and [additional prior art](docs/reviews/G2_PRIOR_ART_SUPPLEMENT_R2.md).
 - [Case B](research/theorem_notes/G2_CHALLENGE_CASE_B_v1.md): uncertain actuator blocks, saturation exit and strictly limited comparison of three sufficient evaluations, accepted at `1da2166`; [review record](docs/reviews/GPT_G2_R3_1da2166_ACCEPT_RECORD.md).
 - [Case C voltage-selection challenge](research/theorem_notes/G2_VOLTAGE_SELECTION_CASE_C_v1.md): same state/family and shared error envelope for two forward voltage levels plus zero; accepted by GPT at `c9ff32d` as a synthetic certificate-output example only; practical usefulness remains UNVERIFIED.
-- [Current GPT review request (R4)](docs/GPT_G2_REVIEW_REQUEST_R4.md). [R3](docs/GPT_G2_REVIEW_REQUEST_R3.md), [R2](docs/GPT_G2_REVIEW_REQUEST_R2.md) and [v1](docs/GPT_G2_REVIEW_REQUEST_v1.md) requests remain historical.
+- Earlier GPT requests [R4](docs/GPT_G2_REVIEW_REQUEST_R4.md), [R3](docs/GPT_G2_REVIEW_REQUEST_R3.md), [R2](docs/GPT_G2_REVIEW_REQUEST_R2.md) and [v1](docs/GPT_G2_REVIEW_REQUEST_v1.md) remain historical.
 
 G2 is UNVERIFIED. These are research artifacts, not an accepted theorem, implementation freeze or new authoritative formulation.
 
@@ -52,4 +56,4 @@ Earlier `docs/` and `research/` notes retain the initial seven-state audit and a
 
 ## Collaboration and isolation
 
-The user relays messages between Codex, GPT and Luna; no browser/computer automation or autonomous subagent handoff. Luna max executes the authorized validation assignment; Codex reviews its returned artifacts. All writes remain inside this project; sibling studies, templates, shared workspace files and global settings are outside the write boundary.
+The user starts the research sessions. Under W2 the two Luna owners coordinate through repository files and publish consolidated handoffs; Codex reviews the evidence. The new independent reviewer produces the assigned research report. All writes remain inside this project; sibling studies, templates, shared workspace files and global settings are outside the write boundary.

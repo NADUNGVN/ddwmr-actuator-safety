@@ -1,0 +1,35 @@
+{
+  "job": {
+    "elapsed_seconds_display_only": 10.047,
+    "job": {
+      "active_processes_at_read": 0,
+      "peak_memory_bytes": 14790656,
+      "terminated_processes": 0,
+      "total_kernel_time_100ns": 312500,
+      "total_processes": 1,
+      "total_user_time_100ns": 99375000
+    },
+    "pid": 41948,
+    "process_assigned_before_resume": true,
+    "process_in_job": true,
+    "returncode": 0,
+    "status": "COMPLETED",
+    "stderr": {
+      "bytes_observed": 0,
+      "drain_stopped_on_overflow": false,
+      "overflow": false,
+      "prefix_base64": "",
+      "sha256_retained_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin_error": null,
+    "stdout": {
+      "bytes_observed": 962,
+      "drain_stopped_on_overflow": false,
+      "overflow": false,
+      "prefix_base64": "ew0KICAiY2VudGVyX3NsYWJzX3JlY29tcHV0ZWQiOiAyNTYsDQogICJmaXhlZF9jZW50ZXJfcmVmZXJlbmNlX2NoYWluaW5nX3JlY29tcHV0ZWQiOiB0cnVlLA0KICAiaGVsZF92b2x0YWdlX2NvbnN0YW50X3JlY29tcHV0ZWQiOiB0cnVlLA0KICAicHJvb2ZfZmllbGRzX3JlY29tcHV0ZWQiOiA0NiwNCiAgInJlY29tcHV0ZWRfY2xpcF9iZXRhX3VwcGVyIjogIjE1Mjc2MDc0OTE3MDU2MTA4NzQxNTAwNTY2MzczLzc5MjI4MTYyNTE0MjY0MzM3NTkzNTQzOTUwMzM2IiwNCiAgInJlY29tcHV0ZWRfY29sbGlzaW9uX21hcmdpbl9sb3dlcl9tIjogIjI2NzA4MjQ4NzExMDkyNjQ1MDI4OTExMzQzMDcvNzkyMjgxNjI1MTQyNjQzMzc1OTM1NDM5NTAzMzYiLA0KICAicmVjb21wdXRlZF9jb250YWN0X21hcmdpbl9sb3dlcl9OIjogIjE1MjE2MTUxNjQ3ODkwNzM2NDY2MzExOTQ4NTM3OS83OTIyODE2MjUxNDI2NDMzNzU5MzU0Mzk1MDMzNiIsDQogICJyZWNvbXB1dGVkX3Byb2dyZXNzX2VuY2xvc3VyZV9tIjogWw0KICAgICI3MjA4ODY2NTg2MDc3NDE0MTE1OTU5NjAyNjc3LzE5ODA3MDQwNjI4NTY2MDg0Mzk4Mzg1OTg3NTg0IiwNCiAgICAiMzM4MDkwODk3NTQ4OTIxOTEwODAwNzI2OTE0NzcvNzkyMjgxNjI1MTQyNjQzMzc1OTM1NDM5NTAzMzYiDQogIF0sDQogICJyZWNvbXB1dGVkX3NhZmV0eV9zdGF0dXMiOiAiQ0VSVElGSUVEIiwNCiAgInJlY29tcHV0ZWRfdGFza19lbGlnaWJsZSI6IHRydWUsDQogICJyZXBsYXllZCI6IHRydWUsDQogICJzY2hlbWEiOiAiRzJfVzJfQ0VOVEVSRURfUkVTSURVQUxfUkVQTEFZX3Y2IiwNCiAgInNoYXJlZF90cnVzdCI6IFsNCiAgICAiUHl0aG9uIGZyYWN0aW9ucy5GcmFjdGlvbiIsDQogICAgInZhbGlkYXRpb24uYXV0b25vbW91c193Mi5nMi5yYXRpb25hbF9pbnRlcnZhbF92My5JL0J1ZGdldC9vdXR3YXJkIDk2LWJpdCBhcml0aG1ldGljIg0KICBdDQp9DQo=",
+      "sha256_retained_prefix": "292d497db1ac54cd5245bb6b8e0d95b6d6bd035a013517c2da270c4c505ca96d"
+    },
+    "termination_reason": null
+  },
+  "launch_error": null
+}
